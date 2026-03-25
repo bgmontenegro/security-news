@@ -4,20 +4,26 @@
   <meta charset="UTF-8">
   <title>Boletín de Seguridad</title>
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    iframe {
-      width: 100%;
-      border: none;
-      min-height: 600px;
-    }
-  </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Boletín de Seguridad</h1>
-    <p>Boletín más reciente </p>
 
-    <iframe src="content/boletin.html"></iframe>
-  </div>
+<body>
+  <header>
+    <h1>Boletín de Seguridad</h1>
+    <p class="subtitle">Resumen ejecutivo de ciberseguridad generado automáticamente</p>
+  </header>
+
+  <main id="contenido">
+    <p>Cargando boletín...</p>
+  </main>
+
+  <script>
+    fetch("content/boletin.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("contenido").innerHTML = html)
+      .catch(() => {
+        document.getElementById("contenido").innerHTML =
+          "<p>No se pudo cargar el boletín.</p>";
+      });
+  </script>
 </body>
 </html>
