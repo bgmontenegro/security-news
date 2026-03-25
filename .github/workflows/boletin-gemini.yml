@@ -13,3 +13,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Generar boletin con Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          PROMPT="Eres un analista experto en ciberseguridad. Realiza una búsqueda web actualizada en inglés y español sobre: noticias globales de ciberseguridad, CVEs críticos del día, zero-days activos, ransomware y amenazas en curso, incidentes de vendors (Microsoft, Fortinet, Cisco, Palo Alto, VMware), alertas de CERTs, tendencias globales y vulnerabilidades explotadas activamente. Selecciona solo lo más relevante. Produce un boletín con estilo EJECUTIVO, con secciones claras: 'Resumen Ejecutivo', 'Principales Incidentes', 'Vulnerabilidades Críticas', 'Ransomware y Amenazas Activas', 'Recomendaciones'. Usa HTML limpio con tarjetas (<div class='card'>). Incluye enlaces a las fuentes. Devuelve solo HTML."
+
+          RESPUESTA=$(curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -H "x-goog-api-key: $GEMINI_API_KEY" \
+            -d "{\"contents\":[{\"parts\":[{\"text\":\"$PROMPT\"}]}]}" \
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent")
+
+          mkdir -p content
+          echo "$RESPUESTA" | jq -r '.candidates[0].content.parts[0].text' > content/boletin.html
+
+      - name: Commit
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add content/boletin.html
+          git commit -m "Boletin actualizado" || echo "Sin cambios"
+          git push
