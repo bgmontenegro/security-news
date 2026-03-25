@@ -14,40 +14,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Preparar prompt para Gemini
-        run: |
-          FECHA=$(date +"%d/%m/%Y %H:%M")
-
-          cat > prompt.txt << 'EOF'
-Eres un analista experto en ciberseguridad. Realiza una búsqueda web actualizada en inglés y español sobre:
-
-- Noticias globales de ciberseguridad
-- CVEs críticos del día
-- Zero-days activos
-- Ransomware y amenazas en curso
-- Incidentes de vendors (Microsoft, Fortinet, Cisco, Palo Alto, VMware, etc.)
-- Alertas de CERTs
-- Tendencias globales
-- Vulnerabilidades explotadas activamente
-
-Tu tarea:
-
-1. Buscar información reciente en la web (inglés y español).
-2. Seleccionar solo lo más relevante.
-3. Resumirlo en español.
-4. Generar un boletín HTML profesional con tarjetas.
-5. Incluir enlaces a las fuentes.
-6. Mantener un tono claro, conciso y técnico.
-7. No inventes información; usa solo lo que encuentres en la web.
-
-Formato final: HTML limpio, sin <html> ni <body>, solo el contenido.
-EOF
-
       - name: Llamar a Gemini con búsqueda web
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          PROMPT=$(sed 's/"/\\"/g' prompt.txt)
+          PROMPT="Eres un analista experto en ciberseguridad. Realiza una búsqueda web actualizada en inglés y español sobre noticias globales de ciberseguridad, CVEs críticos del día, zero-days activos, ransomware y amenazas en curso, incidentes de vendors (Microsoft, Fortinet, Cisco, Palo Alto, VMware, etc.), alertas de CERTs, tendencias globales y vulnerabilidades explotadas activamente. Selecciona solo lo más relevante, resúmelo en español y genera un boletín HTML profesional con tarjetas, títulos, enlaces a las fuentes y tono técnico claro. No inventes información; usa solo lo que encuentres en la web. Devuelve solo HTML (sin etiquetas <html> ni <body>)."
 
           RESPUESTA=$(curl -s -X POST \
             -H "Content-Type: application/json" \
@@ -55,6 +26,7 @@ EOF
             -d "{\"contents\":[{\"parts\":[{\"text\":\"$PROMPT\"}]}]}" \
             "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent")
 
+          mkdir -p content
           echo "$RESPUESTA" | jq -r '.candidates[0].content.parts[0].text' > content/boletin.html
 
       - name: Commit cambios
