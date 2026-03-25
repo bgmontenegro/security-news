@@ -27,8 +27,10 @@ jobs:
             "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent")
 
           mkdir -p content
-          echo "$RESPUESTA" | jq -r '.candidates[0].content.parts[0].text' > content/boletin.html
-
+          echo "$RESPUESTA" > content/raw.json
+          TEXTO=$(echo "$RESPUESTA" | jq -r '.candidates[0].content.parts[0].text // empty')
+          if [ -z "$TEXTO" ]; then echo "<div class='card'><h2>Boletín no disponible</h2><p>Gemini no devolvió contenido válido.</p></div>" > content/boletin.html else   echo "$TEXTO" > content/boletin.html fi
+         
       - name: Commit
         run: |
           git config --global user.name "github-actions"
