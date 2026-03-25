@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boletín de Seguridad</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
-  <header>
+  <header class="site-header">
     <h1>Boletín de Seguridad</h1>
-    <p class="subtitle">Resumen ejecutivo de ciberseguridad generado automáticamente</p>
+    <p class="subtitle">Resumen ejecutivo generado automáticamente</p>
   </header>
 
-  <main id="contenido">
-    <p>Cargando boletín...</p>
+  <nav class="tabs" id="tabs"></nav>
+
+  <main class="wrap">
+    <div id="top"></div>
+    <div id="contenido"></div>
   </main>
 
   <script>
+    const SECCIONES = [
+      { id: "resumen", label: "Resumen" },
+      { id: "incidentes", label: "Incidentes" },
+      { id: "cves", label: "CVEs" },
+      { id: "ransomware", label: "Ransomware" },
+      { id: "recomendaciones", label: "Recomendaciones" }
+    ];
+
+    function setActive(id) {
+      document.querySelectorAll(".tabs button").forEach(b => b.classList.toggle("active", b.dataset.id === id));
+      document.querySelectorAll("#contenido .section").forEach(s => s.classList.toggle("hidden", s.id !== id));
+    }
+
+    function buildTabs() {
+      const tabs = document.getElementById("tabs");
+      tabs.innerHTML = SECCIONES.map(s => `<button type="button" data-id="${s.id}">${s.label}</button>`).join("");
+      tabs.querySelectorAll("button").forEach(btn => btn.addEventListener("click", () => setActive(btn.dataset.id)));
+    }
+
     fetch("content/boletin.html")
       .then(r => r.text())
-      .then(html => document.getElementById("contenido").innerHTML = html)
+      .then(html => {
+        const tmp = document.createElement("div");
+        tmp.innerHTML = html;
+
+        const top = tmp.querySelector(".top");
+        document.getElementById("top").innerHTML = top ? top.outerHTML : "";
+
+        const contenido = document.getElementById("contenido");
+        contenido.innerHTML = "";
+        tmp.querySelectorAll(".section").forEach(sec => contenido.appendChild(sec));
+
+        buildTabs();
+        setActive("resumen");
+      })
       .catch(() => {
-        document.getElementById("contenido").innerHTML =
-          "<p>No se pudo cargar el boletín.</p>";
+        document.getElementById("contenido").innerHTML = "<div class='card'><h2>Error</h2><p>No se pudo cargar el boletín.</p></div>";
       });
   </script>
 </body>
