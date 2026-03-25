@@ -18,7 +18,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          PROMPT="Eres un analista experto en ciberseguridad. Genera un boletín ejecutivo en HTML con tarjetas (<div class='card'>). Incluye estas secciones: Resumen Ejecutivo, Principales Incidentes, Vulnerabilidades Críticas (CVEs), Ransomware y Amenazas Activas, Recomendaciones. Usa solo información reciente y confiable. Devuelve únicamente HTML."
+          PROMPT="Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML. NO incluyas <!DOCTYPE>, <html>, <head>, <body> ni <style>. Usa únicamente estas clases CSS: section, section-title, grid, card, meta, links, tag, top. Estructura obligatoria: - Un bloque <div class='top'> con título y fecha. - Secciones separadas con <section class='section' id='resumen|incidentes|cves|ransomware|recomendaciones'>. - Cada sección debe tener <h3 class='section-title'>. Formato: - Incidentes, CVEs y Ransomware deben usar <div class='grid'> con tarjetas <div class='card'>. - Cada tarjeta debe incluir: • Título claro • 2–4 puntos clave • Un bloque <div class='links'> con al menos un enlace <a href='URL'>Fuente</a> Reglas: - No inventes fuentes. - Si no hay fuente confiable, indica 'Fuente no confirmada' sin enlace. - No uses markdown. - No uses fences ```. Devuelve únicamente el FRAGMENTO HTML."
 
           RESPUESTA=$(curl -s -X POST \
             -H "Content-Type: application/json" \
