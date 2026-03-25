@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Boletín de Seguridad – Byron</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Boletín de Seguridad – Infraestructura Byron</h1>
+    <p>Este sitio carga automáticamente el boletín más reciente.</p>
+
+    <!-- Aquí se inserta el contenido -->
+    <div id="contenido">
+      <!-- GitHub Pages no permite JS dinámico externo, así que usamos include estático -->
+      <!-- Simplemente cargamos el archivo content/boletin.html -->
+      <!-- Cuando actualices boletin.html, el sitio se actualiza solo -->
+      <?php include "content/boletin.html"; ?>
+    </div>
+  </div>
+</body>
+</html>
