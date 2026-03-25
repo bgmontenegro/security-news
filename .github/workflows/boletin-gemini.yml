@@ -1,4 +1,4 @@
-name: Boletín de seguridad automático con Gemini
+name: Boletín de seguridad automático con Gemini (Web Search)
 
 on:
   schedule:
@@ -14,119 +14,48 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Instalar dependencias
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y curl jq
-
-      - name: Obtener noticias RSS reales
-        run: |
-          mkdir rss
-
-          curl -s https://www.fortiguard.com/rss/ir.xml > rss/fortinet.xml
-          curl -s https://msrc.microsoft.com/update-guide/rss > rss/msrc.xml
-          curl -s https://www.cisa.gov/cybersecurity-advisories/all.xml > rss/cisa.xml
-          curl -s https://cert.europa.eu/publications/security-advisories.xml > rss/certeu.xml
-          curl -s https://ubuntu.com/security/notices/rss.xml > rss/ubuntu.xml
-          curl -s https://access.redhat.com/security/updates/advisory/rss.xml > rss/redhat.xml
-          curl -s https://support.zabbix.com/plugins/servlet/feeds/notifications/rss > rss/zabbix.xml
-
-      - name: Convertir RSS a JSON
-        run: |
-          jq -Rs '
-            split("<item>") | .[1:] |
-            map({
-              title: (split("<title>")[1] | split("</title>")[0]),
-              link: (split("<link>")[1] | split("</link>")[0]),
-              description: (split("<description>")[1] | split("</description>")[0])
-            })
-          ' rss/fortinet.xml > fortinet.json
-
-          jq -Rs '
-            split("<item>") | .[1:] |
-            map({
-              title: (split("<title>")[1] | split("</title>")[0]),
-              link: (split("<link>")[1] | split("</link>")[0]),
-              description: (split("<description>")[1] | split("</description>")[0])
-            })
-          ' rss/msrc.xml > msrc.json
-
-          jq -Rs '
-            split("<item>") | .[1:] |
-            map({
-              title: (split("<title>")[1] | split("</title>")[0]),
-              link: (split("<link>")[1] | split("</link>")[0]),
-              description: (split("<description>")[1] | split("</description>")[0])
-            })
-          ' rss/cisa.xml > cisa.json
-
-          jq -Rs '
-            split("<item>") | .[1:] |
-            map({
-              title: (split("<title>")[1] | split("</title>")[0]),
-              link: (split("<link>")[1] | split("</link>")[0]),
-              description: (split("<description>")[1] | split("</description>")[0])
-            })
-          ' rss/certeu.xml > certeu.json
-
-          jq -Rs '
-            split("<item>") | .[1:] |
-            map({
-              title: (split("<title>")[1] | split("</title>")[0]),
-              link: (split("<link>")[1] | split("</link>")[0]),
-              description: (split("<description>")[1] | split("</description>")[0])
-            })
-          ' rss/ubuntu.xml > ubuntu.json
-
-          jq -Rs '
-            split("<item>") | .[1:] |
-            map({
-              title: (split("<title>")[1] | split("</title>")[0]),
-              link: (split("<link>")[1] | split("</link>")[0]),
-              description: (split("<description>")[1] | split("</description>")[0])
-            })
-          ' rss/redhat.xml > redhat.json
-
-          jq -Rs '
-            split("<item>") | .[1:] |
-            map({
-              title: (split("<title>")[1] | split("</title>")[0]),
-              link: (split("<link>")[1] | split("</link>")[0]),
-              description: (split("<description>")[1] | split("</description>")[0])
-            })
-          ' rss/zabbix.xml > zabbix.json
-
-      - name: Unir todas las noticias
-        run: |
-          jq -s 'add' fortinet.json msrc.json cisa.json certeu.json ubuntu.json redhat.json zabbix.json > noticias.json
-
-      - name: Generar boletín con Gemini
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: Preparar prompt para Gemini
         run: |
           FECHA=$(date +"%d/%m/%Y %H:%M")
 
-          PROMPT=$(cat <<EOF
-Eres un analista de ciberseguridad. Recibirás un JSON con noticias reales de seguridad.
+          cat > prompt.txt << 'EOF'
+Eres un analista experto en ciberseguridad. Realiza una búsqueda web actualizada en inglés y español sobre:
+
+- Noticias globales de ciberseguridad
+- CVEs críticos del día
+- Zero-days activos
+- Ransomware y amenazas en curso
+- Incidentes de vendors (Microsoft, Fortinet, Cisco, Palo Alto, VMware, etc.)
+- Alertas de CERTs
+- Tendencias globales
+- Vulnerabilidades explotadas activamente
+
 Tu tarea:
-1. Leer todas las noticias.
-2. Seleccionar las más relevantes.
-3. Resumirlas en español.
-4. Formatearlas en HTML con estilo de tarjetas.
+
+1. Buscar información reciente en la web (inglés y español).
+2. Seleccionar solo lo más relevante.
+3. Resumirlo en español.
+4. Generar un boletín HTML profesional con tarjetas.
 5. Incluir enlaces a las fuentes.
-6. Mantener un tono profesional.
+6. Mantener un tono claro, conciso y técnico.
+7. No inventes información; usa solo lo que encuentres en la web.
 
-JSON de entrada:
-$(cat noticias.json)
+Formato final: HTML limpio, sin <html> ni <body>, solo el contenido.
 EOF
-)
 
-          curl -s -X POST \
+      - name: Llamar a Gemini con búsqueda web
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          PROMPT=$(sed 's/"/\\"/g' prompt.txt)
+
+          RESPUESTA=$(curl -s -X POST \
             -H "Content-Type: application/json" \
             -H "x-goog-api-key: $GEMINI_API_KEY" \
             -d "{\"contents\":[{\"parts\":[{\"text\":\"$PROMPT\"}]}]}" \
-            https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent \
-            | jq -r '.candidates[0].content.parts[0].text' > content/boletin.html
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent")
+
+          echo "$RESPUESTA" | jq -r '.candidates[0].content.parts[0].text' > content/boletin.html
 
       - name: Commit cambios
         run: |
