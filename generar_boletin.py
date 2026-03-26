@@ -21,16 +21,20 @@ prompt = (
 )
 
 # Llamada a Gemini (GitHub Models)
-url = "https://models.inference.ai.azure.com/chat/completions"
+url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
 headers = {
-    "Authorization": f"Bearer {os.environ['API_TOKEN']}",
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
+    "x-goog-api-key": os.environ["API_TOKEN"]
 }
 
 payload = {
-    "model": "gemini-2.5-flash",
-    "messages": [{"role": "user", "content": prompt}],
-    "temperature": 0.2
+    "contents": [
+        {
+            "parts": [
+                {"text": prompt}
+            ]
+        }
+    ]
 }
 
 r = requests.post(url, headers=headers, json=payload)
