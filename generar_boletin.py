@@ -41,7 +41,7 @@ r = requests.post(url, headers=headers, json=payload)
 r.raise_for_status()
 
 data = r.json()
-html = data["choices"][0]["message"]["content"]
+html = data["candidates"][0]["content"]["parts"][0]["text"]
 
 # Guardar salidas
 os.makedirs("content", exist_ok=True)
