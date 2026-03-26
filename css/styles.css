@@ -65,7 +65,8 @@ body {
 
 .top {
   margin: 14px 0 18px;
-  padding: 14px 16px;
+  margin-bottom: 10px;  
+  padding: 10px 14px;
   border: 1px solid var(--border);
   border-radius: 14px;
   background: rgba(15,23,42,0.55);
@@ -87,14 +88,14 @@ body {
 }
 
 .section-title {
-  margin: 0 0 10px;
-  font-size: 16px;
+  margin: 6px 0 8px;
+  font-size: 1.05rem;
   color: #dbeafe;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 12px;
 }
 
@@ -143,3 +144,20 @@ body {
 .hidden {
   display: none;
 }
+
+.tag {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  border-radius: 4px;
+  margin-right: 4px;
+  font-weight: 600;
+}
+
+.tag.CRÍTICO { background: #b91c1c; color: #fff; }
+.tag.ALTO { background: #f97316; color: #fff; }
+.tag.MEDIO { background: #eab308; color: #000; }
+
+.tag.RCE { background: #7c3aed; color: #fff; }
+.tag.EXPLOIT { background: #dc2626; color: #fff; }
+.tag.PARCHE { background: #16a34a; color: #fff; }
