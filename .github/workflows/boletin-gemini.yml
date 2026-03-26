@@ -30,12 +30,19 @@ jobs:
           FECHA=$(date +%Y-%m-%d)
           cp content/boletin.html content/historico/boletin-$FECHA.html
 
-          echo "<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Histórico</title><link rel='stylesheet' href='../../css/styles.css'></head><body><div class='wrap'>  <div class='top'>    <h2>Histórico de Boletines</h2>    <p><a href='../../index.html' style='color:#60a5fa;text-decoration:none;'>← Volver al boletín actual</a></p>  </div>  <ul>" > content/historico/index.html
+          echo "<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Histórico</title><link rel='stylesheet' href='../../css/styles.css'></head><body><div class='wrap'>  <div class='top'>    <h2>Histórico de Boletines</h2>    <p class='meta'><a href='../../index.html' style='color:#60a5fa;text-decoration:none;'>← Volver al boletín actual</a></p>  </div>  <div class='section'>    <h3 class='section-title'>Boletines Generados</h3>    <div class='grid'>" > content/historico/index.html
           for f in content/historico/boletin-*.html; do
             b=$(basename "$f")
-            echo "<li><a href='$b'>$b</a></li>" >> content/historico/index.html
+            FECHA=$(echo "$b" | sed 's/boletin-\(.*\)\.html/\1/')
+            echo "<div class='card'>
+                    <h3>Boletín del $FECHA</h3>
+                    <p class='meta'>Archivo: $b</p>
+                    <div class='links'>
+                      <a href='$b'>Abrir boletín</a>
+                    </div>
+                  </div>" >> content/historico/index.html
           done
-          echo "</ul></div></body></html>" >> content/historico/index.html
+          echo "    </div>  </div></div></body></html>" >> content/historico/index.html
 
           git add content/boletin.html content/raw.json content/historico
           git commit -m "Boletin actualizado" || echo "Sin cambios"
