@@ -53,8 +53,13 @@
         contenido.innerHTML = "";
         tmp.querySelectorAll(".section").forEach(sec => contenido.appendChild(sec));
 
-        buildTabs();
-        setActive("resumen");
+        // Si el resumen no trae id, se lo asignamos al primer bloque .section
+        const firstSection = contenido.querySelector(".section");
+        if (firstSection && !document.getElementById("resumen")) firstSection.id = "resumen";
+
+buildTabs();
+setActive("resumen");
+
       })
       .catch(() => {
         document.getElementById("contenido").innerHTML = "<div class='card'><h2>Error</h2><p>No se pudo cargar el boletín.</p></div>";
