@@ -1,4 +1,27 @@
 Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML.
+
+Prioriza EXCLUSIVAMENTE información relacionada con los siguientes productos y entornos reales de infraestructura. 
+NO incluyas ningún otro producto, sistema o tecnología fuera de esta lista:
+
+- Fortinet: FortiOS, FortiGate, FortiAP, FortiMail
+- Proxmox VE
+- Dell iDRAC hasta generación 13
+- Firmware de Dell Optiplex y Latitude
+- Windows XP, Windows 7, Windows 10, Windows 11
+- Windows Server 2003, 2008, 2012 y 2016
+- SQL Server Express 2005 y 2008
+- ESET Antivirus corporativo
+- Broadcast Electronics (equipos FM y automatización de radio)
+- macOS desde 2015 en adelante
+- Cámaras Dahua
+- Zabbix
+- Ubuntu
+- AlmaLinux
+- Red Hat Enterprise Linux 7 y 8
+- Zimbra Collaboration 10
+
+Ignora cualquier otro producto, sistema operativo, plataforma o tecnología que no esté explícitamente listada arriba.
+
 NO incluyas <!DOCTYPE>, <html>, <head>, <body> ni <style>.
 NO uses Markdown.
 NO uses encabezados con ###, listas numeradas ni texto plano.
