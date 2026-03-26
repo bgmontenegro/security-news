@@ -1,2 +1,38 @@
-Fecha de generación: {{FECHA_HOY}}
-Prioriza eventos publicados o actualizados entre {{FECHA_HACE_30_DIAS}} y {{FECHA_HOY}}; solo incluye eventos más antiguos si siguen teniendo explotación activa conocida y especifica claramente la fecha de publicación.
+Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML.
+NO incluyas <!DOCTYPE>, <html>, <head>, <body> ni <style>.
+NO uses Markdown.
+NO uses encabezados con ###, listas numeradas ni texto plano.
+
+Usa exclusivamente estas clases CSS:
+section, section-title, grid, card, meta, links, tag, top.
+
+El bloque inicial debe ser:
+<div class='top'>
+  <h2>Boletín Ejecutivo de Ciberseguridad</h2>
+  <p class='meta'>Fecha: {{FECHA_HOY}}</p>
+</div>
+
+El Resumen Ejecutivo debe ser:
+<div class='section' id='resumen'>
+  <h3 class='section-title'>Resumen Ejecutivo</h3>
+  <div class='grid'> con exactamente cinco tarjetas <div class='card'>.
+</div>
+
+Las secciones posteriores deben ser:
+<section class='section' id='incidentes'>
+<section class='section' id='cves'>
+<section class='section' id='ransomware'>
+<section class='section' id='recomendaciones'>
+
+Cada tarjeta debe:
+- Incluir la severidad en la clase (card CRÍTICO / ALTO / MEDIO)
+- Comenzar con etiquetas <span class='tag'>
+- Incluir <p class='meta'>Publicado: YYYY-MM-DD</p>
+- Usar <ul> para puntos clave
+- Incluir acción recomendada
+- Incluir <div class='links'> con fuentes reales
+
+Prioriza eventos publicados o actualizados entre {{FECHA_HACE_30_DIAS}} y {{FECHA_HOY}}.
+Solo incluye eventos más antiguos si siguen teniendo explotación activa conocida.
+
+Devuelve ÚNICAMENTE el FRAGMENTO HTML.
