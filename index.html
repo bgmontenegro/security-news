@@ -27,6 +27,7 @@
       { id: "cves", label: "CVEs" },
       { id: "ransomware", label: "Ransomware" },
       { id: "recomendaciones", label: "Recomendaciones" }
+      { id: "historico", label: "Histórico", external: true: 
     ];
 
     function setActive(id) {
@@ -36,8 +37,22 @@
 
     function buildTabs() {
       const tabs = document.getElementById("tabs");
-      tabs.innerHTML = SECCIONES.map(s => `<button type="button" data-id="${s.id}">${s.label}</button>`).join("");
-      tabs.querySelectorAll("button").forEach(btn => btn.addEventListener("click", () => setActive(btn.dataset.id)));
+    
+      tabs.innerHTML = SECCIONES.map(s => {
+        return `<button type="button" data-id="${s.id}" data-external="${s.external ? "1" : "0"}">${s.label}</button>`;
+      }).join("");
+    
+      tabs.querySelectorAll("button").forEach(btn => {
+        const isExternal = btn.dataset.external === "1";
+    
+        if (isExternal) {
+          btn.addEventListener("click", () => {
+            window.location.href = "content/historico/";
+          });
+        } else {
+          btn.addEventListener("click", () => setActive(btn.dataset.id));
+        }
+      });
     }
 
     fetch("content/boletin.html")
