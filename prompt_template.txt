@@ -1,0 +1,2 @@
+Fecha de generación: {{FECHA_HOY}}
+Prioriza eventos publicados o actualizados entre {{FECHA_HACE_30_DIAS}} y {{FECHA_HOY}}; solo incluye eventos más antiguos si siguen teniendo explotación activa conocida y especifica claramente la fecha de publicación.
