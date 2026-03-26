@@ -161,3 +161,7 @@ body {
 .tag.RCE { background: #7c3aed; color: #fff; }
 .tag.EXPLOIT { background: #dc2626; color: #fff; }
 .tag.PARCHE { background: #16a34a; color: #fff; }
+
+.card.CRÍTICO { border-left: 4px solid #b91c1c; }
+.card.ALTO { border-left: 4px solid #f97316; }
+.card.MEDIO { border-left: 4px solid #eab308; }
