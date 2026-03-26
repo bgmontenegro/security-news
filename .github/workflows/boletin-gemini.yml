@@ -30,7 +30,7 @@ jobs:
           FECHA=$(date +%Y-%m-%d)
           cp content/boletin.html content/historico/boletin-$FECHA.html
 
-          echo "<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Histórico</title><link rel='stylesheet' href='../../css/styles.css'></head><body><div class='wrap'>  <div class='top'>    <h2>Histórico de Boletines</h2>  </div>  <ul>" > content/historico/index.html
+          echo "<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Histórico</title><link rel='stylesheet' href='../../css/styles.css'></head><body><div class='wrap'>  <div class='top'>    <h2>Histórico de Boletines</h2>    <p><a href='../../index.html' style='color:#60a5fa;text-decoration:none;'>← Volver al boletín actual</a></p>  </div>  <ul>" > content/historico/index.html
           for f in content/historico/boletin-*.html; do
             b=$(basename "$f")
             echo "<li><a href='$b'>$b</a></li>" >> content/historico/index.html
