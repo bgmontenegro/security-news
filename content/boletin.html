@@ -1,5 +1,5 @@
 <div class='top'>
-    <h1>Boletín Ejecutivo de Ciberseguridad</h1>
+    <h2>Boletín Ejecutivo de Ciberseguridad</h2>
     <p class='meta'>Fecha: 2024-05-15</p>
 </div>
 
@@ -7,171 +7,233 @@
     <h3 class='section-title'>Resumen Ejecutivo</h3>
     <div class='grid'>
         <div class='card CRÍTICO'>
-            <span class='tag CRÍTICO'>CRÍTICO</span>
-            <span class='tag RCE'>RCE</span>
-            <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
-            <h4>Múltiples RCE Críticas en Productos Fortinet</h4>
-            <p class='meta'>Publicado: 2024-05-07</p>
+            <p class='meta'>
+                <span class='tag CRÍTICO'>CRÍTICO</span>
+                <span class='tag RCE'>RCE</span>
+                <span class='tag EXPLOIT'>EXPLOIT ACTIVO</span>
+                <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
+            </p>
+            <h4>Vulnerabilidad Crítica de RCE en FortiOS SSL-VPN</h4>
+            <p class='meta'>Publicado: 2024-02-09</p>
             <ul>
-                <li>Fortinet ha lanzado parches para vulnerabilidades de ejecución remota de código (RCE) en FortiOS y FortiClientEMS.</li>
-                <li>Las vulnerabilidades, incluyendo CVE-2024-23113, podrían permitir a atacantes remotos ejecutar comandos arbitrarios.</li>
-                <li>Afecta a FortiOS y FortiClientEMSD en diversas versiones, requiriendo actualización urgente.</li>
+                <li>CVE-2024-21762: Desbordamiento de búfer basado en heap.</li>
+                <li>Permite a un atacante remoto no autenticado ejecutar código arbitrario.</li>
+                <li>Exploitación activa confirmada por Fortinet y agencias gubernamentales.</li>
+                <li>Afecta a FortiOS 6.0.x, 6.2.x, 6.4.x, 7.0.x y 7.2.x.</li>
             </ul>
-            <p><strong>Acción Recomendada:</strong> Actualizar inmediatamente a las versiones parcheadas de FortiOS y FortiClientEMS para mitigar el riesgo.</p>
+            <p><strong>Acción Recomendada:</strong> Aplicar urgentemente los parches de Fortinet disponibles. Si no es posible, deshabilitar SSL-VPN inmediatamente.</p>
             <div class='links'>
-                <a href='https://www.fortiguard.com/psirt' target='_blank'>Fuente: Fortinet PSIRT Advisories</a>
+                <a href='https://www.fortiguard.com/psirt/FG-IR-24-015' target='_blank'>Fuente: FortiGuard PSIRT</a>
+                <a href='https://www.bleepingcomputer.com/news/security/fortinet-fortios-rce-bug-under-active-attack-govt-warns/' target='_blank'>Análisis: BleepingComputer</a>
             </div>
         </div>
+
         <div class='card CRÍTICO'>
-            <span class='tag CRÍTICO'>CRÍTICO</span>
-            <span class='tag RCE'>RCE</span>
-            <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
-            <h4>RCE Crítica en Componente MSHTML de Microsoft Windows</h4>
+            <p class='meta'>
+                <span class='tag CRÍTICO'>CRÍTICO</span>
+                <span class='tag RCE'>RCE</span>
+                <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
+            </p>
+            <h4>Múltiples RCEs en Componentes de Windows (Mayo 2024)</h4>
             <p class='meta'>Publicado: 2024-05-14</p>
             <ul>
-                <li>Microsoft ha publicado un parche para CVE-2024-30046, una vulnerabilidad crítica de ejecución remota de código en la plataforma MSHTML.</li>
-                <li>La vulnerabilidad podría ser explotada mediante un archivo especialmente diseñado (ej. un documento o correo electrónico malicioso).</li>
-                <li>Afecta a Windows 10, Windows 11 y diversas versiones de Windows Server (2012, 2016).</li>
+                <li>CVE-2024-30040 (Microsoft OLE) y CVE-2024-30044 (MSHTML Platform).</li>
+                <li>Permiten la ejecución remota de código arbitrario.</li>
+                <li>Afectan a Windows 10, 11 y Windows Server 2016.</li>
+                <li>Parches liberados en el Patch Tuesday de Mayo de 2024.</li>
             </ul>
-            <p><strong>Acción Recomendada:</strong> Aplicar urgentemente las actualizaciones de seguridad de Microsoft de mayo de 2024 (Patch Tuesday).</p>
+            <p><strong>Acción Recomendada:</strong> Aplicar las actualizaciones de seguridad de Microsoft de Mayo 2024 lo antes posible a todos los sistemas Windows y Windows Server.</p>
             <div class='links'>
-                <a href='https://msrc.microsoft.com/update-guide/' target='_blank'>Fuente: Microsoft Security Update Guide</a>
-                <a href='https://www.cisa.gov/news-events/alerts/2024/05/14/cisa-adds-one-known-exploited-vulnerability-kev-catalog' target='_blank'>Fuente: CISA</a>
+                <a href='https://msrc.microsoft.com/update-guide/releaseNote/2024-May' target='_blank'>Fuente: MSRC Microsoft</a>
+                <a href='https://krebsonsecurity.com/2024/05/patch-tuesday-may-2024-patches-for-99-flaws/' target='_blank'>Análisis: KrebsOnSecurity</a>
             </div>
         </div>
+
         <div class='card CRÍTICO'>
-            <span class='tag CRÍTICO'>CRÍTICO</span>
-            <span class='tag EXPLOIT'>EXPLOIT ACTIVO</span>
-            <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
-            <h4>Vulnerabilidad de Elevación de Privilegios en Windows DWM bajo Explotación Activa</h4>
-            <p class='meta'>Publicado: 2024-05-14</p>
+            <p class='meta'>
+                <span class='tag CRÍTICO'>CRÍTICO</span>
+                <span class='tag EXPLOIT'>EXPLOIT ACTIVO</span>
+            </p>
+            <h4>Backdoor en XZ Utils Afecta a Distribuciones Linux</h4>
+            <p class='meta'>Publicado: 2024-03-29</p>
             <ul>
-                <li>Microsoft ha parchado CVE-2024-30050, una vulnerabilidad de elevación de privilegios en Windows DWM Core Library.</li>
-                <li>Esta vulnerabilidad está siendo explotada activamente en la naturaleza, lo que la hace de extrema urgencia.</li>
-                <li>Un atacante con acceso local podría explotar esta falla para elevar sus privilegios en el sistema.</li>
+                <li>CVE-2024-3094: Inyección de código malicioso en la librería `liblzma` de XZ Utils.</li>
+                <li>Podría permitir la ejecución remota de código en sistemas SSH expuestos.</li>
+                <li>Afecta a versiones de desarrollo de RHEL 9/10, Fedora 40/41, y algunas versiones de Ubuntu (no estables).</li>
+                <li>Aunque el impacto en RHEL 7/8 y Ubuntu estables es mínimo, la alerta es crítica.</li>
             </ul>
-            <p><strong>Acción Recomendada:</strong> Aplicar las actualizaciones de seguridad de Microsoft de mayo de 2024 (Patch Tuesday) con máxima prioridad.</p>
+            <p><strong>Acción Recomendada:</strong> Verificar las versiones de `xz` o `liblzma` en sistemas AlmaLinux, RHEL 7/8 y Ubuntu. Asegurar que no se utilizan versiones comprometidas. Priorizar actualizaciones de seguridad para paquetes relacionados.</p>
             <div class='links'>
-                <a href='https://msrc.microsoft.com/update-guide/' target='_blank'>Fuente: Microsoft Security Update Guide</a>
-                <a href='https://www.bleepingcomputer.com/news/microsoft/microsoft-may-2024-patch-tuesday-fixes-61-flaws-1-zero-day/' target='_blank'>Fuente: BleepingComputer</a>
+                <a href='https://www.cisa.gov/news-events/alerts/2024/03/29/reported-supply-chain-compromise-xz-utils-data-compression-library' target='_blank'>Fuente: CISA Alert</a>
+                <a href='https://www.bleepingcomputer.com/news/security/red-hat-warns-of-backdoor-in-xz-tools-used-by-most-linux-distros/' target='_blank'>Análisis: BleepingComputer</a>
             </div>
         </div>
-        <div class='card ALTO'>
-            <span class='tag ALTO'>ALTO</span>
-            <span class='tag RCE'>RCE</span>
-            <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
-            <h4>RCE sin Autenticación en Cámaras IP Dahua</h4>
-            <p class='meta'>Publicado: 2024-04-25</p>
+
+        <div class='card CRÍTICO'>
+            <p class='meta'>
+                <span class='tag CRÍTICO'>CRÍTICO</span>
+                <span class='tag RCE'>RCE</span>
+                <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
+            </p>
+            <h4>Vulnerabilidad de Inyección de Comandos en Cámaras Dahua</h4>
+            <p class='meta'>Publicado: 2024-02-05</p>
             <ul>
-                <li>Se ha descubierto una vulnerabilidad de ejecución remota de código (CVE-2024-3153) en el firmware de cámaras IP Dahua.</li>
-                <li>La falla permite a un atacante no autenticado ejecutar código arbitrario en los dispositivos afectados.</li>
-                <li>Afecta a varias series de cámaras IP Dahua, incluyendo modelos populares, dejando la red vulnerable.</li>
+                <li>CVE-2023-3765: Permite la ejecución remota de comandos en dispositivos NVR/DVR.</li>
+                <li>Un atacante no autenticado puede ejecutar código arbitrario con privilegios elevados.</li>
+                <li>Afecta a varios modelos de NVR y DVR de Dahua.</li>
+                <li>Parche de firmware disponible por el fabricante.</li>
             </ul>
-            <p><strong>Acción Recomendada:</strong> Verificar y actualizar el firmware de todas las cámaras Dahua a las versiones más recientes proporcionadas por el fabricante.</p>
+            <p><strong>Acción Recomendada:</strong> Actualizar el firmware de todas las cámaras y NVR/DVR Dahua afectados a las últimas versiones proporcionadas por el fabricante. Restringir el acceso a la interfaz de administración.</p>
             <div class='links'>
-                <a href='https://www.dahuasecurity.com/support/cybersecurity/advisories' target='_blank'>Fuente: Dahua Security Advisories</a>
+                <a href='https://www.cve.org/CVERecord?id=CVE-2023-3765' target='_blank'>Fuente: CVE NVD</a>
+                <a href='https://thehackernews.com/2024/02/critical-rce-vulnerability-found-in.html' target='_blank'>Análisis: The Hacker News</a>
             </div>
         </div>
+
         <div class='card ALTO'>
-            <span class='tag ALTO'>ALTO</span>
-            <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
-            <h4>Múltiples Vulnerabilidades de Alta Severidad en Dell iDRAC9</h4>
-            <p class='meta'>Publicado: 2024-04-16</p>
+            <p class='meta'>
+                <span class='tag ALTO'>ALTO</span>
+                <span class='tag RCE'>RCE</span>
+                <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
+            </p>
+            <h4>RCE en WebKit de macOS y iOS (Apple Security Updates)</h4>
+            <p class='meta'>Publicado: 2024-05-13</p>
             <ul>
-                <li>Dell ha lanzado parches para varias vulnerabilidades de alta severidad en iDRAC9 (utilizado en servidores Dell PowerEdge).</li>
-                <li>Las vulnerabilidades incluyen bypass de autenticación, escalada de privilegios y ejecución remota de código potencial.</li>
-                <li>Afecta a versiones de firmware iDRAC9 hasta la 7.00.00.00 inclusive, comprometiendo la gestión del servidor.</li>
+                <li>CVE-2024-27806: Vulnerabilidad de corrupción de memoria en WebKit.</li>
+                <li>Puede llevar a la ejecución de código arbitrario al procesar contenido web maliciosamente elaborado.</li>
+                <li>Afecta a macOS Ventura y Sonoma, así como iOS y iPadOS.</li>
+                <li>Parches incluidos en las últimas actualizaciones de Apple.</li>
             </ul>
-            <p><strong>Acción Recomendada:</strong> Actualizar el firmware de Dell iDRAC9 a la versión 7.00.00.100 o posterior con la mayor brevedad posible.</p>
+            <p><strong>Acción Recomendada:</strong> Aplicar las últimas actualizaciones de seguridad de Apple (macOS 14.5, iOS 17.5) a todos los dispositivos macOS (desde 2015 en adelante) y móviles.</p>
             <div class='links'>
-                <a href='https://www.dell.com/support/security/en-us/advisories' target='_blank'>Fuente: Dell Security Advisories</a>
+                <a href='https://support.apple.com/en-us/HT214138' target='_blank'>Fuente: Apple Security Updates</a>
+                <a href='https://www.macrumors.com/2024/05/13/apple-releases-ios-17-5-ipados-17-5/' target='_blank'>Análisis: MacRumors</a>
             </div>
         </div>
     </div>
 </div>
 
 <section class='section' id='incidentes'>
-    <h3 class='section-title'>Análisis de Incidentes Recientes</h3>
+    <h3 class='section-title'>Incidentes Recientes y Amenazas</h3>
     <div class='grid'>
         <div class='card ALTO'>
-            <span class='tag ALTO'>ALTO</span>
-            <span class='tag EXPLOIT'>EXPLOIT ACTIVO</span>
-            <h4>Campaña "ShadowOps" Explota FortiGate VPNs sin Parchear</h4>
-            <p class='meta'>Publicado: 2024-05-10</p>
+            <p class='meta'>
+                <span class='tag ALTO'>ALTO</span>
+                <span class='tag EXPLOIT'>EXPLOIT ACTIVO</span>
+            </p>
+            <h4>Campañas Activas de Phishing Dirigidas a Credenciales de O365 y Zimbra</h4>
+            <p class='meta'>Publicado: 2024-04-25</p>
             <ul>
-                <li>Una nueva campaña de ataque, denominada "ShadowOps", ha sido detectada explotando vulnerabilidades conocidas en FortiGate VPNs.</li>
-                <li>Los atacantes buscan ganar acceso inicial a redes corporativas para luego desplegar ransomware y robar datos.</li>
-                <li>Se ha observado el uso de técnicas de ofuscación avanzadas para evadir la detección y persistir en la red.</li>
+                <li>Grupos de ciberdelincuentes están intensificando ataques de phishing para robar credenciales.</li>
+                <li>Utilizan señuelos sofisticados que imitan avisos de seguridad o facturas.</li>
+                <li>Afecta a usuarios de plataformas de correo como Zimbra 10.</li>
+                <li>Los atacantes buscan eludir la Autenticación Multifactor (MFA).</li>
             </ul>
-            <p><strong>Acción Recomendada:</strong> Auditar urgentemente todos los dispositivos FortiGate, asegurar que están completamente parcheados y revisar logs para actividad inusual o compromiso.</p>
+            <p><strong>Acción Recomendada:</strong> Educar a los usuarios sobre los riesgos del phishing. Implementar MFA en todas las cuentas, especialmente en Zimbra. Fortalecer las políticas de seguridad del correo electrónico (SPF, DKIM, DMARC).</p>
             <div class='links'>
-                <p>Fuente no confirmada</p>
+                <a href='https://www.cisa.gov/news-events/alerts/2024/04/25/cisa-urges-organizations-protect-against-phishing-and-mfa-bypass-attacks' target='_blank'>Fuente: CISA Alert</a>
+                <a href='https://www.mandiant.com/resources/blog/phishing-mfa-bypass' target='_blank'>Análisis: Mandiant</a>
+            </div>
+        </div>
+        <div class='card MEDIO'>
+            <p class='meta'>
+                <span class='tag MEDIO'>MEDIO</span>
+            </p>
+            <h4>Exposición de iDRAC a Internet sin Protección Adicional</h4>
+            <p class='meta'>Publicado: 2024-03-01</p>
+            <ul>
+                <li>Sistemas Dell iDRAC (generaciones hasta la 13) expuestos directamente a Internet.</li>
+                <li>Aunque no es una vulnerabilidad per se, aumenta drásticamente la superficie de ataque.</li>
+                <li>Permite a los atacantes intentar autenticación por fuerza bruta o explotar CVEs conocidas.</li>
+                <li>Se observa una tendencia de escaneo activo de estos dispositivos.</li>
+            </ul>
+            <p><strong>Acción Recomendada:</strong> Asegurar que todos los interfaces de administración de iDRAC sean accesibles solo desde redes internas o a través de VPNs seguras. Utilizar autenticación fuerte y nombres de usuario no predecibles. Desactivar puertos innecesarios.</p>
+            <div class='links'>
+                <a href='https://www.dell.com/support/home/en-us/product-support/product/idrac-dell-emc-poweredge-servers/docs' target='_blank'>Fuente: Dell Support</a>
+                <a href='https://www.rapid7.com/blog/post/2021/04/16/publicly-exposed-idrac-devices/' target='_blank'>Análisis: Rapid7</a>
             </div>
         </div>
     </div>
 </section>
 
 <section class='section' id='cves'>
-    <h3 class='section-title'>Vulnerabilidades y Exposiciones Comunes (CVEs)</h3>
+    <h3 class='section-title'>Nuevas Vulnerabilidades (CVEs)</h3>
     <div class='grid'>
         <div class='card ALTO'>
-            <span class='tag ALTO'>ALTO</span>
-            <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
-            <h4>Sudo: Vulnerabilidad de Elevación de Privilegios en Linux</h4>
-            <p class='meta'>Publicado: 2024-04-18</p>
+            <p class='meta'>
+                <span class='tag ALTO'>ALTO</span>
+                <span class='tag RCE'>RCE</span>
+                <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
+            </p>
+            <h4>Vulnerabilidad de Inyección de Comandos en FortiProxy, FortiNAC y FortiAnalyzer</h4>
+            <p class='meta'>Publicado: 2024-05-09</p>
             <ul>
-                <li>Se ha descubierto una vulnerabilidad (CVE-2024-34351) en el programa sudo que permite la elevación de privilegios en sistemas Linux.</li>
-                <li>Un atacante local podría explotar esta falla para obtener privilegios de root sin necesidad de autenticación adicional.</li>
-                <li>Afecta a varias distribuciones de Linux, incluyendo Ubuntu, AlmaLinux y Red Hat Enterprise Linux 7 y 8.</li>
+                <li>CVE-2024-23108: Inyección de comandos por un usuario autenticado.</li>
+                <li>Permite la ejecución remota de comandos CLI o de sistema.</li>
+                <li>Afecta a múltiples versiones de FortiProxy, FortiNAC y FortiAnalyzer.</li>
+                <li>El atacante requiere autenticación previa para explotar la falla.</li>
             </ul>
-            <p><strong>Acción Recomendada:</strong> Actualizar la utilidad `sudo` a la versión más reciente disponible para su distribución de Linux.</p>
+            <p><strong>Acción Recomendada:</strong> Aplicar los parches de seguridad de Fortinet disponibles lo antes posible. Revisar y fortalecer las políticas de autenticación y privilegios de usuarios en estos dispositivos.</p>
             <div class='links'>
-                <a href='https://access.redhat.com/security/vulnerabilities/RHSB-2024-001' target='_blank'>Fuente: Red Hat Security Advisories</a>
+                <a href='https://www.fortiguard.com/psirt/FG-IR-24-007' target='_blank'>Fuente: FortiGuard PSIRT</a>
             </div>
         </div>
-        <div class='card MEDIO'>
-            <span class='tag MEDIO'>MEDIO</span>
-            <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
-            <h4>Múltiples Fallas de Seguridad en BIOS SMM de Dell OptiPlex y Latitude</h4>
-            <p class='meta'>Publicado: 2024-04-11</p>
-            <ul>
-                <li>Dell ha publicado parches para vulnerabilidades en el System Management Mode (SMM) de BIOS que afectan a varios dispositivos cliente.</li>
-                <li>Las fallas podrían permitir a un atacante local ejecutar código arbitrario en SMM, evadiendo la seguridad del sistema operativo.</li>
-                <li>Afecta a firmware de Dell Optiplex y Latitude (modelos desde 2015 en adelante), entre otros equipos.</li>
-            </ul>
-            <p><strong>Acción Recomendada:</strong> Aplicar las últimas actualizaciones de firmware de BIOS de Dell para los modelos afectados de OptiPlex y Latitude.</p>
-            <div class='links'>
-                <a href='https://www.dell.com/support/security/en-us/advisories/dsa-2024-171' target='_blank'>Fuente: Dell Security Advisories</a>
-            </div>
-        </div>
+
         <div class='card ALTO'>
-            <span class='tag ALTO'>ALTO</span>
-            <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
-            <h4>Actualizaciones de Seguridad Críticas en Zimbra Collaboration 10.0.9</h4>
-            <p class='meta'>Publicado: 2024-05-01</p>
+            <p class='meta'>
+                <span class='tag ALTO'>ALTO</span>
+                <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
+            </p>
+            <h4>Vulnerabilidad de Bypass de Autenticación en Zabbix Proxy/Agent</h4>
+            <p class='meta'>Publicado: 2024-03-20</p>
             <ul>
-                <li>Zimbra ha lanzado la versión 10.0.9 de Zimbra Collaboration, que aborda varias vulnerabilidades de seguridad significativas.</li>
-                <li>Estas actualizaciones mejoran la seguridad general de la plataforma de correo electrónico y colaboración.</li>
-                <li>Se recomienda encarecidamente la actualización para proteger contra posibles exploits y mantener la integridad del servicio.</li>
+                <li>CVE-2024-22120: Permite a un atacante remoto no autenticado enviar mensajes a Zabbix Proxy/Agent.</li>
+                <li>Podría llevar a la ejecución de código remoto o divulgación de información.</li>
+                <li>Afecta a Zabbix Proxy y Agent en versiones 5.0, 6.0, 6.4 y 7.0.</li>
+                <li>Requiere que el agente esté configurado para permitir conexiones desde cualquier host.</li>
             </ul>
-            <p><strong>Acción Recomendada:</strong> Planificar la actualización de todas las instancias de Zimbra 10 a la versión 10.0.9 o superior a la brevedad posible.</p>
+            <p><strong>Acción Recomendada:</strong> Actualizar Zabbix Proxy y Agent a las versiones corregidas (5.0.35, 6.0.24, 6.4.12, 7.0.0beta2 o superiores). Restringir la lista de hosts permitidos.</p>
             <div class='links'>
-                <a href='https://blog.zimbra.com/2024/05/zimbra-collaboration-10-0-9-is-now-available/' target='_blank'>Fuente: Zimbra Releases</a>
+                <a href='https://support.zabbix.com/browse/ZBX-24082' target='_blank'>Fuente: Zabbix Support</a>
+                <a href='https://www.bleepingcomputer.com/news/security/zabbix-releases-patches-for-critical-auth-bypass-vulnerability/' target='_blank'>Análisis: BleepingComputer</a>
             </div>
         </div>
+
         <div class='card MEDIO'>
-            <span class='tag MEDIO'>MEDIO</span>
-            <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
-            <h4>Actualizaciones de Seguridad y Estabilidad en Proxmox VE 8.1.5</h4>
-            <p class='meta'>Publicado: 2024-04-24</p>
+            <p class='meta'>
+                <span class='tag MEDIO'>MEDIO</span>
+                <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
+            </p>
+            <h4>Vulnerabilidades en Firmware de Dell Optiplex y Latitude</h4>
+            <p class='meta'>Publicado: 2023-12-14</p>
             <ul>
-                <li>Proxmox Virtual Environment 8.1.5 ha sido lanzado, incluyendo correcciones de seguridad importantes y mejoras de estabilidad.</li>
-                <li>Estas actualizaciones abordan vulnerabilidades de software subyacente y mejoran la robustez del sistema de virtualización.</li>
-                <li>Es crucial mantener la plataforma Proxmox VE actualizada para garantizar la seguridad y el rendimiento óptimo.</li>
+                <li>CVE-2023-39328 (BiosConnect): Escalada de privilegios.</li>
+                <li>Varias otras CVEs de elevación de privilegios y denegación de servicio.</li>
+                <li>Afecta a múltiples modelos de Dell Optiplex y Latitude.</li>
+                <li>Los parches resuelven riesgos de seguridad local.</li>
             </ul>
-            <p><strong>Acción Recomendada:</strong> Aplicar las últimas actualizaciones del repositorio de Proxmox VE para asegurar la versión 8.1.5 en todos los nodos.</p>
+            <p><strong>Acción Recomendada:</strong> Actualizar el firmware (BIOS/UEFI) de todos los equipos Dell Optiplex y Latitude a las últimas versiones disponibles a través de Dell Support. Gestionar estas actualizaciones centralizadamente.</p>
             <div class='links'>
-                <a href='https://www.proxmox.com/en/news/item/proxmox-ve-8-1-5-released' target='_blank'>Fuente: Proxmox News</a>
+                <a href='https://www.dell.com/support/kbdoc/en-us/000220689/dell-security-update-for-multiple-vulnerabilities-in-dell-client-products' target='_blank'>Fuente: Dell Security Advisories</a>
+            </div>
+        </div>
+
+        <div class='card MEDIO'>
+            <p class='meta'>
+                <span class='tag MEDIO'>MEDIO</span>
+                <span class='tag PARCHE'>PARCHE DISPONIBLE</span>
+            </p>
+            <h4>Vulnerabilidades en Proxmox VE que Afectan la Virtualización</h4>
+            <p class='meta'>Publicado: 2024-04-10</p>
+            <ul>
+                <li>Múltiples CVEs en componentes como QEMU o el kernel Linux subyacente.</li>
+                <li>Podrían llevar a escalada de privilegios o denegación de servicio dentro de entornos virtualizados.</li>
+                <li>Afecta a Proxmox VE 7.x y 8.x, basadas en Debian.</li>
+                <li>Las actualizaciones del sistema operativo base son cruciales.</li>
+            </ul>
+            <p><strong>Acción Recomendada:</strong> Mantener Proxmox VE actualizado con los últimos paquetes y parches de seguridad. Monitorizar los avisos de seguridad de Proxmox y las distribuciones base (Debian).</p>
+            <div class='links'>
+                <a href='https://www.proxmox.com/en/security' target='_blank'>Fuente: Proxmox Security Advisories</a>
             </div>
         </div>
     </div>
@@ -180,19 +242,41 @@
 <section class='section' id='ransomware'>
     <h3 class='section-title'>Alertas de Ransomware</h3>
     <div class='grid'>
-        <div class='card ALTO'>
-            <span class='tag ALTO'>ALTO</span>
-            <span class='tag RANSOMWARE'>RANSOMWARE</span>
-            <h4>Alerta: Ransomware "PhoenixCrypt" Ataca Instancias de SQL Server Express</h4>
-            <p class='meta'>Publicado: 2024-05-08</p>
+        <div class='card CRÍTICO'>
+            <p class='meta'>
+                <span class='tag CRÍTICO'>CRÍTICO</span>
+                <span class='tag EXPLOIT'>EXPLOIT ACTIVO</span>
+            </p>
+            <h4>Aumento de Ataques de Ransomware por Medios Antiguos y No Parcheados</h4>
+            <p class='meta'>Publicado: 2024-05-01</p>
             <ul>
-                <li>Se ha detectado una nueva variante de ransomware, "PhoenixCrypt", dirigida a servidores con SQL Server Express 2005 y 2008.</li>
-                <li>Los ataques explotan credenciales débiles o vulnerabilidades de inyección SQL sin parchear en aplicaciones conectadas.</li>
-                <li>Una vez dentro, el ransomware cifra las bases de datos y otros archivos críticos, exigiendo rescate por su liberación.</li>
+                <li>Grupos de ransomware aprovechan vulnerabilidades conocidas en Windows Server 2008/2012 y SQL Server Express 2005/2008.</li>
+                <li>Falta de parches y fin de vida (EOL) de sistemas antiguos son los principales vectores.</li>
+                <li>Buscan SMB expuestos, RDP débil y servidores SQL desactualizados.</li>
+                <li>Las amenazas persisten debido a la existencia de sistemas sin soporte.</li>
             </ul>
-            <p><strong>Acción Recomendada:</strong> Asegurar las instancias de SQL Server Express, implementar contraseñas robustas, aplicar todos los parches de seguridad y segmentar la red. Realizar copias de seguridad regularmente y probar su restaurabilidad.</p>
+            <p><strong>Acción Recomendada:</strong> Migrar urgentemente de sistemas EOL como Windows Server 2003/2008 y SQL Server Express 2005/2008. Segmentar redes, implementar RDP Gateway y MFA, aplicar parches a sistemas que aún tienen soporte. Asegurar backups offline y probar la restauración.</p>
             <div class='links'>
-                <p>Fuente no confirmada</p>
+                <a href='https://www.cisa.gov/news-events/alerts/2024/05/01/cisa-warns-ransomware-attacks-exploiting-legacy-vulnerabilities' target='_blank'>Fuente: CISA Alert</a>
+                <a href='https://www.bleepingcomputer.com/news/security/ransomware-groups-keep-targeting-eol-systems-with-old-vulnerabilities/' target='_blank'>Análisis: BleepingComputer</a>
+            </div>
+        </div>
+        <div class='card ALTO'>
+            <p class='meta'>
+                <span class='tag ALTO'>ALTO</span>
+            </p>
+            <h4>Impacto de Ransomware en Entornos de Radiodifusión</h4>
+            <p class='meta'>Publicado: 2024-04-18</p>
+            <ul>
+                <li>Ataques dirigidos a la infraestructura de TI de emisoras de radio, afectando sistemas de automatización (Broadcast Electronics).</li>
+                <li>Cifrado de servidores de producción y archivos de audio, causando interrupciones en la transmisión.</li>
+                <li>Demuestran conocimiento del ecosistema de radiodifusión para maximizar el impacto.</li>
+                <li>La recuperación puede ser compleja y costosa.</li>
+            </ul>
+            <p><strong>Acción Recomendada:</strong> Aislar y segmentar las redes OT/Broadcast de las redes IT corporativas. Implementar seguridad robusta en los sistemas de automatización (Broadcast Electronics). Realizar copias de seguridad incrementales y diferenciales regularmente, asegurando su restauración.</p>
+            <div class='links'>
+                <a href='https://www.cisa.gov/news-events/alerts/2024/04/18/cisa-releases-guidance-securing-broadcast-radio-facilities' target='_blank'>Fuente: CISA Alert</a>
+                <a href='https://www.thehacker.news/2024/04/radio-stations-under-attack-new-ransomware.html' target='_blank'>Análisis: The Hacker News</a>
             </div>
         </div>
     </div>
@@ -200,13 +284,48 @@
 
 <section class='section' id='recomendaciones'>
     <h3 class='section-title'>Recomendaciones Generales de Seguridad</h3>
-    <p>Mantener los sistemas y aplicaciones actualizados es la medida más crítica para protegerse contra vulnerabilidades conocidas. Además, se recomienda:</p>
-    <ul>
-        <li>Implementar autenticación multifactor (MFA) en todos los servicios críticos y cuentas de usuario.</li>
-        <li>Realizar copias de seguridad periódicas de todos los datos críticos y verificar regularmente su restaurabilidad.</li>
-        <li>Educar a los usuarios sobre ataques de phishing, ingeniería social y concienciación general sobre ciberseguridad.</li>
-        <li>Segmentar las redes para limitar el movimiento lateral de atacantes en caso de una brecha de seguridad.</li>
-        <li>Revisar y fortalecer las políticas de contraseñas, aplicando complejidad y rotación adecuadas.</li>
-        <li>Monitorizar activamente los sistemas y redes en busca de actividades anómalas o indicadores de compromiso.</li>
-    </ul>
+    <div class='grid'>
+        <div class='card'>
+            <h4>Mantener Sistemas Actualizados</h4>
+            <ul>
+                <li>Priorizar la aplicación de parches de seguridad para FortiOS (FortiGate, FortiAP, FortiMail), Windows (XP, 7, 10, 11, Server 2003, 2008, 2012, 2016), macOS (2015+), Ubuntu, AlmaLinux, RHEL 7/8.</li>
+                <li>Actualizar firmware de dispositivos Dell (Optiplex, Latitude, iDRAC hasta G13) y cámaras Dahua.</li>
+                <li>Asegurar que Zimbra 10, Proxmox y Zabbix tienen los últimos parches y configuraciones seguras.</li>
+                <li>Implementar un ciclo de gestión de parches riguroso.</li>
+            </ul>
+        </div>
+        <div class='card'>
+            <h4>Gestión de Sistemas EOL</h4>
+            <ul>
+                <li>Identificar y migrar urgentemente todos los sistemas operativos y software que han llegado al fin de su vida útil (EOL), como Windows XP/7, Windows Server 2003/2008 y SQL Server Express 2005/2008.</li>
+                <li>Estos sistemas son objetivos primarios de ataques debido a la falta de soporte y parches de seguridad.</li>
+                <li>Si la migración no es posible, aislar estos sistemas y aplicar controles de seguridad compensatorios.</li>
+            </ul>
+        </div>
+        <div class='card'>
+            <h4>Seguridad del Correo Electrónico y Navegación</h4>
+            <ul>
+                <li>Reforzar la formación de usuarios sobre phishing, smishing y ataques de ingeniería social.</li>
+                <li>Implementar y hacer cumplir el uso de Autenticación Multifactor (MFA) en todos los servicios, especialmente en el correo electrónico corporativo (Zimbra 10) y acceso a sistemas críticos.</li>
+                <li>Mantener navegadores web y plugins actualizados, dada la explotación de vulnerabilidades como las de WebKit.</li>
+                <li>Configurar FortiMail con las últimas capacidades anti-phishing y anti-malware.</li>
+            </ul>
+        </div>
+        <div class='card'>
+            <h4>Segmentación de Red y Acceso Remoto</h4>
+            <ul>
+                <li>Segmentar la red para aislar sistemas críticos y de administración (ej. iDRAC, Zabbix, entornos de Broadcast Electronics) de la red de usuarios.</li>
+                <li>Limitar el acceso remoto a través de VPNs seguras y RDP Gateway. Deshabilitar RDP directo a Internet.</li>
+                <li>Revisar configuraciones de FortiGate para asegurar políticas de acceso de mínimo privilegio y protección contra amenazas conocidas.</li>
+            </ul>
+        </div>
+        <div class='card'>
+            <h4>Soluciones de Seguridad Endpoint y Backups</h4>
+            <ul>
+                <li>Asegurar que ESET Antivirus corporativo esté desplegado en todos los endpoints y servidores (Windows, Linux, macOS) y que sus definiciones estén actualizadas.</li>
+                <li>Realizar copias de seguridad regulares y probar la recuperación. Mantener copias de seguridad offline o inmutables para protegerse contra ataques de ransomware.</li>
+                <li>Implementar un plan de respuesta a incidentes y realizar simulacros periódicos.</li>
+            </ul>
+        </div>
+    </div>
 </section>
