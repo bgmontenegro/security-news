@@ -38,7 +38,7 @@ jobs:
                     <h3>Boletín del $FECHA</h3>
                     <p class='meta'>Archivo: $b</p>
                     <div class='links'>
-                      <a href='$b'>Abrir boletín</a>
+                      <a href='../../index.html?historico=$FECHA'>Abrir boletín</a>
                     </div>
                   </div>" >> content/historico/index.html
           done
