@@ -70,6 +70,18 @@
         const top = tmp.querySelector(".top");
         document.getElementById("top").innerHTML = top ? top.outerHTML : "";
 
+        if (historico) {
+          const aviso = document.createElement("div");
+          aviso.className = "top";
+          aviso.innerHTML = `
+            <p class="meta">
+              📜 Estás viendo un boletín histórico (${historico})
+              · <a href="index.html" style="color:#60a5fa;text-decoration:none;">Volver al boletín actual</a>
+            </p>
+          `;
+          document.getElementById("top").appendChild(aviso);
+        }
+
         const contenido = document.getElementById("contenido");
         contenido.innerHTML = "";
         tmp.querySelectorAll(".section").forEach(sec => contenido.appendChild(sec));
