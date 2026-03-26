@@ -16,25 +16,10 @@ jobs:
 
       - name: Generar boletin con Gemini
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          API_TOKEN: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          PROMPT="Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML. NO incluyas <!DOCTYPE>, <html>, <head>, <body> ni <style>. Usa únicamente estas clases CSS: section, section-title, grid, card, meta, links, tag, top. El bloque inicial debe ser <div class='top'> con título y fecha, y la fecha debe ir como <p class='meta'>Fecha: YYYY-MM-DD</p>. Prioriza exclusivamente información relacionada con estos productos y entornos: Fortinet (FortiOS, FortiGate, FortiAP, FortiMail), Proxmox, Dell iDRAC hasta generación 13, firmware de Dell Optiplex y Latitude, Windows XP, 7, 10 y 11, Windows Server 2003, 2008, 2012 y 2016, SQL Server Express 2005 y 2008, ESET Antivirus corporativo, Broadcast Electronics (equipos FM y automatización de radio), macOS desde 2015 en adelante, cámaras Dahua, Zabbix, Ubuntu, AlmaLinux, Red Hat Enterprise Linux 7 y 8, Zimbra 10. Ignora cualquier otro producto o tecnología. Prioriza eventos publicados o actualizados en los últimos 30 días; solo incluye eventos más antiguos si siguen teniendo explotación activa conocida y especifica claramente la fecha de publicación. El Resumen Ejecutivo NO debe ser texto: debe ser un <div class='section' id='resumen'> que contenga un <h3 class='section-title'>Resumen Ejecutivo</h3> y un <div class='grid'> con exactamente cinco tarjetas <div class='card'> con los eventos más críticos del día, priorizando exploits activos, RCE y vulnerabilidades con parche disponible. Las secciones posteriores deben ser <section class='section' id='incidentes'>, <section class='section' id='cves'>, <section class='section' id='ransomware'> y <section class='section' id='recomendaciones'>, cada una con <h3 class='section-title'>. Incidentes, CVEs y Ransomware deben usar <div class='grid'> con tarjetas <div class='card'>. La clase de cada tarjeta debe incluir la severidad correspondiente (por ejemplo: <div class='card CRÍTICO'>, <div class='card ALTO'> o <div class='card MEDIO'>). Cada tarjeta (en todas las secciones) debe incluir: título claro, entre dos y cuatro puntos clave, etiquetas al inicio usando <span class='tag CRÍTICO'>CRÍTICO</span> o <span class='tag ALTO'>ALTO</span> o <span class='tag MEDIO'>MEDIO</span> y, si aplica, <span class='tag RCE'>RCE</span>, <span class='tag EXPLOIT'>EXPLOIT ACTIVO</span>, <span class='tag PARCHE'>PARCHE DISPONIBLE</span>; luego un bloque <p class='meta'>Publicado: YYYY-MM-DD</p> con la fecha real de publicación o actualización; luego la lista de puntos clave; y finalmente la acción recomendada. Incluye un bloque <div class='links'>. Dentro de <div class='links'> incluye primero una fuente oficial como vendor, NVD, CERT o CISA y, solo si existe, un segundo enlace opcional a análisis o cobertura técnica de medios reconocidos como BleepingComputer, The Hacker News, Krebs on Security, Mandiant, Talos, Rapid7 o Unit42. No inventes fuentes. Si no existe una fuente confiable, escribe 'Fuente no confirmada' sin enlace. No uses markdown. No uses bloques de código. Devuelve únicamente el FRAGMENTO HTML."
-          RESPUESTA=$(curl -s -X POST \
-            -H "Content-Type: application/json" \
-            -H "x-goog-api-key: $GEMINI_API_KEY" \
-            -d "{\"contents\":[{\"parts\":[{\"text\":\"$PROMPT\"}]}]}" \
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent")
-
-          mkdir -p content
-          echo "${RESPUESTA:-EMPTY_RESPONSE}" > content/raw.json
-
-          TEXTO=$(echo "$RESPUESTA" | jq -r '.candidates[0].content.parts[0].text // empty')
-
-          if [ -z "$TEXTO" ]; then
-            echo "<div class='card'><h2>Boletín no disponible</h2><p>Gemini no devolvió contenido válido.</p></div>" > content/boletin.html
-          else
-            echo "$TEXTO" > content/boletin.html
-          fi
+          pip install requests
+          python generar_boletin.py
 
       - name: Commit
         run: |
