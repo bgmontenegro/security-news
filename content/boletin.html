@@ -1,215 +1,300 @@
 <div class='top'>
-  <h1>Boletín Ejecutivo de Ciberseguridad</h1>
-  <p>Fecha: 22 de Octubre de 2023</p>
+    <h3>Boletín Ejecutivo de Ciberseguridad</h3>
+    <p>Fecha: 15 de Diciembre de 2023</p>
 </div>
 
-<h2>Resumen Ejecutivo</h2>
-<div class='grid'>
-  <div class='card'>
-    <div class='meta'>
-      <p><strong>Producto:</strong> FortiGate (FortiOS)</p>
-      <p><strong>Evento:</strong> CVE Crítica - Explotación Activa</p>
-      <p><strong>Impacto:</strong> <span class='tag'>CRÍTICO</span></p>
+<section class='section'>
+    <h3 class='section-title'>Resumen Ejecutivo</h3>
+    <div class='grid'>
+        <div class='card'>
+            <h4>FortiOS: Vulnerabilidad Crítica de Ejecución Remota de Código</h4>
+            <div class='meta'>
+                <span><strong>Producto Afectado:</strong> FortiOS, FortiGate</span>
+                <span><strong>Tipo de Evento:</strong> CVE (Explotación activa)</span>
+                <span><strong>Nivel de Impacto:</strong> CRÍTICO</span>
+            </div>
+            <p><strong>Acción Recomendada Inmediata:</strong> Identificar y aplicar parches disponibles a la mayor brevedad. Desactivar interfaces de administración expuestas a internet que no sean estrictamente necesarias.</p>
+            <div class='links'>
+                <a href='https://www.fortiguard.com/psirt'>FortiGuard PSIRT Advisories</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Zimbra 10: Múltiples Vulnerabilidades Explotadas en Campañas Activas</h4>
+            <div class='meta'>
+                <span><strong>Producto Afectado:</strong> Zimbra Collaboration Suite 10</span>
+                <span><strong>Tipo de Evento:</strong> Explotación activa, CVEs</span>
+                <span><strong>Nivel de Impacto:</strong> CRÍTICO</span>
+            </div>
+            <p><strong>Acción Recomendada Inmediata:</strong> Aplicar urgentemente las actualizaciones de seguridad disponibles y revisar logs en busca de actividad sospechosa. Aislar servidores Zimbra no parcheados.</p>
+            <div class='links'>
+                <a href='https://blog.zimbra.com/category/security-advisories/'>Zimbra Security Blog</a>
+                <a href='https://www.bleepingcomputer.com/news/security/'>BleepingComputer (Zimbra)</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Windows Server 2012/2016: Actualizaciones Críticas de Seguridad</h4>
+            <div class='meta'>
+                <span><strong>Producto Afectado:</strong> Windows Server 2012, 2016</span>
+                <span><strong>Tipo de Evento:</strong> Actualización de Seguridad (Patch Tuesday)</span>
+                <span><strong>Nivel de Impacto:</strong> ALTO</span>
+            </div>
+            <p><strong>Acción Recomendada Inmediata:</strong> Programar e instalar las últimas actualizaciones acumulativas para abordar vulnerabilidades de elevación de privilegios y ejecución remota de código.</p>
+            <div class='links'>
+                <a href='https://msrc.microsoft.com/update-guide/'>Microsoft Security Update Guide</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Dell iDRAC (Gen. 13 y Anteriores): Actualización de Firmware Urgente</h4>
+            <div class='meta'>
+                <span><strong>Producto Afectado:</strong> Dell iDRAC Service Module hasta Gen 13</span>
+                <span><strong>Tipo de Evento:</strong> Actualización de Firmware, CVE</span>
+                <span><strong>Nivel de Impacto:</strong> ALTO</span>
+            </div>
+            <p><strong>Acción Recomendada Inmediata:</strong> Descargar y aplicar la última versión de firmware para iDRAC. Restringir el acceso a la interfaz de administración únicamente a redes de gestión seguras o VPN.</p>
+            <div class='links'>
+                <a href='https://www.dell.com/support/security/en-us/idrac-vulnerabilities'>Dell Security Advisories</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Cámaras Dahua: Riesgo por Credenciales Débiles y Explotación Activa</h4>
+            <div class='meta'>
+                <span><strong>Producto Afectado:</strong> Cámaras de Seguridad Dahua</span>
+                <span><strong>Tipo de Evento:</strong> Explotación Activa, Configuraciones Inseguras</span>
+                <span><strong>Nivel de Impacto:</strong> ALTO</span>
+            </div>
+            <p><strong>Acción Recomendada Inmediata:</strong> Cambiar todas las credenciales por defecto, actualizar firmware y segmentar la red donde operan las cámaras para aislar su acceso a Internet.</p>
+            <div class='links'>
+                <a href='https://www.dahua.com/es/security-center'>Dahua Security Center</a>
+                <a href='https://www.cisa.gov/uscert/ics/advisories'>CISA ICS Advisories (Buscar Dahua)</a>
+            </div>
+        </div>
     </div>
-    <p><strong>Acción Inmediata:</strong> Actualizar FortiOS a la última versión parcheada (ej. 7.4.2, 7.2.6, 7.0.13) o aplicar mitigaciones temporales provistas por Fortinet.</p>
-    <div class='links'>
-      <a href='https://www.fortiguard.com/psirt/FG-IR-23-XXX'>FortiGuard PSIRT Advisory</a>
-    </div>
-  </div>
-
-  <div class='card'>
-    <div class='meta'>
-      <p><strong>Producto:</strong> Windows Server 2012, 2016</p>
-      <p><strong>Evento:</strong> Explotación Zero-day (Advisory)</p>
-      <p><strong>Impacto:</strong> <span class='tag'>ALTO</span></p>
-    </div>
-    <p><strong>Acción Inmediata:</strong> Monitorear actividad anómala en DCs y servidores miembros. Implementar segmentación de red y preparar aplicación de parches de emergencia.</p>
-    <div class='links'>
-      <a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-XXXX'>Microsoft MSRC Advisory</a>
-      <a href='https://www.cisa.gov/news-events/alerts/2023/alert-XXXX'>CISA Alert</a>
-    </div>
-  </div>
-
-  <div class='card'>
-    <div class='meta'>
-      <p><strong>Producto:</strong> Proxmox Virtual Environment</p>
-      <p><strong>Evento:</strong> Actualización de Seguridad Crítica</p>
-      <p><strong>Impacto:</strong> <span class='tag'>ALTO</span></p>
-    </div>
-    <p><strong>Acción Inmediata:</strong> Aplicar las últimas actualizaciones de seguridad disponibles para Proxmox VE para corregir vulnerabilidades de escalada de privilegios y DoS.</p>
-    <div class='links'>
-      <a href='https://www.proxmox.com/en/security/security-advisories'>Proxmox Security Advisory</a>
-    </div>
-  </div>
-
-  <div class='card'>
-    <div class='meta'>
-      <p><strong>Producto:</strong> Dell PowerEdge iDRAC (Gen 13 y anteriores)</p>
-      <p><strong>Evento:</strong> CVE de Autenticación Bypass</p>
-      <p><strong>Impacto:</strong> <span class='tag'>ALTO</span></p>
-    </div>
-    <p><strong>Acción Inmediata:</strong> Actualizar el firmware de iDRAC a la versión recomendada por Dell. Restringir el acceso a la interfaz de administración de iDRAC.</p>
-    <div class='links'>
-      <a href='https://www.dell.com/support/kb/en-us/000XXXX'>Dell Support KB Article</a>
-    </div>
-  </div>
-
-  <div class='card'>
-    <div class='meta'>
-      <p><strong>Producto:</strong> Zabbix (múltiples versiones)</p>
-      <p><strong>Evento:</strong> CVE de Autenticación Bypass</p>
-      <p><strong>Impacto:</strong> <span class='tag'>CRÍTICO</span></p>
-    </div>
-    <p><strong>Acción Inmediata:</strong> Actualizar el servidor Zabbix a la versión parcheada. Revisar logs en busca de accesos no autorizados si la interfaz está expuesta a la red pública.</p>
-    <div class='links'>
-      <a href='https://www.zabbix.com/life_cycle_and_release_policy'>Zabbix Security Advisory</a>
-      <a href='https://nvd.nist.gov/vuln/detail/CVE-2023-YYYY'>NVD - CVE-2023-YYYY</a>
-    </div>
-  </div>
-</div>
+</section>
 
 <section class='section' id='incidentes'>
-  <h3 class='section-title'>Incidentes Recientes</h3>
-  <div class='grid'>
-    <div class='card'>
-      <h4>Compromiso de Perímetros con FortiGate No Parcheado</h4>
-      <ul>
-        <li>Múltiples incidentes donde atacantes explotaron una vulnerabilidad crítica de RCE en FortiOS para obtener acceso inicial a redes corporativas.</li>
-        <li>La explotación ha llevado a la instalación de backdoors y movimientos laterales dentro de las organizaciones afectadas.</li>
-        <li><strong>Productos Afectados:</strong> FortiGate con versiones vulnerables de FortiOS (especialmente 6.x y 7.0.x no parcheadas).</li>
-      </ul>
-      <p><strong>Severidad:</strong> <span class='tag'>CRÍTICO</span></p>
-      <p><strong>Acción Recomendada:</strong> Revisar los logs de FortiGate en busca de actividad sospechosa. Aislar y parchear inmediatamente los dispositivos FortiGate vulnerables.</p>
-      <div class='links'>
-        <a href='https://www.fortiguard.com/psirt/FG-IR-23-XXX-update'>FortiGuard PSIRT Update</a>
-        <a href='https://www.cisa.gov/news-events/alerts/2023/alert-Fortinet'>CISA Alert on Fortinet Exploitation</a>
-      </div>
+    <h3 class='section-title'>Incidentes Destacados</h3>
+    <div class='grid'>
+        <div class='card'>
+            <h4>Compromiso de Redes a través de Vulnerabilidades en FortiGate</h4>
+            <ul>
+                <li>Se observan campañas de explotación activa contra dispositivos FortiGate y FortiMail, utilizando vulnerabilidades recientes de ejecución remota de código.</li>
+                <li>Los atacantes buscan acceso inicial a la red para despliegue de ransomware o exfiltración de datos sensibles.</li>
+                <li>Afecta principalmente a organizaciones que no han aplicado los parches rápidamente a sus dispositivos expuestos.</li>
+            </ul>
+            <span class='tag'>CRÍTICO</span>
+            <p><strong>Acción Recomendada:</strong> Revisar logs de acceso a FortiGate/FortiMail en busca de Indicadores de Compromiso (IoCs) publicados por Fortinet y aplicar los parches más recientes sin demora. Considerar el uso de un WAF.</p>
+            <div class='links'>
+                <a href='https://www.fortiguard.com/psirt'>FortiGuard PSIRT Advisory</a>
+                <a href='https://www.thehacker.news/topics/fortinet'>The Hacker News (Fortinet)</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Ataques a Zabbix con Fines de Acceso a Infraestructura</h4>
+            <ul>
+                <li>Grupos de ciberdelincuentes están aprovechando vulnerabilidades en servidores Zabbix expuestos para obtener un punto de apoyo inicial en las redes de las víctimas.</li>
+                <li>Las vulnerabilidades explotadas incluyen bypass de autenticación y ejecución remota de código, permitiendo a los atacantes controlar el sistema de monitoreo.</li>
+                <li>Se ha detectado el uso de Zabbix comprometido para mapear la red interna y desplegar malware.</li>
+            </ul>
+            <span class='tag'>ALTO</span>
+            <p><strong>Acción Recomendada:</strong> Asegurar que Zabbix esté en la última versión estable. Restringir el acceso a la interfaz web de Zabbix y utilizar autenticación fuerte (MFA) si es posible. Monitorear los accesos anómalos al servidor Zabbix.</p>
+            <div class='links'>
+                <a href='https://www.zabbix.com/security_advisories'>Zabbix Security Advisories</a>
+                <a href='https://www.rapid7.com/blog/search/?q=zabbix'>Rapid7 Blog (Zabbix)</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Explotación de Servidores Windows 2008 y SQL Server 2008 R2</h4>
+            <ul>
+                <li>Persisten los ataques dirigidos a infraestructuras críticas que aún operan con Windows Server 2008 o SQL Server Express 2008.</li>
+                <li>Los atacantes explotan vulnerabilidades conocidas y no parcheadas debido al fin de vida (EOL) del soporte extendido.</li>
+                <li>Resulta en compromiso de datos, inyección de malware y acceso persistente a la red.</li>
+            </ul>
+            <span class='tag'>CRÍTICO</span>
+            <p><strong>Acción Recomendada:</strong> Es IMPERATIVO migrar estos sistemas a versiones soportadas. Si la migración es inviable a corto plazo, aislar estos sistemas y aplicar medidas de compensación como firewalls de aplicación y monitoreo intensivo.</p>
+            <div class='links'>
+                <a href='https://msrc.microsoft.com/update-guide/'>Microsoft Security Update Guide (EOL Products)</a>
+            </div>
+        </div>
     </div>
-
-    <div class='card'>
-      <h4>Explotación de SQL Injection en SQL Server Express 2008</h4>
-      <ul>
-        <li>Varios sitios web y aplicaciones que utilizan SQL Server Express 2008 backend han sido comprometidos a través de ataques de inyección SQL.</li>
-        <li>Los atacantes han logrado exfiltrar bases de datos y en algunos casos, ejecutar comandos remotos.</li>
-        <li><strong>Productos Afectados:</strong> SQL Server Express 2008 R2 (y versiones anteriores) con aplicaciones vulnerables.</li>
-      </ul>
-      <p><strong>Severidad:</strong> <span class='tag'>ALTO</span></p>
-      <p><strong>Acción Recomendada:</strong> Realizar un inventario de todas las instancias de SQL Server Express 2005/2008. Auditar aplicaciones para vulnerabilidades de inyección SQL. Considerar migración urgente a versiones más recientes.</p>
-      <div class='links'>
-        <a href='https://learn.microsoft.com/en-us/sql/sql-server/sql-server-lifecycle-support'>Microsoft SQL Server Lifecycle</a>
-        <a href='https://owasp.org/www-community/attacks/SQL_Injection'>OWASP SQL Injection Guide</a>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class='section' id='cves'>
-  <h3 class='section-title'>Alertas de CVEs Críticas</h3>
-  <div class='grid'>
-    <div class='card'>
-      <h4>CVE-2023-AAAA: RCE Crítica en FortiMail</h4>
-      <ul>
-        <li>Una nueva vulnerabilidad crítica (CVE-2023-AAAA) ha sido descubierta en FortiMail, permitiendo la ejecución remota de código no autenticada.</li>
-        <li>Afecta a múltiples versiones de FortiMail (ej. 7.4.x, 7.2.x, 7.0.x).</li>
-        <li><strong>CVSS:</strong> 9.8 (CRÍTICO)</li>
-      </ul>
-      <p><strong>Severidad:</strong> <span class='tag'>CRÍTICO</span></p>
-      <p><strong>Acción Recomendada:</strong> Actualizar FortiMail a las versiones parcheadas. Revisar los logs en busca de indicadores de compromiso.</p>
-      <div class='links'>
-        <a href='https://www.fortiguard.com/psirt/FG-IR-23-AAAA'>FortiGuard Advisory FG-IR-23-AAAA</a>
-        <a href='https://nvd.nist.gov/vuln/detail/CVE-2023-AAAA'>NVD - CVE-2023-AAAA</a>
-      </div>
+    <h3 class='section-title'>Nuevas Vulnerabilidades (CVEs)</h3>
+    <div class='grid'>
+        <div class='card'>
+            <h4>CVE-2023-XXXXX: Vulnerabilidad de Heap-based Buffer Overflow en FortiOS SSL-VPN</h4>
+            <ul>
+                <li><strong>Detalles:</strong> Una vulnerabilidad crítica de desbordamiento de búfer basado en heap en FortiOS SSL-VPN podría permitir la ejecución remota de código arbitrario.</li>
+                <li><strong>Impacto:</strong> CRÍTICO. Los atacantes no autenticados podrían explotarla remotamente.</li>
+                <li><strong>Versiones Afectadas:</strong> FortiOS 7.2.x, 7.0.x, 6.4.x, 6.2.x y 6.0.x (antes de las versiones parcheadas).</li>
+            </ul>
+            <span class='tag'>CRÍTICO</span>
+            <p><strong>Acción Recomendada:</strong> Actualizar inmediatamente a las versiones parcheadas (ej., 7.2.6, 7.0.13, 6.4.14, 6.2.15, 6.0.17). Deshabilitar o restringir el acceso a SSL-VPN si la actualización no es posible de inmediato.</p>
+            <div class='links'>
+                <a href='https://www.fortiguard.com/psirt'>FortiGuard PSIRT Advisory</a>
+                <a href='https://nvd.nist.gov/vuln/detail/CVE-2023-XXXXX'>NVD - CVE-2023-XXXXX (ejemplo)</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>CVE-2023-YYYYY: Proxmox VE - Vulnerabilidad de Privilegios Locales</h4>
+            <ul>
+                <li><strong>Detalles:</strong> Se ha descubierto una vulnerabilidad de escalada de privilegios local en Proxmox Virtual Environment que permite a usuarios con bajo privilegio obtener acceso de root.</li>
+                <li><strong>Impacto:</strong> ALTO. Un atacante con acceso local al sistema podría comprometer completamente el host de virtualización.</li>
+                <li><strong>Versiones Afectadas:</strong> Proxmox VE 7.x y 8.x (antes de ciertas actualizaciones).</li>
+            </ul>
+            <span class='tag'>ALTO</span>
+            <p><strong>Acción Recomendada:</strong> Aplicar las últimas actualizaciones de Proxmox VE utilizando `apt update && apt dist-upgrade`. Asegurarse de que solo usuarios de confianza tengan acceso a la interfaz de administración.</p>
+            <div class='links'>
+                <a href='https://www.proxmox.com/en/security/security-advisories'>Proxmox Security Advisories</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>CVE-2023-ZZZZZ: Múltiples CVEs en el Kernel Linux (Ubuntu, RHEL, AlmaLinux)</h4>
+            <ul>
+                <li><strong>Detalles:</strong> Numerosas vulnerabilidades han sido corregidas en el kernel Linux que afectan a múltiples distribuciones, incluyendo elevación de privilegios, denegación de servicio y ejecución remota de código en ciertos subsistemas.</li>
+                <li><strong>Impacto:</strong> ALTO/CRÍTICO (dependiendo del CVE específico). Podrían ser explotadas local o remotamente.</li>
+                <li><strong>Versiones Afectadas:</strong> Varios kernels de Ubuntu, RHEL 7/8, AlmaLinux.</li>
+            </ul>
+            <span class='tag'>CRÍTICO</span>
+            <p><strong>Acción Recomendada:</strong> Actualizar urgentemente el kernel y los paquetes relacionados en todos los sistemas Ubuntu, RHEL 7/8 y AlmaLinux. Reiniciar los sistemas para que los cambios surtan efecto.</p>
+            <div class='links'>
+                <a href='https://ubuntu.com/security/notices'>Ubuntu Security Notices</a>
+                <a href='https://access.redhat.com/security/security-updates'>Red Hat Security Updates</a>
+                <a href='https://errata.almalinux.org/'>AlmaLinux Errata</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>CVE-2023-AAAAA: Vulnerabilidad en Zabbix Frontend PHP</h4>
+            <ul>
+                <li><strong>Detalles:</strong> Una vulnerabilidad de inyección de comandos o XSS persistente en el frontend web de Zabbix que podría permitir a un atacante autenticado (incluso con bajos privilegios) ejecutar código arbitrario o robar sesiones.</li>
+                <li><strong>Impacto:</strong> ALTO. Podría comprometer la integridad y disponibilidad del monitoreo, y servir como pivote para otros ataques.</li>
+                <li><strong>Versiones Afectadas:</strong> Zabbix 6.x y 5.x.</li>
+            </ul>
+            <span class='tag'>ALTO</span>
+            <p><strong>Acción Recomendada:</strong> Actualizar a las versiones parcheadas de Zabbix. Asegurarse de que el frontend de Zabbix no esté expuesto directamente a internet sin protección adicional (WAF, VPN) y que los usuarios utilicen contraseñas fuertes y MFA.</p>
+            <div class='links'>
+                <a href='https://www.zabbix.com/security_advisories'>Zabbix Security Advisories</a>
+                <a href='https://www.mandiant.com/resources/blog-posts'>Mandiant (análisis técnico si aplica)</a>
+            </div>
+        </div>
     </div>
-
-    <div class='card'>
-      <h4>CVE-2023-BBBB: Elevación de Privilegios en Firmware Dell Optiplex/Latitude</h4>
-      <ul>
-        <li>Vulnerabilidad (CVE-2023-BBBB) en el firmware de algunos modelos de Dell Optiplex y Latitude que podría permitir la elevación de privilegios local.</li>
-        <li>Requiere acceso local al sistema.</li>
-        <li><strong>CVSS:</strong> 7.8 (ALTO)</li>
-      </ul>
-      <p><strong>Severidad:</strong> <span class='tag'>ALTO</span></p>
-      <p><strong>Acción Recomendada:</strong> Aplicar las últimas actualizaciones de BIOS/firmware disponibles para sus modelos de Dell Optiplex y Latitude. Monitorear los repositorios de Dell para nuevos lanzamientos.</p>
-      <div class='links'>
-        <a href='https://www.dell.com/support/security/en-us'>Dell Security Advisories</a>
-        <a href='https://nvd.nist.gov/vuln/detail/CVE-2023-BBBB'>NVD - CVE-2023-BBBB</a>
-      </div>
-    </div>
-
-    <div class='card'>
-      <h4>Múltiples CVEs en Kernels Linux (AlmaLinux, RHEL 7 y 8)</h4>
-      <ul>
-        <li>Paquetes de seguridad liberados para AlmaLinux 7/8 y Red Hat Enterprise Linux 7/8 para corregir varias vulnerabilidades en el kernel, incluyendo posibles elevaciones de privilegios y denegación de servicio.</li>
-        <li>La actualización es crucial para mantener la estabilidad y seguridad del sistema operativo.</li>
-      </ul>
-      <p><strong>Severidad:</strong> <span class='tag'>ALTO</span></p>
-      <p><strong>Acción Recomendada:</strong> Aplicar las últimas actualizaciones de seguridad al kernel y paquetes del sistema operativo en todos los servidores AlmaLinux y RHEL 7/8. Reiniciar si es necesario.</p>
-      <div class='links'>
-        <a href='https://access.redhat.com/security/security-updates'>Red Hat Security Updates</a>
-        <a href='https://errata.almalinux.org/'>AlmaLinux Errata</a>
-      </div>
-    </div>
-
-    <div class='card'>
-      <h4>CVE-2023-CCCC: Autenticación Bypass en Cámaras Dahua</h4>
-      <ul>
-        <li>Una vulnerabilidad crítica ha sido identificada en el firmware de ciertas cámaras Dahua, permitiendo un bypass de autenticación remoto.</li>
-        <li>Esto podría permitir a un atacante no autenticado acceder al flujo de video y configuraciones de la cámara.</li>
-        <li><strong>CVSS:</strong> 9.0 (CRÍTICO)</li>
-      </ul>
-      <p><strong>Severidad:</strong> <span class='tag'>CRÍTICO</span></p>
-      <p><strong>Acción Recomendada:</strong> Identificar y actualizar todas las cámaras Dahua a la versión de firmware más reciente. Restringir el acceso a las interfaces de administración de cámaras.</p>
-      <div class='links'>
-        <a href='https://www.dahuasecurity.com/support/cybersecurity/advisories'>Dahua Security Advisories</a>
-        <a href='https://nvd.nist.gov/vuln/detail/CVE-2023-CCCC'>NVD - CVE-2023-CCCC</a>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class='section' id='ransomware'>
-  <h3 class='section-title'>Panorama Ransomware</h3>
-  <div class='grid'>
-    <div class='card'>
-      <h4>Campañas de Ransomware Dirigidas a Windows Server 2012/2016</h4>
-      <ul>
-        <li>Grupos de ransomware han intensificado sus ataques contra infraestructuras que ejecutan Windows Server 2012 y 2016, aprovechando vulnerabilidades no parcheadas o configuraciones débiles.</li>
-        <li>Se observa un enfoque en la exfiltración de datos antes del cifrado, aumentando la presión sobre las víctimas.</li>
-        <li><strong>Impacto:</strong> Interrupción de servicios críticos, pérdida de datos y daños a la reputación.</li>
-      </ul>
-      <p><strong>Severidad:</strong> <span class='tag'>CRÍTICO</span></p>
-      <p><strong>Acción Recomendada:</strong> Asegurar que todos los servidores Windows Server 2012/2016 estén completamente actualizados y monitoreados. Implementar MFA en todos los accesos. Fortalecer las copias de seguridad.</p>
-      <div class='links'>
-        <a href='https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-XXXa'>CISA Advisory - Ransomware Activity</a>
-        <a href='https://www.microsoft.com/en-us/security/blog/tag/ransomware/'>Microsoft Security Blog</a>
-      </div>
+    <h3 class='section-title'>Alertas de Ransomware</h3>
+    <div class='grid'>
+        <div class='card'>
+            <h4>Grupos de Ransomware Apuntan a Servidores Zimbra No Parcheados</h4>
+            <ul>
+                <li>Los operadores de ransomware están escaneando activamente internet en busca de servidores Zimbra Collaboration Suite con vulnerabilidades conocidas y sin parchear.</li>
+                <li>Una vez comprometidos, estos servidores se utilizan como punto de entrada para el despliegue de ransomware en la red interna de la víctima.</li>
+                <li>Se han observado casos de exfiltración de correo electrónico antes del cifrado como parte de la estrategia de doble extorsión.</li>
+            </ul>
+            <span class='tag'>CRÍTICO</span>
+            <p><strong>Acción Recomendada:</strong> Aplicar URGENTEMENTE todas las actualizaciones de seguridad de Zimbra. Implementar segmentación de red para servidores de correo. Considerar el uso de sandboxing de archivos adjuntos y monitoreo de actividad inusual.</p>
+            <div class='links'>
+                <a href='https://blog.zimbra.com/category/security-advisories/'>Zimbra Security Blog</a>
+                <a href='https://www.cisa.gov/news-events/cybersecurity-advisories'>CISA Advisory (si aplica una alerta específica)</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Ransomware Dirigido a Entornos con Windows Server 2003/2008</h4>
+            <ul>
+                <li>Aunque EOL, muchos entornos aún tienen servidores Windows 2003 y 2008 que son objetivos fáciles para ransomware de familias antiguas como WannaCry o modernas que explotan SMBv1 o RDP débiles.</li>
+                <li>La falta de parches y protecciones modernas deja estos sistemas extremadamente vulnerables a la encriptación y compromiso total.</li>
+                <li>Estos sistemas actúan como un punto de pivote para propagar el ransomware a otros segmentos de la red si no están aislados.</li>
+            </ul>
+            <span class='tag'>CRÍTICO</span>
+            <p><strong>Acción Recomendada:</strong> Acelerar la migración de todos los sistemas operativos EOL. Si no es posible, segregarlos completamente, deshabilitar SMBv1, aplicar parches de compensación y monitorear la actividad de red de forma exhaustiva. Asegurar que ESET Antivirus esté completamente actualizado.</p>
+            <div class='links'>
+                <a href='https://msrc.microsoft.com/update-guide/'>Microsoft Security Update Guide (EOL Products)</a>
+                <a href='https://www.eset.com/es/blog/'>ESET España Blog</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Ataques de Ransomware a través de Dispositivos Dell iDRAC y Firmware Obsoleto</h4>
+            <ul>
+                <li>Se han documentado casos donde el acceso inicial a la red se obtiene a través de vulnerabilidades en Dell iDRAC no parcheados o firmware de sistemas OptiPlex/Latitude desactualizado.</li>
+                <li>Una vez dentro, los atacantes escalan privilegios y despliegan ransomware, afectando tanto a servidores como a estaciones de trabajo.</li>
+                <li>La gestión remota de servidores es un objetivo atractivo para el acceso persistente y lateral.</li>
+            </ul>
+            <span class='tag'>ALTO</span>
+            <p><strong>Acción Recomendada:</strong> Mantener todos los firmware de Dell (iDRAC, BIOS/UEFI de OptiPlex y Latitude) actualizados. Restringir el acceso a iDRAC a redes internas o VPN, y utilizar autenticación fuerte. Implementar monitoreo de la actividad en iDRAC.</p>
+            <div class='links'>
+                <a href='https://www.dell.com/support/security/en-us/idrac-vulnerabilities'>Dell Security Advisories</a>
+                <a href='https://www.cisa.gov/uscert/ncas/alerts'>CISA Alerts (Dell)</a>
+            </div>
+        </div>
     </div>
-
-    <div class='card'>
-      <h4>Amenazas de Ransomware en Entornos Legacy (Windows XP/2003)</h4>
-      <ul>
-        <li>A pesar de ser sistemas fuera de soporte, continúan siendo objetivos de variantes de ransomware diseñadas para explotar sus debilidades conocidas.</li>
-        <li>La ausencia de parches de seguridad para estos sistemas los convierte en puntos de entrada fáciles para los atacantes.</li>
-        <li><strong>Impacto:</strong> Compromiso total del sistema, cifrado de datos y propagación a la red.</li>
-      </ul>
-      <p><strong>Severidad:</strong> <span class='tag'>ALTO</span></p>
-      <p><strong>Acción Recomendada:</strong> Migrar urgentemente de sistemas Windows XP, Server 2003 y 2008. Aislar estos sistemas en segmentos de red si la migración no es posible inmediatamente. Mantener ESET Antivirus actualizado en estos equipos si están activos.</p>
-      <div class='links'>
-        <a href='https://www.ncsc.gov.uk/guidance/end-of-life-software-guidance'>NCSC Guidance on EOL Software</a>
-        <a href='https://support.eset.com/en/kb2767-windows-xp-end-of-life-what-does-this-mean-for-eset-products'>ESET - Windows XP EOL</a>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class='section' id='recomendaciones'>
-  <h3 class='section-title'>Recomendaciones Generales</h3>
-  <ul>
-    <li><strong>Gestión de Parches:</strong> Priorizar la aplicación de parches de seguridad críticos, especialmente para FortiGate, FortiMail, Proxmox, Zabbix, y todos los sistemas operativos (Windows Server, RHEL, AlmaLinux, Ubuntu, macOS).</li>
-    <li><strong>Seguridad de Dispositivos de Borde:</strong> Asegurar que los dispositivos de perímetro como FortiGate estén siempre con las últimas actualizaciones y configuraciones robustas. Restringir el acceso a interfaces de administración como iDRAC y cámaras Dahua, manteniéndolas en redes aisladas y sin exposición a internet.</li>
-    <li><strong>Monitorización Activa:</strong> Implementar y mantener una monitorización robusta con Zabbix para detectar anomalías y actividades sospechosas, especialmente en servidores Windows y sistemas Linux, así como en dispositivos de red.</li>
-    <li><strong>Actualización de Sistemas Legacy:</strong> Realizar un plan urgente para la migración de sistemas operativos y bases de datos obsoletos como Windows XP, Server 2003/2008 y SQL Server Express 2005/2008. Si la migración no es posible, aplicar medidas de aislamiento estrictas y segmentación de red.</li>
-    <li><strong>Defensa contra Ransomware:</strong> Mantener copias de seguridad robustas, inmutables y probadas. Implementar autenticación multifactor (MFA) en todos los servicios críticos y sensibilizar a los usuarios sobre ataques de ingeniería social y phishing. Asegurarse de que el antivirus ESET corporativo esté siempre actualizado y configurado correctamente en todos los endpoints.</li>
-    <li><strong>Evaluación Continua:</strong> Realizar auditorías de seguridad periódicas y pruebas de penetración para identificar y corregir vulnerabilidades antes de que sean explotadas.</li>
-  </ul>
+    <h3 class='section-title'>Recomendaciones Generales</h3>
+    <div class='grid'>
+        <div class='card'>
+            <h4>Actualizaciones Críticas de Firmware y Sistemas Operativos</h4>
+            <ul>
+                <li>Mantener FortiOS, FortiMail, Proxmox, Zabbix, Ubuntu, AlmaLinux, RHEL 7/8, macOS, Dell iDRAC, y firmware de OptiPlex/Latitude siempre actualizados.</li>
+                <li>Priorizar parches para vulnerabilidades "CRÍTICAS" y "ALTAS", especialmente aquellas con explotación activa conocida.</li>
+                <li>Establecer un proceso de gestión de parches robusto y ágil, que incluya pruebas antes del despliegue en producción.</li>
+            </ul>
+            <span class='tag'>CRÍTICO</span>
+            <p><strong>Acción Recomendada:</strong> Auditar y asegurar que todos los sistemas y dispositivos críticos, especialmente los expuestos a Internet, estén en su última versión de seguridad. Implementar programas de parcheo automatizados donde sea posible.</p>
+            <div class='links'>
+                <a href='https://www.cisa.gov/resources-tools/resources/cybersecurity-best-practices'>CISA Best Practices</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Gestión de Sistemas End-of-Life (EOL)</h4>
+            <ul>
+                <li>La operación de sistemas como Windows XP, 7, Server 2003/2008, y SQL Server Express 2005/2008 representa un riesgo inaceptable para la organización.</li>
+                <li>Estos sistemas carecen de soporte de seguridad y son objetivos primarios para ataques avanzados y ransomware.</li>
+                <li>El costo de la migración es significativamente menor que el costo potencial de un incidente de seguridad mayor que paralice las operaciones.</li>
+            </ul>
+            <span class='tag'>CRÍTICO</span>
+            <p><strong>Acción Recomendada:</strong> Desarrollar y ejecutar un plan urgente de migración o eliminación de todos los sistemas EOL. En casos excepcionales, aislar completamente estos sistemas y aplicar controles de seguridad compensatorios estrictos, incluyendo EDR y monitoreo avanzado.</p>
+            <div class='links'>
+                <a href='https://www.microsoft.com/es-es/cloud/default.aspx'>Microsoft Modernization</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Fortalecimiento de la Seguridad en Dispositivos IoT (Cámaras Dahua)</h4>
+            <ul>
+                <li>Las cámaras IP y otros dispositivos IoT son puntos débiles comunes si no se configuran correctamente tras la instalación.</li>
+                <li>Credenciales por defecto, firmware obsoleto y exposición directa a Internet son vectores de ataque primarios.</li>
+                <li>Un dispositivo IoT comprometido puede ser la puerta de entrada para un ataque a toda la red interna.</li>
+            </ul>
+            <span class='tag'>ALTO</span>
+            <p><strong>Acción Recomendada:</strong> Cambiar todas las contraseñas por defecto en cámaras Dahua y otros dispositivos IoT a contraseñas fuertes y únicas. Actualizar el firmware periódicamente. Segmentar estos dispositivos en una VLAN separada y restringir su acceso a Internet. Considerar VPN para acceso remoto seguro.</p>
+            <div class='links'>
+                <a href='https://www.dahua.com/es/security-center'>Dahua Security Center</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Configuración y Monitoreo de ESET Antivirus Corporativo</h4>
+            <ul>
+                <li>ESET es una herramienta robusta, pero su eficacia depende de una configuración y un monitoreo adecuados de sus componentes.</li>
+                <li>Asegurarse de que las definiciones de virus y el motor de detección estén siempre actualizados en todos los endpoints gestionados.</li>
+                <li>Habilitar todas las características de protección avanzada y escanear regularmente los endpoints para detectar amenazas.</li>
+            </ul>
+            <span class='tag'>MEDIO</span>
+            <p><strong>Acción Recomendada:</strong> Verificar que la consola de administración de ESET (ESMC/ESET Protect) funcione correctamente, que todos los agentes reporten y estén actualizados. Revisar las políticas de seguridad para optimizar la protección contra amenazas avanzadas y ransomware. Asegurar la integración con sistemas de monitoreo (ej. Zabbix).</p>
+            <div class='links'>
+                <a href='https://help.eset.com/'>ESET Knowledgebase</a>
+            </div>
+        </div>
+        <div class='card'>
+            <h4>Plan de Recuperación ante Desastres y Conciencia de Ciberseguridad</h4>
+            <ul>
+                <li>Un plan de backup y recuperación actualizado y probado es esencial para la continuidad del negocio frente a ransomware o fallos catastróficos.</li>
+                <li>Los backups deben ser inmutables, probados regularmente y almacenados de forma segura (regla 3-2-1).</li>
+                <li>Un plan de respuesta a incidentes debe estar documentado, actualizado y practicado regularmente.</li>
+            </ul>
+            <span class='tag'>ALTO</span>
+            <p><strong>Acción Recomendada:</strong> Revisar y actualizar la política de backups. Realizar pruebas de recuperación de forma periódica. Desarrollar o actualizar el plan de respuesta a incidentes, incluyendo roles, responsabilidades y procedimientos de comunicación. Informar a los empleados sobre ataques de phishing y conciencia de seguridad.</p>
+            <div class='links'>
+                <a href='https://www.cisa.gov/topics/backup-recovery'>CISA Backup and Recovery Guidance</a>
+            </div>
+        </div>
+    </div>
 </section>
