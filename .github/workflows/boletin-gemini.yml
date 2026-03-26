@@ -35,7 +35,7 @@ jobs:
             b=$(basename "$f")
             echo "<li><a href='$b'>$b</a></li>" >> content/historico/index.html
           done
-          echo "</ul></body></html>" >> content/historico/index.html
+          echo "</ul></div></body></html>" >> content/historico/index.html
 
           git add content/boletin.html content/raw.json content/historico
           git commit -m "Boletin actualizado" || echo "Sin cambios"
