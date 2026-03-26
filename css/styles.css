@@ -38,7 +38,6 @@ body {
 .tabs {
   display: flex;
   gap: 8px;
-  justify-content: center;
   padding: 10px 12px;
   position: sticky;
   top: 0;
@@ -46,6 +45,16 @@ body {
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   z-index: 10;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.tabs::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.tabs button {
+  flex: 0 0 auto; /* evita que se encojan */
 }
 
 .tabs button {
