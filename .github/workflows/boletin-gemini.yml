@@ -25,8 +25,18 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
+
           mkdir -p content/historico
-          cp content/boletin.html content/historico/boletin-$(date +%Y-%m-%d).html
+          FECHA=$(date +%Y-%m-%d)
+          cp content/boletin.html content/historico/boletin-$FECHA.html
+
+          echo "<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Histórico</title></head><body><h2>Histórico de Boletines</h2><ul>" > content/historico/index.html
+          for f in content/historico/boletin-*.html; do
+            b=$(basename "$f")
+            echo "<li><a href='$b'>$b</a></li>" >> content/historico/index.html
+          done
+          echo "</ul></body></html>" >> content/historico/index.html
+
           git add content/boletin.html content/raw.json content/historico
           git commit -m "Boletin actualizado" || echo "Sin cambios"
           git push
