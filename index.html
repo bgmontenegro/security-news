@@ -53,8 +53,15 @@
         }
       });
     }
+    
+    const params = new URLSearchParams(window.location.search);
+    const historico = params.get("historico");
 
-    fetch("content/boletin.html")
+    const boletinURL = historico
+      ? `content/historico/boletin-${historico}.html`
+      : "content/boletin.html";
+
+    fetch(boletinURL)
       .then(r => r.text())
       .then(html => {
         const tmp = document.createElement("div");
