@@ -1,24 +1,24 @@
-Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML.
+Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML, usa fuentes de información en ingles pero debes traducirlo.
 
-Prioriza EXCLUSIVAMENTE información relacionada con los siguientes productos y entornos reales de infraestructura. 
+Prioriza EXCLUSIVAMENTE información real relacionada con los siguientes productos y entornos de infraestructura. 
+Los url a las fuentes de información seran utilizados también.
 NO incluyas ningún otro producto, sistema o tecnología fuera de esta lista:
 
-- Fortinet: FortiOS, FortiGate, FortiAP, FortiMail
-- Proxmox VE
+- Fortinet: FortiOS 7.2.12 en adelante para: FortiGate, FortiAP, FortiMail
+- Proxmox VE version 8.4.16 en adelante 
 - Dell iDRAC hasta generación 13
-- Firmware de Dell Optiplex y Latitude
+- Firmware de Dell Optiplex y Latitude equipos 2015 en adelante
 - Windows XP, Windows 7, Windows 10, Windows 11
 - Windows Server 2003, 2008, 2012 y 2016
 - SQL Server Express 2005 y 2008
 - ESET Antivirus corporativo
-- Broadcast Electronics (equipos FM y automatización de radio)
+- Office 365
 - macOS desde 2015 en adelante
-- Cámaras Dahua
-- Zabbix
-- Ubuntu
-- AlmaLinux
+- Cámaras y HVR Dahua
+- Zabbix 7 en adelante
+- Ubuntu Sever 24 LT
 - Red Hat Enterprise Linux 7 y 8
-- Zimbra Collaboration 10
+- Zimbra Collaboration Professional version 10 en adelante
 
 Ignora cualquier otro producto, sistema operativo, plataforma o tecnología que no esté explícitamente listada arriba.
 
@@ -53,7 +53,7 @@ Cada tarjeta debe:
 - Incluir <p class='meta'>Publicado: YYYY-MM-DD</p>
 - Usar <ul> para puntos clave
 - Incluir acción recomendada
-- Incluir <div class='links'> con fuentes reales
+- Incluir <div class='links'> con las fuentes reales de donde obtuviste la información
 
 Prioriza eventos publicados o actualizados entre {{FECHA_HACE_30_DIAS}} y {{FECHA_HOY}}.
 Solo incluye eventos más antiguos si siguen teniendo explotación activa conocida.
