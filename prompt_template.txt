@@ -1,4 +1,12 @@
 Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML, usa fuentes de información en ingles y español pero debes entregar siempre en español.
+RESUMEN EJECUTIVO:
+  Genera siempre un resumen ejecutivo, incluso si no existen nuevos CVEs confirmados.
+    El resumen debe incluir:
+      - Tendencias observadas en el período
+      - Actividad de explotación conocida
+      - Riesgos relevantes para el stack tecnológico definido
+      - Cambios en el panorama de amenazas
+  Si no hay eventos críticos nuevos, explica por qué el período fue estable.
 
 Prioriza EXCLUSIVAMENTE información real relacionada con los siguientes productos y entornos de infraestructura. 
 Los url a las fuentes de información seran utilizados también.
@@ -74,7 +82,6 @@ Cada tarjeta debe:
 - Usar <ul> para puntos clave
 - Incluir acción recomendada
 - Incluir <div class='links'> con las fuentes reales de donde obtuviste la información
-
 Prioriza eventos publicados o actualizados entre {{FECHA_HACE_30_DIAS}} y {{FECHA_HOY}}.
 Solo incluye eventos más antiguos si siguen teniendo explotación activa conocida.
 
