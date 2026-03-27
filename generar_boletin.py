@@ -35,6 +35,11 @@ payload = {
             ]
         }
     ]
+    "tools": [
+        {
+            "googleSearch": {} # Esto habilita la búsqueda en internet en tiempo real
+        }
+    ]    
 }
 
 r = requests.post(url, headers=headers, json=payload)
