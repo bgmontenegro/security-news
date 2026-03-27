@@ -2,6 +2,8 @@ import os
 import json
 import requests
 from datetime import datetime, timedelta
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # Fechas reales
 hoy = datetime.utcnow()
@@ -42,7 +44,25 @@ payload = {
     ]    
 }
 
-r = requests.post(url, headers=headers, json=payload)
+session = requests.Session()
+
+retries = Retry(
+    total=3,
+    backoff_factor=1,
+    status_forcelist=[429, 500, 502, 503, 504],
+    allowed_methods=["POST"]
+)
+
+adapter = HTTPAdapter(max_retries=retries)
+session.mount("https://", adapter)
+
+r = session.post(
+    url,
+    headers=headers,
+    json=payload,
+    timeout=30
+)
+
 r.raise_for_status()
 
 data = r.json()
