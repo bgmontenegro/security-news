@@ -7,172 +7,99 @@
   <h3 class='section-title'>Resumen Ejecutivo</h3>
   <div class='grid'>
     <div class='card'>
-      <h4>Sin reportes verificados</h4>
+      <h4>Tendencias Observadas y Panorama de Amenazas</h4>
       <p class='meta'>Actualizado: 2026-03-27</p>
-      <p>No se han detectado nuevos eventos confirmados para el stack tecnológico definido.</p>
+      <ul>
+        <li>El panorama de amenazas se ve significativamente impactado por la creciente sofisticación de los ataques impulsados por Inteligencia Artificial (IA), incluyendo phishing hiperpersonalizado, deepfakes y la automatización de la ingeniería social. Esto conduce a mayores tasas de compromiso y a un incremento en el riesgo para la reputación de las marcas y el cumplimiento normativo.</li>
+        <li>La evolución de las técnicas de phishing es notable. El phishing por correo electrónico ha disminuido como vector de intrusión principal, con una marcada transición hacia métodos más interactivos como el "vishing" (phishing de voz) y el "quishing" (phishing mediante códigos QR). Los atacantes están utilizando infraestructuras de envío legítimas y técnicas de "fuzzing" para evadir las defensas tradicionales de detección.</li>
+        <li>La actividad de ransomware persiste con una focalización continua en servicios críticos y entidades gubernamentales. Aunque en 2025 se observó una desaceleración temporal en las brechas con consecuencias físicas en infraestructura crítica, se espera que los ataques de ransomware retomen su crecimiento en 2026-2027. Se han identificado bandas como Medusa, Qilin y Uragan realizando ataques activos con técnicas avanzadas de evasión, incluyendo el uso de controladores vulnerables para deshabilitar productos de seguridad (BYOVD).</li>
+        <li>Los ataques a la cadena de suministro siguen siendo una preocupación crítica, como se evidenció en incidentes recientes que muestran la rapidez con la que las vulnerabilidades pueden ser explotadas, a veces incluso antes de su divulgación pública (zero-days).</li>
+        <li>Existe una tendencia creciente de los atacantes a centrarse en herramientas de gestión de TI, plataformas de monitoreo (RMM) y software de observabilidad, ya que el compromiso de estas herramientas puede multiplicar el alcance de un ataque dentro de una organización.</li>
+      </ul>
+      <p>Este período se caracteriza por una mayor agilidad y especialización de los adversarios, lo que reduce drásticamente la ventana entre la publicación de una vulnerabilidad y su explotación activa. La resiliencia operativa y la gestión proactiva de riesgos se vuelven aún más críticas.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='incidentes'>
-  <h3 class='section-title'>Incidentes Reportados</h3>
-  <div class='grid'>
-    <div class='card CRITICO'>
-      <h4>Múltiples Vulnerabilidades Críticas en Fortinet FortiOS SSL VPN Explotadas Activamente</h4>
-      <p class='meta'>Publicado: Varias fechas, explotación activa en 2026-03-11</p>
-      <span class='tag'>Fortinet FortiOS</span>
-      <ul>
-        <li>Se están explotando activamente múltiples vulnerabilidades críticas en FortiOS SSL VPN y dispositivos de seguridad orientados a Internet.</li>
-        <li>Estas fallas incluyen ejecución remota de código, bypass de autenticación y divulgación de credenciales, permitiendo el acceso inicial a entornos empresariales.</li>
-        <li>Se han observado actores de amenazas escaneando puertos SSL VPN de FortiGate expuestos y explotando automáticamente estas vulnerabilidades conocidas.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Aplicar todas las actualizaciones de seguridad disponibles de Fortinet de inmediato, rotar credenciales, implementar controles de autenticación robustos y monitorear movimientos laterales en la red.</p>
-      <div class='links'>
-        <a href="https://www.fortiguard.com/psirt/FG-IR-24-015" target="_blank" rel="noopener noreferrer">FortiGuard Advisory: CVE-2024-21762</a>
-        <a href="https://www.fortiguard.com/psirt/FG-IR-23-078" target="_blank" rel="noopener noreferrer">FortiGuard Advisory: CVE-2023-27997</a>
-        <a href="https://www.fortiguard.com/psirt/FG-IR-22-398" target="_blank" rel="noopener noreferrer">FortiGuard Advisory: CVE-2022-42475</a>
-        <a href="https://www.fortiguard.com/psirt/FG-IR-23-456" target="_blank" rel="noopener noreferrer">FortiGuard Advisory: CVE-2024-23113</a>
-        <a href="https://www.fortiguard.com/psirt/FG-IR-22-377" target="_blank" rel="noopener noreferrer">FortiGuard Advisory: CVE-2022-40684</a>
-        <a href="https://www.fortiguard.com/psirt/FG-IR-19-010" target="_blank" rel="noopener noreferrer">FortiGuard Advisory: CVE-2018-13379</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_et6m95lfK3q5oTwU5tZlIrV1e3LTeAXAhnDGBvdJp5Sa3mw27W48k9ehHNxV5au9iZNDNPfOJaEbm8CLfxVcnbNVLtHjKMLPKzrOf4zTcFhMwVuDinu6zVeBGSEnEffHtuGwpilmgV_t0Uk-ywh46VxoskZK7giABTuHpoiJ6RDP-vLhPUEHt3VBSjVeaXt122xwKO384R15I9I-Q7DA6HsbsS3nD-pSQ7rSbWo3qlEvUA1HoGunOCNcGNQpk0XMMVBK6-C_fWjDTQ==" target="_blank" rel="noopener noreferrer">Fuente: TechRadar</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8dcnvD91E5A3DH2z8sVbCrGbZJY9Bc0n9rsl51MeYaVDpJl1nmUH1TcpMuYt0U3SjAQw5qU1FQIyqAUnasa5-Hjt9ikB5Ri66Gku9a897kvdr_md2wNt9Rc4qI_bj4AvMfMfvu_8riO6NcOilGPJUG4XFnFPCYJVMmWWmataEIkTxoaCnuXQdCSZ9o0oHE=" target="_blank" rel="noopener noreferrer">Fuente: OP Innovate</a>
-      </div>
-    </div>
-    <div class='card ALTO'>
-      <h4>Vulnerabilidad de Omisión de Autenticación en Dahua Explotada por Actores Vinculados a Irán</h4>
-      <p class='meta'>Publicado: 2021-09-08 (explotación activa confirmada en 2026-03-04)</p>
-      <span class='tag'>Dahua Cámaras y HVR</span>
-      <ul>
-        <li>Una vulnerabilidad de omisión de autenticación remota (CVE-2021-33044) ha sido identificada en ciertos productos Dahua.</li>
-        <li>Hackers vinculados a Irán han intensificado los ataques explotando fallas críticas en equipos de vigilancia ampliamente utilizados, incluyendo productos Dahua, desde finales de febrero de 2026.</li>
-        <li>La explotación de esta falla puede permitir a los atacantes eludir los controles de autenticación y obtener acceso no autorizado.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Revisar y aplicar las actualizaciones de firmware proporcionadas por Dahua. Implementar segmentación de red para aislar dispositivos IoT y cámaras IP.</p>
-      <div class='links'>
-        <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-33044" target="_blank" rel="noopener noreferrer">NVD - CVE-2021-33044</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFl93bnQv77ODUPj4ajohUmeibjETDdQuCALkYP3_3qnZqMul6Egjkx7g_OmuMW2KfWjlOa5zPonRZvHY_JuCyltUkoKt244JbaLD55IqsijpIOdrgouwEzvsTDjDjfRiMtVDFLIEEC7zSSrJUP0mn8ycPAwYiEbCSyiDTe7gdu-lgkiGVIHfjqiQwMUeVx" target="_blank" rel="noopener noreferrer">Fuente: Cybersecurity Dive</a>
-      </div>
-    </div>
-    <div class='card ALTO'>
-      <h4>Vulnerabilidad de Cross-Site Scripting (XSS) en Zimbra Collaboration Suite explotada activamente</h4>
-      <p class='meta'>Publicado: 2025-11-20 (explotación activa confirmada en 2026-03-25)</p>
-      <span class='tag'>Zimbra Collaboration Professional 10+</span>
-      <ul>
-        <li>Una vulnerabilidad de XSS almacenado (CVE-2025-66376) en la interfaz de usuario clásica de Zimbra Collaboration Suite permite a los atacantes inyectar contenido malicioso a través de correos electrónicos HTML manipulados.</li>
-        <li>La falla está siendo explotada activamente en campañas de phishing dirigidas (Operación GhostMail) atribuidas a APT28.</li>
-        <li>CISA ha añadido esta vulnerabilidad a su catálogo de vulnerabilidades conocidas explotadas (KEV).</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Actualizar Zimbra a las versiones 10.1.13 o 10.0.18 o posteriores. Implementar filtros de correo electrónico robustos y educar a los usuarios sobre los riesgos del phishing.</p>
-      <div class='links'>
-        <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66376" target="_blank" rel="noopener noreferrer">NVD - CVE-2025-66376</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2WrkbZMvxCJSbR3CMS-GDmmDdSUnn9-7bRbtMy83UHYRw7-TQ-1xs2LDCVCZLtzOt6-Szygmcck1a7B61criWXs3FbkTqtSNqAuB0zxUFyIH3PUCcvxO0_Cv85l03lihj-O1j7K1wTQeIt7Vhpw_HIKXwbmvkmUeZu4fS_7fLxyhh5o1uCSHTKmA8hbma4DZe7w==" target="_blank" rel="noopener noreferrer">Fuente: SecurityWeek</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUn8Vzs3_3fqY2Lo3MCt-CGSHvFVAIu3xZGifIcepY-f99R4-4KEEvzaYfkiPopwQbkfwVxWocwIudxeKVzkxD08x7wBkLSw1YCpLRtn-ldCVfAqDXHLWTi6JjbDwMxS4eMv28wNnMiQaLssJJtssBDLT4Ly9oIcyRi97vIInZp9I7nHZ2iLY=" target="_blank" rel="noopener noreferrer">Fuente: SentinelOne</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEidWFFP08p6JiY8OZoxeyua3nCTaGlIZleY0vv9IXtPvrt7p5n6QxjCh6G_cUZeIJpdddMljTtXbU9yf6UQNofSitBNg7S2YLaAlKXZq-gQxt2mvMt9TuX_3EuEeNz848TsgWS6XIJWndaq7z9BJq37pOYnkCnPuSpKww0fr57MHLo-wpppv9YId1yi3wuASDF" target="_blank" rel="noopener noreferrer">Fuente: WaterISAC</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class='section' id='cves'>
-  <h3 class='section-title'>Vulnerabilidades Recientes (CVEs)</h3>
+  <h3 class='section-title'>Incidentes Reportados y Actividad de Explotación</h3>
   <div class='grid'>
     <div class='card ALTO'>
-      <h4>Actualización de Seguridad para BIOS de Plataformas Cliente Dell (Intel Product Update)</h4>
-      <p class='meta'>Publicado: 2026-03-10</p>
-      <span class='tag'>Dell Latitude Firmware</span>
-      <ul>
-        <li>Múltiples vulnerabilidades (incluyendo CVE-2025-31648) en el BIOS de las plataformas cliente Dell que usan el Intel Product Update 2026.1.</li>
-        <li>Estas fallas podrían ser explotadas por usuarios maliciosos para comprometer el sistema afectado.</li>
-        <li>Afecta a modelos como Dell Latitude 3530 (BIOS anterior a 1.32.0) y Latitude 3540 (BIOS anterior a 1.29.0).</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Actualizar el BIOS a las versiones más recientes (1.32.0 o posterior para Latitude 3530, 1.29.0 o posterior para Latitude 3540) a través del sitio de soporte de Dell.</p>
-      <div class='links'>
-        <a href="https://www.dell.com/support/kbdoc/en-us/000219504/dsa-2026-010-security-update-for-dell-client-platform-for-2026-1-intel-product-update-advisories" target="_blank" rel="noopener noreferrer">Dell Security Advisory DSA-2026-010</a>
-      </div>
-    </div>
-    <div class='card CRITICO'>
-      <h4>Múltiples Vulnerabilidades de Ejecución Remota de Código en Microsoft Excel para Office Online Server</h4>
-      <p class='meta'>Publicado: 2026-03-10</p>
-      <span class='tag'>Office 365</span>
-      <ul>
-        <li>Esta actualización de seguridad resuelve múltiples vulnerabilidades de ejecución remota de código en Microsoft Excel (CVE-2026-26109, CVE-2026-26108, CVE-2026-26107, CVE-2026-26112).</li>
-        <li>La explotación exitosa podría permitir a un atacante ejecutar código arbitrario en el contexto del usuario actual.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Aplicar la actualización de seguridad KB5002846 para Office Online Server de inmediato.</p>
-      <div class='links'>
-        <a href="https://support.microsoft.com/en-us/topic/description-of-the-security-update-for-office-online-server-march-10-2026-kb5002846-9907f59d-6497-4c07-b673-c15c0e1e9218" target="_blank" rel="noopener noreferrer">Microsoft Support KB5002846</a>
-      </div>
-    </div>
-    <div class='card ALTO'>
-      <h4>Vulnerabilidad de Escalada de Privilegios en Dispositivos Dahua NVR/XVR</h4>
-      <p class='meta'>Publicado: 2026-03-16</p>
-      <span class='tag'>Dahua Cámaras y HVR</span>
-      <ul>
-        <li>Una vulnerabilidad (CVE-2025-31703) permite a un atacante con acceso físico al dispositivo obtener acceso a un shell restringido a través del puerto serial y eludir la autenticación para escalar privilegios.</li>
-        <li>Afecta a dispositivos Dahua NVR/XVR con firmware anterior al 3 de marzo de 2026.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Actualizar el firmware de los dispositivos NVR/XVR de Dahua a versiones con una fecha de compilación posterior al 3 de marzo de 2026.</p>
-      <div class='links'>
-        <a href="https://www.dahuasecurity.com/about-dahua/trust-center/dahua-psirt/security-advisory-%E2%80%93-vulnerability-found-in-dahua-nvr-xvr-device" target="_blank" rel="noopener noreferrer">Dahua Security Advisory</a>
-      </div>
-    </div>
-    <div class='card ALTO'>
-      <h4>Vulnerabilidad de Denegación de Servicio/Ejecución Remota de Código en Redis para Ubuntu Server 24.04 LTS</h4>
+      <span class='tag'>ALTO</span>
+      <h4>Vulnerabilidades Críticas en Zabbix (Múltiples)</h4>
       <p class='meta'>Publicado: 2026-03-24</p>
-      <span class='tag'>Ubuntu Server 24.04 LTS</span>
       <ul>
-        <li>Se descubrió que Redis manejaba incorrectamente la memoria durante las operaciones de hyperloglog (CVE-2025-32023).</li>
-        <li>Un atacante podría usar este problema para causar una denegación de servicio o, posiblemente, lograr la ejecución remota de código.</li>
+        <li>CERT-Bund ha alertado sobre múltiples vulnerabilidades críticas en Zabbix, un sistema de monitoreo de red de código abierto, con una puntuación CVSS base de 8.8.</li>
+        <li>Las fallas permiten la divulgación de información, inyección de comandos de shell, inyección SQL y ataques de denegación de servicio (DoS) por parte de atacantes con acceso a la red adyacente.</li>
+        <li>Afecta a versiones de Zabbix anteriores a 7.4.3, 7.0.19, 7.2.13, 6.0.41, y varios otros parches específicos.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Aplicar las actualizaciones de seguridad disponibles para los paquetes de Redis en Ubuntu Server 24.04 LTS (USN-8120-1).</p>
+      <p><b>Acción Recomendada:</b> Revisar y aplicar de inmediato los parches de seguridad para las versiones afectadas de Zabbix. Implementar segmentación de red y controles de acceso estrictos para las instancias de Zabbix.</p>
       <div class='links'>
-        <a href="https://ubuntu.com/security/notices/USN-8120-1" target="_blank" rel="noopener noreferrer">Ubuntu Security Notice USN-8120-1</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJ11hah3GvQcYGNv2eiL4tC2gXfq6DS2B2y5xRwDatmjCGMyGLN8xA2WLlihNgwkAOJ9BfwD3E3egBtdcEblI_BD16Ml5LKXIsMex8EmUhFeejxke0GMJQ10oEu86F1P0hpeHtFBzf9vdMK_fMMxRJjjUdKOPY-ML_41JcIs-PjXBNWAG-opraj8zDO0gkoi9XsE4Km9_jTxoswu9_n3IXseyUa-ZBeriM04FW1o6UPz4c9_M=' target='_blank' rel='noopener noreferrer'>Zabbix Vulnerabilities Allow Remote Attacks | Changeflow</a>
       </div>
     </div>
-    <div class='card MEDIO'>
-      <h4>Vulnerabilidad de Entidad Externa XML (XXE) en Zimbra Collaboration (ZCS)</h4>
+    <div class='card CRITICO'>
+      <span class='tag'>CRITICO</span>
+      <h4>Vulnerabilidad de Ejecución Remota de Código (RCE) en Dell iDRAC</h4>
       <p class='meta'>Publicado: 2026-03-20</p>
-      <span class='tag'>Zimbra Collaboration Professional 10+</span>
       <ul>
-        <li>Una vulnerabilidad XXE (CVE-2026-33371) existe en la interfaz SOAP de Zimbra Exchange Web Services (EWS) debido a la manipulación inadecuada de la entrada XML.</li>
-        <li>Un atacante autenticado puede enviar datos XML manipulados para divulgar archivos locales sensibles del servidor.</li>
+        <li>Se identificó una vulnerabilidad de control de procesos (CVE-2026-26945) en Dell iDRAC9 y iDRAC10.</li>
+        <li>Permite que un atacante con altos privilegios y acceso a la red adyacente ejecute código arbitrario en los sistemas iDRAC afectados.</li>
+        <li>Afecta a iDRAC9 (versiones 14G anteriores a 7.00.00.181, 15G y 16G anteriores a 7.20.10.50) e iDRAC10 (versiones 17G anteriores a 1.20.25.00).</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Monitorear las actualizaciones de seguridad de Zimbra y aplicar parches para la vulnerabilidad CVE-2026-33371 cuando estén disponibles.</p>
+      <p><b>Acción Recomendada:</b> Actualizar el firmware de Dell iDRAC a las versiones parcheadas lo antes posible. Revisar la documentación de Dell DSA-2026-113 para obtener detalles específicos sobre la versión y el parche.</p>
       <div class='links'>
-        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33371" target="_blank" rel="noopener noreferrer">NVD - CVE-2026-33371</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1-noK-4d4RxS9BINxusulWmehzHyViKEHfTDF7_YMzGJtlg0qqB4yVm1_tId8lDB1dtyDaVQlNZKm49XWUW1Ul6g71J52zf_qk_Ouz8DWk5qQc2CXSQg2_xkZs15_0r3q3toXL9Sx96yBCyMcGwIAk-oiwvDOE48Ui9hJdw==' target='_blank' rel='noopener noreferrer'>CVE-2026-26945: Dell iDRAC RCE Vulnerability - SentinelOne</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2ZveFe3-rRgY404PDsw7JZUE_-jmIfwYaT-oo-hfUtyCyZXsVI6YtE8F3N5hIF5_uZOvwHQGqtc8ta8NcKzWm4ZiGecJqW678WcYTPzr5_qAXoDo7ewm4MyEd-YYFGs4m91OwGvzdXd1X_jDznaaa2S5nzBVbE6CkX0y_VCsVSLIVuPCIMlz3bUCeQwQ8Z1_7B2cAuYBOsHXmrVY3ELl3DjfF5GN2GCWnmRK8F6__ZXNXhSTfAQ==' target='_blank' rel='noopener noreferrer'>DSA-2026-113: Security Update for Dell iDRAC9 and iDRAC10 Vulnerabilities</a>
+      </div>
+    </div>
+    <div class='card ALTO'>
+      <span class='tag'>ALTO</span>
+      <h4>Múltiples Vulnerabilidades en Zimbra Collaboration Suite (XSS, XXE, CSRF)</h4>
+      <p class='meta'>Publicado: 2026-03-19</p>
+      <ul>
+        <li>Zimbra ha lanzado actualizaciones para abordar varias vulnerabilidades en ZCS 10.0 y 10.1, incluyendo XSS almacenado (CVE-2025-66376, CVE-2026-33370), XXE (CVE-2026-33371) y CSRF (CVE-2026-33372).</li>
+        <li>Estas fallas pueden permitir la inyección de scripts maliciosos, divulgación de archivos locales sensibles y ejecución de acciones no autorizadas en nombre de un usuario.</li>
+        <li>También se reportó un XSS reflejado (CVE-2026-33368) en la interfaz REST de Classic Webmail.</li>
+      </ul>
+      <p><b>Acción Recomendada:</b> Actualizar Zimbra Collaboration Suite a las versiones 10.0.18 o superior, o 10.1.16 o superior. Consultar los avisos de seguridad de Zimbra para obtener detalles.</p>
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHch_67ue9_pUczHgOLxnfVycWcXtpMoSBqQjJUIsQ91dwmw-qRK0eSwrrK437RUfaneqYrD1xDZGedWu4Be8_07rxdgfe5e_sRVrHn2_0i0CvdXuyZj12Zm94aG_X1v_SsQbiSKaCGoCgdpswi98lIhMyOi0TkoVnud1hkPB8L8radPHcSaLpb5DGZ3s-1OVzVHURoHMNol-ir0tWeDtuPoRCY4MFFMLSOjzvhCgxr' target='_blank' rel='noopener noreferrer'>Security Alert: Zimbra Collaboration Suite XSS Vulnerability Updates – March 2026</a>
+        <a href='https://vertexaisearch.cloud.google.google.com/grounding-api-redirect/AUZIYQG2bTP1sC7hoDCVZVxQkcoXPi5QEBI3NqFkVxRf01xjnpfJShtaoaOEnuzFXwuYQrh3s8Nww4DC8HcwmvwMh-KL1uKWt_wIfeJRR6IBIu9bgMm3ys6obFMRvYnyr6zAF_MHo7doYB08aNWDOo6czf2AEH_Mxzik' target='_blank' rel='noopener noreferrer'>CVE-2026-33371 Detail - NVD</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEe9N4xy7cIdca33CCF9JP8CMnfKASl3TgdVp_1KmqTr_8QWTK7QcxxV4FAOrNYWyd0YPvitVGZH0EU_2c41Ukm0hXChLIhOREn1HQ2Mcay6wOEHy1lCjR-Lk_NxDUMjEdU7dNmE_ebf-E=' target='_blank' rel='noopener noreferrer'>CVE-2026-33370 : An issue was discovered in Zimbra Collaboration (ZCS) 10.0 and 10.1. A stored cr - CVE Details</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDNza_Vllwy7Kn8MWKdLJ-PAIC3vE39qhK2LGVwdH6lz1WlUHEAjVtYQjEWspARNgjk7skt6IP9kNc58REHjc24q-43pfxfg6RMWgrqQ3zlzpDYU0_GyecysUFozojZUHfy7_HCZKfwmhd' target='_blank' rel='noopener noreferrer'>CVE-2026-33372 Detail - NVD</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEumkSeI1RLYr89Phxm-iEXcW_Z9024BmTFaKRZQ8kyaVYIHBJv-jtwOPdiQ7FchdAs6nBhjma97POO-jrpD-HJu8n4BxpONtcTtauamg0rTBl47zsMpSCMSff3hPBAxKhQLwz3sXkPMQBUnJw==' target='_blank' rel='noopener noreferrer'>Zimbra Collaboration Suite (ZCS) 10.0 and 10.1 contains a... · CVE-2026-33368 - GitHub</a>
       </div>
     </div>
     <div class='card MEDIO'>
-      <h4>Vulnerabilidad de Falsificación de Solicitudes entre Sitios (CSRF) en Zimbra Webmail</h4>
-      <p class='meta'>Publicado: 2026-03-19</p>
-      <span class='tag'>Zimbra Collaboration Professional 10+</span>
+      <span class='tag'>MEDIO</span>
+      <h4>Actualizaciones de Seguridad para Ubuntu Server 24.04 LTS</h4>
+      <p class='meta'>Publicado: Varias fechas en marzo 2026</p>
       <ul>
-        <li>Una vulnerabilidad CSRF (CVE-2026-33372) existe en Zimbra Webmail (ZCS 10.0 y 10.1) debido a una validación inadecuada de los tokens CSRF.</li>
-        <li>Un atacante puede explotar esto engañando a un usuario autenticado para que envíe una solicitud manipulada, lo que podría permitir acciones no autorizadas en nombre de la víctima.</li>
+        <li>Se han lanzado múltiples avisos de seguridad para abordar vulnerabilidades en el kernel de Linux y otros componentes del sistema operativo Ubuntu 24.04 LTS.</li>
+        <li>Una vulnerabilidad de escalada de privilegios (CVE-2026-3888) en `snapd` afecta a Ubuntu 24.04 LTS y versiones anteriores.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Monitorear las actualizaciones de seguridad de Zimbra y aplicar parches para la vulnerabilidad CVE-2026-33372 cuando estén disponibles.</p>
+      <p><b>Acción Recomendada:</b> Aplicar todas las actualizaciones de seguridad disponibles para Ubuntu Server 24.04 LTS de manera prioritaria y regular para mitigar riesgos.</p>
       <div class='links'>
-        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33372" target="_blank" rel="noopener noreferrer">NVD - CVE-2026-33372</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1nk9fFG_o0_s2WA6v167ulBnF2ALMJlcqzgzMZE4xsFAflo8qOOI37T50pTFwSUbSO8C3VA0wS-IS_KQukQCn73tQWevBwA7dV-tviLC_hQFOh1PidEbqSJq-NUD_VBaflcIgt2UJmIDjUsbqABAdlagtQ60Du0OVo8Yx7wrvid8z-23r' target='_blank' rel='noopener noreferrer'>Ubuntu Security Notices</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAW9OHq-a7neK0O78RL4qhc6K9Jsf5nbKDxBGveY7wzh3ZIONd4xdlx1LVoBgiO41bEaxzR3bEdAhjkN6Ge2wjL8YTXfttD0ebSLAM_BLl16Nk5o0V_wxxVBe4sA==' target='_blank' rel='noopener noreferrer'>Ubuntu Product Security Update Advisory (CVE-2026-3888) - ASEC</a>
       </div>
     </div>
-  </div>
-</section>
-
-<section class='section' id='ransomware'>
-  <h3 class='section-title'>Alertas de Ransomware</h3>
-  <div class='grid'>
-    <div class='card'>
-      <h4>Sin reportes verificados</h4>
-      <p class='meta'>Actualizado: 2026-03-27</p>
-      <p>No se han detectado nuevas campañas de ransomware dirigidas específicamente a los productos y entornos de infraestructura definidos, con información verificada y URLs oficiales en el período reciente.</p>
+    <div class='card MEDIO'>
+      <span class='tag'>MEDIO</span>
+      <h4>Vulnerabilidad de Escalada de Privilegios en Cámaras y HVR Dahua</h4>
+      <p class='meta'>Publicado: 2026-03-16</p>
+      <ul>
+        <li>Se ha descubierto una vulnerabilidad (CVE-2025-31703) en dispositivos Dahua NVR y XVR.</li>
+        <li>Un atacante con acceso físico al dispositivo puede obtener acceso a un shell restringido a través del puerto serie y omitir el mecanismo de autenticación para escalar privilegios.</li>
+      </ul>
+      <p><b>Acción Recomendada:</b> Actualizar el firmware de los dispositivos Dahua NVR/XVR a versiones con fecha de compilación posterior al 3 de marzo de 2026. Asegurar el acceso físico a los dispositivos para prevenir la explotación.</p>
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhQ77l8EotgopxfojNS2BY-CH4TqdK2MdbaW2OQJOLFkDep7101lU7Fxa_0j6q-Y3y021Ybv9Ix0cZJyaTx1RTPbFP0EDhJD8Kok_9o1t0DShM3cOxnmG3JppLp-q0b9HEFj8BzHOrrgWLit2UqPyD6MarmYjeBEleVRbvXw==' target='_blank' rel='noopener noreferrer'>CVE-2025-31703: Dahua NVR/XVR Privilege Escalation Flaw - SentinelOne</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGouX_-oPV7K0P8fP3EI1m7xmgp4GakwW7RAzrntDt4o55d5aTfU5d91WhANvF7PVDcmfhWVTiujyf-Vai-RL77unZy-x_7pixKw9W2sPP5YAsMW_lZMFUnQ_F2uQukARyvTHQjaGH_p-v5P4j_0TWJl6yH5o2UqfgZJf3E-Mupr4XGO_nkG0nW_Gow4EXHzZw6Kboxqp9MmsdKw4UgAjUalEZbbuj_RyGz9-OvDOgR1BqoARFJYMS5_wTN7tDLw2o4GTl1zec=' target='_blank' rel='noopener noreferrer'>Security Advisory – Vulnerability found in Dahua NVR/XVR device</a>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class='section' id='recomendaciones'>
-  <h3 class='section-title'>Recomendaciones Generales</h3>
-  <div class='grid'>
-    <div class='card'>
-      <h4>Mantener el Software Actualizado</h4>
-      <p class='meta'>Publicado: 2026-03-27</p>
-      <p>Asegúrese de que todos los sistemas operativos, firmware de hardware y aplicaciones listadas estén siempre actualizados con los últimos parches de seguridad.
+    <div class='card MEDIO'>
+      <span class='tag'>MEDIO</span>
+      <h4>Actualización Obligatoria para ESET Antivirus Corporativo</h4>
+      <p class='meta'>Publicado: 2026-0
