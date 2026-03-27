@@ -9,7 +9,8 @@ on:
 jobs:
   boletin:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,6 +21,22 @@ jobs:
         run: |
           pip install requests
           python generar_boletin.py
+          
+      - name: Mostrar contenido de content/ en logs (debug)
+        if: always()
+        run: |
+            echo "=== LISTADO content ==="
+            ls -la content || echo "No existe carpeta content"
+            echo "=== HEAD raw.json (si existe) ==="
+            if [ -f content/raw.json ]; then head -c 2000 content/raw.json || true; else echo "raw.json no existe"; fi echo "=== HEAD api_error_response.json (si existe) ==="
+            if [ -f content/api_error_response.json ]; then head -c 2000 content/api_error_response.json || true; else echo "api_error_response.json no existe"; fi
+
+      - name: Subir carpeta content como artefacto
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boletin-content
+          path: content
 
       - name: Commit
         run: |
