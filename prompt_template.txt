@@ -2,6 +2,13 @@ Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML, 
 
 Prioriza EXCLUSIVAMENTE información real relacionada con los siguientes productos y entornos de infraestructura. 
 Los url a las fuentes de información seran utilizados también.
+REGLA CRÍTICA DE VERIFICACIÓN DE FUENTES: Prioriza la precisión absoluta sobre la completitud.
+  - NUNCA inventes, supongas o alucines una URL.
+  - NUNCA uses marcadores de posición para IDs de vulnerabilidad como 'CVE-2024-XXXX'. Si no conoces el ID exacto, elimina ese evento por completo.
+  - Cada URL proporcionada debe ser un enlace directo y funcional a un advisory oficial (ej. NVD, CISA, o vendor advisory).
+  - Si para un evento crítico no puedes proporcionar un enlace oficial específico, verificado y preciso, no incluyas el evento. 
+  - Prefiero un boletín con menos tarjetas reales que uno con tarjetas falsas o inexactas. Rompe el flujo y devuelve un mensaje de error si no puedes cumplir esta regla.
+
 NO incluyas ningún otro producto, sistema o tecnología fuera de esta lista:
 
 - Fortinet: FortiOS 7.2.12 en adelante para: FortiGate, FortiAP, FortiMail
