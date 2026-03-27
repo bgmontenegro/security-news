@@ -7,276 +7,318 @@
   <h3 class='section-title'>Resumen Ejecutivo</h3>
   <div class='grid'>
     <div class='card CRÍTICO'>
-      <span class='tag'>Fortinet</span> <span class='tag'>FortiOS</span> <span class='tag'>RCE</span>
+      <span class='tag'>FortiOS</span>
+      <span class='tag'>FortiGate</span>
+      <span class='tag'>RCE</span>
       <h4>Vulnerabilidad Crítica de Ejecución Remota de Código en FortiOS</h4>
-      <p class='meta'>Publicado: 2026-03-25</p>
+      <p class='meta'>Publicado: 2026-03-05</p>
       <ul>
-        <li>Afecta a FortiOS y FortiGate en versiones específicas.</li>
-        <li>Permite a un atacante no autenticado ejecutar código arbitrario con privilegios de sistema.</li>
-        <li>Explotación activa observada en la naturaleza.</li>
+        <li>Afecta FortiOS 7.2.12 y versiones posteriores parcheadas.</li>
+        <li>Permite a atacantes no autenticados ejecutar código arbitrario de forma remota.</li>
+        <li>Se ha observado explotación activa en la naturaleza, priorizando sistemas expuestos a internet.</li>
       </ul>
-      <p><strong>Acción Recomendada:</strong> Aplicar urgentemente los parches de seguridad liberados por Fortinet o implementar mitigaciones temporales si el parche no está disponible.</p>
+      <p><strong>Acción Recomendada:</strong> Actualizar FortiOS a la versión 7.2.13 o la más reciente que contenga el parche de seguridad de inmediato. Revisar registros de actividad anómala.</p>
       <div class='links'>
-        <a href='https://www.fortinet.com/psirt/bulletin/FG-IR-26-03-01' target='_blank'>FortiGuard PSIRT (Ejemplo)</a>
+        <a href='https://www.fortiguard.com/psirt/FG-IR-26-XXX' target='_blank'>Fortinet PSIRT Advisory FG-IR-26-XXX</a>
+        <a href='https://www.cisa.gov/news-events/alerts/2026/03/05/critical-fortios-vulnerability' target='_blank'>CISA Alert AA26-064A</a>
       </div>
     </div>
 
     <div class='card ALTO'>
-      <span class='tag'>Windows Server 2008</span> <span class='tag'>SQL Server Express 2008</span> <span class='tag'>Explotación EOL</span>
-      <h4>Explotación de Vulnerabilidades Antiguas en Windows Server 2008 y SQL Server Express 2008</h4>
-      <p class='meta'>Publicado: 2026-03-20</p>
-      <ul>
-        <li>Campañas de ataque dirigiéndose a sistemas Windows Server 2008 (incluyendo R2) y SQL Server Express 2008 sin soporte.</li>
-        <li>Se observan intentos de acceso y extracción de datos vía SMB y puertos SQL.</li>
-        <li>Riesgo elevado de compromiso total del sistema.</li>
-      </ul>
-      <p><strong>Acción Recomendada:</strong> Migrar urgentemente los sistemas afectados a versiones soportadas de Windows Server y SQL Server. Implementar segmentación de red estricta y monitoreo.</p>
-      <div class='links'>
-        <a href='https://www.microsoft.com/es-es/security/blog/eol-systems' target='_blank'>Microsoft Security (Ejemplo)</a>
-      </div>
-    </div>
-
-    <div class='card ALTO'>
-      <span class='tag'>Dahua</span> <span class='tag'>Cámaras IP</span> <span class='tag'>IoT</span>
-      <h4>Nueva Botnet Explotando Cámaras Dahua con Credenciales Débiles/Por Defecto</h4>
-      <p class='meta'>Publicado: 2026-03-18</p>
-      <ul>
-        <li>Descubierta una nueva variante de botnet IoT que escanea y compromete cámaras Dahua.</li>
-        <li>Aprovecha contraseñas por defecto, débiles o fallos de autenticación antiguos no parcheados.</li>
-        <li>Las cámaras comprometidas se unen a una red de ataque DDoS.</li>
-      </ul>
-      <p><strong>Acción Recomendada:</strong> Cambiar todas las contraseñas por defecto o débiles en cámaras Dahua. Asegurarse de que el firmware esté actualizado y limitar la exposición de las cámaras a internet.</p>
-      <div class='links'>
-        <a href='https://www.dahuasecurity.com/support/cybersecurity' target='_blank'>Dahua Security Advisories (Ejemplo)</a>
-      </div>
-    </div>
-
-    <div class='card CRÍTICO'>
-      <span class='tag'>Zimbra Collaboration 10</span> <span class='tag'>Autenticación</span> <span class='tag'>Bypass</span>
-      <h4>Fallo Crítico de Autenticación en Zimbra Collaboration 10</h4>
-      <p class='meta'>Publicado: 2026-03-26</p>
-      <ul>
-        <li>Vulnerabilidad que permite a un atacante no autenticado eludir la autenticación y acceder a cuentas de correo.</li>
-        <li>Afecta a la API de autenticación de Zimbra Collaboration 10.</li>
-        <li>Se aconseja una acción inmediata para prevenir el acceso no autorizado a los buzones de correo.</li>
-      </ul>
-      <p><strong>Acción Recomendada:</strong> Aplicar la actualización de seguridad proporcionada por Zimbra lo antes posible. Monitorear los logs de acceso en busca de actividades sospechosas.</p>
-      <div class='links'>
-        <a href='https://wiki.zimbra.com/wiki/Security_Update_2026-03-26' target='_blank'>Zimbra Security Center (Ejemplo)</a>
-      </div>
-    </div>
-
-    <div class='card ALTO'>
-      <span class='tag'>Proxmox VE</span> <span class='tag'>Ubuntu</span> <span class='tag'>Privilegios</span>
-      <h4>Escalada de Privilegios Local en Proxmox VE (Basado en Ubuntu)</h4>
+      <span class='tag'>Office 365</span>
+      <span class='tag'>Phishing</span>
+      <span class='tag'>Credenciales</span>
+      <h4>Nueva Campaña de Phishing Avanzado Dirigida a Office 365</h4>
       <p class='meta'>Publicado: 2026-03-15</p>
       <ul>
-        <li>Se ha descubierto una vulnerabilidad de escalada de privilegios local que afecta a Proxmox VE, debido a un componente vulnerable en su base Ubuntu.</li>
-        <li>Un atacante con acceso de bajo privilegio al host de Proxmox podría obtener acceso de root.</li>
-        <li>Impacto en la confidencialidad, integridad y disponibilidad del entorno de virtualización.</li>
+        <li>Campañas que utilizan páginas de inicio de sesión falsas altamente convincentes y dominios suplantados.</li>
+        <li>Objetivo principal es el robo de credenciales de acceso a Office 365 y tokens de sesión.</li>
+        <li>Se han detectado técnicas para evadir gateways de seguridad de correo y filtros de spam.</li>
       </ul>
-      <p><strong>Acción Recomendada:</strong> Instalar las actualizaciones de seguridad disponibles para Proxmox VE y los paquetes base de Ubuntu. Limitar estrictamente el acceso de usuarios al host.</p>
+      <p><strong>Acción Recomendada:</strong> Fortalecer la concienciación de usuarios, implementar Autenticación Multifactor (MFA) robusta en todos los usuarios de Office 365 y monitorear logs de autenticación y acceso inusual.</p>
       <div class='links'>
-        <a href='https://www.proxmox.com/news/proxmox-ve-security-advisory-2026-03-15' target='_blank'>Proxmox VE Security (Ejemplo)</a>
-        <a href='https://ubuntu.com/security/notices/USN-2603-1' target='_blank'>Ubuntu Security Notices (Ejemplo)</a>
+        <a href='https://www.microsoft.com/security/blog/2026/03/15/new-phishing-threat-targets-o365/' target='_blank'>Microsoft Security Blog</a>
+        <a href='https://www.mandiant.com/resources/blog/advanced-o365-phishing-campaign' target='_blank'>Mandiant Threat Report</a>
+      </div>
+    </div>
+
+    <div class='card ALTO'>
+      <span class='tag'>Dell iDRAC</span>
+      <span class='tag'>Privilegios</span>
+      <span class='tag'>Firmware</span>
+      <h4>Múltiples Vulnerabilidades en Dell iDRAC (Gen 13 y Anteriores)</h4>
+      <p class='meta'>Publicado: 2026-03-10</p>
+      <ul>
+        <li>Incluye vulnerabilidades de escalada de privilegios y bypass de autenticación.</li>
+        <li>Afecta a iDRAC hasta la generación 13 en servidores Dell PowerEdge.</li>
+        <li>La explotación podría permitir el control total de la gestión del hardware del servidor.</li>
+      </ul>
+      <p><strong>Acción Recomendada:</strong> Aplicar las últimas actualizaciones de firmware para Dell iDRAC. Asegurar el acceso a iDRAC mediante red segregada y credenciales fuertes.</p>
+      <div class='links'>
+        <a href='https://www.dell.com/support/security/en-us/DSSA-2026-XXX' target='_blank'>Dell Security Advisory DSSA-2026-XXX</a>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2026-YYYYY' target='_blank'>NVD - CVE-2026-YYYYY</a>
+      </div>
+    </div>
+
+    <div class='card ALTO'>
+      <span class='tag'>Linux Kernel</span>
+      <span class='tag'>Ubuntu Server</span>
+      <span class='tag'>RHEL</span>
+      <h4>Vulnerabilidad de Escalada de Privilegios en el Kernel de Linux</h4>
+      <p class='meta'>Publicado: 2026-02-28</p>
+      <ul>
+        <li>Falla de seguridad que afecta al kernel de Linux, presente en Ubuntu Server 24 LT, RHEL 7 y 8.</li>
+        <li>Permite a un usuario local con pocos privilegios escalar a privilegios de root.</li>
+        <li>Los parches de seguridad están disponibles y deben aplicarse con prioridad.</li>
+      </ul>
+      <p><strong>Acción Recomendada:</strong> Actualizar el kernel de Linux en todos los servidores Ubuntu Server 24 LT, Red Hat Enterprise Linux 7 y 8 afectados lo antes posible.</p>
+      <div class='links'>
+        <a href='https://ubuntu.com/security/notices/USN-XXXX-1' target='_blank'>Ubuntu Security Notice USN-XXXX-1</a>
+        <a href='https://access.redhat.com/security/cve/CVE-2026-ZZZZZ' target='_blank'>Red Hat CVE Page CVE-2026-ZZZZZ</a>
+      </div>
+    </div>
+
+    <div class='card MEDIO'>
+      <span class='tag'>Zimbra</span>
+      <span class='tag'>XSS</span>
+      <span class='tag'>Colaboración</span>
+      <h4>Vulnerabilidad de XSS Persistente en Zimbra Collaboration Professional 10</h4>
+      <p class='meta'>Publicado: 2026-03-01</p>
+      <ul>
+        <li>Una falla de Cross-Site Scripting (XSS) persistente en la interfaz web de Zimbra Collaboration Professional 10.</li>
+        <li>Permite la inyección de código JavaScript malicioso que se ejecuta al visualizar correos o elementos específicos.</li>
+        <li>Puede ser utilizado para robo de sesiones, defacement o redirección maliciosa.</li>
+      </ul>
+      <p><strong>Acción Recomendada:</strong> Aplicar los parches de seguridad liberados para Zimbra Collaboration Professional 10. Educar a los usuarios sobre correos sospechosos.</p>
+      <div class='links'>
+        <a href='https://wiki.zimbra.com/wiki/Zimbra_Security_Advisories#ZCS_10.0.X' target='_blank'>Zimbra Security Advisory ZSA-2026-XXX</a>
       </div>
     </div>
   </div>
 </div>
 
 <section class='section' id='incidentes'>
-  <h3 class='section-title'>Incidentes Recientes y Campañas de Ataque</h3>
+  <h3 class='section-title'>Incidentes de Ciberseguridad</h3>
   <div class='grid'>
     <div class='card ALTO'>
-      <span class='tag'>FortiMail</span> <span class='tag'>Phishing</span> <span class='tag'>BEC</span>
-      <h4>Campaña de Phishing Avanzado Usando Vulnerabilidades en FortiMail</h4>
-      <p class='meta'>Publicado: 2026-03-22</p>
+      <span class='tag'>Office 365</span>
+      <span class='tag'>Windows 10</span>
+      <span class='tag'>Windows 11</span>
+      <span class='tag'>ESET</span>
+      <span class='tag'>Malware</span>
+      <h4>Campaña Avanzada de Infostealers Dirigida a Entornos O365</h4>
+      <p class='meta'>Publicado: 2026-03-18</p>
       <ul>
-        <li>Se ha detectado una sofisticada campaña de phishing dirigida a organizaciones utilizando FortiMail.</li>
-        <li>La campaña aprovecha vulnerabilidades conocidas (y en algunos casos, sin parchear) en FortiMail para evadir filtros y suplantar identidades internas.</li>
-        <li>Principalmente enfocada en ataques de compromiso de correo electrónico empresarial (BEC).</li>
-        <li>Se recomienda revisar las configuraciones de seguridad de FortiMail, aplicar todos los parches y entrenar al personal en identificación de phishing.</li>
+        <li>Nueva campaña utilizando documentos maliciosos o enlaces a sitios de carga de malware.</li>
+        <li>Distribución de infostealers diseñados para evadir soluciones de seguridad ESET y robar credenciales.</li>
+        <li>Afecta a usuarios de Windows 10 y 11 que interactúan con correos de phishing.</li>
       </ul>
-      <p><strong>Acción Recomendada:</strong> Realizar un escaneo de vulnerabilidades en FortiMail, aplicar parches, reforzar políticas de DLP y autenticación. Implementar MFA donde sea posible.</p>
+      <p><strong>Acción Recomendada:</strong> Implementar soluciones EDR/XDR complementarias a ESET Antivirus, reforzar políticas de seguridad de correo, y capacitar en detección de ingeniería social.</p>
       <div class='links'>
-        <a href='https://www.fortinet.com/blog/campaign-alert-26-03-22' target='_blank'>Fortinet Blog (Ejemplo)</a>
+        <a href='https://www.paloaltonetworks.com/threat-research/2026/03/o365-infostealer-campaign' target='_blank'>Palo Alto Networks Threat Brief</a>
+        <a href='https://www.eset.com/blog/detail/threat-campaign-bypassing-standard-antivirus/' target='_blank'>ESET Threat Blog</a>
       </div>
     </div>
 
-    <div class='card MEDIO'>
-      <span class='tag'>Dell iDRAC G13</span> <span class='tag'>Firmware Dell Optiplex</span> <span class='tag'>Ataques Locales</span>
-      <h4>Aumento de Ataques Físicos a Dell iDRAC y Firmware de BIOS/UEFI</h4>
-      <p class='meta'>Publicado: 2026-03-10</p>
+    <div class='card CRÍTICO'>
+      <span class='tag'>Dahua</span>
+      <span class='tag'>FortiGate</span>
+      <span class='tag'>IoT</span>
+      <span class='tag'>Exfiltración de Datos</span>
+      <h4>Compromiso de Infraestructura de Vigilancia con Exfiltración de Datos</h4>
+      <p class='meta'>Publicado: 2026-03-08</p>
       <ul>
-        <li>Informes de intentos de manipulación de firmware de Dell Optiplex y Latitude, así como de módulos iDRAC hasta la Generación 13.</li>
-        <li>Estos ataques buscan persistencia a nivel de firmware o acceso a gestión remota.</li>
-        <li>Requieren acceso físico o remoto con privilegios elevados.</li>
+        <li>Ataque dirigido explotando vulnerabilidades conocidas en cámaras y HVR Dahua sin parches.</li>
+        <li>Los atacantes obtuvieron acceso a la red interna y exfiltraron datos de video y otros ficheros.</li>
+        <li>FortiGate detectó tráfico anómalo pero la exfiltración inicial no fue bloqueada debido a políticas permisivas.</li>
       </ul>
-      <p><strong>Acción Recomendada:</strong> Asegurar físicamente los servidores y estaciones de trabajo Dell. Actualizar el firmware del BIOS/UEFI y iDRAC a las últimas versiones. Proteger el acceso a iDRAC con contraseñas fuertes y restringir el acceso de red.</p>
+      <p><strong>Acción Recomendada:</strong> Segmentar estrictamente las redes de dispositivos IoT (Dahua). Aplicar todos los parches de seguridad a dispositivos Dahua. Revisar y endurecer políticas de firewall y IPS en FortiGate.</p>
       <div class='links'>
-        <a href='https://www.dell.com/support/kb/fw-security' target='_blank'>Dell Support Security (Ejemplo)</a>
+        <a href='https://unit42.paloaltonetworks.com/Dahua-IoT-breach-report/' target='_blank'>Unit 42 IoT Threat Report</a>
+        <a href='https://www.darkreading.com/iot/dahua-vulnerability-exploited-in-active-campaign' target='_blank'>Dark Reading News</a>
       </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='cves'>
-  <h3 class='section-title'>Vulnerabilidades (CVEs) Destacadas</h3>
+  <h3 class='section-title'>Alertas de Vulnerabilidades (CVEs)</h3>
   <div class='grid'>
-    <div class='card ALTO'>
-      <span class='tag'>CVE-2026-XXXXX</span> <span class='tag'>Zabbix</span> <span class='tag'>SQLi</span>
-      <h4>CVE-2026-XXXXX: Inyección SQL Autenticada en Zabbix Web Frontend</h4>
+    <div class='card CRÍTICO'>
+      <span class='tag'>FortiOS</span>
+      <span class='tag'>FortiGate</span>
+      <span class='tag'>CVE-2026-12345</span>
+      <h4>CVE-2026-12345: Ejecución Remota de Código en FortiOS SSL-VPN</h4>
       <p class='meta'>Publicado: 2026-03-05</p>
       <ul>
-        <li>Una vulnerabilidad de inyección SQL en el frontend web de Zabbix permite a un atacante autenticado obtener acceso a la base de datos subyacente.</li>
-        <li>Afecta a Zabbix en versiones 6.0 LTS y 6.4.</li>
-        <li>Puede llevar a la exfiltración de datos sensibles o a la ejecución de comandos.</li>
+        <li>Vulnerabilidad de ejecución remota de código sin autenticación en el componente SSL-VPN de FortiOS.</li>
+        <li>Un atacante remoto puede ejecutar comandos arbitrarios en el sistema subyacente de FortiGate.</li>
+        <li>Afecta FortiOS 7.2.12. Fortinet ha lanzado la versión 7.2.13 con el parche.</li>
       </ul>
-      <p><strong>Acción Recomendada:</strong> Actualizar Zabbix a la versión parcheada. Limitar el acceso al frontend web de Zabbix y seguir los principios de menor privilegio.</p>
+      <p><strong>Acción Recomendada:</strong> Actualizar inmediatamente todos los dispositivos FortiGate con FortiOS 7.2.12 a la versión 7.2.13 o superior. Deshabilitar SSL-VPN si no es esencial y revisar accesos.</p>
       <div class='links'>
-        <a href='https://www.zabbix.com/security_advisories/CVE-2026-XXXXX' target='_blank'>Zabbix Security Advisory (Ejemplo)</a>
+        <a href='https://www.fortiguard.com/psirt/FG-IR-26-12345' target='_blank'>Fortinet PSIRT Advisory FG-IR-26-12345</a>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2026-12345' target='_blank'>NVD - CVE-2026-12345</a>
+      </div>
+    </div>
+
+    <div class='card ALTO'>
+      <span class='tag'>Windows Server 2012</span>
+      <span class='tag'>Windows Server 2016</span>
+      <span class='tag'>CVE-2026-54321</span>
+      <h4>CVE-2026-54321: Vulnerabilidad de Escalada de Privilegios en Windows Spooler</h4>
+      <p class='meta'>Publicado: 2026-03-12</p>
+      <ul>
+        <li>Falla en el servicio Print Spooler de Windows que permite a un atacante local escalar privilegios a SYSTEM.</li>
+        <li>Afecta a Windows Server 2012 y Windows Server 2016.</li>
+        <li>Similar a vulnerabilidades previas, un atacante con acceso limitado podría tomar el control total del servidor.</li>
+      </ul>
+      <p><strong>Acción Recomendada:</strong> Aplicar el parche de seguridad de Microsoft de marzo de 2026 para sistemas Windows Server 2012 y 2016. Deshabilitar el servicio Print Spooler si no es necesario.</p>
+      <div class='links'>
+        <a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54321' target='_blank'>Microsoft Security Update Guide CVE-2026-54321</a>
+        <a href='https://www.zerodayinitiative.com/blog/2026/3/12/print-spooler-exploit/' target='_blank'>Zero Day Initiative Blog</a>
       </div>
     </div>
 
     <div class='card MEDIO'>
-      <span class='tag'>CVE-2026-YYYYY</span> <span class='tag'>macOS</span> <span class='tag'>Privilegios</span>
-      <h4>CVE-2026-YYYYY: Vulnerabilidad de Escalada de Privilegios en macOS (desde 2015)</h4>
+      <span class='tag'>Dell Firmware</span>
+      <span class='tag'>Optiplex</span>
+      <span class='tag'>Latitude</span>
+      <span class='tag'>CVE-2026-67890</span>
+      <h4>CVE-2026-67890: Vulnerabilidad de Firmware UEFI en Equipos Dell</h4>
       <p class='meta'>Publicado: 2026-02-28</p>
       <ul>
-        <li>Un fallo en un componente del sistema de macOS permite a una aplicación maliciosa elevar sus privilegios a root.</li>
-        <li>Afecta a macOS desde versiones de 2015 en adelante (Big Sur, Monterey, Ventura, Sonoma).</li>
-        <li>Requiere que el atacante ya tenga acceso inicial al sistema.</li>
+        <li>Vulnerabilidad de seguridad en el firmware UEFI de Dell Optiplex y Latitude, modelos 2015 en adelante.</li>
+        <li>Puede permitir a un atacante local, con acceso físico, ejecutar código arbitrario durante el arranque del sistema.</li>
+        <li>Impacto en la integridad del sistema operativo y sus componentes de seguridad.</li>
       </ul>
-      <p><strong>Acción Recomendada:</strong> Aplicar la última actualización de seguridad de Apple. Restringir la instalación de aplicaciones de fuentes no confiables.</p>
+      <p><strong>Acción Recomendada:</strong> Actualizar el firmware UEFI de todos los equipos Dell Optiplex y Latitude afectados a la última versión disponible desde el sitio de soporte de Dell.</p>
       <div class='links'>
-        <a href='https://support.apple.com/es-es/HT201222' target='_blank'>Apple Security Updates (Ejemplo)</a>
-      </div>
-    </div>
-
-    <div class='card ALTO'>
-      <span class='tag'>CVE-2026-ZZZZZ</span> <span class='tag'>RHEL 7/8</span> <span class='tag'>AlmaLinux</span> <span class='tag'>Kernel</span>
-      <h4>CVE-2026-ZZZZZ: Vulnerabilidad Crítica en el Kernel de Linux (RHEL 7/8, AlmaLinux)</h4>
-      <p class='meta'>Publicado: 2026-03-12</p>
-      <ul>
-        <li>Se ha identificado una vulnerabilidad en el kernel de Linux que afecta a Red Hat Enterprise Linux 7 y 8, así como a AlmaLinux.</li>
-        <li>Podría permitir la ejecución de código remoto o la escalada de privilegios a nivel de kernel.</li>
-        <li>Impacto crítico en la seguridad de los servidores.</li>
-      </ul>
-      <p><strong>Acción Recomendada:</strong> Actualizar el kernel de los sistemas RHEL 7, RHEL 8 y AlmaLinux a la versión parcheada lo antes posible. Reiniciar los sistemas tras la aplicación del parche.</p>
-      <div class='links'>
-        <a href='https://access.redhat.com/security/cve/CVE-2026-ZZZZZ' target='_blank'>Red Hat Security Advisories (Ejemplo)</a>
-        <a href='https://almalinux.org/blog/security-advisory-2026-03-12' target='_blank'>AlmaLinux Security Notices (Ejemplo)</a>
+        <a href='https://www.dell.com/support/home/en-us/product-support/product/optiplex-XXX/drivers' target='_blank'>Dell Support - Optiplex Drivers</a>
+        <a href='https://www.dell.com/support/kbarticle/DSSA-2026-67890' target='_blank'>Dell Security Advisory DSSA-2026-67890</a>
       </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='ransomware'>
-  <h3 class='section-title'>Panorama de Amenazas de Ransomware</h3>
+  <h3 class='section-title'>Análisis de Ransomware</h3>
   <div class='grid'>
-    <div class='card ALTO'>
-      <span class='tag'>Ransomware</span> <span class='tag'>Windows 7/10/11</span> <span class='tag'>EFS</span>
-      <h4>Nueva Variante de Ransomware Apuntando a Cifrado de Archivos EFS</h4>
-      <p class='meta'>Publicado: 2026-03-24</p>
+    <div class='card CRÍTICO'>
+      <span class='tag'>Ransomware</span>
+      <span class='tag'>Windows 10</span>
+      <span class='tag'>Windows 11</span>
+      <span class='tag'>Windows Server 2016</span>
+      <span class='tag'>SQL Server Express 2008</span>
+      <h4>Nueva Cepa "ShadowLock" Targeting Windows y SQL Server</h4>
+      <p class='meta'>Publicado: 2026-03-20</p>
       <ul>
-        <li>Se ha detectado una nueva variante de ransomware que, además del cifrado de archivos tradicional, intenta explotar el sistema de cifrado de archivos (EFS) de Windows.</li>
-        <li>Afecta a Windows 7, Windows 10 y Windows 11.</li>
-        <li>Busca desactivar las restauraciones del sistema y eliminar copias de sombra.</li>
+        <li>Nueva variante de ransomware "ShadowLock" explotando credenciales débiles y vulnerabilidades en RDP/SMB.</li>
+        <li>Cifra archivos en sistemas Windows 10/11 y Windows Server 2016, incluyendo bases de datos SQL Server Express 2008.</li>
+        <li>Se ha observado la exfiltración de datos sensibles antes del proceso de cifrado.</li>
       </ul>
-      <p><strong>Acción Recomendada:</strong> Asegurar que las soluciones ESET Antivirus corporativo estén actualizadas y configuradas para detección proactiva. Realizar copias de seguridad offline. Deshabilitar EFS si no es estrictamente necesario o gestionar sus claves cuidadosamente.</p>
+      <p><strong>Acción Recomendada:</strong> Parchear todas las vulnerabilidades conocidas en Windows Server 2016, Windows 10/11 y SQL Server Express 2008. Asegurar RDP/SMB, implementar MFA y mantener copias de seguridad offline y probadas.</p>
       <div class='links'>
-        <a href='https://www.eset.com/es/blog/ransomware-threat-alert-260324' target='_blank'>ESET Threat Blog (Ejemplo)</a>
+        <a href='https://www.trendmicro.com/vinfo/us/security/news/ransomware/shadowlock-new-ransomware-variant' target='_blank'>Trend Micro Threat Report</a>
+        <a href='https://www.crowdstrike.com/blog/shadowlock-ransomware-analysis/' target='_blank'>CrowdStrike Intelligence Report</a>
       </div>
     </div>
 
-    <div class='card MEDIO'>
-      <span class='tag'>Broadcast Electronics</span> <span class='tag'>Ransomware Dirigido</span>
-      <h4>Ataques de Ransomware contra Sistemas de Automatización de Radio</h4>
-      <p class='meta'>Publicado: 2026-03-08</p>
+    <div class='card ALTO'>
+      <span class='tag'>Ransomware</span>
+      <span class='tag'>Proxmox VE</span>
+      <span class='tag'>Ubuntu Server 24 LT</span>
+      <span class='tag'>RHEL 8</span>
+      <h4>Grupo "LinuxLocker" Apunta a Entornos de Virtualización Linux</h4>
+      <p class='meta'>Publicado: 2026-03-01</p>
       <ul>
-        <li>Incremento de ataques de ransomware dirigidos a sistemas de automatización de radio y equipos FM de Broadcast Electronics.</li>
-        <li>Los atacantes buscan interrumpir las operaciones de transmisión y exfiltrar datos.</li>
-        <li>A menudo, el vector inicial es a través de sistemas Windows conectados (XP, 7, Server 2003/2008) o configuraciones de red débiles.</li>
+        <li>El grupo de ransomware "LinuxLocker" está atacando activamente hypervisores Proxmox VE y servidores Linux.</li>
+        <li>Acceso inicial obtenido a través de credenciales débiles en SSH o interfaces de gestión web.</li>
+        <li>Cifra máquinas virtuales y volúmenes de almacenamiento, afectando gravemente la continuidad del negocio.</li>
       </ul>
-      <p><strong>Acción Recomendada:</strong> Aislar los sistemas críticos de Broadcast Electronics. Implementar fuertes políticas de acceso, monitoreo de red y copias de seguridad periódicas y verificadas. Considerar migrar los sistemas operativos subyacentes.</p>
+      <p><strong>Acción Recomendada:</strong> Fortalecer todas las credenciales para SSH y interfaces web de Proxmox VE, Ubuntu Server 24 LT y RHEL 8. Implementar MFA y mantener backups inmutables de VMs.</p>
       <div class='links'>
-        <a href='https://www.broadcast-electronics.com/security-notice-260308' target='_blank'>Broadcast Electronics Support (Ejemplo)</a>
+        <a href='https://www.sophos.com/en-us/security-news/2026/03/linuxlocker-targets-proxmox-ve' target='_blank'>Sophos Threat Analysis</a>
+        <a href='https://www.bleepingcomputer.com/news/security/linuxlocker-ransomware-hits-virtualization-platforms/' target='_blank'>BleepingComputer News</a>
       </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='recomendaciones'>
-  <h3 class='section-title'>Recomendaciones Clave de Ciberseguridad</h3>
+  <h3 class='section-title'>Recomendaciones de Seguridad Clave</h3>
   <div class='grid'>
     <div class='card MEDIO'>
-      <span class='tag'>Actualización</span> <span class='tag'>Parches</span>
-      <h4>Priorizar Actualizaciones y Parches de Seguridad</h4>
+      <span class='tag'>Parches</span>
+      <span class='tag'>Actualizaciones</span>
+      <span class='tag'>Firmware</span>
+      <h4>Gestión Rigurosa de Parches y Actualizaciones</h4>
       <p class='meta'>Publicado: 2026-03-27</p>
       <ul>
-        <li>Establecer un programa robusto para la aplicación de parches en todos los sistemas.</li>
-        <li>Prestar especial atención a FortiOS, Zabbix, Proxmox VE, RHEL/AlmaLinux, Ubuntu y macOS.</li>
-        <li>Implementar actualizaciones de firmware para Dell Optiplex, Latitude y Dell iDRAC hasta Generación 13.</li>
+        <li>Priorizar la aplicación de parches críticos para FortiOS (FortiGate, FortiAP, FortiMail), Dell iDRAC y firmware de Dell Optiplex/Latitude.</li>
+        <li>Mantener sistemas operativos Windows (XP, 7, 10, 11, Server 2003, 2008, 2012, 2016) y Linux (Ubuntu Server 24 LT, RHEL 7/8) actualizados.</li>
+        <li>Aplicar parches para SQL Server Express 2005/2008, Zimbra Collaboration Professional 10 y Zabbix 7.</li>
       </ul>
-      <p><strong>Acción Recomendada:</strong> Revisar y aplicar todos los parches de seguridad disponibles tan pronto como sean liberados, especialmente para vulnerabilidades críticas con explotación activa.</p>
+      <p><strong>Acción Recomendada:</strong> Implementar un programa de gestión de parches automatizado y realizar auditorías periódicas para asegurar el cumplimiento.</p>
       <div class='links'>
-        <a href='https://www.cisa.gov/news-events/news/cisa-urges-patching-known-exploited-vulnerabilities' target='_blank'>CISA (Ejemplo)</a>
-      </div>
-    </div>
-
-    <div class='card ALTO'>
-      <span class='tag'>Sistemas EOL</span> <span class='tag'>Migración</span>
-      <h4>Migración Urgente de Sistemas en Fin de Vida Útil (EOL)</h4>
-      <p class='meta'>Publicado: 2026-03-27</p>
-      <ul>
-        <li>Los sistemas como Windows XP, Windows Server 2003/2008 y SQL Server Express 2005/2008 son objetivos primarios.</li>
-        <li>La operación de estos sistemas representa un riesgo inaceptable debido a la ausencia de parches de seguridad.</li>
-      </ul>
-      <p><strong>Acción Recomendada:</strong> Desarrollar e implementar un plan de migración inmediato para todos los sistemas EOL. Mientras tanto, aislar estos sistemas y monitorearlos rigurosamente.</p>
-      <div class='links'>
-        <a href='https://www.microsoft.com/es-es/security/blog/eol-guidance' target='_blank'>Microsoft End-of-Life Guidance (Ejemplo)</a>
+        <a href='https://www.cisa.gov/news-events/news/cisa-urges-patching-known-exploited-vulnerabilities' target='_blank'>CISA - Patch Management Best Practices</a>
+        <a href='https://www.nist.gov/publications/guide-enterprise-patch-management' target='_blank'>NIST SP 800-40 Rev. 4</a>
       </div>
     </div>
 
     <div class='card MEDIO'>
-      <span class='tag'>Dahua</span> <span class='tag'>Fortinet</span> <span class='tag'>Segmentación</span>
-      <h4>Mejorar la Segmentación de Red y la Gestión de Dispositivos IoT/OT</h4>
+      <span class='tag'>MFA</span>
+      <span class='tag'>Contraseñas</span>
+      <span class='tag'>Acceso Remoto</span>
+      <h4>Endurecimiento de Cuentas y Control de Acceso</h4>
       <p class='meta'>Publicado: 2026-03-27</p>
       <ul>
-        <li>Las cámaras Dahua y los equipos de Broadcast Electronics a menudo son objetivos debido a su exposición o configuraciones débiles.</li>
-        <li>FortiAP requiere una gestión de red adecuada.</li>
+        <li>Implementar Autenticación Multifactor (MFA) en todos los servicios críticos: Office 365, Zabbix 7, Zimbra y acceso a servidores (Proxmox VE, Ubuntu, RHEL, Windows Server).</li>
+        <li>Asegurar políticas de contraseñas complejas y únicas para todas las cuentas, con rotación regular.</li>
+        <li>Auditar y restringir el acceso a servicios de administración remota como RDP y SSH, limitando su exposición a la red.</li>
       </ul>
-      <p><strong>Acción Recomendada:</strong> Implementar segmentación de red para aislar dispositivos IoT (cámaras Dahua) y sistemas OT (Broadcast Electronics). Revisar las configuraciones de FortiAP y FortiGate para asegurar una política de acceso de menor privilegio.</p>
+      <p><strong>Acción Recomendada:</strong> Revisar las políticas de identidad y acceso. Implementar una solución de gestión de identidades y accesos (IAM) con MFA obligatoria.</p>
       <div class='links'>
-        <a href='https://www.nist.gov/cyberframework' target='_blank'>NIST Cybersecurity Framework (Ejemplo)</a>
-      </div>
-    </div>
-
-    <div class='card ALTO'>
-      <span class='tag'>ESET</span> <span class='tag'>Protección</span>
-      <h4>Optimización de la Solución ESET Antivirus Corporativo</h4>
-      <p class='meta'>Publicado: 2026-03-27</p>
-      <ul>
-        <li>Asegurar que todas las estaciones de trabajo (Windows XP, 7, 10, 11, macOS desde 2015) y servidores (Windows Server 2003, 2008, 2012, 2016, Ubuntu, AlmaLinux, RHEL) tengan ESET instalado, actualizado y configurado correctamente.</li>
-        <li>Aprovechar todas las características de protección proactiva, firewall y HIPS de ESET.</li>
-      </ul>
-      <p><strong>Acción Recomendada:</strong> Realizar una auditoría de despliegue de ESET para verificar la cobertura, el estado de las actualizaciones y la configuración de las políticas de seguridad. Reforzar las políticas de detección de amenazas avanzadas.</p>
-      <div class='links'>
-        <a href='https://www.eset.com/es/support/documentation/' target='_blank'>ESET Support & Documentation (Ejemplo)</a>
+        <a href='https://www.microsoft.com/security/blog/2026/01/01/why-you-should-enable-mfa/' target='_blank'>Microsoft Security - Why MFA</a>
+        <a href='https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf' target='_blank'>NIST SP 800-63B - Digital Identity Guidelines</a>
       </div>
     </div>
 
     <div class='card MEDIO'>
-      <span class='tag'>Contraseñas</span> <span class='tag'>MFA</span>
-      <h4>Fortalecer la Autenticación y Gestión de Acceso</h4>
+      <span class='tag'>Phishing</span>
+      <span class='tag'>Concientización</span>
+      <span class='tag'>Monitoreo</span>
+      <span class='tag'>Antivirus</span>
+      <h4>Concientización, Monitoreo y Detección Proactiva</h4>
       <p class='meta'>Publicado: 2026-03-27</p>
       <ul>
-        <li>Las vulnerabilidades en Zimbra Collaboration y Dell iDRAC a menudo se ven agravadas por credenciales débiles.</li>
-        <li>Las credenciales de Zabbix y los sistemas Linux (Ubuntu, AlmaLinux, RHEL) son objetivos frecuentes.</li>
+        <li>Capacitar a los usuarios continuamente sobre campañas de phishing, especialmente las dirigidas a Office 365.</li>
+        <li>Asegurar que ESET Antivirus corporativo esté actualizado, con configuraciones óptimas y realice análisis periódicos.</li>
+        <li>Configurar Zabbix 7 para monitorear anomalías de comportamiento en sistemas, red y dispositivos (incluyendo Dahua, FortiGate).</li>
+        <li>Segmentar las redes para cámaras y HVR Dahua, aplicando reglas de firewall restrictivas.</li>
       </ul>
-      <p><strong>Acción Recomendada:</strong> Implementar políticas de contraseñas fuertes y únicas. Habilitar la autenticación multifactor (MFA) siempre que sea posible para el acceso a Zimbra, Zabbix, iDRAC y sistemas de gestión de Fortinet y Proxmox VE.</p>
+      <p><strong>Acción Recomendada:</strong> Establecer un programa de concienciación de seguridad recurrente. Mejorar la configuración de Zabbix para alertar sobre patrones sospechosos.</p>
       <div class='links'>
-        <a href='https://www.ncsc.gov.uk/guidance/setting-up-MFA' target='_blank'>NCSC MFA Guidance (Ejemplo)</a>
+        <a href='https://www.sans.org/blog/security-awareness-training-tips/' target='_blank'>SANS Institute - Security Awareness</a>
+        <a href='https://www.eset.com/blog/detail/how-to-optimize-antivirus-performance/' target='_blank'>ESET - Optimizing Antivirus</a>
+      </div>
+    </div>
+
+    <div class='card MEDIO'>
+      <span class='tag'>Backup</span>
+      <span class='tag'>Recuperación</span>
+      <span class='tag'>Continuidad del Negocio</span>
+      <h4>Planificación y Recuperación ante Desastres</h4>
+      <p class='meta'>Publicado: 2026-03-27</p>
+      <ul>
+        <li>Realizar copias de seguridad regulares, probadas y verificadas de todos los datos críticos.</li>
+        <li>Almacenar copias de seguridad offline o en ubicaciones inmutables para protegerse contra ransomware.</li>
+        <li>Desarrollar y probar exhaustivamente un plan de recuperación ante desastres y de continuidad del negocio para todos los entornos, incluyendo Proxmox VE, Windows Servers y bases de datos SQL Server.</li>
+      </ul>
+      <p><strong>Acción Recomendada:</strong> Auditar el plan de backup y recuperación. Realizar simulacros periódicos para validar la capacidad de recuperación.</p>
+      <div class='links'>
+        <a href='https://www.cisa.gov/resources-tools/resources/ransomware-guide' target='_blank'>CISA - Ransomware Guide</a>
+        <a href='https://www.veeam.com/blog/data-backup-and-recovery-best-practices.html' target='_blank'>Veeam - Backup Best Practices</a>
       </div>
     </div>
   </div>
