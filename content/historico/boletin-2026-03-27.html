@@ -6,190 +6,88 @@
 <section class='section' id='resumen'>
   <h3 class='section-title'>Resumen Ejecutivo</h3>
   <div class='grid'>
-    <div class='card CRÍTICO'>
-      <span class='tag'>Fortinet</span>
-      <h4>Vulnerabilidades Críticas en FortiGate FortiOS (CVE-2026-24858, CVE-2025-59718, CVE-2025-59719)</h4>
-      <p class='meta'>Publicado: 2026-01-28</p>
+    <div class='card CRITICO'>
+      <h4>Múltiples Vulnerabilidades Críticas en Windows Server y Cliente</h4>
+      <p class='meta'>Publicado: 2026-03-12</p>
       <ul>
-        <li>Se han descubierto vulnerabilidades críticas en los dispositivos FortiGate FortiOS, incluyendo un día cero (CVE-2026-24858) que permite el bypass de autenticación SSO de FortiCloud.</li>
-        <li>Otras vulnerabilidades, CVE-2025-59718 y CVE-2025-59719, con CVSS de 9.8, permiten a los atacantes omitir la autenticación enviando tokens SAML manipulados.</li>
-        <li>Fortinet ha lanzado actualizaciones de firmware y suspendió temporalmente la funcionalidad de inicio de sesión único (SSO) de FortiCloud.</li>
+        <li>Una vulnerabilidad de ejecución remota de código (RCE) en el Servicio de Actualización de Windows Server (WSUS) afecta a Windows Server 2012 y versiones posteriores, y se encuentra bajo explotación activa.</li>
+        <li>Vulnerabilidades RCE en la herramienta de administración del Servicio de Enrutamiento y Acceso Remoto (RRAS) de Windows 11 han requerido un hotpatch de emergencia.</li>
+        <li>Ubuntu Server 24.04 LTS presenta vulnerabilidades de escalada de privilegios y RCE de alta severidad.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Actualizar FortiOS a la versión 7.4.11 o posterior y cualquier otra versión parcheada disponible. Deshabilitar la integración de SSO de FortiCloud si no se puede actualizar inmediatamente.</p>
-      <div class='links'>
-        <a href="https://www.tenable.com/cve/CVE-2026-24858" target="_blank" rel="noopener noreferrer">Tenable - CVE-2026-24858</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHsAN3hHI0MDfSIePedzrhWeYe97BMU0crwZ82n5ezoRn0Ptlv_ZK7-yTbejUJ3vq2C_OM_rs9bFlq46Jhk30SqWPvuLJATRGNaHTEH_1kVOXMyX6kw7XZSKpkZ2kWtPVXSQ5e4oQBAbYPRt-iMXz-hVMfLfnZIDklNPigMLQ8FWP-bPybu-0elAkNl7NFJj-6d-NQ-hENEr4oS6jvvLowPSCoIkMjg8lo0phaKZXe14ivOQ47-GwsaWJ3ZM5RX1Y=" target="_blank" rel="noopener noreferrer">Cyber Technology Insights - FortiGate Firewall Vulnerabilities Exploited in 2026 Intrusion Campaign</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHx4ZS2DUu8wo-YmmfntykYqv0KV3ofVpSzU_oXXZZ4apClwEbbBc3Hrrec-BsF0QkKIS6-RQTOfit8_CTpO7QiHWE9VAy4YRpyrvkArEGCnToBI-_Uplr8xzGSgw269iyGSN3N1mpWUh-BjlbDBst7kGE=" target="_blank" rel="noopener noreferrer">SOC Prime - CVE-2026-24858: FortiOS SSO Zero-Day Exploited in the Wild</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFo7iZzO8n8LnNJtEWOctaLXzc0Nnjn3n-cekQomczonELZL5EvXuyKItAREbYBNATo2djkTRmZbLs0MYT5BECPqBbvW8pyNKGftlIslISWBcxSvZ141UR0rBclgA_nLHHkYGZYFrm457IQ0LDclJV8XeJgXg5CR2ak1QDPllyIm_WJKi6xBPxqKgOAuTJJV2m1LhYpqtRP-dSXSPGMlJki2GWpQ==" target="_blank" rel="noopener noreferrer">BleepingComputer - Fortinet starts patching exploited FortiCloud SSO zero-day (CVE-2026-24858)</a>
-        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24858" target="_blank" rel="noopener noreferrer">NVD - CVE-2026-24858</a>
-      </div>
+      <p>La explotación de estas fallas puede permitir a los atacantes obtener control total sobre los sistemas afectados.</p>
     </div>
     <div class='card ALTO'>
-      <span class='tag'>Dell iDRAC</span>
-      <h4>Múltiples Vulnerabilidades en Dell iDRAC9 e iDRAC10 (CVE-2026-26945, CVE-2026-26948)</h4>
-      <p class='meta'>Publicado: 2026-03-20</p>
+      <h4>Actualizaciones de Seguridad Críticas para Red Hat Enterprise Linux 7</h4>
+      <p class='meta'>Publicado: 2026-03-23</p>
       <ul>
-        <li>CVE-2026-26945: Una vulnerabilidad de control de procesos (CWE-114) en Dell iDRAC 9 y 10 permite la ejecución remota de código por parte de un atacante con altos privilegios y acceso a la red adyacente.</li>
-        <li>CVE-2026-26948: Una vulnerabilidad de divulgación de información de depuración en Dell iDRAC9 expone datos sensibles del sistema debido a información de depuración no borrada.</li>
+        <li>Red Hat ha lanzado actualizaciones importantes para ImageMagick y libvpx, corrigiendo múltiples vulnerabilidades.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Aplicar las actualizaciones de seguridad de Dell para iDRAC9 (versiones anteriores a 7.00.00.181 para 14G, 7.20.10.50 para 15G y 16G) e iDRAC10 (versiones anteriores a 1.20.25.00 para 17G).</p>
-      <div class='links'>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrP4VSrFI7mSgak0tYwJW1mnFKEBUQKOw8_nImkxgOKRwZfvGg0oYeK-syvfUyiGaH7kR-AmLEJbjuzMOE8ielT3wYxgsJB4HeMAmjjTz_1i6La4eAGr_Ec7CX-8Xc6s6uiGtPYobCh946W61rCaJmB0qPo1mWQxwzYFBxCw==" target="_blank" rel="noopener noreferrer">SentinelOne - CVE-2026-26945: Dell iDRAC RCE Vulnerability</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHT6hnCEgzFSBRtVHKYQCF90wAa-FFNDorEFBaaMqQVvl0S2I-JDfV-kvCdzmU1HzigeV-EKN8a9bc6vhJncXwixuD8Iw-6-PqRdOXaI8CwaUUarklVy0Wg6s5vHZd9OYLPvWe4XdtCW1SeGWYVbDlxYgjXdQlV6CKe7DRxuA==" target="_blank" rel="noopener noreferrer">SentinelOne - CVE-2026-26948: Dell iDRAC Information Disclosure Flaw</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3A9Vqek12hQ-XUF6q2-EWBgS5NI9OfeBL6HBPlmDOMn6w0MxeiDlF2oPFA0MhlQFu6Gm4zQYDRHkTPmsKQTBYJjB6ftLopsTtRpu3wTwMBzkpPkQmozorkh00GVW3CRwJf3CMLS_TMzL9R_Cbs6Hdj8iTJ1_0QMcWm-C6IOwFxnv4Wm3NgK33XQBPRBwOOTZmbu9fx1SVedjyCxrXI54KtYqlYki5KpxBq945m4dVBUnp_HmIew==" target="_blank" rel="noopener noreferrer">Dell - DSA-2026-113: Security Update for Dell iDRAC9 and iDRAC10 Vulnerabilities</a>
-      </div>
+      <p>Se recomienda la aplicación inmediata de estas actualizaciones para mitigar riesgos.</p>
     </div>
-    <div class='card ALTO'>
-      <span class='tag'>macOS</span>
-      <h4>Múltiples Vulnerabilidades en macOS Tahoe (CVE-2026-20700, CVE-2026-20668, CVE-2026-20684 y otras)</h4>
-      <p class='meta'>Publicado: 2026-03-26</p>
+    <div class='card MEDIO'>
+      <h4>Riesgos Continuos en Sistemas Legados sin Soporte</h4>
+      <p class='meta'>Actualizado: 2026-03-27</p>
       <ul>
-        <li>Apple ha lanzado actualizaciones de seguridad para macOS Tahoe 26.3, abordando múltiples vulnerabilidades, incluyendo un día cero explotado activamente (CVE-2026-20700) en el componente dyld.</li>
-        <li>Otras vulnerabilidades incluyen acceso a datos sensibles, bypass de Gatekeeper y ejecución de código arbitrario.</li>
+        <li>Sistemas operativos como Windows XP, Windows 7, Windows Server 2003 y 2008, así como SQL Server Express 2005 y 2008, carecen de soporte de seguridad, lo que los expone a un riesgo elevado de ciberataques y problemas de cumplimiento.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Actualizar macOS a la versión Tahoe 26.3 o posterior. Habilitar las actualizaciones automáticas.</p>
-      <div class='links'>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhEBgR4vqycqIefrBAshwSAhh-00eC4qiTYmf_Jo8cq6M-UUY88ZwzZ3Hqhxn6IkaJYuHF_pAzn1XBhKqyf3WQ4NnMcNoUV0xwXChkMuwBzTRqgZYrYroscNrh02acvPU-nef5d7aQu373XfwFObV2L_9SpWb_QWRmnv_KAGJ5HnHAcjtq2f23a--K3bAt0FiEPsKENU==" target="_blank" rel="noopener noreferrer">Sophos - Apple Patches (almost) everything again. March 2026 edition.</a>
-        <a href="https://support.apple.com/es-es/HT201222" target="_blank" rel="noopener noreferrer">Apple Support - Acerca del contenido de seguridad de macOS Tahoe 26.3</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSTNGIILwl3zSmFpMy_x7QMt1Kj5cpHtV58KsC7qs0r71U-4Cr7YmbRBbJAykNnAjZm4Dl22TmZLAC2WfoDo-ZYEqIo2O_2s2-5_OrTX-4etwLrJe3qn02GlKAv-iFzf8-OV55hfleeA==" target="_blank" rel="noopener noreferrer">Tenable - macOS 26.x < 26.3 Multiple Vulnerabilities (126348)</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGn7a3Js26-qdRyjtJn76Xpk1TpZ9C0n-FlDLdm05jVs-Bx1oXoV5GkUyz9-lPDvnoXW4uirVt5ZBwV0EyPHnt-UayHgxEkbANszJdadI9s2uA7nZ839UK3pVPjOeelMAXlT34WvQn0ZjXNME__G_Wi5bI=" target="_blank" rel="noopener noreferrer">SOC Prime - CVE-2026-20700: Apple Patches Zero-Day Exploited in Sophisticated Cyber Attacks</a>
-        <a href="https://securemac.com/macos-cybersecurity-privacy-january-2026" target="_blank" rel="noopener noreferrer">SecureMac - macOS Cybersecurity & Privacy in January 2026</a>
-      </div>
+      <p>La migración a versiones compatibles es crucial para la higiene de la ciberseguridad.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='incidentes'>
-  <h3 class='section-title'>Incidentes Reportados</h3>
+  <h3 class='section-title'>Incidentes Recientes y Amenazas</h3>
   <div class='grid'>
     <div class='card ALTO'>
-      <span class='tag'>Fortinet</span>
-      <h4>Campaña de Intrusión con Explotación de Vulnerabilidades de FortiGate</h4>
-      <p class='meta'>Publicado: 2026-03-16</p>
+      <span class='tag'>Ransomware</span>
+      <h4>Tendencias de Ransomware en Febrero y Marzo de 2026</h4>
+      <p class='meta'>Publicado: 2026-03-24</p>
       <ul>
-        <li>Investigadores de seguridad han descubierto una serie de intrusiones cibernéticas a principios de 2026 que explotaron vulnerabilidades en dispositivos FortiGate.</li>
-        <li>Los atacantes lograron establecer acceso persistente en redes corporativas, aunque los defensores detectaron los ataques en la etapa de movimiento lateral.</li>
-        <li>La campaña se alinea con las vulnerabilidades críticas CVE-2025-59718, CVE-2025-59719 y el día cero CVE-2026-24858.</li>
+        <li>La actividad de ransomware se mantuvo elevada en febrero de 2026, con 694 incidentes reportados globalmente y 82 públicamente divulgados.</li>
+        <li>Los sectores más atacados incluyen servicios profesionales, manufactura, tecnologías de la información y salud.</li>
+        <li>Grupos como Qilin, Akira, Clop, INC Ransom, Play, DragonForce y Sinobi fueron los más activos en EE. UU. durante enero y febrero de 2026.</li>
+        <li>Las tendencias clave incluyen la multi-extorsión, el Ransomware as a Service (RaaS), y el uso de la IA para potenciar el phishing.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Revisar los registros de FortiGate en busca de actividad sospechosa y aplicar los parches más recientes para las CVEs mencionadas.</p>
+      <p>Acción recomendada: Implementar defensas multicapa, fortalecer la detección temprana, y capacitar al personal en reconocimiento de amenazas.</p>
       <div class='links'>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHsAN3hHI0MDfSIePedzrhWeYe97BMU0crwZ82n5ezoRn0Ptlv_ZK7-yTbejUJ3vq2C_OM_rs9bFlq46Jhk30SqWPvuLJATRGNaHTEH_1kVOXMyX6kw7XZSKpkZ2kWtPVXSQ5e4oQBAbYPRt-iMXz-hVMfLfnZIDklNPigMLQ8FWP-bPybu-0elAkNl7NFJj-6d-NQ-hENEr4oS6jvvLowPSCoIkMjg8lo0phaKZXe14ivOQ47-GwsaWJ3ZM5RX1Y=" target="_blank" rel="noopener noreferrer">Cyber Technology Insights - FortiGate Firewall Vulnerabilities Exploited in 2026 Intrusion Campaign</a>
-      </div>
-    </div>
-    <div class='card ALTO'>
-      <span class='tag'>Dahua</span>
-      <h4>Vulnerabilidad en Dispositivos Dahua NVR/XVR que Permite Escalada de Privilegios</h4>
-      <p class='meta'>Publicado: 2026-03-16</p>
-      <ul>
-        <li>Se identificó una vulnerabilidad en dispositivos Dahua NVR/XVR que permite a un atacante con acceso físico obtener acceso a un shell restringido a través del puerto serie.</li>
-        <li>Esto permite omitir el mecanismo de autenticación del shell para escalar privilegios.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Las versiones con un tiempo de compilación posterior al 3 de marzo de 2026 no se ven afectadas. Se recomienda actualizar el firmware a la última versión disponible.</p>
-      <div class='links'>
-        <a href="https://www.dahuasecurity.com/support/cybersecurity/advisories" target="_blank" rel="noopener noreferrer">Dahua Security Advisory</a>
+        <a href="https://www.huntress.com/blog/ransomware-trends-to-watch-for-in-2026" target="_blank" rel="noopener noreferrer">Huntress Blog</a>
+        <a href="https://www.cyfirma.com/cyfirma-blog/tracking-ransomware-february-2026/" target="_blank" rel="noopener noreferrer">CYFIRMA Reporte</a>
+        <a href="https://www.bitdefender.com/files/News/Insight/Bitdefender-Ransomware-Attacks-Against-the-US-2026-Insights.pdf" target="_blank" rel="noopener noreferrer">Bitdefender Reporte</a>
+        <a href="https://www.blackfog.com/the-state-of-ransomware-2026/" target="_blank" rel="noopener noreferrer">BlackFog Reporte</a>
       </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='cves'>
-  <h3 class='section-title'>Nuevas CVEs y Actualizaciones</h3>
+  <h3 class='section-title'>Vulnerabilidades y Exposiciones Comunes (CVEs)</h3>
   <div class='grid'>
-    <div class='card CRÍTICO'>
-      <span class='tag'>Fortinet</span>
-      <h4>CVE-2026-24858: Bypass de Autenticación en FortiGate FortiOS (Día Cero Explotado)</h4>
-      <p class='meta'>Publicado: 2026-01-28</p>
+    <div class='card CRITICO'>
+      <span class='tag'>Microsoft Windows Server</span>
+      <h4>CVE-2025-59287: RCE en Windows Server Update Service (WSUS)</h4>
+      <p class='meta'>Publicado: 2025-10-14</p>
       <ul>
-        <li>Vulnerabilidad crítica de bypass de autenticación (CWE-288) en Fortinet FortiOS, FortiManager y FortiAnalyzer.</li>
-        <li>Permite a un atacante con una cuenta de FortiCloud y un dispositivo registrado iniciar sesión en otros dispositivos si la autenticación SSO de FortiCloud está habilitada.</li>
-        <li>Esta vulnerabilidad fue activamente explotada en la naturaleza. Fortinet deshabilitó temporalmente el SSO de FortiCloud y publicó parches.</li>
-        <li>Afecta a FortiOS 7.2.0 a 7.2.12, entre otras versiones.</li>
+        <li>Vulnerabilidad de deserialización insegura crítica en WSUS que permite la ejecución remota de código arbitrario.</li>
+        <li>Afecta a todas las versiones compatibles de Windows Server desde 2012 hasta 2025.</li>
+        <li>Se está explotando activamente y ha sido añadida al catálogo de vulnerabilidades conocidas explotadas (KEV) de CISA.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Actualizar a FortiOS 7.4.11 o versiones posteriores que contengan el parche. Deshabilitar el SSO de FortiCloud si las actualizaciones no pueden aplicarse de inmediato.</p>
+      <p>Acción recomendada: Priorizar el parcheo inmediato de los servidores WSUS. Requiere ninguna autenticación para su explotación remota.</p>
       <div class='links'>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHx4ZS2DUu8wo-YmmfntykYqv0KV3ofVpSzU_oXXZZ4apClwEbbBc3Hrrec-BsF0QkKIS6-RQTOfit8_CTpO7QiHWE9VAy4YRpyrvkArEGCnToBI-_Uplr8xzGSgw269iyGSN3N1mpWUh-BjlbDBst7kGE=" target="_blank" rel="noopener noreferrer">SOC Prime - CVE-2026-24858: FortiOS SSO Zero-Day Exploited in the Wild</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFo7iZzO8n8LnNJtEWOctaLXzc0Nnjn3n-cekQomczonELZL5EvXuyKItAREbYBNATo2djkTRmZbLs0MYT5BECPqBbvW8pyNKGftlIslISWBcxSvZ141UR0rBclgA_nLHHkYGZYFrm457IQ0LDclJV8XeJgXg5CR2ak1QDPllyIm_WJKi6xBPxqKgOAuTJJV2m1LhYpqtRP-dSXSPGMlJki2GWpQ==" target="_blank" rel="noopener noreferrer">BleepingComputer - Fortinet starts patching exploited FortiCloud SSO zero-day (CVE-2026-24858)</a>
-        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24858" target="_blank" rel="noopener noreferrer">NVD - CVE-2026-24858</a>
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-59287" target="_blank" rel="noopener noreferrer">NVD - CVE-2025-59287</a>
+        <a href="https://www.sentinelone.com/blog/cve-2025-59287-windows-server-2012-rce-vulnerability/" target="_blank" rel="noopener noreferrer">SentinelOne Blog</a>
       </div>
     </div>
     <div class='card ALTO'>
-      <span class='tag'>Dell iDRAC</span>
-      <h4>CVE-2026-26945: Ejecución Remota de Código en Dell iDRAC9 e iDRAC10</h4>
-      <p class='meta'>Publicado: 2026-03-20</p>
+      <span class='tag'>Microsoft Windows 11</span>
+      <h4>CVE-2026-25172, CVE-2026-25173, CVE-2026-26111: RCE en RRAS</h4>
+      <p class='meta'>Publicado: 2026-03-10</p>
       <ul>
-        <li>Vulnerabilidad de control de procesos (CWE-114) en Dell iDRAC 9 y 10 que permite a un atacante con altos privilegios y acceso a la red adyacente ejecutar código arbitrario.</li>
+        <li>Múltiples vulnerabilidades de ejecución remota de código en la herramienta de administración del Servicio de Enrutamiento y Acceso Remoto (RRAS) de Windows.</li>
+        <li>La explotación podría permitir a un atacante ejecutar código arbitrario o interrumpir las operaciones del sistema.</li>
+        <li>Se emitió un hotpatch fuera de banda (KB5084597) en marzo de 2026 para versiones empresariales de Windows 11.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Actualizar Dell iDRAC9 a las versiones 7.00.00.181 (14G), 7.20.10.50 (15G y 16G) o posteriores, y Dell iDRAC10 a la versión 1.20.25.00 (17G) o posterior.</p>
+      <p>Acción recomendada: Aplicar el hotpatch KB5084597 o las actualizaciones de seguridad de marzo de 2026. Se requiere interacción del usuario autenticado en el dominio para la explotación.</p>
       <div class='links'>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrP4VSrFI7mSgak0tYwJW1mnFKEBUQKOw8_nImkxgOKRwZfvGg0oYeK-syvfUyiGaH7kR-AmLEJbjuzMOE8ielT3wYxgsJB4HeMAmjjTz_1i6La4eAGr_Ec7CX-8Xc6s6uiGtPYobCh946W61rCaJmB0qPo1mWQxwzYFBxCw==" target="_blank" rel="noopener noreferrer">SentinelOne - CVE-2026-26945: Dell iDRAC RCE Vulnerability</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3A9Vqek12hQ-XUF6q2-EWBgS5NI9OfeBL6HBPlmDOMn6w0MxeiDlF2oPFA0MhlQFu6Gm4zQYDRHkTPmsKQTBYJjB6ftLopsTtRpu3wTwMBzkpPkQmozorkh00GVW3CRwJf3CMLS_TMzL9R_Cbs6Hdj8iTJ1_0QMcWm-C6IOwFxnv4Wm3NgK33XQBPRBwOOTZmbu9fx1SVedjyCxrXI54KtYqlYki5KpxBq945m4dVBUnp_HmIew==" target="_blank" rel="noopener noreferrer">Dell - DSA-2026-113: Security Update for Dell iDRAC9 and iDRAC10 Vulnerabilities</a>
-      </div>
-    </div>
-    <div class='card MEDIO'>
-      <span class='tag'>Dell iDRAC</span>
-      <h4>CVE-2026-26948: Divulgación de Información en Dell iDRAC9</h4>
-      <p class='meta'>Publicado: 2026-03-20</p>
-      <ul>
-        <li>Vulnerabilidad de divulgación de información de depuración en Dell iDRAC9 debido a información de depuración no borrada.</li>
-        <li>Un atacante con altos privilegios y acceso remoto podría explotar esta vulnerabilidad para obtener acceso a datos confidenciales del sistema.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Actualizar Dell iDRAC9 a las versiones 7.00.00.174 (14G), 7.10.90.00 (15G y 16G) o posteriores.</p>
-      <div class='links'>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHT6hnCEgzFSBRtVHKYQCF90wAa-FFNDorEFBaaMqQVvl0S2I-JDfV-kvCdzmU1HzigeV-EKN8a9bc6vhJncXwixuD8Iw-6-PqRdOXaI8CwaUUarklVy0Wg6s5vHZd9OYLPvWe4XdtCW1SeGWYVbDlxYgjXdQlV6CKe7DRxuA==" target="_blank" rel="noopener noreferrer">SentinelOne - CVE-2026-26948: Dell iDRAC Information Disclosure Flaw</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3A9Vqek12hQ-XUF6q2-EWBgS5NI9OfeBL6HBPlmDOMn6w0MxeiDlF2oPFA0MhlQFu6Gm4zQYDRHkTPmsKQTBYJjB6ftLopsTtRpu3wTwMBzkpPkQmozorkh00GVW3CRwJf3CMLS_TMzL9R_Cbs6Hdj8iTJ1_0QMcWm-C6IOwFxnv4Wm3NgK33XQBPRBwOOTZmbu9fx1SVedjyCxrXI54KtYqlYki5KpxBq945m4dVBUnp_HmIew==" target="_blank" rel="noopener noreferrer">Dell - DSA-2026-113: Security Update for Dell iDRAC9 and iDRAC10 Vulnerabilities</a>
-      </div>
-    </div>
-    <div class='card MEDIO'>
-      <span class='tag'>Dell iDRAC</span>
-      <h4>CVE-2026-20790: Escalada de Privilegios en Dell iDRAC Service Module</h4>
-      <p class='meta'>Publicado: 2026-02-10</p>
-      <ul>
-        <li>Vulnerabilidad de control de acceso inapropiado en Dell iDRAC Service Module (iSM) para Windows (versiones anteriores a 6.0.3.1) y Linux (versiones anteriores a 5.4.1.1).</li>
-        <li>Un atacante con pocos privilegios y acceso local podría explotar esta vulnerabilidad para escalar privilegios.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Actualizar Dell iDRAC Service Module a la versión 6.0.3.1 para Windows o 5.4.1.1 para Linux, o versiones posteriores.</p>
-      <div class='links'>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEz-q0PNORIVcr90YxvuQRNQgUgGVI7uh9XqLHCKEvdwXgmmdcpOv5IPTFBM-x5IuWg9Nr1mV7t9TXlza1Al4xQ4u7F6dpkZt2YpW1LbYR6iPXkQpNIqMN8quPw1If16DdaTRCCU7ExqFOguPgbZN3eb8ohnti-IXdJJ3PGCejklnlOdvVvCd9fdkhkp3DMlgi1bvesZzUDlzG_Tc_Pw55VsvdaASS8wAgyf3z6PtYBIvVGzazgsQ==" target="_blank" rel="noopener noreferrer">Dell - DSA-2026-077: Security Update for Dell iDRAC Service Module Vulnerability</a>
-      </div>
-    </div>
-    <div class='card ALTO'>
-      <span class='tag'>Proxmox VE</span>
-      <h4>CVE-2026-25499: Path Traversal en el Proveedor de Terraform/OpenTofu para Proxmox VE</h4>
-      <p class='meta'>Publicado: 2026-02-06</p>
-      <ul>
-        <li>Vulnerabilidad de path traversal (CWE-22) en el Proveedor de Terraform/OpenTofu para Proxmox Virtual Environment.</li>
-        <li>Antes de la versión 0.93.1, la documentación de configuración de SSH recomienda una configuración sudoer insegura que permite a los atacantes escapar del directorio previsto y modificar archivos arbitrarios.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Actualizar el Proveedor de Terraform/OpenTofu para Proxmox VE a la versión 0.93.1 o posterior. Revisar y asegurar las configuraciones de sudoer.</p>
-      <div class='links'>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBJEX95pTtIHroELwdjQJ1WJYxQZRtD19d7bZ93q5RQb1CQRmY3QN3MuUKH7VT9KtYqZZhRUQchKzU1i_OBRoiyF48gTjVQodmmWwuTxln6491zFd6DDBNXjkMvTwUTF1JKejwyXCRd5YJ0hOptAbJ4W9Rm8Q8ECE27B6tOA==" target="_blank" rel="noopener noreferrer">SentinelOne - CVE-2026-25499: Proxmox Provider Path Traversal Flaw</a>
-      </div>
-    </div>
-    <div class='card MEDIO'>
-      <span class='tag'>Zabbix</span>
-      <h4>CVE-2026-23925: Bypass de Autorización en Zabbix</h4>
-      <p class='meta'>Publicado: 2026-03-13</p>
-      <ul>
-        <li>Vulnerabilidad de bypass de autorización (CWE-863) en Zabbix que permite a usuarios autenticados con privilegios limitados exceder sus permisos previstos.</li>
-        <li>Un usuario con rol "User" y permisos de escritura de plantilla/host puede crear objetos a través de la API <code>configuration.import</code>.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Actualizar Zabbix a versiones parcheadas (por ejemplo, 6.0.41, 7.0.18, 7.2.12, 7.4.2 para las ramas respectivas). Revisar los permisos de acceso de los usuarios de Zabbix.</p>
-      <div class='links'>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAuWk1roEg-iX2Mnd1KdAHbVSG8uXvpJdu60ZOGkuGjRTS1s6v-vmpQhrx6jjQmTnc01oe3kdFKIlhTl_M0dczikSvWHewd_fSUZuBFPycc87IXoZviuBH5HVAIyoy77-nfx0bq-IWOJ_aB7tHoYqQqAuiIt4wrpyAcfL1hw==" target="_blank" rel="noopener noreferrer">SentinelOne - CVE-2026-23925: Zabbix Auth Bypass Vulnerability</a>
-        <a href="https://www.sek.es/zabbix-releases-fixes-for-three-vulnerabilities-in-monitoring-agents/" target="_blank" rel="noopener noreferrer">SEK - Zabbix releases fixes for three vulnerabilities in monitoring agents</a>
-        <a href="https://opencve.io/cve?search=Zabbix" target="_blank" rel="noopener noreferrer">OpenCVE - Zabbix CVEs and Security Vulnerabilities</a>
-      </div>
-    </div>
-    <div class='card ALTO'>
-      <span class='tag'>Zimbra Collaboration Professional</span>
-      <h4>CVE-2026-33368: Cross-Site Scripting (XSS) Reflejado en Zimbra Collaboration Suite (ZCS)</h4>
-      <p class='meta'>Publicado: 2026-03-21</p>
-      <ul>
-        <li>Vulnerabilidad de cross-site scripting (XSS) reflejado en la interfaz REST de Classic Webmail (/h/rest) de Zimbra Collaboration Suite (ZCS) 10.0 y 10.1.</li>
-        <li>Permite a un atacante no autenticado inyectar JavaScript malicioso en una URL manipulada.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Actualizar Zimbra Collaboration Suite a la versión 10.0.18 o superior, o 10.1.16 o superior. Seguir los avisos de seguridad de Zimbra.</p>
-      <div class='links'>
-        <a href="https://github.com/CVEProject/cvelist/blob/master/2026/33xxx/CVE-2026-33368.json" target="_blank" rel="noopener noreferrer">GitHub - CVE-2026-33368</a>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyi6pDkR_-6K4FJtpU3QS9Q6uDPen69JLLfr-7jm1w4vEeswnMcGnQkGH_M7bGIh2DITCDicfUJMqrG_JoKNZl-S6_M996bUfeNkwoX8JGhdNYR7qmk55E9eWzsPKinhPQNQUKw2Rbx-KbMreIxkcLSTOWVE-QWvrHCMr7Z4dwm8f1493je45ji-alwetCwWeZr4lFZnFgFy2yiCvkR3rWrpowNJs7RtgYljt3_hi" target="_blank" rel="noopener noreferrer">NCSA - Security Alert: Zimbra Collaboration Suite XSS Vulnerability Updates – March 2026</a>
-        <a href="https://wiki.zimbra.com/wiki/Zimbra_Security_Advisories"
+        <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25172" target="_blank" rel="noopener noreferrer">MSRC - CVE-2026-25172</a>
+        <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25173" target="_blank" rel="noopener noreferrer">MSRC - CVE-2026-25173</a>
+        <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26111" target="_blank" rel="noopener noreferrer">MSRC - CVE-20
