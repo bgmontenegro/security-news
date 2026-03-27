@@ -44,6 +44,6 @@ jobs:
           done
           echo "    </div>  </div></div></body></html>" >> content/historico/index.html
 
-          git add content/boletin.html content/raw.json content/historico
+          git add content/boletin.html content/historico
           git commit -m "Boletin actualizado" || echo "Sin cambios"
           git push
