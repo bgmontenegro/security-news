@@ -1,4 +1,4 @@
-Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML, usa fuentes de información en ingles pero debes traducirlo.
+Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML, usa fuentes de información en ingles y español pero debes entregar siempre en español.
 
 Prioriza EXCLUSIVAMENTE información real relacionada con los siguientes productos y entornos de infraestructura. 
 Los url a las fuentes de información seran utilizados también.
@@ -8,6 +8,9 @@ REGLA CRÍTICA DE VERIFICACIÓN DE FUENTES: Prioriza la precisión absoluta sobr
   - Cada URL proporcionada debe ser un enlace directo y funcional a un advisory oficial (ej. NVD, CISA, o vendor advisory).
   - Si para un evento crítico no puedes proporcionar un enlace oficial específico, verificado y preciso, no incluyas el evento. 
   - Prefiero un boletín con menos tarjetas reales que uno con tarjetas falsas o inexactas. Rompe el flujo y devuelve un mensaje de error si no puedes cumplir esta regla.
+REGLAS ESTRICTAS PARA ENLACES Y HTML:
+  - CERO REDIRECCIONES: NUNCA incluyas URLs de telemetría, redirección o atribución de Google (prohibidas las URLs que comiencen con https://vertexaisearch.cloud.google.com/... o https://www.google.com/url?...). Debes extraer y escribir ÚNICAMENTE la URL directa, limpia y final de la fuente original (ej. https://nvd.nist.gov/vuln/detail/CVE-..., https://www.fortiguard.com/...). Si la herramienta de búsqueda te da un enlace de redirección, extrae el dominio final.
+  - NAVEGACIÓN SEGURA: Todos los enlaces generados dentro del bloque <div class='links'> deben ser etiquetas <a> formateadas obligatoriamente con los atributos para abrir en una pestaña nueva de forma segura. Ejemplo de formato obligatorio: <a href="[URL_LIMPIA]" target="_blank" rel="noopener noreferrer">Nombre de la Fuente</a>
 
 NO incluyas ningún otro producto, sistema o tecnología fuera de esta lista:
 
@@ -23,7 +26,7 @@ NO incluyas ningún otro producto, sistema o tecnología fuera de esta lista:
 - macOS desde 2015 en adelante
 - Cámaras y HVR Dahua
 - Zabbix 7 en adelante
-- Ubuntu Sever 24 LT
+- Ubuntu Server 24.04 LTS
 - Red Hat Enterprise Linux 7 y 8
 - Zimbra Collaboration Professional version 10 en adelante
 
@@ -42,17 +45,27 @@ El bloque inicial debe ser:
   <p class='meta'>Fecha: {{FECHA_HOY}}</p>
 </div>
 
-El Resumen Ejecutivo debe ser:
-<div class='section' id='resumen'>
+El Resumen Ejecutivo debe mantener esta estructura exacta:
+<section class='section' id='resumen'>
   <h3 class='section-title'>Resumen Ejecutivo</h3>
-  <div class='grid'> con exactamente cinco tarjetas <div class='card'>.
-</div>
+  <div class='grid'>
+    </div>
+</section>
 
-Las secciones posteriores deben ser:
-<section class='section' id='incidentes'>
-<section class='section' id='cves'>
-<section class='section' id='ransomware'>
-<section class='section' id='recomendaciones'>
+ESTRUCTURA DE LAS SECCIONES POSTERIORES:
+  Las siguientes secciones son OBLIGATORIAS y deben existir en el HTML generado:
+    <section class='section' id='incidentes'>
+    <section class='section' id='cves'>
+    <section class='section' id='ransomware'>
+    <section class='section' id='recomendaciones'>
+
+REGLA DE EMPTY STATE: Si para el Resumen Ejecutivo o para cualquiera de las secciones posteriores NO tienes eventos reales, verificados y con URLs oficiales:
+  - NO inventes datos. En su lugar, dentro del <div class='grid'> de esa sección específica, inserta una única tarjeta estandarizada de "Sin Novedades" con esta estructura exacta:
+  <div class='card'>
+    <h4>Sin reportes verificados</h4>
+    <p class='meta'>Actualizado: {{FECHA_HOY}}</p>
+    <p>No se han detectado nuevos eventos confirmados para el stack tecnológico definido.</p>
+  </div>
 
 Cada tarjeta debe:
 - Incluir la severidad en la clase (card CRÍTICO / ALTO / MEDIO)
