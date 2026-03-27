@@ -22,45 +22,37 @@ prompt = (
     .replace("{{FECHA_HACE_30_DIAS}}", FECHA_30)
 )
 
-# Llamada a Gemini (GitHub Models)
+# Preparar payload y headers (igual que antes)
 url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
 headers = {
     "Content-Type": "application/json",
-    "x-goog-api-key": os.environ["API_TOKEN"]
+    "x-goog-api-key": os.environ.get("API_TOKEN", "")
 }
-
 payload = {
     "contents": [
-        {
-            "parts": [
-                {"text": prompt}
-            ]
-        }
+        {"parts": [{"text": prompt}]}
     ],
-    "tools": [
-        {
-            "googleSearch": {} # Esto habilita la búsqueda en internet en tiempo real
-        }
-    ]    
+    "tools": [{"googleSearch": {}}]
 }
 
+# Configurar sesión con reintentos y timeouts
 session = requests.Session()
 retries = Retry(
     total=5,
     backoff_factor=1,
-    status_forcelist=[429, 500, 502, 503, 504],
-    allowed_methods=["HEAD", "GET", "POST", "PUT", "DELETE", "OPTIONS", "TRACE"]
+    status_forcelist=(429, 500, 502, 503, 504),
+    allowed_methods=frozenset(["GET", "POST"])
 )
 adapter = HTTPAdapter(max_retries=retries)
 session.mount("https://", adapter)
 session.mount("http://", adapter)
 
-# Llamada con timeout (connect, read)
+# Llamada con timeout (10s conexión, 90s lectura)
 r = session.post(
     url,
     headers=headers,
     json=payload,
-    timeout=(10, 90)  # 10s conexión, 90s lectura
+    timeout=(10, 90)
 )
 r.raise_for_status()
 data = r.json()
