@@ -45,26 +45,24 @@ payload = {
 }
 
 session = requests.Session()
-
 retries = Retry(
-    total=3,
-    backoff_factor=2,
+    total=5,
+    backoff_factor=1,
     status_forcelist=[429, 500, 502, 503, 504],
-    allowed_methods=["POST"]
+    allowed_methods=["HEAD", "GET", "POST", "PUT", "DELETE", "OPTIONS", "TRACE"]
 )
-
 adapter = HTTPAdapter(max_retries=retries)
 session.mount("https://", adapter)
+session.mount("http://", adapter)
 
+# Llamada con timeout (connect, read)
 r = session.post(
     url,
     headers=headers,
     json=payload,
     timeout=(10, 90)  # 10s conexión, 90s lectura
 )
-
 r.raise_for_status()
-
 data = r.json()
 html = data["candidates"][0]["content"]["parts"][0]["text"]
 
