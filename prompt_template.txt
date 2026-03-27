@@ -146,4 +146,4 @@ Las recomendaciones deben incluir, cuando sea posible:
 Prioriza eventos publicados o actualizados entre {{FECHA_HACE_30_DIAS}} y {{FECHA_HOY}}.
 Incluye eventos más antiguos solo si siguen teniendo explotación activa conocida.
 
-Devuelve ÚNICAMENTE el FRAGMENTO HTML.
+Devuelve ÚNICAMENTE el FRAGMENTO HTML. Al final del fragmento HTML, incluye exactamente esta línea: <!-- FIN_DE_BOLETIN -->
