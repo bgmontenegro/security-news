@@ -4,13 +4,7 @@
       "content": {
         "parts": [
           {
-            "text": "<div class='top'>\n  <h2>Bolet\u00edn Ejecutivo de Ciberseguridad</h2>\n  <p class='meta'>Fecha: 2026-03-27</p>\n</div>\n\n<div class='section' id='resumen'>\n  <h3 class='section-title'>Resumen Ejecutivo</h3>\n  <div class='grid'>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>macOS</span><span class='tag'>Apple</span><span class='tag'>RCE</span><span class='tag'>Escalada de Privilegios</span>\n      <h4>Actualizaciones de Seguridad Cr\u00edticas para macOS</h4>\n      <p class='meta'>Publicado: 2026-03-25</p>\n      <ul>\n        <li>Apple lanz\u00f3 una actualizaci\u00f3n de seguridad importante en marzo de 2026, corrigiendo 85 vulnerabilidades en macOS (Tahoe, Sequoia, Sonoma) y otros productos de su ecosistema.</li>\n        <li>Las vulnerabilidades abarcan ejecuci\u00f3n remota de c\u00f3digo (RCE), escalada de privilegios, escapes de sandbox, divulgaci\u00f3n de informaci\u00f3n, denegaci\u00f3n de servicio (DoS) y corrupci\u00f3n de memoria del kernel.</li>\n        <li>Se incluyen CVEs notables como CVE-2026-20643 (WebKit) y m\u00faltiples fallas en WebKit, Kernel, PackageKit y CoreMedia.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Priorizar la implementaci\u00f3n inmediata de las actualizaciones de seguridad de Apple de marzo de 2026 en todos los dispositivos compatibles, incluyendo macOS.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAuGN60IvpXuRIFNIr2IPUr2AsAu_oUSqNgthPr7IMXI44gDTWsHVXqT3X1HyALAgMih1WYXpS9RZCLandKnUkcptdz3_-NQpxlvJyhlq_6yyIVS9A2AZ_X99RJOHKoS5N1PkK7wPT0IvPK-lRTQd9_6w13BD9Ukq6mgDTxxytJkhTsJ4mcBZSTj5A9yZPYxrzJlJUNU'>SANS ISC Handlers Diary</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECtuKW7TagdJZhQWfOF3QNPKxKE0L5xqE0PJEaHw-iTo8qAwBCNwTzRsknQ2ofKd-Y7jERBjGAxXac653Rj-mltOVoNfpHxAN0DDnJxeny74JLHt-8acXl-gF7PwZ06ProY2Ljctg7r71-yz0a04xmGuQ'>SecureMac</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGSSsMUiOzu5-0DkPIp5WT2OfELGPtANM4lsWXuqrTYMEYxGb7Je0-jxCbehjaj0vXZZZ_ufxM_2_6aFWyAHY3cGY0vOvYHcxYDXy67buYwhINDdct0Lvfxs9MXG3aMMaQv1s1Coko9GpUXWTVGQbWq7mWiCRSr5kRI22Ki3Ri2s7Bjpb-W2lLReDOmRqZEIR44NZ2WA'>SANS ISC Handlers Diary (CVEs)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmFIS_AnXaZcjlBRMZOv6i2JoWUrG-N48PLqA1dffj8Q_2LkeScWFPBL-CcZ2EzVhNRbaV5nkf0ncKa7xSdMv9qDrk2VEoaRwvojZ5UR8LRe9uRIyc5QtceuLkphdTZ7ryDxZIeiOtGoLwqL2ewVTAGTmkbEa2_pbycRFORWUQOltDPIeZ4Dd1WUx853xaEFWDWh0i-uQ--bQVBmDkX0y3Iab5n73bd3A'>Malwarebytes</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEV7_RdpqgWaeCrLl_huMeKuepG0_wm2LfE02Qqgrab0apRLlVJlC-LmdE7WmsrcoOzgZEePvWrHtaDK7t6lAj8cxmPEEhSezVybRT_vtqiYf1JQMoX07sNM6eKpo6v5_55'>Apple Support</a>\n      </div>\n    </div>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Windows</span><span class='tag'>Windows Server</span><span class='tag'>RCE</span><span class='tag'>Escalada de Privilegios</span><span class='tag'>Zero-Day</span>\n      <h4>Actualizaciones de Seguridad de Microsoft - Marzo 2026</h4>\n      <p class='meta'>Publicado: 2026-03-10</p>\n      <ul>\n        <li>Microsoft public\u00f3 actualizaciones de seguridad de \"Patch Tuesday\" en marzo de 2026, abordando m\u00e1s de 80 vulnerabilidades en Windows y otros productos.</li>\n        <li>Se incluyen vulnerabilidades cr\u00edticas de ejecuci\u00f3n remota de c\u00f3digo (RCE) y escalada de privilegios (EoP) en Windows 10, Windows 11 y Windows Server 2012/2016.</li>\n        <li>CVE-2025-59287 es una vulnerabilidad cr\u00edtica de deserializaci\u00f3n insegura en Microsoft Windows Server Update Service (WSUS) que permite RCE y est\u00e1 siendo activamente explotada.</li>\n        <li>Se corrigieron dos vulnerabilidades de d\u00eda cero divulgadas p\u00fablicamente: CVE-2026-26127 (DoS en .NET) y CVE-2026-21262 (EoP en SQL Server 2016+).</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Aplicar los \u00faltimos parches de seguridad de Microsoft de marzo de 2026 lo antes posible para prevenir la explotaci\u00f3n. Prestar atenci\u00f3n especial a la actualizaci\u00f3n de WSUS.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfLWEYkpeCriZTE72hVP5BTOhViX9H9mcrDW7-DOraxoWMIcZX6gYtvoT0_I1Oce8eeyr8TnehiWxLnOq-b2362iYOp1j5296gpBUaPoSlYVYaFRnOZnxfpnjJWglJ7p2RB4YPsQ0GqiRmhwNyYlQlQk1eTfZiqtJLqA=='>CyberLeveling (Patch Tuesday)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhHUd3rPJt2467BwEyPjuCDbF6If1GPEc4aXeUx5Ipfepgj1dS3yhzc8dzZwPIoqpiDj32EbMAcA09hsD6f0VIuUuCqv7y1WFjdIhnKZyzRGpVrd2s6HjvvHjeS75xxBNN2CPEhncC904HugtIHgSoDRW2eJAQBVurrgF1jg=='>SentinelOne (CVE-2025-59287 WSUS)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJuLjK-Z4cXSUNMfWLiOOfLAOXxsRshFYDIoiiPdxQzzJxDqhxhs9MVUrttzQSubkr3VY9wVdjG2Z4ZSnubu7xR60yeleph_tRxOjCa-S39IA2PChHwfWdcxh5NTiJP3b1TFtGMvJixBf-I2PXncHEaORPnIUuH9MG60-yG6Er5Cfs1ZYDM520FGt4hgO5MF0wEiVpRDGtlxweahpwIwnSPg=='>Qualys ThreatPROTECT</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhVvmY6Zyi74WKUrlD-9_XGHG269KZU_mUeW1i9_1IM7VG2fgOnbeif61l2sTq2lvNZ2oHE9Tcdh9qDHQD4ZhUILaiXi-2sfjTZoIhM9uwoI-CYisd212hkDHeNzmdeNnxe5T22sPnTnf3M5FPlB7OzkO8ZRGA6-cc-jqqCt2Co2NBrSJUdToTE6sESwswXGFUjZI13jciYy3Pa73evY2ZUO8SVW7i'>PCWorld</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKp7WYYwUKQITrd9z7_kHhc4f3ZTy_T1PYqPZtRE_Zy3phNr3qowEAhJNRzVR-chCgozbapTiBkWdMjJQCF8ymBNHZuUhQ0aiPU7LS3Ka6sX3LQlHZ-gxOIOdm8vcs3y1S7SkPIu4XWq1LhJ72BxQD5jpOfcKpZCECCxhGCxcnfG9l0IQEWKeHzxGk4A=='>NCSA (Microsoft Alert)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFkXSAOFcDGMqa813L88kwxO2UBxScgTI7lgytbTIFcP7PEO9I48YUpQS1z7ntkkZiUbGQa8PcNNShrdU1VvfdZWQoot1v7JvDZe3dTIOeg1ZPmzygU12dqdNZj1h0JhGw1kKIDy1Q5QiXjqXZYlHypr3riJDmzZpksEadBhkf2HzHzsc='>CrowdStrike</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4vn4u9-zWgwhh7BvN_PEFXJe85Ej3SYaUZBWl_3dJVyQK-FEKppKmAqKPCasV3pEHDShIO44sFtKBKmHF46K2FvhY8_uifJvrfaedaohgZja9U_8hmcmlCJsk0IMThkLJq9jbum6xc-Bj4sMositUHIqAz-ApMnk4KCKiENGUsKUGiZc='>Arctic Wolf</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQFvPAjk5SLqwq-clYeBQjFh3st9GeT0L7FT3jcqOjlsnzbULBtLlVPxHURiO6Cv0uR8pVyVCI41vUfBJY6v2CEz-yBm7srB6iexVflz9KKra9_h7lAfC8TGvL-JVuUqY_MKNkl3h1UCqA71v_EJ-50yCMZJH6BbLz9km51oCQ-8dRwLQ6QpRHJwQ='>Krebs on Security</a>\n      </div>\n    </div>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Zimbra</span><span class='tag'>XSS</span><span class='tag'>XXE</span><span class='tag'>CSRF</span><span class='tag'>Explotaci\u00f3n Activa</span>\n      <h4>M\u00faltiples Vulnerabilidades en Zimbra Collaboration Suite</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Una vulnerabilidad cr\u00edtica en Zimbra Collaboration Suite (ZCS) ha sido a\u00f1adida por CISA a su cat\u00e1logo de Vulnerabilidades Explotadas Conocidas (KEV), confirmando su abuso activo.</li>\n        <li>Esta falla se debe a una sanitizaci\u00f3n insuficiente de contenido malicioso incrustado en mensajes de correo electr\u00f3nico, permitiendo la ejecuci\u00f3n de scripts.</li>\n        <li>Otras vulnerabilidades incluyen XSS (CVE-2026-33370) en Zimbra Briefcase, XXE (CVE-2026-33371) en la interfaz SOAP de EWS, y CSRF (CVE-2026-33372) en Zimbra Webmail.</li>\n        <li>Las versiones afectadas son ZCS 10.0 y 10.1, y espec\u00edficamente CVE-2025-66376 afecta a ZCS 10.0.18 y versiones anteriores, y 10.1.13 y versiones anteriores.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Actualizar Zimbra Collaboration Suite a la versi\u00f3n 10.1.13 para implementaciones actuales o 10.0.18 para sistemas heredados. Si no es posible, considerar la interrupci\u00f3n temporal de los sistemas afectados.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH--BqPp987mNiKezHcv3Rgz_kJawxKusH7XGQ13GkppMtUt14M8wIzuX-E84hlDyK_CR9GnLlXzDnlfXG0Z3cbaaCERghlgwvBmdnBbrUbQujQ6KvkPXBQJ6HWTGwx1zB8yeAKfQ=='>Tenable (CVE-2026-33370)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPArzrF0W-DpAwEF5yngjlgp8q2W6ZZ8xalKD0zw3nq6jNbN9EKfNughRJ-2HU1wzYidt3H7H21UioeJ5F7xgk-HoqoABXpJdg_PwwBoYcKlYPDyPyZLzuVmYYbcHlw3Om1Um7M-6TqhzIPPgP_wlGOcVUm-SM'>NVD (CVE-2026-33371)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi-77m1CPC7pmW6H5Sxl87-dThldhXHzCizTCM5tvZO-CTIapGv0Vra-Tk0rJ7CiU94nI16a4v2j5LhAV4jrNYIzVrKsXfdYhsHWq_PBHnibyAwFCsIjSCkPgE99ur8F7E7tP_m-yn_eUj'>NVD (CVE-2026-33372)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbCtGT8f9d1ZwCYchP7NbF7f27T4FTqtFsomEspE_vuySUhIT5WITMfZBwHXMwKNkQBu6yOUUjt5fmkblj4hf_8wszX73R6W8d3sjlZ3hJpyIM4vHjp9hX-X9cvw=='>ASEC (CVE-2025-66376)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjLujKrTzr3o88eC91T2c3Rhdz3nbCYzUNU5hspPj0Wsp-eqZayP5q8ohO02HJnO0imQ9ZuDFVKkGgzM07OQp_iXgQPhtZjjX2oadLld9m7wr0OAjrJY6tOFnFYODLcT1n79sfeF8Ovxn0mIkib9-fsFTGunXayRQMqZRIK8YaCmpljpe9DdnIa1NlFCDyQULvDk6IL9lnZQ=='>Cyber Technology Insights (CISA Warning)</a>\n      </div>\n    </div>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Proxmox VE</span><span class='tag'>Path Traversal</span><span class='tag'>RCE</span><span class='tag'>Sin Autenticaci\u00f3n</span>\n      <h4>Vulnerabilidad Cr\u00edtica de Path Traversal en Proxmox VE Provider</h4>\n      <p class='meta'>Publicado: 2026-02-06</p>\n      <ul>\n        <li>Una vulnerabilidad de Path Traversal (CVE-2026-25499) fue identificada en el proveedor Terraform/OpenTofu para Proxmox Virtual Environment (PVE), afectando versiones anteriores a 0.93.1.</li>\n        <li>La configuraci\u00f3n insegura de sudoer recomendada en la documentaci\u00f3n SSH permite a los atacantes escapar directorios y modificar archivos del sistema arbitrariamente.</li>\n        <li>Esta falla puede llevar a una escalada de privilegios, manipulaci\u00f3n de la configuraci\u00f3n o despliegue de c\u00f3digo malicioso en entornos de infraestructura como c\u00f3digo.</li>\n        <li>El vector de ataque es basado en red y no requiere autenticaci\u00f3n ni interacci\u00f3n del usuario.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Actualizar el proveedor Terraform/OpenTofu"
-          },
-          {
-            "text": " para Proxmox Virtual Environment a la versi\u00f3n 0.93.1 o posterior.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEtqyBcF7NQkc4pjDu16HQEuX6vEzRFuKsWqZUkXwOw5sXjNpDFYKH0G-fzyT2FKiWXMy4QvixX0TB9bVuAMsVheO7CWYuIXhIOxqwve-8HSYefC8XEREmYIgmBLdm-STv-vktN3ua5uXRbZE8yJUmpDyRGbQ4XKPkkYlmFw=='>SentinelOne (CVE-2026-25499)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9BtYAiKyMSxMNqjUWOmgPqL1q-bkJtYKgxYGB9Xeh2ry_RrsteuBbDZ-a61c62ZIBcyQQzLtyR3rBtrbvpmJJdUhwNkMAiAGXPktzewVThuwA-l396NhGLgKYYzESyiYJF_wtNk-SANvxCSs='>EUVD (CVE-2026-25499)</a>\n      </div>\n    </div>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Red Hat Enterprise Linux</span><span class='tag'>Kernel</span><span class='tag'>RCE</span><span class='tag'>Escalada de Privilegios</span>\n      <h4>M\u00faltiples Vulnerabilidades Cr\u00edticas en el Kernel de Red Hat Enterprise Linux</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>CERT-FR ha emitido un aviso sobre m\u00faltiples vulnerabilidades cr\u00edticas descubiertas en el kernel de Red Hat Linux (CVE-2025-38106, CVE-2026-23001).</li>\n        <li>Estas fallas representan riesgos significativos, incluyendo ejecuci\u00f3n arbitraria de c\u00f3digo (RCE), escalada de privilegios y brechas de datos.</li>\n        <li>Las versiones afectadas incluyen Red Hat Enterprise Linux 7 y 8, as\u00ed como CodeReady Linux Builder.</li>\n        <li>Una vulnerabilidad importante (RHSA-2026:4672) tambi\u00e9n afecta al m\u00f3dulo `container-tools:rhel8`, con CVEs como CVE-2025-61728 y CVE-2025-61726.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Consultar urgentemente el bolet\u00edn de seguridad de Red Hat (RHSA-2026:4012) para obtener informaci\u00f3n espec\u00edfica sobre los parches y aplicar las actualizaciones necesarias.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDibQOCw6eBkOP0pGkSqYBi2jFENJkIj170fRNjy-fDpyALY4Q0W9skiOYgVh7mJW81pYq9HDSX2xE_WC6go_A3v2eaYiJGaTdK0D4xF8hkLQ9wrSVItrHijYB0JJklnfB4u0kNf39U6y2zZLbJdvPosB4OvBP-2eAs_2fpKhsFtFHfGsKUt98LGj-lUB4QVBkkWmQPdwDeDdGBP_Jtt-FW_TAvnJYeIf_4SiGBE_RCTck3-V6QcI='>Changeflow (Kernel Vulnerabilities)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHSQdeB7EYHsDfP9_G6_ym50xbUAr28vD6r-aKxUnjh2KilMpn-IbLNRvSFn__lvZfFju6Fdfd2k0hnpGQq2BaFyPz0Qe80KWA0vX65UdbxJODMrtBnYxmuMq6TDmt45WSC1-FD7AtcjZD'>Red Hat Customer Portal (RHSA-2026:4672)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvMCxZJXUDe_M3El8edCGVt24pUNU8lqQDLSI-XDJ3goFYyTn4Zb9Z6K9OicrebgwOGNjcoTg6FOhMjwdwMzjgNhoRSsmbHFgJs_QPTP6shAPkvY9OEpeqYHg6avOkh0Mc2BW5swhybe_FnLGsLdVGjYn7uXe0KZQ1wz9gksODsEmn99K7z8NqzvxKuPMAJOwALgbBO6qzGtY='>GovCERT.HK (Red Hat)</a>\n      </div>\n    </div>\n  </div>\n</div>\n\n<section class='section' id='incidentes'>\n  <h3 class='section-title'>Incidentes Recientes y Amenazas</h3>\n  <div class='grid'>\n    <div class='card ALTO'>\n      <span class='tag'>Dahua</span><span class='tag'>NVR</span><span class='tag'>XVR</span><span class='tag'>Escalada de Privilegios</span><span class='tag'>Acceso F\u00edsico</span>\n      <h4>Vulnerabilidad de Escalada de Privilegios en Dispositivos Dahua NVR/XVR</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Una vulnerabilidad de escalada de privilegios (CVE-2025-31703) fue descubierta en los dispositivos Dahua NVR (Network Video Recorder) y XVR (eXtended Video Recorder).</li>\n        <li>Un atacante con acceso f\u00edsico al dispositivo puede obtener acceso a un shell restringido a trav\u00e9s del puerto serial y eludir el mecanismo de autenticaci\u00f3n para escalar privilegios.</li>\n        <li>Esta falla podr\u00eda comprometer la infraestructura de videovigilancia.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Consultar el aviso de seguridad de Dahua para obtener actualizaciones de firmware y aplicar los parches espec\u00edficos del proveedor lo antes posible. Implementar controles de acceso f\u00edsico estrictos.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHiBVnPGASGQDYn-_Nv6-BVla4jKZRGEAaP2zRJwnt618PYX017lvWEDbYR-BC_3QZrHMYx2jJwZbB2CZ4fj2r_lG1wDxcu7QSw6XEQyDft4ZywXprSGDpVZlmDEQAOsmTCZUB-CrsgPj3YngHXPAhJSV7wwSgMm2c5UdY9w=='>SentinelOne (CVE-2025-31703)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHc20Wx0e77vLs9wf45Q7W2CbEgZtNJQJL5IoxRexVlh_V3E89io2k8SixMJFNyb_HJPIXt2droDDzOol3VKHzQzo_2Nsh8yptOz0dKkS-W7NSrtBSEAYg9m2IP3ewlczjUWyWEzciyRwFR0Y6r7EbqsRSBHg5h40E7o0Owv8GkKmoxrg2cTPM6WTmfyCTnjJHMzP6pliAysnU9UNE6n70jwUqeJXXKkX9G_fz8gunJ018z99ZAupJNAb_kvcSs8gdNreZBwps='>Dahua Security Advisory</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRpkuuHNSOLHsrExgmpHHnGwanb5-NH67Q1fF8AOWutoP3Ha5wllgeQSTtd3ZjOdOcw3hXaASs-XCLKpD0MQLpbRqH6qoXViPp83ZtHYwdCm-WdMQHOTl8EMbuM_Zt5Inof_3kGA=='>Tenable (CVE-2025-31703)</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Dell iDRAC</span><span class='tag'>RCE</span><span class='tag'>Divulgaci\u00f3n de Informaci\u00f3n</span><span class='tag'>Acceso de Red Adyacente</span>\n      <h4>Vulnerabilidades en Dell iDRAC (RCE y Divulgaci\u00f3n de Informaci\u00f3n)</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Una vulnerabilidad de control de procesos (CVE-2026-26945) en Dell Integrated Dell Remote Access Controller (iDRAC) 9 y 10 podr\u00eda permitir la ejecuci\u00f3n arbitraria de c\u00f3digo.</li>\n        <li>Requiere un atacante con altos privilegios y acceso a la red adyacente para su explotaci\u00f3n.</li>\n        <li>Tambi\u00e9n se identific\u00f3 una vulnerabilidad de divulgaci\u00f3n de informaci\u00f3n de depuraci\u00f3n (CVE-2026-26948) en iDRAC9, exponiendo datos sensibles del sistema.</li>\n        <li>Las versiones afectadas incluyen iDRAC9 14G anteriores a 7.00.00.181, 15G y 16G anteriores a 7.20.10.50, e iDRAC10 17G anteriores a 1.20.25.00.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Aplicar las actualizaciones de seguridad de firmware proporcionadas por Dell en el aviso DSA-2026-113 para todas las versiones de iDRAC afectadas.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFf7waRAPzGo_GjiVOrcR3-QKf-sr6AsAESd_Rg9ILbU8HX6IBURhmgdPKdLeaGPtjY_X1CfO1pO3pvfelATfTDM39v3AduUy0tVBnxVe-EQHo0e5FG8W9RSihBPEdZy402PX2D5Mjua-2pHzJ4q20BNtTkoTO7wFwN1Ec_TA=='>SentinelOne (CVE-2026-26945)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAkxZz5FcGX4z63Jy9Sf5vrp_kwvMmGKKT53y6CCUTncnhrsjUz_h0Fx1kTiHvc0PhOB9mgz5Ks8q9lZwTOMBexEHkQvTn6YNB5DkoB4Laf9ybuJb8wTELlSwe4tQH7X2ACtDLbVGQXtY_JeLGcSIwfAwAH4jlQ2tbByDJGw=='>SentinelOne (CVE-2026-26948)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWw6CVcC_uaSdD8l7RKOXdpcmCIMAK0iBRDDLO8QcMvl-mrdm3_kMfBsWHEyxFALWn_DebdpfpG_bV4mUbrio2MkSW-FgXtCHkao0Ok40npecDse5WEnvzVAU5AqebeqiBNZzcXn-nb2gtLC1IX6ypuVrJyy9k3mWVMUbfXOj9zGVspBb_AZwzGXPOGcv5AkZP_TwflaFBZVBNLEqpHGYy6ogFWY0sMQOw1TMU8d2qjhSzytxa9A=='>Dell Security Advisory (DSA-2026-113)</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Fortinet</span><span class='tag'>FortiOS</span><span class='tag'>FortiSandbox</span><span class='tag'>Bypass de Autenticaci\u00f3n</span><span class='tag'>XSS</span>\n      <h4>M\u00faltiples Vulnerabilidades en Productos Fortinet</h4>\n      <p class='meta'>Publicado: 2026-02-12</p>\n      <ul>\n        <li>Fortinet lanz\u00f3 avisos de seguridad que abordan m\u00faltiples vulnerabilidades en sus productos, incluyendo FortiOS y FortiSandbox.</li>\n        <li>CVE-2025-52436 (Severidad Alta) es una vulnerabilidad de Cross-site Scripting (XSS) en FortiSandbox que puede permitir la ejecuci\u00f3n de comandos por un atacante no autenticado.</li>\n        <li>CVE-2026-22153 (Severidad Alta) es una vulnerabilidad de Bypass de Autenticaci\u00f3n en FortiOS fnbamd que permite a un atacante no autenticado eludir la autenticaci\u00f3n LDAP.</li>\n        <li>Las versiones de FortiOS 7.2.0 - 7.2.11 se encuentran entre las afectadas.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Seguir el aviso de seguridad de Fortinet y aplicar las actualizaciones de seguridad requeridas lo antes posible para mitigar el riesgo. Migrar a una versi\u00f3n corregida para FortiOS 7.2.0 - 7.2.11.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWjUnLcml6hDI-U6LdLIPE_OC4ZvRNAmqktLOkKcRkHv3WvV3snSz7yvy5A5c1ISnXUy_lxVgX3Tui_G-nUmZs3NHFFykVZCyuT4GIw6cQpTB5n2GU6t4Hv_A8PwuikmLY7iCiqE83Vd1iSvO_dX0LXYANoRPZmHF7dBgHSzwS5qRWDrGg8hY4_5lk1653AqgwytvdjQ6XLmohs8V_5_3yTtkt9OkqTx8NkEhqejXDmEl7Un8guyLgu62rPUJc8A=='>ITS Advisory (Fortinet)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_Q8T4ZZzX8sEuZoAMYYgqcs2RxnnFZFiGJSjDmoB_UNXrFyfeFrUAanoGEVPI9deb_ZK0lHXyyid4_4LerPBWBX0TEaowJXefs-owevlCDMJI6lcmibMCRbd3HScknHSTS08zQXqWo_piL1IiXS2txW4hQa3ABQjdewvif2TQOaJwtXSIRY3ijVpTNP_VX52wx_nGm_u_jdBsRQDZGCFBSz5YJsNy8yETXoRlyB8=='>Security Affairs (Fortinet)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyRMRStAzGHq0hqzUi2Tl5E6bGmUi_rrmTqrU6N36HMZbA6LVKS2GMU3_HRoRoZ84hs1wyuqPAX4Ra58BnNXNjmq-kzh8LD0b8L-UyR4GTrqHHbOFNsxJOoJuyv9TdFxAEMx_typFul_-iiBIgYCpgUeU='>GovCERT.HK (Fortinet)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRBRxKLZMIam7hfS4jfmBEedJZ7aW57p9QEXmGo_CIP7fMJfnuyKmpltYTp_eOcxajjF1QVhlmAFsy23T2JoAXlEIPultHhqrMz-_Sl4qyZDPtZiDfo8BsPzS_CaGZUelOE95E6c0PoIHZOLpgQiiiJ2jkG-hBR1Mbxo5G0Glq-yYltc4UXiYUm8lwE93r7cjNK-Jw9JiH'>NCSA (Fortinet Alert)</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Zabbix</span><span class='tag'>Bypass de Autenticaci\u00f3n</span><span class='tag'>Escalada de Privilegios</span>\n      <h4>Vulnerabilidades de Bypass de Autenticaci\u00f3n y Escalada de Privilegios en Zabbix</h4>\n      <p class='meta'>Publicado: 2026-03-13</p>\n      <ul>\n        <li>Una vulnerabilidad de bypass de autenticaci\u00f3n (CVE-2026-23925) en Zabbix permite a usuarios autenticados con permisos de escritura de plantillas/hosts crear objetos no autorizados a trav\u00e9s de la API `configuration.import`.</li>\n        <li>Esto puede llevar a una p\u00e9rdida de confidencialidad al crear hosts no autorizados.</li>\n        <li>Tambi\u00e9n se inform\u00f3 una escalada de privilegios local (CVE-2025-27237) en Zabbix Agent y Agent 2 para Windows, permitiendo la inyecci\u00f3n de DLL.</li>\n        <li>Las versiones afectadas incluyen Zabbix 7.0.0 a 7.0.17 y 7.2.0 a 7.2.11 para CVE-2025-27237.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Actualizar Zabbix Agent, Agent 2 y Server a las versiones corregidas (ej. 7.0.18, 7.2.12). Revisar y aplicar el principio de menor privilegio para las cuentas de usuario de Zabbix.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFfcf-Cnt7ww2Ci7fPnRm-UcIO0aVdNHREvqvfPeoZ9zAwEshPW4IMi6XB5KWsNkk37pl8ZdMJsQ-gAXUgf0yPZkvZa5mPT1tN_O0jSM8flW4D4EYTQCyaQzCl9VUPk4OKGOa0bI-lpSaPYeadzbUngxNXOwz5KDbH6tYLRg=='>SentinelOne (CVE-2026-23925)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsF9NYwBvGhsazq2x40c0Ck0Lk_UW3-I2WKZORYOIAq0AIB-ECXulGBEyyME086ptJDFWrasSyu__yWSgWjkSugvsQ-OX5kk7jy808oq3kF3SUKjHaP3WP5qRT-RsXrIgc0RcnSxljDOx4iyE='>GitHub (CVE-2026-23925)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG0yJ592db3ea_u8IuTZlwUdvN6sur_mDE3U9iGc-czrKk0almirhlzBYA0D-AFhYQWcqO1MqkNgLvHsvyzAhuNyE7O0C24sD4VmqjO0gewqhQgPbFT8LeRoHNGcCh1-8NR95HEW3DiXXK_mf904ATICvmCSZlf3ImlODDepizuQvwKzeSfNVa7qv1Y4HhyH-wqQ=='>SEK (Zabbix Fixes)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWLkFUlI_o0-8sMCUbSZnoBg5gRICL3X91ptqXDTvziLac55GdVD85k2ZOfDaNMsevd5x0B1E5anHDkL9cd96o4xcLhL4VCGYrCfTFnncSDr2WpdBGkNXlNJd6pVKZdw5QUgB-'>OpenCVE (Zabbix)</a>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class='section' id='cves'>\n  <h3 class='section-title'>Vulnerabilidades (CVEs)</h3>\n  <div class='grid'>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>CVE-2025-59287</span><span class='tag'>Windows Server</span><span class='tag'>WSUS</span><span class='tag'>RCE</span><span class='tag'>Explotaci\u00f3n Activa</span>\n      <h4>CVE-2025-59287: RCE Cr\u00edtica en Windows Server Update Service (WSUS)</h4>\n      <p class='meta'>Publicado: 2025-10-14 (Actualizado: 2026-03-12)</p>\n      <ul>\n        <li>Esta es una vulnerabilidad cr\u00edtica de deserializaci\u00f3n insegura en Microsoft Windows Server Update Service (WSUS) que permite a un atacante no autenticado ejecutar c\u00f3digo arbitrario a trav\u00e9s de la red.</li>\n        <li>Afecta a todas las versiones compatibles de Windows Server, desde 2012 hasta 2025.</li>\n        <li>La vulnerabilidad se est\u00e1 explotando activamente y ha sido a\u00f1adida al cat\u00e1logo KEV de CISA.</li>\n        <li>Los atacantes pueden enviar solicitudes de red especialmente dise\u00f1adas que contienen objetos serializados maliciosos, logrando RCE con privilegios de SYSTEM.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Priorizar el parcheo inmediato de todos los servidores WSUS afectados. Dada la explotaci\u00f3n activa y la facilidad de ataque (sin autenticaci\u00f3n, remoto), esta es una prioridad m\u00e1xima.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhHUd3rPJt2467BwEyPjuCDbF6If1GPEc4aXeUx5Ipfepgj1dS3yhzc8dzZwPIoqpiDj32EbMAcA09hsD6f0VIuUuCqv7y1WFjdIhnKZyzRGpVrd2s6HjvvHjeS75xxBNN2CPEhncC904HugtIHgSoDRW2eJAQBVurrgF1jg=='>SentinelOne (CVE-2025-59287)</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>CVE-2025-31703</span><span class='tag'>Dahua</span><span class='tag'>NVR</span><span class='tag'>XVR</span><span class='tag'>Escalada de Privilegios</span>\n      <h4>CVE-2025-31703: Escalada de Privilegios en Dispositivos Dahua NVR/XVR</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Esta vulnerabilidad de escalada de privilegios permite a un atacante con acceso f\u00edsico al dispositivo NVR/XVR de Dahua bypass la autenticaci\u00f3n a trav\u00e9s del puerto serial.</li>\n        <li>El atacante puede obtener acceso a un shell restringido y luego escalar privilegios.</li>\n        <li>Afecta a modelos NVR2-4KS3, XVR4232AN-I/T, XVR1B16H-I/T con versiones de firmware con fecha de compilaci\u00f3n anterior al 3 de marzo de 2026.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Actualizar el firmware de los dispositivos Dahua NVR/XVR afectados a las versiones corregidas proporcionadas por el fabricante.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHiBVnPGASGQDYn-_Nv6-BVla4jKZRGEAaP2zRJwnt618PYX017lvWEDbYR-BC_3QZrHMYx2jJwZbB2CZ4fj2r_lG1wDxcu7QSw6XEQyDft4ZywXprSGDpVZlmDEQAOsmTCZUB-CrsgPj3YngHXPAhJSV7wwSgMm2c5UdY9w=='>SentinelOne (CVE-2025-31703)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHc20Wx0e77vLs9wf45Q7W2CbEgZtNJQJL5IoxRexVlh_V3E83iU8XJ31ZA0-SyutVNm3UMBmP5RhwH4huWCzCILEtem_Y8nlu9Hv2tEEhVM8UzA6OX1Rhj6mSHuKL1qz6vN0sl2qDvicDLYHLgPFWOCFp2kETCXQmdYKl3UC-QvfxKkvog=='>Dahua Security Advisory</a>\n      </div>\n    </div>\n    <div class='card MEDIO'>\n      <span class='tag'>CVE-2026-25749</span><span class='tag'>Red Hat Enterprise Linux</span><span class='tag'>Vim</span><span class='tag'>Heap Buffer Overflow</span>\n      <h4>CVE-2026-25749: Desbordamiento de B\u00fafer en Vim en Red Hat Linux</h4>\n      <p class='meta'>Publicado: 2026-03-12</p>\n      <ul>\n        <li>Una vulnerabilidad de desbordamiento de b\u00fafer de pila (CVE-2026-25749) fue descubierta en Vim, el editor de texto de l\u00ednea de comandos, que afecta a Red Hat Enterprise Linux.</li>\n        <li>La falla reside en la l\u00f3gica de resoluci\u00f3n de archivos de etiquetas al procesar la opci\u00f3n 'helpfile'.</li>\n        <li>Un usuario local podr\u00eda explotar esto proporcionando un valor 'helpfile' especialmente dise\u00f1ado, lo que podr\u00eda llevar a la ejecuci\u00f3n arbitraria de c\u00f3digo o una denegaci\u00f3n de servicio.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Actualizar Vim a la versi\u00f3n corregida en Red Hat Enterprise Linux. Evaluar la posible exposici\u00f3n a usuarios locales malintencionados.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9_CPF0exLg0Thl9krwwigSGg_lLELzgyK8oYe71Iq_q82CFto-w53yVN_w_SkDucphTGXEu0YFAeN_gJ4KyTnRDaR8nmBrFU2E81m5BZ_k7ONCtDJ2McexTM91wHUnFissm75q5ITc4tejqGgJPrQ'>Red Hat Customer Portal (CVE-2026-25749)</a>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class='section' id='ransomware'>\n  <h3 class='section-title'>Alertas de Ransomware</h3>\n  <div class='grid'>\n    <div class='card MEDIO'>\n      <span class='tag'>MacSync</span><span class='tag'>macOS</span><span class='tag'>Infostealer</span><span class='tag'>Ingenier\u00eda Social</span>\n      <h4>Campa\u00f1a de Robo de Informaci\u00f3n MacSync Dirigida a Usuarios de macOS</h4>\n      <p class='meta'>Publicado: 2026-03-19</p>\n      <ul>\n        <li>Una campa\u00f1a creciente est\u00e1 distribuyendo un infostealer de macOS llamado MacSync a trav\u00e9s de campa\u00f1as de \"ClickFix\".</li>\n        <li>Los usuarios son enga\u00f1ados para que abran Terminal y peguen un comando que instala el malware, sin necesidad de un exploit.</li>\n        <li>MacSync apunta a datos valiosos en macOS, incluyendo contrase\u00f1as guardadas, archivos, datos del llavero, carteras de criptomonedas y frases semilla.</li>\n        <li>La clave del ataque es la ingenier\u00eda social, donde los usuarios son convencidos de instalar el malware por s\u00ed mismos.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Educar a los usuarios sobre los riesgos de ejecutar comandos de fuentes no confiables. Desconfiar de herramientas de IA o gu\u00edas de soluci\u00f3n de problemas falsas. Mantener las copias de seguridad de los datos importantes.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECtuKW7TagdJZhQWfOF3QNPKxKE0L5xqE0PJEaHw-iTo8qAwBCNwTzRsknQ2ofKd-Y7jERBjGAxXac653Rj-mltOVoNfpHxAN0DDnJxeny74JLHt-8acXl-gF7PwZ06ProY2Ljctg7r71-yz0a04xmGuQ'>SecureMac (MacSync)</a>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class='section' id='recomendaciones'>\n  <h3 class='section-title'>Recomendaciones Generales</h3>\n  <div class='grid'>\n    <div class='card MEDIO'>\n      <span class='tag'>Gesti\u00f3n de Parches</span><span class='tag'>Actualizaciones</span><span class='tag'>Priorizaci\u00f3n</span>\n      <h4>Mantener los Sistemas Actualizados y Parcheados</h4>\n      <p class='meta'>Publicado: 2026-03-27</p>\n      <ul>\n        <li>Implementar un proceso robusto de gesti\u00f3n de parches para todos los productos y entornos listados, priorizando las vulnerabilidades cr\u00edticas y las que est\u00e1n bajo explotaci\u00f3n activa.</li>\n        <li>Asegurar que se apliquen las \u00faltimas actualizaciones de seguridad de Apple para macOS y las actualizaciones de \"Patch Tuesday\" de Microsoft para Windows y Windows Server de manera oportuna.</li>\n        <li>Prestar especial atenci\u00f3n a las actualizaciones de firmware para dispositivos como Dell iDRAC y Dahua NVR/XVR, as\u00ed como a las de Zimbra Collaboration Suite y Zabbix.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Establecer calendarios de parcheo regulares, utilizar herramientas de gesti\u00f3n de parches y monitorear activamente los avisos de seguridad de los proveedores.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAuGN60IvpXuRIFNIr2IPUr2AsAu_oUSqNgthPr7IMXI44gDTWsHVXqT3X1HyALAgMih1WYXpS9RZCLandKnUkcptdz3_-NQpxlv"
-          },
-          {
-            "text": "Jyhlq_6yyIVS9A2AZ_X99RJOHKoS5N1PkK7wPT0IvPK-lRTQd9_6w13BD9Ukq6mgDTxxytJkhTsJ4mcBZSTj5A9yZPYxrzJlJUNU'>SANS ISC Handlers Diary</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHiBVnPGASGQDYn-_Nv6-BVla4jKZRGEAaP2zRJwnt618PYX017lvWEDbYR-BC_3QZrHMYx2jJwZbB2CZ4fj2r_lG1wDxcu7QSw6XEQyDft4ZywXprSGDpVZlmDEQAOsmTCZUB-CrsgPj3YngHXPAhJSV7wwSgMm2c5UdY9w=='>SentinelOne (CVE-2025-31703)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfLWEYkpeCriZTE72hVP5BTOhViX9H9mcrDW7-DOraxoWMIcZX6gYtvoT0_I1Oce8eeyr8TnehiWxLnOq-b2362iYOp1j5296gpBUaPoSlYVYaFRnOZnxfpnjJWglJ7p2RB4YPsQ0GqiRmhwNyYlQlQk1eTfZiqtJLqA=='>CyberLeveling (Patch Tuesday)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFfcf-Cnt7ww2Ci7fPnRm-UcIO0aVdNHREvqvfPeoZ9zAwEshPW4IMi6XB5KWsNkk37pl8ZdMJsQ-gAXUgf0yPZkvZa5mPT1tN_O0jSM8flW4D4EYTQCyaQzCl9VUPk4OKGOa0bI-lpSaPYeadzbUngxNXOwz5KDbH6tYLRg=='>SentinelOne (CVE-2026-23925)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFf7waRAPzGo_GjiVOrcR3-QKf-sr6AsAESd_Rg9ILbU8HX6IBURhmgdPKdLeaGPtjY_X1CfO1pO3pvfelATfTDM39v3AduUy0tVBnxVe-EQHo0e5FG8W9RSihBPEdZy402PX2D5Mjua-2pHzJ4q20BNtTkoTO7wFwN1Ec_TA=='>SentinelOne (CVE-2026-26945)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKp7WYYwUKQITrd9z7_kHhc4f3ZTy_T1PYqPZtRE_Zy3phNr3qowEAhJNRzVR-chCgozbapTiBkWdMjJQCF8ymBNHZuUhQ0aiPU7LS3Ka6sX3LQlHZ-gxOIOdm8vcs3y1S7SkPIu4XWq1LhJ72BxQD5jpOfcKpZCECCxhGCxcnfG9l0IQEWKeHzxGk4A=='>NCSA (Microsoft Alert)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAkxZz5FcGX4z63Jy9Sf5vrp_kwvMmGKKT53y6CCUTncnhrsjUz_h0Fx1kTiHvc0PhOB9mgz5Ks8q9lZwTOMBexEHkQvTn6YNB5DkoB4Laf9ybuJb8wTELlSwe4tQH7X2ACtDLbVGQXtY_JeLGcSIwfAwAH4jlQ2tbByDJGw=='>SentinelOne (CVE-2026-26948)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWw6CVcC_uaSdD8l7RKOXdpcmCIMAK0iBRDDLO8QcMvl-mrdm3_kMfBsWHEyxFALWn_DebdpfpG_bV4mUbrio2MkSW-FgXtCHkao0Ok40npecDse5WEnvzVAU5AqebeqiBNZzcXn-nb2gtLC1IX6ypuVrJyy9k3mWVMUbfXOj9zGVspBb_AZwzGXPOGcv5AkZP_TwflaFBZVBNLEqpHGYy6ogFWY0sMQOw1TMU8d2qjhSzytxa9A=='>Dell Security Advisory (DSA-2026-113)</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG0yJ592db3ea_u8IuTZlwUdvN6sur_mDE3U9iGc-czrKk0almirhlzBYA0D-AFhYQWcqO1MqkNgLvHsvyzAhuNyE7O0C24sD4VmqjO0gewqhQgPbFT8LeRoHNGcCh1-8NR95HEW3DiXXK_mf904ATICvmCSZlf3ImlODDepizuQvwKzeSfNVa7qv1Y4HhyH-wqQ=='>SEK (Zabbix Fixes)</a>\n      </div>\n    </div>\n    <div class='card MEDIO'>\n      <span class='tag'>Conciencia de Seguridad</span><span class='tag'>Ingenier\u00eda Social</span><span class='tag'>Phishing</span>\n      <h4>Fortalecer la Conciencia sobre Ingenier\u00eda Social</h4>\n      <p class='meta'>Publicado: 2026-03-27</p>\n      <ul>\n        <li>Las campa\u00f1as de ingenier\u00eda social, como la de MacSync, siguen siendo una amenaza eficaz para comprometer sistemas sin necesidad de exploits t\u00e9cnicos.</li>\n        <li>Los atacantes utilizan t\u00e1cticas convincentes (por ejemplo, herramientas de IA falsas, gu\u00edas de soluci\u00f3n de problemas) para enga\u00f1ar a los usuarios y que estos ejecuten c\u00f3digo malicioso o divulguen informaci\u00f3n sensible.</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Realizar capacitaciones continuas para los empleados sobre c\u00f3mo reconocer y reportar intentos de phishing y otras t\u00e1cticas de ingenier\u00eda social. Fomentar la verificaci\u00f3n de la legitimidad de las fuentes antes de ejecutar comandos o descargar software.</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECtuKW7TagdJZhQWfOF3QNPKxKE0L5xqE0PJEaHw-iTo8qAwBCNwTzRsknQ2ofKd-Y7jERBjGAxXac653Rj-mltOVoNfpHxAN0DDnJxeny74JLHt-8acXl-gF7PwZ06ProY2Ljctg7r71-yz0a04xmGuQ'>SecureMac (MacSync)</a>\n      </div>\n    </div>\n  </div>\n</section>"
+            "text": "<div class='top'>\n  <h2>Bolet\u00edn Ejecutivo de Ciberseguridad</h2>\n  <p class='meta'>Fecha: 2026-03-27</p>\n</div>\n\n<section class='section' id='resumen'>\n  <h3 class='section-title'>Resumen Ejecutivo</h3>\n  <div class='grid'>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Actualizaci\u00f3n Cr\u00edtica</span>\n      <h4>M\u00faltiples Vulnerabilidades Cr\u00edticas en Productos Microsoft</h4>\n      <p class='meta'>Publicado: 2026-03-10</p>\n      <ul>\n        <li>Microsoft lanz\u00f3 el Patch Tuesday de marzo de 2026, abordando 84 vulnerabilidades, incluyendo ocho cr\u00edticas.</li>\n        <li>Se incluyen fallas de ejecuci\u00f3n remota de c\u00f3digo en Microsoft Office (CVE-2026-26110, CVE-2026-26113) y divulgaci\u00f3n de informaci\u00f3n en Microsoft Excel (CVE-2026-26144).</li>\n        <li>Una vulnerabilidad de ejecuci\u00f3n remota de c\u00f3digo en Microsoft SharePoint (CVE-2026-20963) ha sido confirmada como activamente explotada y a\u00f1adida al cat\u00e1logo KEV de CISA.</li>\n      </ul>\n      <p><b>Acci\u00f3n Recomendada:</b> Aplicar todas las actualizaciones de seguridad de Microsoft de marzo de 2026 de inmediato. Priorizar la actualizaci\u00f3n de sistemas Windows, Office y SharePoint.</p>\n      <div class='links'>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26110\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26110</a>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26113\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26113</a>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26144\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26144</a>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20963\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-20963</a>\n        <a href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9DQYIvb1z0d8MPVTh71RFgRsi5sHcukgOP9rsTG3UnqJ9GJcf0Lg1bdxwlcRKK3I-FZzjG7YY8HVDiwd2ZnYBbCmlE27NLRopX9C3OQUV8NGPpkLZ9dpx9W85M7tAsCF41Wm1gd8LA7d5uISPfZ0lzv6ZlI_1ZOH8shWi4RWcUDMHmQ23dlrHf1eCReJcjI2Tc8Fj5DAXLQerBycT\" target=\"_blank\" rel=\"noopener noreferrer\">SecurityWeek - Dell RecoverPoint Zero-Day Exploited</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Actualizaci\u00f3n de Seguridad</span>\n      <h4>Vulnerabilidades en Dell iDRAC</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Se han identificado m\u00faltiples vulnerabilidades en Dell iDRAC9 y iDRAC10, incluyendo divulgaci\u00f3n de informaci\u00f3n (CVE-2026-26948) y ejecuci\u00f3n remota de c\u00f3digo (CVE-2026-26945).</li>\n        <li>Una vulnerabilidad de Path Traversal (CVE-2020-5366) en Dell iDRAC9, aunque antigua, sigue siendo un tema de discusi\u00f3n.</li>\n      </ul>\n      <p><b>Acci\u00f3n Recomendada:</b> Actualizar el firmware de iDRAC a las versiones parcheadas seg\u00fan el aviso de seguridad de Dell DSA-2026-113 y DSA-2020-128. Implementar controles de acceso de red estrictos para las interfaces de administraci\u00f3n de iDRAC.</p>\n      <div class='links'>\n        <a href=\"https://www.dell.com/support/security/en-us/advisories/DSA-2026-113\" target=\"_blank\" rel=\"noopener noreferrer\">Dell Security Advisory DSA-2026-113</a>\n        <a href=\"https://www.dell.com/support/security/en-us/advisories/DSA-2020-128\" target=\"_blank\" rel=\"noopener noreferrer\">Dell Security Advisory DSA-2020-128</a>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class='section' id='incidentes'>\n  <h3 class='section-title'>Incidentes Reportados</h3>\n  <div class='grid'>\n    <div class='card ALTO'>\n      <span class='tag'>Incidente</span>\n      <h4>CISA Alerta sobre Ciberataque a Sistemas de Gesti\u00f3n de Endpoints</h4>\n      <p class='meta'>Publicado: 2026-03-18</p>\n      <ul>\n        <li>CISA ha emitido una alerta sobre actividad cibern\u00e9tica maliciosa dirigida a sistemas de gesti\u00f3n de endpoints de organizaciones estadounidenses, incluyendo un ataque a una empresa de tecnolog\u00eda m\u00e9dica que afect\u00f3 su entorno de Microsoft.</li>\n        <li>El incidente subraya la importancia de fortalecer las configuraciones de los sistemas de gesti\u00f3n de endpoints para defenderse contra el uso indebido de software leg\u00edtimo.</li>\n      </ul>\n      <p><b>Acci\u00f3n Recomendada:</b> Revisar y aplicar las mejores pr\u00e1cticas de seguridad para Microsoft Intune y otros software de gesti\u00f3n de endpoints. Implementar el principio de menor privilegio, MFA resistente a phishing y controles de acceso privilegiado.</p>\n      <div class='links'>\n        <a href=\"https://www.cisa.gov/news-events/cybersecurity-advisories/alert-cisa-urges-endpoint-management-system-hardening-after-cyberattack-against-us-organization\" target=\"_blank\" rel=\"noopener noreferrer\">CISA Alert: Endpoint Management System Hardening</a>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class='section' id='cves'>\n  <h3 class='section-title'>Vulnerabilidades (CVEs)</h3>\n  <div class='grid'>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Microsoft Office</span>\n      <h4>CVE-2026-26110 y CVE-2026-26113: Ejecuci\u00f3n Remota de C\u00f3digo Cr\u00edtica</h4>\n      <p class='meta'>Publicado: 2026-03-10</p>\n      <ul>\n        <li>Dos vulnerabilidades cr\u00edticas de ejecuci\u00f3n remota de c\u00f3digo en Microsoft Office que podr\u00edan permitir a un atacante no autorizado ejecutar c\u00f3digo localmente.</li>\n        <li>La vulnerabilidad CVE-2026-26110 es un problema de confusi\u00f3n de tipos, y CVE-2026-26113 es una desreferencia de puntero no confiable.</li>\n      </ul>\n      <p><b>Acci\u00f3n Recomendada:</b> Aplicar las actualizaciones de seguridad de Microsoft de marzo de 2026 para Office y sistemas Windows afectados.</p>\n      <div class='links'>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26110\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26110</a>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26113\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26113</a>\n      </div>\n    </div>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Microsoft Excel</span>\n      <h4>CVE-2026-26144: Vulnerabilidad de Divulgaci\u00f3n de Informaci\u00f3n Cr\u00edtica</h4>\n      <p class='meta'>Publicado: 2026-03-10</p>\n      <ul>\n        <li>Vulnerabilidad cr\u00edtica de divulgaci\u00f3n de informaci\u00f3n que afecta a Microsoft Excel, debido a una neutralizaci\u00f3n incorrecta de la entrada.</li>\n        <li>Un atacante no autorizado podr\u00eda divulgar informaci\u00f3n confidencial en los sistemas afectados.</li>\n      </ul>\n      <p><b>Acci\u00f3n Recomendada:</b> Instalar las actualizaciones de seguridad de Microsoft de marzo de 2026 para Excel.</p>\n      <div class='links'>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26144\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26144</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Microsoft .NET</span>\n      <h4>CVE-2026-26127: Vulnerabilidad de Denegaci\u00f3n de Servicio (Zero-Day)</h4>\n      <p class='meta'>Publicado: 2026-03-10</p>\n      <ul>\n        <li>Vulnerabilidad de denegaci\u00f3n de servicio en .NET (CVE-2026-26127), que podr\u00eda permitir a un atacante no autorizado interrumpir el servicio.</li>\n        <li>Esta vulnerabilidad fue divulgada p\u00fablicamente antes de la publicaci\u00f3n del parche, aunque no hay evidencia de explotaci\u00f3n activa.</li>\n      </ul>\n      <p><b>Acci\u00f3n Recomendada:</b> Aplicar las actualizaciones de seguridad de Microsoft de marzo de 2026 para los componentes de .NET.</p>\n      <div class='links'>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26127\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26127</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Microsoft SharePoint / Office 365</span>\n      <h4>CVE-2026-20963: Ejecuci\u00f3n Remota de C\u00f3digo Activamente Explotada</h4>\n      <p class='meta'>Publicado: 2026-03-24</p>\n      <ul>\n        <li>Vulnerabilidad de ejecuci\u00f3n remota de c\u00f3digo en Microsoft SharePoint debido al manejo inadecuado de entradas serializadas, con explotaci\u00f3n activa confirmada.</li>\n        <li>Esta vulnerabilidad fue a\u00f1adida al cat\u00e1logo de Vulnerabilidades Explotadas Conocidas (KEV) de CISA el 18 de marzo de 2026.</li>\n      </ul>\n      <p><b>Acci\u00f3n Recomendada:</b> Parchear las instancias de Microsoft SharePoint inmediatamente, especialmente aquellas accesibles externamente. Considerar que cualquier instancia expuesta o sin parchear est\u00e1 siendo atacada activamente.</p>\n      <div class='links'>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20963\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-20963</a>\n        <a href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCnY0bV69MApCglVL6YSMSglA5JnZO2ZL5l3agq8yb7A30TZ-MS3RPYZ7AXQJcHVsopz_2C2AzEOVfcAnhTwdSkrEllwpSgpl5z00-_tHqPqFQp4kLH6TJ1Jc_oAe6XIUTBWU_-VLWbdwM5rN4zrWNmp9XhHn1d70sQAUdjoy_9mFKQyNql1BCmgDwp6Ss9kSQkDjS8QCn3pkc1hnSsGvCriX_0Oac0AjRwsEjgzo7\" target=\"_blank\" rel=\"noopener noreferrer\">SentinelOne - SharePoint Deserialization RCE</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Dell iDRAC</span>\n      <h4>CVE-2026-26948: Divulgaci\u00f3n de Informaci\u00f3n en iDRAC9</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Vulnerabilidad de divulgaci\u00f3n de informaci\u00f3n en Dell Integrated Dell Remote Access Controller 9 (iDRAC9) debido a informaci\u00f3n de depuraci\u00f3n no eliminada.</li>\n        <li>Un atacante con altos privilegios y acceso remoto podr\u00eda explotar esta vulnerabilidad para obtener acceso a datos confidenciales del sistema.</li>\n      </ul>\n      <p><b>Acci\u00f3n Recomendada:</b> Actualizar el firmware de iDRAC a las versiones parcheadas seg\u00fan el aviso de seguridad de Dell DSA-2026-113.</p>\n      <div class='links'>\n        <a href=\"https://www.dell.com/support/security/en-us/advisories/DSA-2026-113\" target=\"_blank\" rel=\"noopener noreferrer\">Dell Security Advisory DSA-2026-113</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Dell iDRAC</span>\n      <h4>CVE-2026-26945: Ejecuci\u00f3n Remota de C\u00f3digo en iDRAC</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Vulnerabilidad de Control de Procesos (CWE-114) en Dell Integrated Dell Remote Access Controller (iDRAC) que afecta a m\u00faltiples generaciones de servidores.</li>\n        <li>Un atacante con altos privilegios y acceso a la red adyacente podr\u00eda ejecutar c\u00f3digo arbitrario en sistemas iDRAC vulnerables.</li>\n      </ul>\n      <p><b>Acci\u00f3n Recomendada:</b> Actualizar el firmware de iDRAC a las versiones parcheadas especificadas en el aviso de seguridad de Dell DSA-2026-113. Asegurar el aislamiento de las interfaces de gesti\u00f3n de iDRAC en VLANs dedicadas.</p>\n      <div class='links'>\n        <a href=\"https://www.dell.com/support/security/en-us/advisories/DSA-2026-113\" target=\"_blank\" rel=\"noopener noreferrer\">Dell Security Advisory DSA-2026-113</a>\n      </div>\n    </div>\n    <div class='card MEDIO'>\n      <span class='tag'>Dell iDRAC9</span>\n      <h4>CVE-2020-5366: Path Traversal en iDRAC9</h4>\n      <p class='meta'>Publicado: 2026-03-04 (Discusi\u00f3n actualizada)</p>\n      <ul>\n        <li>Vulnerabilidad de Path Traversal en el firmware de Dell EMC iDRAC9 (versiones anteriores a 4.20.20.20), que permite a un usuario autenticado con bajos privilegios acceder a archivos arbitrarios.</li>\n        <li>Aunque es una vulnerabilidad de 2020, se sigue discutiendo su impacto en entornos empresariales.</li>\n      </ul>\n      <p><b>Acci\u00f3n Recomendada:</b> Actualizar el firmware de iDRAC9 a la versi\u00f3n 4.20.20.20 o posterior. Implementar controles de acceso a la red estrictos para limitar el acceso a la interfaz de gesti\u00f3n de iDRAC9.</p>\n      <div class='links'>\n        <a href=\"https://www.dell.com/support/security/en-us/advisories/DSA-2020-128\" target=\"_blank\" rel=\"noopener noreferrer\">Dell Security Advisory DSA-2020-128</a>\n      </div>\n    </div>\n    <div class='card'>\n      <h4>Sin reportes verificados</h4>\n      <p class='meta'>Actualizado: 2026-03-27</p>\n      <p>No se han detectado nuevos eventos confirmados para Fortinet FortiOS 7.2.12+, FortiGate, FortiAP, FortiMail, Proxmox VE 8.4.16+, Dell Optiplex y Latitude, Windows XP, Windows 7, Windows Server 2003/2008/2012, SQL Server Express 2005/2008, ESET Antivirus corporativo, macOS desde 2015 en adelante, C\u00e1maras y HVR Dahua, Zabbix 7 en adelante, Ubuntu Server 24.04 LTS, Red Hat Enterprise Linux 7 y 8, Zimbra Collaboration Professional version 10 en adelante.</p>\n    </div>\n  </div>\n</section>\n\n<section class='section' id='ransomware'>\n  <h3 class='section-title'>Ransomware</h3>\n  <div class='grid'>\n    <div class='card'>\n      <h4>Sin reportes verificados</h4>\n      <p class='meta'>Actualizado: 2026-03-27</p>\n      <p>No se han detectado nuevos eventos confirmados para el stack tecnol\u00f3gico definido.</p>\n    </div>\n  </div>\n</section>\n\n<section class='section' id='recomendaciones'>\n  <h3 class='section-title'>Recomendaciones Generales</h3>\n  <div class='grid'>\n    <div class='card'>\n      <h4>Priorizar Actualizaciones de Seguridad</h4>\n      <p class='meta'>Actualizado: 2026-03-27</p>\n      <ul>\n        <li>Mantener todos los sistemas operativos, firmware (especialmente iDRAC de Dell) y aplicaciones (Microsoft Office, SharePoint) actualizados con los \u00faltimos parches de seguridad.</li>\n        <li>Prestar especial atenci\u00f3n a los boletines de seguridad mensuales de los fabricantes y aplicar las actualizaciones cr\u00edticas de inmediato.</li>\n      </ul>\n      <p><b>Acci\u00f3n Sugerida:</b> Implementar un proceso de gesti\u00f3n de parches robusto y automatizado para minimizar la ventana de vulnerabilidad.</p>\n    </div>\n    <div class='card'>\n      <h4>Fortalecer la Gesti\u00f3n de Endpoints y Office 365</h4>\n      <p class='meta'>Actualizado: 2026-03-27</p>\n      <ul>\n        <li>Configurar de forma segura los sistemas de gesti\u00f3n de endpoints y entornos de Microsoft, siguiendo las mejores pr\u00e1cticas de CISA y Microsoft.</li>\n        <li>Asegurar el uso del principio de menor privilegio, implementar MFA resistente a phishing y controles de acceso privilegiado.</li>\n      </ul>\n      <p><b>Acci\u00f3n Sugerida:</b> Realizar auditor\u00edas de configuraci\u00f3n de seguridad en sistemas de gesti\u00f3n de endpoints y plataformas de colaboraci\u00f3n para identificar y remediar posibles debilidades.</p>\n    </div>\n    <div class='card'>\n      <h4>Aislamiento de Interfaces de Gesti\u00f3n</h4>\n      <p class='meta'>Actualizado: 2026-03-27</p>\n      <ul>\n        <li>Aislar las interfaces de gesti\u00f3n como iDRAC en redes dedicadas (VLANs) con reglas de firewall estrictas, limitando el acceso solo a administradores autorizados.</li>\n        <li>Minimizar la exposici\u00f3n de estas interfaces a redes no confiables o a internet.</li>\n      </ul>\n      <p><b>Acci\u00f3n Sugerida:</b> Revisar y ajustar las configuraciones de red y firewall para garantizar el aislamiento adecuado de los componentes cr\u00edticos de la infraestructura.</p>\n    </div>\n  </div>\n</section>"
           }
         ],
         "role": "model"
@@ -19,247 +13,85 @@
       "index": 0,
       "groundingMetadata": {
         "searchEntryPoint": {
-          "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH07sCIPT3GWGJQb9YVZAYZBoSeaPIVXLwqQYLNveLFf_8On2FDF0K5CqGSj7QKNFAdCBR53tMcJUXmVPaeZ3NelDt4-KNcwmuFEJC9PCv_0cd1ZYPIlhdU7-z50CddGHGNnn0vYU-vhWlcPQvbd5V8RUBKT27rj8kZWs50w47pnXJUl5W6E_Ye-Pu22hI_EYh1D92QsPZdLIps0clYDlrFkbrQVyEhliWunAjMrlSeOIqzLjQAr1b3oQaQ4NdHNwfYpjz1X7c9F0E=\">Windows Server 2012 2016 vulnerabilities March 2026 security advisory</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHznpmzR73mld8C9oxpJD8b7CzI0TMeKHxSxaDiaZ6_XUVI-jcMrJLoW2q6hEeHXvgefwtM7zSWIp-RievxmLeFD8xfHf-x4eTMf_Ki3hgaIPr4OkAoBB_EmxJYiX1h1VfQpiVJUVmI0rk-DYO9aoqk26VYgmimfq-iPKOrWL2JPEhdt0xoyyMZTQoEBmU424HF8xxUP6jujusoTbdiwPm6RV4duqxOnT5jZtmWUr8wwXAh7PeDV7P524OwaGZIWl8=\">Dell iDRAC generation 13 vulnerabilities March 2026 advisory</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8SBovhcTd7kpgYVmcchpwfiX4tovqtZZ3UxZDnKSyt7tnqIvGIxptbWqKyZRoaoZnAm0qNJGrOwHp2bc5AVha8gGakfdMdjB0lvYQZEcs-JC2YC5KyooduA0VY5xG6o-hvvEIALhvYmo-gLLGjZCODOZmtgwo1OxMOM-N-4wJ3UQ0Hjvp1YW8VGzdBLuc6Fo9DLHxIr-0WYEfa8kJdCqK-5LiNDHZasEpPdBGGG2_AtExcwl58_Kws4K8RRRelvgLDA==\">Proxmox VE 8.4.16 security vulnerabilities March 2026 advisory</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVaJOg6RevNaJzwC-0JrEcWObuUrys8Qd0Pa81PT1MDqu7zbE2vi8XVbG2AhZ25R7y7X5kgYIo6YER2tyJ0DMrbmyFZ59ldaxOFfiqcsMQWv4EyiXqmi7CF7AYnVoZ4AvddWVkK89GeoRVk1TAbiGR5L2vTk-FyV-6tcmDyBhm5Z7eALrVm5rS5aMc0oRdLdxPbGNasug20h1eIvpslZGJJiaLYjMvNqw4n3ffdL2eUvQFuV4hOkVyr7cDNA==\">Fortinet FortiOS 7.2.12 security advisory March 2026 CVE</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5d_EEcRycyoFbOBQMjhXOO5_9hNUrPPLc5FwHAbExtkkVagbY3Nv65gQn3_U41qTarAAjiJbgHQEJfp4ceQScJA52ZMZP0hLUkM8zwlS_k7fIe_4GBq-EHPAU9iOOaqWhA0H_y8rGvRxEkOKUo8G5phQdU73z4EbKytEN63TfmS4YGjHNtnGM34AGqjXOD9JtW_XzmJ0cg5iMzvu2cgXnC56kyEEIJkHP4kSZbX5U\">Proxmox VE security update February 2026 CVE</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8qn7VaMdNjhRYqyo_RrBmrW-_KCm6I2xhhHW20XZyCo-kYTXVtTd_u9xsWk0IqaZdmxyxwPK1g_CoGHjI-29MhuwXPM_FmcPXph-6Q4hTT6tHWzGiJ1cA-VGcyToLLMv2LVwE_jOEjoT7Hc0jv9_R29RQb8YTkA50_uSi3_HG65BfwdDcuE0C6VsMDtn8kIVMlqB8tao9C_72t-xhqmOaK8hqkhpo-T9f15yIyxPV1XjSUNWHKlaiOss=\">SQL Server Express 2008 active exploitation March 2026</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjXxj9L3VR8QYtOUFtjXIFevRCP3mC_N3MCEKHwo3zkb__m0SmMcrPQlbnRRaCctxSC6ad_rob-3LIN-Gx2H3eVAW5nVikF2KfWJn2bqJFyQVQsD5Cw4Ub6khWn7ZFINPsxqd7p0-5fcE24pdGAOqfwiP83iIWKpdeMNYYfzjapsmLJavq3yAv4vaspexpM13xWI59HTMhnaGhKE3i5-X3QeBKoKO6lDATyFAg6iaoob6_O1I=\">Office 365 security incidents March 2026 advisory</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHduPEqqjJtfMHKmqy9EavWhLXiO9MaSoe9ZF1E1cLZ0zT32HNaeladE5zwJ69X2hvQsFZ6sOLszDHX8e8IgaS5pqglmZEY3eLUeB2YPuWJUNWI_JyUdcpPqXZyTeAMA8agVisWI3anl-pm2bQXV1YXB3ESEDxTAq55IIXHVgkvlDbhuugD0fT7VjMnqO0P57iWQAIsEjDU_S9gCqW-LT6ui-Limshh6P4N6AE=\">Windows 7 active exploitation March 2026</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBz8OZS12uEXnSmVJ6uVBNXyQsOoQh58p4w9x8SxPoWMxW_zKpl3V12T00f9pDFqicHUHG92gWjgTspKLSTt-OtdIeAvj4_s1Tm8CnolUZ5zOsTB7nnIf4G1jfZA1FncHk6cSzl7uIyufNW6rQc5SxQcR7xuelX__IsF7XioG-TqbrDCp_pYLi5EymzdEzsApHOKMDCMoPaeNjyVMOSfNflhCWPdHOnAx660GH\">Windows XP active exploitation March 2026</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2KOxE3X86_4DeL6rmypU-5fxSpq0IiJ3HUfpD8pF7qmquZQGHgFHTSj-7iBjVaCGyfegkT60GTcnAYGwmxFYnfwXmebrzpkmFu-Gpg5h4qAOMfmRj5mtoipyqKf3TbqzrOKctXwTTJ2y9p-6ZF-tNZ7HW4lRsJTlhL3qCWqCKL85a74oOHCARfD_q3Z65-oNf_X7qIO8HDmlQyA9ZIS-5TgydtaLFJvqYY5Val0SG3oscctc5cq9VbQ==\">Dahua cameras HVR vulnerabilities March 2026 advisory</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwpXsMzcCx9xcL-iKBJ-LGxLQ_qUCgw6qtCU4zbTwIWwMldOtd6BmDJyehfX8MNTxTNqWVF-UclpPozA6cHIkIHp32JuhMLYxTqGr9UObBnsHXiBdddqHwHXj6B72AERQB0RGB0NQnZfrqcLH94x3gzJWZ4A3EdjNbcrqKq0XBEcT2fy8D1_wggBpQGLLfvJtB-j8GCKh6A3iUe9g7gulV5meQNaKVsQ-FOhztEnW-p_UVil66frF6qA==\">Zabbix 7 security vulnerabilities March 2026 advisory</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvC3ONaSOY186WylUHqhuBTc9LuaXR_TyzctwmpGf1FbwxSnbZvIEQPbdKwNG2tX_Q3Mm2MsBi6wp8W0DWcXND7gZGWlUkZaS8W2esS_as1EtU23J3bTtVEGxxsSQ6WM71khMplYRriyzOFm7f4d2ASl9wFvmC8ZdPnYM1jTMgVakSUIHxsaSX7ypbrca_bHyDCj_KG06k5u0gZ89DHBQcf0aGewZ-H0v34SRs-8ybe9Xqo_3_O5r5ITVcGIw7I-fB2EOFW8-LEWXji6uitVc=\">Fortinet FortiGate FortiAP FortiMail vulnerabilities February 2026 advisory</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHelQQ6nYAHCblGWNoDeVwzV6Chx7AnUT-9T35AodD6CqGL4H2Xhm8rifb3_FmHJ4yaOkrg6vKJO_KXWw__eRsNTpry8wisqOpV3E6btvSx9A6xqRCXWBiCWvCMicghNJDEtj82BD9muvSQ26hpdW8kxc7icu7zeCYu7ZG1jrveB3ddw790Uf09vaSyTnxKAYVSHaCE1esgQwlGGx-72m5b5atuQ6hrJfnbujdv2ls685lTFWQex4BRcZcmMlVKTF1Frfmy0OS0\">Dell Optiplex Latitude firmware update March 2026 security advisory</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEavb98raW808TiXR5Anct7lovOdOPQH1y1tukgtrpq7TBUdt7fJxgouuusyiYF3Oroz4hx-7XAmzDlh6tmU2ih7SxstwHOzV4Kr_ndT2zMePSf2awl4mPXeJPHWjjY5NVdZblKEhVjsbw6EbnypC8kbJVCpY-XRAgt7vxkUJxnxhZKlfLF_Pi3_QpUHLY4LNsKY12cQjuXTp1IjUzwkN3DD80RNGot1qxJr3Tb66PW\">Windows 10 11 security update March 2026 CVE</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5T6M1ggOG3OI0pk3l6xZCU987JaMZtFrWPEgGd8WZB7p3Q7Zvr_DWKXPDSBUNe1xgRVpK0UJ64OmF6fbMX0eMXumVac8HrvVTqe6eWwFqIXWQ3DUOIBnb9mLtVzLuXfQPcSi5YEQF8Y9cc6l-LOcKgxlejV6lSP8r60p_g7AnMkMkg7siUywTJ2wffyUKVfR5lKZo_UQvw6hZxvT3CfI3B82Y752_Ag==\">macOS security update March 2026 CVE</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRRKnCWwTDezuJPLNLUNbro-Bj-A_N8m9hDl5yE-I_Gx4whyV848Obx3GDQOS6uLwqAURHgP0PXYsFs1HvyhsqWFLpc0gMMbXLYq2TcQqpMLJYuvoUm6JJhthIW6_1CMHO4tDPkTYha3fmBZz1f2fB6TUkCiDDlJ1FE98rSsNVbdnyu2R4ylMPOQybdH25K_geg1oTd2I3odWv_tK64D9tnKghnFCFPmRPbhieWXSk2VLs2oY0T63Q5sE=\">SQL Server Express 2005 active exploitation March 2026</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0GZOWN_us6bPHT27bmcg3oA3Eu3GSbKG-5djCRvfhO9Rd3A5HnSfZUHR3L2u8X8-9idIBDLxWnce3rxmiTNY1KFwYdgnud8g_exhPrIXQNnCPnCmzlJtjWc93gY8_Mp3HCza3fMqeeZ0h0-7xwrVplCqkWop4xUfoLfpEq3rhnKJA3IqgzhyQOFd4eVjvc_yr_LM7BsVObx5TjgZTs-uOkn26USYyKnB98WJ0O-0B1ZW94CNosA==\">Ubuntu Server 24 LT security update March 2026 CVE</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmx7nCq6beGjODuHNj9DGuQNoFVqCm_maYeviHDQoHdS7ZO8YqE7vpFvifhZR43kgBc1nuyzF3_-kdpKT_a9IcOuquLceRviCx1Yh3hYM4cpME9P3Wbm-I0Z6J4NU6jjIzUeHmSMKsetgPMMNgCk7B0IUkcIc5kX075hTfrp46qencVAgs0sIVUzlQ6FlSkBYWy7kduWV_PLaKxT0PY2PvfRBclEVxFltlJMaF5PrbCx0ccZlfJrVcQ6dRWLJupPQ=\">ESET corporate antivirus vulnerabilities March 2026 advisory</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEFNPktdlR13lcWKvcH41URwRC0bKXC4VwFQ0ui-OjMDtw9A3Ul1EFhiIm6Cdc8Nl0opISyVOgsxhZwPrJ9PpkkcdAgMiG2lTxW-lb0LcASL8UHzlQtYmxfjhzdNjp1_CWo5TbreAdE-zIIu0GNvvkKR1TysujYAiTjwqc5Vcy0AyThfOrIfTdzX2cfN6ZDTJDgtgQZjvCZjWhnoeX1c8YN7BCGy-scQUf5IecqpJK_ojDJxAiAmJDIJfRfobVdSYg\">Red Hat Enterprise Linux 7 8 security advisory March 2026 CVE</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzH857YX9WghOFS1OSiqU9s_maI0BkmswKZ0wNgFiQvPj0lptcJB8kjznP7eCS5lZSN1DPCizeYOSIT8-WdH5lIcVmxhao84_ckqljrNdhC9XuxYzXNCOgL3U3_Lj3hsq5j9ykZ0OP-XLgXHJrs9cb7rShn2whWQ7KJso1MduGh0e2ZGRNTxo1KPyiBXaUJD0TtJtIWRyYTXppsUSn4vE_rzb-u8aTfcwPCSL0JTaZM9teInkr4MRJWY2zhOD1p0aM-Sff8uhAxtB3igA=\">Zimbra Collaboration Professional 10 vulnerabilities March 2026 advisory</a>\n  </div>\n</div>\n"
+          "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd69MKo_J-_EYTTKhk9HLi_p4zkc-DRXbM4cM5N5hLrbQQuqwjTccHAH4zDa8HlNidqGRr5jljR9dt2U8PhAz8GBY07KnNbSbWw9DPmcbY5l42Im-8CqZMfkq_ZlIwuX6gE2CRvanhkOh8BN-SR6fxtjA8W-EO8DkPVpp_Suq1h_LnQEyozTPGcLYE0sVdSr1I_tASsg1MkLIakY4yuqPUyXv7ihAZyWX1VLAe-5-gew==\">nvd.nist.gov vulnerabilities after:2026-02-25</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJAf3WQKdyl8Kf92hAQoYhP4qMx7hLsY9o1gPSTaGPr11rnnbLo9eJzZjgyomlij0jqaYL81oa6_Wsqn4bpvdOUJEGCWIS-Xeq-L9_eP_CT2lJ29xUsMUyNCWxdvZtoI7xz-y5ZTSnFQoVWWwVj0FNGymw-2PPq9isPo7MMNMkWK4OKGKcW-3h4oOXYMzId_ByrEyfmrBnJ-q1SUs9wLCN7q8sKkHG4weoJVWN9QtVujoCapP7cns3sNS44mYMpPBvYETIErM=\">Proxmox VE 8.4.16 vulnerability security advisory after:2026-02-25</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiXXd9SwQi6EI3k_RC_RADCu2J2El4noP17ILpypQhWYzGw0Xq0ytnOzHxgXBXv0vqfWST1kinNXPzF_p9QGy3lwX4_4Sh2vY1eNJs1ZM9Iz8UCafDMZpIVxBDd4fwRmcqeJo7qQZCoDhqSCXzmuqEIl_LuzeUd8GBfMXeBKWYOLm1noEzc-mZEFtfhZJuO0mfSfY8erL5PJ-rRMLVDrUBEwLf45iV-Ipqf8HSps-U\">FortiGate security advisory after:2026-02-25</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVfgO3CEdw3-oCp1WegCeL-nih8Epam9psWMZn_aLbzRS-YXrbSlmPkbYAtTc9p1M07WDc_2vLZflFfGdoHPm6v-AU7G2IvcRA3uC4Wa03PjcAQbVNIBDp6atJO1acuBH7aGwa35ljI9tseVSdbmpufZiqlB_czlCTmbRMgI3Iy-S9HddsmN-dU3UegTyiZoBc77AAAtbaC6CQ0nw=\">CVE-2026- March Microsoft</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPGD5bt7f_WUxF7vfRr-PzL_X0CXnuyCtNC7GF6mtwXGf_jPd6cghvFNYYA-U2cdbSixhw50T9YUEHV7TISKZV5RxAU9ggeAWCJQlS0ujhLqvNB7cRVpi-Z-85rIdLabTPDFe3yGo9AkGqUUaEd_tObg8pjoEiSPiZrKIgYV1STzFI1LQyvop4z6vLZOoqnC0nRQpsHvYR1UTa0k6mZ7eu0xRWAGgYfv8=\">Windows 10 security update March 2026</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAgE77VJI-S3JYcBoKWe2bNfZ6PxGgFfDu3yGH1FXDNJj0KS8k4kPKC3Omzf1gkI7DnoVwbFY2WscwW8--GPk99knqvvBqkDHwtXoc7kW8QJJ50tCy60sITaoQzV_NNIMIC0WlADHiGSrBBj0HYHj7OYW0SnU3i6R8KU324yMnED0asVzdzs3hDjA67L9PcpUizUmm24IS\">CVE-2026- March Dell</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhhz9Pvbscmw1mP5CN8p7JbSB4KMVPMBbIpdaJcxPibk5g-EhsTOtF-je1z-oftPy8YrQzQmM7IxINMaAsrYOtEHhkeSQd9V76Kp8DzbsjghqlzZIKXNQFOKAaaYbuXSvt8sCCMF6X7A50Q29xalBtgkokWV9ocTg9rEWWD_gO5kO4AXWIjh8wWMbt3SWj21hS5w7ZdUWSspSXHnQugG-JSHc3j7-jj8kzqplA1gyPWSS-pGCXv_2qP5--teM=\">Zabbix 7 vulnerability security advisory after:2026-02-25</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcaD86sX0u8Bc69bLtPznN9sCdbq6F8M3SsZq_5QDSLS4099QzaGtzxmXt8TzFqPLg2ylzuIO465NywTMTYTXAnk1raPdj-P2sMCwV0zZn0iEjY5b3Q1NzkUAggmNhKYSbLwrHBQC5ieuioy6tvtexSep7kIT6679yrF6MsnsBeb7OWPDw13EyF8x9CJ1Q7VlcNirOj7il8f8MpEORIXqwMIZ4RZf9YW_kGCDSHIAgbG_TxBhR41kkDmO8qFs9rWwwWcB1aIXU6FvJaWja1bdcpESRw-3ayeq9\">Zimbra Collaboration Professional 10 vulnerability security advisory after:2026-02-25</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxHyVVwG8WfxekCgn7Ktk6Qz6-Y4w8_YH11LFiMKt557aymbcIpyB0SGuo_vFw22Fvj3-85VYAzLVGQQdeC6BmWkXt3QzNokI2BbnFZ-GnsHVn-ETBxbisWvWbqb6RMVOufcrIFb2UF0ONpPVxBq7rIIEBZX5UTpJGFrM2arvwJ4x-gXlOVTvzzG4rtIaQTGLnoIff6P1uQa0XK95AEAdhvQ==\">cisa.gov advisories March 2026</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd4AKDwpjaYWVrkjyzzRnv-IkyVjLeHF-_6B2YTNaF01IirdIB9iGrshUvvkoCBzqvoepb4EDAh5zGg-56JSPfPVifBLNZZ04B_7r-cWYsauHMZXeSzms27l46Two-31K5xJbPhjNk8N5eNNKyNU3WIofd8sfe84S29OSxr7tJQAYFL5wY1fpqB5hNT-Eg0p2S8QDDs00qPT45yp0P1RK9BpoT97uPxF2vkXRff1MxVn6b61CTO_U2uDYPU4TizDv6\">Red Hat Enterprise Linux 8 security advisory after:2026-02-25</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyJlhLCb7oC9PDBUZjJJwOP9MmB0Fz08NekuEzOA2I8vLzlUneLnV7iVe6VwGa2s5hn0Q8wd-aDvoTPNBH6AtDeHJDcaGKsceTHLJ5o4iW9Qz2SZFRBzVnQADKXIvP02ErKyiP-lg3452KJkoLpcyMl_ExTm38XaBCNipXpre4d76t3LHDJcUcM3s9BpWLbj0gkMn2QLPNEAo98tBeoUXPoqRzpR_LOd6dWuBGWILeg3w=\">Windows Server 2016 security update March 2026</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbnemwyare5i1vPM4QdDpNHK1K72kYpAScnfbUp7vNx_8zKY3FE-GkNLKGqfyx271D7IEG8B2VhkZOPno4A5nNAOVPa14HhRs5rGjtnmBoF5AXbMnV4gUZnCKbMHCzK7NU0Zk7xoZqG3wG2rfSa-rPHDaO3bNmLhN9GhCn9Sbr-j5FxxbEEcOu1VcnSKBKx-BTsVJ5BhFQCXINjA==\">CVE-2026- March Fortinet</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuvGkPnrPQfCkVXmkOb8wT4lwYf5KOFc4tSd9CttTNSwDe0Uj-9wgiMIW9ogzwGKdkCZnJQ05uz6Thf-_J2VQc4gL0EMre8zm02USq4SQfGR7XneETYlBOmqlBGXho7Uk5jpH_5B3H3g4uHnRR2c6NaYWqbhsLHBcTkUWDKOkXsJuOe7haw99drQ-j1xBG-DGfRgnfozOZ12xQXzE3uOsc9X1mqqXLSwc=\">Windows 11 security update March 2026</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSaEg1qDZyHW2AvnIIr4dWmGu37SgxsKp607_d1TNi6KWILnewVHrRnu_MtVaJV4Bb7uTr72aFNjtnz5KoCY8wuw2bwWjCg0W1wRy3FOE3hKOnLt6FoNBi3auOBoowkXnAsoXITaiW8ZMXBEgyef8oYCbicB4i4gMkqvsX4qLOTYSZqdsvNujkOXz-stXAbo2-L_8fWZT4AQspHVV2nRkRnatvQ3odXl89pVqVo0_Vc9EV7BNNhfGjhM1zRUGSia-sc0E=\">FortiOS 7.2.12 vulnerability security advisory after:2026-02-25</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjgJ2y0bxzCUmYDxoWxpKM5dgmPUcw7jZsDNkYkbTqqzQLx0eQKyH1ymxvRWY1J6usUHJ4Suy2reY5KpyMxXZqO9PH2iMs0cEdS_0YpcJs73E8B7br70zdBhZEmI3IbrCwgfzYQUgUDlFTJ2ceHYQEUj8tcUFKM5t1IcjYLz5xeIErrr2vYlwRkvLozy2ASjTC1KBEKdcuv2MNkLhTv727kErQNzpjXcwbXDIyRyjrBCDAZKJFLtxxxsPqx3KnOPyNwKrT\">Dell Optiplex Latitude firmware security update after:2026-02-25</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-a639mlo-KwDLDzm-8BTpEk39AD5vkjvxs4RQQzZLEJ1w7fAw6cADHJpgsKz6Z5iy7Sn20sULjpbl-_CcBVZCe_ri3lKQIbWWeRv-vnRSQIEEAAeaoG5OKQrJ2D8hukpJqY0XOK5OiyPGNqBtWEhZgrfjwLAHBsADH3BUpmrGDmJo1B_noE_yxvlDUcov2PZfVoftKWF9MCXuNWxOze8zHMMSSb1i4dPXfRS9zUw90A==\">Dell iDRAC security advisory after:2026-02-25</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMiuuFmzp92C1TNgHbP6TFWQ4xfGa6vtBk71bO2dSWSFJd966r_k-83_4SHeSfsNmnpUxZkdn2aQBsjZSUwPY0IZu9FkImoqVL-5xEMPnwyZqAVBnOv5xcFlZSBqfKclaWldQWzePbxxI5GeKf8afUKYx8hX-UxKQBorPjSd4z0YKP7en3p-fE29QBG4GYKy9hX2WkVg6mGDxv7bcx-cLyQqzAtFl8ny7u6Q==\">Office 365 security advisory March 2026</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgnYlxDQSFY9T1yc7Ojf6oVDyJhIZNa3xJXWcmLtMnekLtltSU5GZEeZWIWUH-kiWt78MdZrULYtr7CAHqvdaIfcP8DVfZoFBXJ4FOavZp4fPR-7BjzeyjNhsRvKZDhaOKbiz_SkFGAJCa5gBKAkxVHxLjE_q3VyfhbH3Yi0IBxzRueWfx1qyYoZ-f4VWIkvYPkW0oHVcv0pUnwNQFM0PBabGE\">macOS security update March 2026</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIi0n3cYZpD-jh8F8_m8QOJ-CUs5eukrS3W0Ul9f6lvOeZ6utEuGlod-dcV-O6EPSUWocJYKjtOi9ONI2mZgr2BD308qM4gdHCBtqxkU81FssMWyD-OWGxlUx85HkSg_oXrjzMI9WizNxL2Zy1wtR096fG-kXDq_uci4qnQFELR156LCCBAfOh0Am7-gWjMogDZP2gr7kxtwfLcWhFmGxOei_5KOMK5qDYOFHUG6Rb5bq-Vz97wa40XDzQPq1x\">Ubuntu Server 24.04 LTS security advisory after:2026-02-25</a>\n    <a class=\"chip\" href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3lnhP9aUlnqyTP4JslgSEA1bL_S32TeA7KaGnmluv3L-lxiVL3Vy7qd-QbuY6L6ej9HgBz18VOOYW-SbpoD1Gu0GUDh1mBVi3NCLDg87blUIrg7XQOB78zsZhDjcNJZ81zJaOZbPP1Lbhi11USZTe-Lr3nJF0Wr-nebb5HDRPj1fYkT2LubmdUwE8CewIjWfaNmkRCLCaJUlibRM_STOYX7L6XavpfzlZ1CZUjDZTpwPi_tbePdns26i7a-_tuW_i\">Red Hat Enterprise Linux 7 security advisory after:2026-02-25</a>\n  </div>\n</div>\n"
         },
         "groundingChunks": [
           {
             "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAuGN60IvpXuRIFNIr2IPUr2AsAu_oUSqNgthPr7IMXI44gDTWsHVXqT3Xf1HyALAgMih1WYXpS9RZCLandKnUkcptdz7_-NQpxlvJyhlq_6yyIVS9A2AZ_X99RJOHKoS5N1PkK7wPT0IvPK-lRTQd9_6w13BD9Ukq6mgDTxxytJkhTsJ4mcBZSTj5A9yZPYxrzJlJUNU=",
-              "title": "offseq.com"
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPn2EyZrDFT_E8frl5AszzKF5puaDX-IkqiLomVDeAXfySSKgzUCvnIO_YMDzIDfjqJbobA04-cNN4WZrkNKZfUf34Lx785Ce5uZZiQo3g8odWHixkT4qw0DeQk74FxcLE7lOZmYqDagmEZbsSW64ir2hJsuLKf9iUfr9FpIj48MC3WMmcM-YXXzWJFGQHgZ4r",
+              "title": "blogspot.com"
             }
           },
           {
             "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECtuKW7TagdJZhQWfOF3QNPKxKE0L5xqE0PJEaHw-iTo8qAwBCNwTzRsknQ2ofKd-Y7jERBjGAxXac653Rj-mltOVoNfpHxAN0DDnJxeny74JLHt-8acXl-gF7PwZ06ProY2Ljctg7r71-yz0a04xmGuQ=",
-              "title": "securemac.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGSSsMUiOzu5-0DkPIp5WT2OfELGPtANM4lsWXuqrTYMEYxGb7Je0-jxCbehjaj0vXZZZ_ufxM_2_6aFWyAHY3cGY0vOvYHcxYDXy67buYwhINDdct0Lvfxs9MXG3aMMaQv1s1Coko9GpUXWTVGQbWq7mWiCRSr5kRI22Ki3Ri2s7Bjpb-W2lLReDOmRqZEIR44NZ2WA==",
-              "title": "sans.edu"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmFIS_AnXaZcjlBRMZOv6i2JoWUrG-N48PLqA1dffj8Q_2LkeScWFPBL-CcZ2EzVhNRbaV5nkf0ncKa7xSdMv9qDrk2VEoaRwvojZ5UR8LRe9uRIyc5QtceuLkphdTZ7ryDxZIeiOtGoLwqL2ewVTAGTmkbEa2_pbycRFORWUQOltDPIeZ4Dd1WUx853xaEFWDWh0i-uQ--bQVBmDkX0y3Iab5n73bd3A=",
-              "title": "malwarebytes.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEV7_RdpqgWaeCrLl_huMeKuepG0_wm2LfE02Qqgrab0apRLlVJlC-LmdE7WmsrcoOzgZEePvWrHtaDK7t6lAj8cxmPEEhSezVybRT_vtqiYf1JQMoX07sNM6eKpo6v5_55",
-              "title": "apple.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJuLjK-Z4cXSUNMfWLiOOfLAOXxsRshFYDIoiiPdxQzzJxDqhxhs9MVUrttzQSubkr3VY9wVdjG2Z4ZSnubu7xR60yeleph_tRxOjCa-S39IA2PChHwfWdcxh5NTiJP3b1TFtGMvJixBf-I2PXncHEaORPnIUuH9MG60-yG6Er5Cfs1ZYDM520FGt4hgO5MF0wEiVpRDGtlxweahpwIwnSPg==",
-              "title": "qualys.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhVvmY6Zyi74WKUrlD-9_XGHG269KZU_mUeW1i9_1IM7VG2fgOnbeif61l2sTq2lvNZ2oHE9Tcdh9qDHQD4ZhUILaiXi-2sfjTZoIhM9uwoI-CYisd212hkDHeNzmdeNnxe5T22sPnTnf3M5FPlB7OzkO8ZRGA6-cc-jqqCt2Co2NBrSJUdToTE6sESwswXGFUjZI13jciYy3Pa73evY2ZUO8SVW7i",
-              "title": "pcworld.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKp7WYYwUKQITrd9z7_kHhc4f3ZTy_T1PYqPZtRE_Zy3phNr3qowEAhJNRzVR-chCgozbapTiBkWdMjJQCF8ymBNHZuUhQ0aiPU7LS3Ka6sX3LQlHZ-gxOIOdm8vcs3y1S7SkPIu4XWq1LhJ72BxQD5jpOfcKpZCECCxhGCxcnfG9l0IQEWKeHzxGk4A==",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPBSylFpG43xcnUMUQ-V17F1wudq9wZ4wr0jDGWd6R4ZKiIKvwQp59sFHUiIndRKK-oLvlVgKKEgNe0dwgs86GDlriEXoAwDGEyD5OFrg_NTEUMzOFmjNNWegfLMVpgg4IYpUHaIjpGEKndTU8N0cKNTo90jpBwACgHfm-D6MhFws-UzX5Nuz0ODVCXQ==",
               "title": "cyber.gov.rw"
             }
           },
           {
             "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFkXSAOFcDGMqa813L88kwxO2UBxScgTI7lgytbTIFcP7PEO9I48YUpQS1z7ntkkZiUbGQa8PcNNShrdU1VvfdZWQoot1v7JvDZe3dTIOeg1ZPmzygU12dqdNZj1h0JhGw1kKIDy1Q5QiXjqXZYlHypr3riJDmzZpksEadBhkf2HzHzsc=",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFiNjGenZdIlHwJiEr_5gICxlbdCKpxOa8REpSFTDx71fP45HBViRz5gT0F9e8xzHjgv24R9X5xUpjPPiDbNpcpHZA__tDPvMuRS_8eQQHGu0IA-x7LXKsxLuBp7jkQCdfwutkouDsIej5Sjt5pCE8dC0htjeuNRp33wik-1hf7Ow=",
+              "title": "talosintelligence.com"
+            }
+          },
+          {
+            "web": {
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMv0uuzPj1Hoo7-YK3g7rZskfQgguPAJqhE-rScZZP82mT9ZGOSB0S481k75BRsy0UBjWtuZUvL6GrLEffm1ycKg8Cv5E7h7jFLcp5jAlzYk_EuTdXWwMarvvXxt6DXTCVyT1UgUhrJWJQPdAk4dM4mT6yN9k8eTrE6qkGbixG-TbIK5eoGL93",
+              "title": "redmondmag.com"
+            }
+          },
+          {
+            "web": {
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPhVf6XPjwWyQb8Cz3MDer4AeztZ3Je2C_9DwL2rrYQaqfl2ms6x2pzM4A-QABwvNkBw_FaYISebjonrKXKedMWDoJRRWcFweA-bVnShLTYvEHFMympC9ZoNO7c9t6b9o32iTc2K-3pWtKG8nq85T8VMo2IRORHZ-dETWAzW0L0wAfxVk=",
               "title": "crowdstrike.com"
             }
           },
           {
             "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4vn4u9-zWgwhh7BvN_PEFXJe85Ej3SYaUZBWl_3dJVyQK-FEKppKmAqKPCasV3pEHDShIO44sFtKBKmHF46K2FvhY8_uifJvrfaedaohgZja9U_8hmcmlCJsk0IMThkLJq9jbum6xc-Bj4sMositUHIqAz-ApMnk4KCKiENGUsKUGiZc=",
-              "title": "arcticwolf.com"
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCnY0bV69MApCglVL6YSMSglA5JnZO2ZL5l3agq8yb7A30TZ-MS3RPYZ7AXQJcHVsopz_2C2AzEOVfcAnhTwdSkrEllwpSgpl5z00-_tHqPqFQp4kLH6TJ1Jc_oAe6XIUTBWU_-VLWbdwM5rN4zrWNmp9XhHn1d70sQAUdjoy_9mFKQyNql1BCmgDwp6Ss9kSQkDjS8QCn3pkc1hnSsGvCriX_0Oac0AjRwsEjgzo7",
+              "title": "securityboulevard.com"
             }
           },
           {
             "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQFvPAjk5SLqwq-clYeBQjFh3st9GeT0L7FT3jcqOjlsnzbULBtLlVPxHURiO6Cv0uR8pVyVCI41vUfBJY6v2CEz-yBm7srB6iexVflz9KKra9_h7lAfC8TGvL-JVuUqY_MKNkl3h1UCqA71v_EJ-50yCMZJH6BbLz9km51oCQ-8dRwLQ6QpRHJwQ=",
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9DQYIvb1z0d8MPVTh71RFgRsi5sHcukgOP9rsTG3UnqJ9GJcf0Lg1bdxwlcRKK3I-FZzjG7YY8HVDiwd2ZnYBbCmlE27NLRopX9C3OQUV8NGPpkLZ9dpx9W85M7tAsCF41Wm1gd8LA7d5uISPfZ0lzv6ZlI_1ZOH8shWi4RWcUDMHmQ23dlrHf1eCReJcjI2Tc8Fj5DAXLQerBycT",
+              "title": "securityweek.com"
+            }
+          },
+          {
+            "web": {
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYBvhFWFQpS2HLgFZi60YQG1mFjP2jit9ZZd_BSBJxP9zc5wYOtkWSuGnMKFVFfJRHm8ut8vRjgwCenPS26Wg85QOhdz8nNtxzsQGl9QkbHAqeh13rOk6K8YOh4dAf30cmlZWqnQZgpDU6Y9XZkATqdMg4lgmDziOZK66uNg==",
+              "title": "sentinelone.com"
+            }
+          },
+          {
+            "web": {
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbRC1h9yhZSVcvnq8zoDvgfTjBLHPHekfFad9VWhYcw9XT8_UkYAGLthRHh9oT9z4q3WVpwiFhLF7_mDRjHn5rSBa-Y4PCfuTJrAYmit6xFn6qT3Ax5SfopVTeIoRFL6-E2NldAj2JBysS6OU1JWMj0amcmBMyhC_XI66QAg==",
+              "title": "sentinelone.com"
+            }
+          },
+          {
+            "web": {
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2x__32CrMFJJnZxPHK7aXy1mQ26pHoh7IYeFM6hUFspcWzs0_N-Vya5ZuldEOTfdjJ1e-WthVemgmXymPB-C_kAD2j3_lRAI5or0XcDNGri6_912bNkbCul0PxrcD7Os9ZG5ZDv_FCUpaRwp4Ua4jaR0sv_2xOaQv_FRO",
+              "title": "sentinelone.com"
+            }
+          },
+          {
+            "web": {
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGC__rQBOO4uF-O7xHuE0BF_Ij7mR0sxLRpcGccqErgReKEOEqCl-6zDUKorS2Nm1HE2mlS3IEsGnw26XqS_fu2e0vOD02UppElsiqsDcJSnW9C6TXPkU2L-IT8I5jyMYeQQX28t2o1MS8YgwbFEIxL6O-4BJC7yGen55-2_mI_O5uaF0LNzaj_F0KPSN71WQOuf3IW4VfYBvUQ6D9qmHC8sqwLP7pE6RK4Rrj2v2-9O-9FBxZgfvQ_P35U5C4O9rZdwtUykf0AHQ==",
+              "title": "cisa.gov"
+            }
+          },
+          {
+            "web": {
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUaVw7dJXeD9BgMckiK6x3m27bHOkNuSDd1WKMdh0VWoWUkiWmOmYTAx-RbtASpmp5y70tPkPAH3iOSTKf0jaVl5k24PXqpq-g2JnN3GtW7SgaktD5jaFnkqUKWCp6qq1R2LDPj69GtFnU43sKwcr12gqP1PlH4UL2r4sp3s1Lt_VEsSB3twR_hMA=",
               "title": "krebsonsecurity.com"
             }
           },
           {
             "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfLWEYkpeCriZTE72hVP5BTOhViX9H9mcrDW7-DOraxoWMIcZX6gYtvoT0_I1Oce8eeyr8TnehiWxLnOq-b2362iYOp1j5296gpBUaPoSlYVYaFRnOZnxfpnjJWglJ7p2RB4YPsQ0GqiRmhwNyYlQlQk1eTfZiqtJLqA==",
-              "title": "cyberleveling.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhHUd3rPJt2467BwEyPjuCDbF6If1GPEc4aXeUx5Ipfepgj1dS3yhzc8dzZwPIoqpiDj32EbMAcA09hsD6f0VIuUuCqv7y1WFjdIhnKZyzRGpVrd2s6HjvvHjeS75xxBNN2CPEhncC904HugtIHgSoDRW2eJAQBVurrgF1jg==",
-              "title": "sentinelone.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjLujKrTzr3o88eC91T2c3Rhdz3nbCYzUNU5hspPj0Wsp-eqZayP5q8ohO02HJnO0imQ9ZuDFVKkGgzM07OQp_iXgQPhtZjjX2oadLld9m7wr0OAjrJY6tOFnFYODLcT1n79sfeF8Ovxn0mIkib9-fsFTGunXayRQMqZRIK8YaCmpljpe9DdnIa1NlFCDyQULvDk6IL9lnZQ==",
-              "title": "cybertechnologyinsights.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH--BqPp987mNiKezHcv3Rgz_kJawxKusH7XGQ13GkppMtUt14M8wIzuX-E84hlDyK_CR9GnLlXzDnlfXG0Z3cbaaCERghlgwvYmdnBbrUbQujQ6KvkPXBQJ6HWTGwx1zB8yeAKfQ==",
-              "title": "tenable.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPArzrF0W-DpAwEF5yngjlgp8q2W6ZZ8xalKD0zw3nq6jNbN9EKfNughRJ-2HU1wzYidt3H7H21UioeJ5F7xgk-HoqoABXpJdg_PwwBoYcKlYPDyPyZLzuVmYYbcHlw7Om1Um7M-6TqhzIPPgP_wlGOcVUm-SM",
-              "title": "nist.gov"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi-77m1CPC7pmW6H5Sxl87-dThldhXHzCizTCM5tvZO-CTIapGv0Vra-Tk0rJ7CiU94nI16a4v2j5LhAV4jrNYIzVrKsXfdYhsHWq_PBHnibyAwFCsIjSCkPgE99ur8F7E7tP_m-yn_eUj",
-              "title": "nist.gov"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbCtGT8f9d1ZwCYchP7NbF7f27T4FTqtFsomEspE_vuySUhIT5WITMfZBwHXMwKNkQBu6yOUUjt5fmkblj4hf_8wszX73R6W8d3sjlZ3hJpyIM4vHjp9hX-X9cvw==",
-              "title": "ahnlab.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEtqyBcF7NQkc4pjDu16HQEuX6vEzRFuKsWqZUkXwOw5sXjNpDFYKH0G-fzyT2FKiWXMy4QvixX0TB9bVuAMsVheO7CWYuIXhIOxqwve-8HSYefC8XEREmYIgmBLdm-STv-vktN3ua5uXRbZE8yJUmpDyRGbQ4XKPkkYlmFw==",
-              "title": "sentinelone.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9BtYAiKyMSxMNqjUWOmgPqL1q-bkJtYKgxYGB9Xeh2ry_RrsteuBbDZ-a61c62ZIBcyQQzLtyR3rBtrbvpmJJdUhwNkMAiAGXPktzewVThuwA-l396NhGLgKYYzESyiYJF_wtNk-SANvxCSs=",
-              "title": "europa.eu"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDibQOCw6eBkOP0pGkSqYBi2jFENJkIj170fRNjy-fDpyALY4Q0W9skiOYgVh7mJW81pYq9HDSX2xE_WC6go_A3v2eaYiJGaTdK0D4xF8hkLQ9wrSVItrHijYB0JJklnfB4u0kNf39U6y2zZLbJdvPosB4OvBP-2eAs_2fpKhsFtFHfGsKUt98LGj-lUB4QVBkkWmQPdwDeDdGBP_Jtt-FW_TAvnJYeIf_4SiGBE_RCTck3-V6QcI=",
-              "title": "changeflow.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvMCxZJXUDe_M3El8edCGVt24pUNU8lqQDLSI-XDJ3goFYyTn4Zb9Z6K9OicrebgwOGNjcoTg6FOhMjwdwMzjgNhoRSsmbHFgJs_QPTP6shAPkvY9OEpeqYHg6avOkh0Mc2BW5swhybe_FnLGsLdVGjYn7uXe0KZQ1wz9gksODsEmn99K7z8NqzvxKuPMAJOwALgbBO6qzGtY=",
-              "title": "hkcert.org"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcetkhtB4KPKHRDxH63bZ0LFYRp-t2u3TmlsgL-J3_wbTu3CireBVRTMTlbYZdzOQ0a6qgrE6wMT6lxLRM5A7xstpqvZjtsp-s2UEiKIkXSkiJQe7PvZ09vMQ5jTF6x856AsQVwv5TdUo5xCH2bwc=",
-              "title": "redhat.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHSQdeB7EYHsDfP9_G6_ym50xbUAr28vD6r-aKxUnjh2KilMpn-IbLNRvSFn__lvZfFju6Fdfd2k0hnpGQq2BaFyPz0Qe80KWA0vX65UdbxJODMrtBnYxmuMq6TDmt45WSC1-FD7AtcjZD",
-              "title": "redhat.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHiBVnPGASGQDYn-_Nv6-BVla4jKZRGEAaP2zRJwnt618PYX017lvWEDbYR-BC_3QZrHMYx2jJwZbB2CZ4fj2r_lG1wDxcu7QSw6XEQyDft4ZywXprSGDpVZlmDEQAOsmTCZUB-CrsgPj3YngHXPAhJSV7wwSgMm2c5UdY9w==",
-              "title": "sentinelone.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHc20Wx0e77vLs9wf45Q7W2CbEgZtNJQJL5IoxRexVlh_V3E89io2k8SixMJFNyb_HJPIXt2droDDzOol3VKHzQzo_2Nsh8yptOz0dKkS-W7NSrtBSEAYg9m2IP3ewlczjUWyWEzciyRwFR0Y6r9EbqsRSBHg5h40E7o0Owv8GkKmoxrg2cTPM6WTmfyCTnjJHMzP6pliAysnU9UNE6n70jwUqeJXXKkX9G_fz8gunJ018z99ZAupJNAm_kvcSs8gdNreZBwps=",
-              "title": "dahuasecurity.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRpkuuHNSOLHsrExgmpHHnGwanb5-NH67Q1fF8AOWutoP3Ha5wllgeQSTtd3ZjOdOcw3hXaASs-XCLKpD0MQLpbRqH6qoXViPp83ZtHYwdCm-WdMQHOTl8EMbuM_Zt5Inof_3kGA==",
-              "title": "tenable.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFf7waRAPzGo_GjiVOrcR3-QKf-sr6AsAESd_Rg9ILbU8HX6IBURhmgdPKdLeaGPtjY_X1CfO1pO3pvfelATfTDM39v3AduUy0tVBnxVe-EQHo0e5FG8W9RSihBPEdZy402PX2D5Mjua-2pHzJ4q20BNtTkoTO7wFwN1Ec_TA==",
-              "title": "sentinelone.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWw6CVcC_uaSdD8l7RKOXdpcmCIMAK0iBRDDLO8QcMvl-mrdm3_kMfBsWHEyxFALWn_DebdpfpG_bV4mUbrio2MkSW-FgXtCHkao0Ok40npecDse5WEnvzVAU5AqebeqiBNZzcXn-nb2gtLC1IX6ypuVrJyy9k3mWVMUbfXOj9zGVspBb_AZwzGXPOGcv5AkZP_TwflaFBZVBNLEqpHGYy6ogFWY0sMQOw1TMU8d2qjhSzytxa9A==",
-              "title": "dell.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFk4p0U5fHWhbTyLLpZAYvSjazlc3r8LTqLox1B9-ZWBpoBuB6KlZ5898YG5mF7kP31wJjXUuuLrseM7VsaF3s0OyJL2CjzJwxezjJpSaQX90xNOXMCscD1UA33xSNyRjzAVX-v9LGb06__2g5tb-ZCu9rZyXUNE-fIzIW8pC2Z",
-              "title": "rapid7.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAkxZz5FcGX4z63Jy9Sf5vrp_kwvMmGKKT53y6CCUTncnhrsjUz_h0Fx1kTiHvc0PhOB9mgz5Ks8q9lZwTOMBexEHkQvTn6YNB5DkoB4Laf9ybuJb8wTELlSwe4tQH7X2ACtDLbVGQXtY_JeLGcSIwfAwAH4jlQ2tbByDJGw==",
-              "title": "sentinelone.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_Q8T4ZZzX8sEuZoAMYYgqcs2RxnnFZFiGJSjDmoB_UNXrFyfeFrUAanoGEVPI9deb_ZK0lHXyyid4_4LerPBWBX0TEaowJXefs-owevlCDMJI6lcmibMCRbd3HScknHSTS08zQXqWo_piL1IiXS2txW4hQa3ABQjdewvif2TQOaJwtXSIRY3ijVpTNP_VX52wx_nGm_u_jdBsRQDZGCFBSz5YJsNy8yETXoRlyB8=",
-              "title": "belgium.be"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyRMRStAzGHq0hqzUi2Tl5E6bGmUi_rrmTqrU6N36HMZbA6LVKS2GMU3_HRoRoZ84hs1wyuqPAX4Ra58BnNXNjmq-kzh8LD0b8L-UyR4GTrqHHbOFNsxJOoJuyv9TdFxAEMx_typFul_-iiBIgYCpgUeU=",
-              "title": "govcert.gov.hk"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRBRxKLZMIam7hfS4jfmBEedJZ7aW57p9QEXmGo_CIP7fMJfnuyKmpltYTp_eOcxajjF1QVhlmAFsy23T2JoAXlEIPultHhqrMz-_Sl4qyZDPtZiDfo8BsPzS_CaGZUelOE95E6c0PoIHZOLpgQiiiJ2jkG-hBR1Mbxo5G0Glq-yYltc4UXiYUm8lwE93r7cjNK-Jw9JiH",
-              "title": "cyber.gov.rw"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWjUnLcml6hDI-U6LdLIPE_OC4ZvRNAmqktLOkKcRkHv3WvV3snSz7yvy5A5c1ISnXUy_lxVgX3Tui_G-nUmZs3NHFFykVZCyuT4GIw6cQpTB5n2GU6t4Hv_A8PwuikmLY7iCiqE83Vd1iSvO_dX0LXYANoRPZmHF7dBgHSzwS5qRWDrGg8hY4_5lk1653AqgwytvdjQ6XLmohs8V_5_3yTtkt9OkqTx8NkEhqejXDmEl7Un8guyLgu62rPUJc8A==",
-              "title": "cisecurity.org"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFfcf-Cnt7ww2Ci7fPnRm-UcIO0aVdNHREvqvfPeoZ9zAwEshPW4IMi6XB5KWsNkk37pl8ZdMJsQ-gAXUgf0yPZkvZa5mPT1tN_O0jSM8flW4D4EYTQCyaQzCl9VUPk4OKGOa0bI-lpSaPYeadzbUngxNXOwz5KDbH6tYLRg==",
-              "title": "sentinelone.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsF9NYwBvGhsazq2x40c0Ck0Lk_UW3-I2WKZORYOIAq0AIB-ECXulGBEyyME086ptJDFWrasSyu__yWSgWjkSugvsQ-OX5kk7jy808oq3kF3SUKjHaP3WP5qRT-RsXrIgc0RcnSxljDOx4iyE=",
-              "title": "github.com"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWLkFUlI_o0-8sMCUbSZnoBg5gRICL3X91ptqXDTvziLac55GdVD85k2ZOfDaNMsevd5x0B1E5anHDkL9cd96o4xcLhL4VCGYrCfTFnncSDr2WpdBGkNXlNJd6pVKZdw5QUgB-",
-              "title": "opencve.io"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG0yJ592db3ea_u8IuTZlwUdvN6sur_mDE3U9iGc-czrKk0almirhlzBYA0D-AFhYQWcqO1MqkNgLvHsvyzAhuNyE7O0C24sD4VmqjO0gewqhQgPbFT8LeRoHNGcCh1-8NR95HEW3DiXXK_mf904ATICvmCSZlfzImlODDepizuQvwKzeSfNVa7qv1Y4HhyH-wqQ==",
-              "title": "sek.io"
-            }
-          },
-          {
-            "web": {
-              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9_CPF0exLg0Thl9krwwigSGg_lLELzgyK8oYe71Iq_q82CFto-w53yVN_w_SkDucphTGXEu0YFAeN_gJ4KyTnRDaR8nmBrFU2E81m5BZ_k7ONCtDJ2McexTM91wHUnFissm75q5ITc4tejqGgJPrQ",
-              "title": "redhat.com"
+              "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgIiDXJm685j0JFbgh3uLJibi6qCEyZY1vGbyLa-srWwv5HxiX0uZoStwb--doD468R8nJZxvPi0LRVsSLibIR1u7EW074Ie1ct6ffKna8XniDU8Q_5BZZrDrQbWVH-_0xXSAqFkR08f41c_gJwijoYUhTXRijDCJMShujS2Nl_BSypZmlSyhVn5DJKlnKOKuh1-jQquKuU9wd7Eh_Fa0UztnLMszC",
+              "title": "pcworld.com"
             }
           }
         ],
@@ -267,189 +99,31 @@
           {
             "segment": {
               "startIndex": 114,
-              "endIndex": 707,
-              "text": "<div class='section' id='resumen'>\n  <h3 class='section-title'>Resumen Ejecutivo</h3>\n  <div class='grid'>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>macOS</span><span class='tag'>Apple</span><span class='tag'>RCE</span><span class='tag'>Escalada de Privilegios</span>\n      <h4>Actualizaciones de Seguridad Cr\u00edticas para macOS</h4>\n      <p class='meta'>Publicado: 2026-03-25</p>\n      <ul>\n        <li>Apple lanz\u00f3 una actualizaci\u00f3n de seguridad importante en marzo de 2026, corrigiendo 85 vulnerabilidades en macOS (Tahoe, Sequoia, Sonoma) y otros productos de su ecosistema."
+              "endIndex": 568,
+              "text": "<section class='section' id='resumen'>\n  <h3 class='section-title'>Resumen Ejecutivo</h3>\n  <div class='grid'>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Actualizaci\u00f3n Cr\u00edtica</span>\n      <h4>M\u00faltiples Vulnerabilidades Cr\u00edticas en Productos Microsoft</h4>\n      <p class='meta'>Publicado: 2026-03-10</p>\n      <ul>\n        <li>Microsoft lanz\u00f3 el Patch Tuesday de marzo de 2026, abordando 84 vulnerabilidades, incluyendo ocho cr\u00edticas."
             },
             "groundingChunkIndices": [
               0,
-              1,
-              2,
-              3,
-              4
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 707,
-              "endIndex": 931,
-              "text": "</li>\n        <li>Las vulnerabilidades abarcan ejecuci\u00f3n remota de c\u00f3digo (RCE), escalada de privilegios, escapes de sandbox, divulgaci\u00f3n de informaci\u00f3n, denegaci\u00f3n de servicio (DoS) y corrupci\u00f3n de memoria del kernel."
-            },
-            "groundingChunkIndices": [
-              0,
-              1,
-              2,
-              3,
-              4
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 931,
-              "endIndex": 1066,
-              "text": "</li>\n        <li>Se incluyen CVEs notables como CVE-2026-20643 (WebKit) y m\u00faltiples fallas en WebKit, Kernel, PackageKit y CoreMedia."
-            },
-            "groundingChunkIndices": [
-              0,
-              2,
-              3
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 1066,
-              "endIndex": 1271,
-              "text": "</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Priorizar la implementaci\u00f3n inmediata de las actualizaciones de seguridad de Apple de marzo de 2026 en todos los dispositivos compatibles, incluyendo macOS."
-            },
-            "groundingChunkIndices": [
-              0
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 1271,
-              "endIndex": 1613,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAuGN60IvpXuRIFNIr2IPUr2AsAu_oUSqNgthPr7IMXI44gDTWsHVXqT3X1HyALAgMih1WYXpS9RZCLandKnUkcptdz3_-NQpxlvJyhlq_6yyIVS9A2AZ_X99RJOHKoS5N1PkK7wPT0IvPK-lRTQd9_6w13BD9Ukq6mgDTxxytJkhTsJ4mcBZSTj5A9yZPYxrzJlJUNU'>SANS ISC Handlers Diary"
-            },
-            "groundingChunkIndices": [
-              0
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 1613,
-              "endIndex": 1868,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECtuKW7TagdJZhQWfOF3QNPKxKE0L5xqE0PJEaHw-iTo8qAwBCNwTzRsknQ2ofKd-Y7jERBjGAxXac653Rj-mltOVoNfpHxAN0DDnJxeny74JLHt-8acXl-gF7PwZ06ProY2Ljctg7r71-yz0a04xmGuQ'>SecureMac"
-            },
-            "groundingChunkIndices": [
               1
             ]
           },
           {
             "segment": {
-              "startIndex": 1868,
-              "endIndex": 2191,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGSSsMUiOzu5-0DkPIp5WT2OfELGPtANM4lsWXuqrTYMEYxGb7Je0-jxCbehjaj0vXZZZ_ufxM_2_6aFWyAHY3cGY0vOvYHcxYDXy67buYwhINDdct0Lvfxs9MXG3aMMaQv1s1Coko9GpUXWTVGQbWq7mWiCRSr5kRI22Ki3Ri2s7Bjpb-W2lLReDOmRqZEIR44NZ2WA'>SANS ISC Handlers Diary (CVEs)"
+              "startIndex": 568,
+              "endIndex": 757,
+              "text": "</li>\n        <li>Se incluyen fallas de ejecuci\u00f3n remota de c\u00f3digo en Microsoft Office (CVE-2026-26110, CVE-2026-26113) y divulgaci\u00f3n de informaci\u00f3n en Microsoft Excel (CVE-2026-26144)."
             },
             "groundingChunkIndices": [
-              2
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 2191,
-              "endIndex": 2521,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmFIS_AnXaZcjlBRMZOv6i2JoWUrG-N48PLqA1dffj8Q_2LkeScWFPBL-CcZ2EzVhNRbaV5nkf0ncKa7xSdMv9qDrk2VEoaRwvojZ5UR8LRe9uRIyc5QtceuLkphdTZ7ryDxZIeiOtGoLwqL2ewVTAGTmkbEa2_pbycRFORWUQOltDPIeZ4Dd1WUx853xaEFWDWh0i-uQ--bQVBmDkX0y3Iab5n73bd3A'>Malwarebytes"
-            },
-            "groundingChunkIndices": [
-              3
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 2521,
-              "endIndex": 2757,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEV7_RdpqgWaeCrLl_huMeKuepG0_wm2LfE02Qqgrab0apRLlVJlC-LmdE7WmsrcoOzgZEePvWrHtaDK7t6lAj8cxmPEEhSezVybRT_vtqiYf1JQMoX07sNM6eKpo6v5_55'>Apple Support"
-            },
-            "groundingChunkIndices": [
+              2,
+              3,
               4
             ]
           },
           {
             "segment": {
-              "startIndex": 2757,
-              "endIndex": 3298,
-              "text": "</a>\n      </div>\n    </div>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Windows</span><span class='tag'>Windows Server</span><span class='tag'>RCE</span><span class='tag'>Escalada de Privilegios</span><span class='tag'>Zero-Day</span>\n      <h4>Actualizaciones de Seguridad de Microsoft - Marzo 2026</h4>\n      <p class='meta'>Publicado: 2026-03-10</p>\n      <ul>\n        <li>Microsoft public\u00f3 actualizaciones de seguridad de \"Patch Tuesday\" en marzo de 2026, abordando m\u00e1s de 80 vulnerabilidades en Windows y otros productos."
-            },
-            "groundingChunkIndices": [
-              5,
-              6,
-              7,
-              8,
-              9,
-              10
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 3298,
-              "endIndex": 3478,
-              "text": "</li>\n        <li>Se incluyen vulnerabilidades cr\u00edticas de ejecuci\u00f3n remota de c\u00f3digo (RCE) y escalada de privilegios (EoP) en Windows 10, Windows 11 y Windows Server 2012/2016."
-            },
-            "groundingChunkIndices": [
-              11,
-              5,
-              6,
-              8
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 3478,
-              "endIndex": 3674,
-              "text": "</li>\n        <li>CVE-2025-59287 es una vulnerabilidad cr\u00edtica de deserializaci\u00f3n insegura en Microsoft Windows Server Update Service (WSUS) que permite RCE y est\u00e1 siendo activamente explotada."
-            },
-            "groundingChunkIndices": [
-              12
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 3791,
-              "endIndex": 3839,
-              "text": "NET) y CVE-2026-21262 (EoP en SQL Server 2016+)."
-            },
-            "groundingChunkIndices": [
-              7,
-              8,
-              10
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 4007,
-              "endIndex": 4062,
-              "text": "Prestar atenci\u00f3n especial a la actualizaci\u00f3n de WSUS."
-            },
-            "groundingChunkIndices": [
-              12,
-              7
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 4062,
-              "endIndex": 4376,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfLWEYkpeCriZTE72hVP5BTOhViX9H9mcrDW7-DOraxoWMIcZX6gYtvoT0_I1Oce8eeyr8TnehiWxLnOq-b2362iYOp1j5296gpBUaPoSlYVYaFRnOZnxfpnjJWglJ7p2RB4YPsQ0GqiRmhwNyYlQlQk1eTfZiqtJLqA=='>CyberLeveling (Patch Tuesday)"
-            },
-            "groundingChunkIndices": [
-              11
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 4376,
-              "endIndex": 4672,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhHUd3rPJt2467BwEyPjuCDbF6If1GPEc4aXeUx5Ipfepgj1dS3yhzc8dzZwPIoqpiDj32EbMAcA09hsD6f0VIuUuCqv7y1WFjdIhnKZyzRGpVrd2s6HjvvHjeS75xxBNN2CPEhncC904HugtIHgSoDRW2eJAQBVurrgF1jg=='>SentinelOne (CVE-2025-59287 WSUS)"
-            },
-            "groundingChunkIndices": [
-              12
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 4672,
-              "endIndex": 5003,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJuLjK-Z4cXSUNMfWLiOOfLAOXxsRshFYDIoiiPdxQzzJxDqhxhs9MVUrttzQSubkr3VY9wVdjG2Z4ZSnubu7xR60yeleph_tRxOjCa-S39IA2PChHwfWdcxh5NTiJP3b1TFtGMvJixBf-I2PXncHEaORPnIUuH9MG60-yG6Er5Cfs1ZYDM520FGt4hgO5MF0wEiVpRDGtlxweahpwIwnSPg=='>Qualys ThreatPROTECT"
+              "startIndex": 757,
+              "endIndex": 949,
+              "text": "</li>\n        <li>Una vulnerabilidad de ejecuci\u00f3n remota de c\u00f3digo en Microsoft SharePoint (CVE-2026-20963) ha sido confirmada como activamente explotada y a\u00f1adida al cat\u00e1logo KEV de CISA."
             },
             "groundingChunkIndices": [
               5
@@ -457,9 +131,9 @@
           },
           {
             "segment": {
-              "startIndex": 5003,
-              "endIndex": 5325,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhVvmY6Zyi74WKUrlD-9_XGHG269KZU_mUeW1i9_1IM7VG2fgOnbeif61l2sTq2lvNZ2oHE9Tcdh9qDHQD4ZhUILaiXi-2sfjTZoIhM9uwoI-CYisd212hkDHeNzmdeNnxe5T22sPnTnf3M5FPlB7OzkO8ZRGA6-cc-jqqCt2Co2NBrSJUdToTE6sESwswXGFUjZI13jciYy3Pa73evY2ZUO8SVW7i'>PCWorld"
+              "startIndex": 1164,
+              "endIndex": 2294,
+              "text": "</p>\n      <div class='links'>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26110\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26110</a>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26113\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26113</a>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26144\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26144</a>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20963\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-20963</a>\n        <a href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9DQYIvb1z0d8MPVTh71RFgRsi5sHcukgOP9rsTG3UnqJ9GJcf0Lg1bdxwlcRKK3I-FZzjG7YY8HVDiwd2ZnYBbCmlE27NLRopX9C3OQUV8NGPpkLZ9dpx9W85M7tAsCF41Wm1gd8LA7d5uISPfZ0lzv6ZlI_1ZOH8shWi4RWcUDMHmQ23dlrHf1eCReJcjI2Tc8Fj5DAXLQerBycT\" target=\"_blank\" rel=\"noopener noreferrer\">SecurityWeek - Dell RecoverPoint Zero-Day Exploited</a>"
             },
             "groundingChunkIndices": [
               6
@@ -467,29 +141,20 @@
           },
           {
             "segment": {
-              "startIndex": 5325,
-              "endIndex": 5630,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKp7WYYwUKQITrd9z7_kHhc4f3ZTy_T1PYqPZtRE_Zy3phNr3qowEAhJNRzVR-chCgozbapTiBkWdMjJQCF8ymBNHZuUhQ0aiPU7LS3Ka6sX3LQlHZ-gxOIOdm8vcs3y1S7SkPIu4XWq1LhJ72BxQD5jpOfcKpZCECCxhGCxcnfG9l0IQEWKeHzxGk4A=='>NCSA (Microsoft Alert)"
+              "startIndex": 2301,
+              "endIndex": 2702,
+              "text": "</div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Actualizaci\u00f3n de Seguridad</span>\n      <h4>Vulnerabilidades en Dell iDRAC</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Se han identificado m\u00faltiples vulnerabilidades en Dell iDRAC9 y iDRAC10, incluyendo divulgaci\u00f3n de informaci\u00f3n (CVE-2026-26948) y ejecuci\u00f3n remota de c\u00f3digo (CVE-2026-26945)."
             },
             "groundingChunkIndices": [
-              7
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 5630,
-              "endIndex": 5912,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFkXSAOFcDGMqa813L88kwxO2UBxScgTI7lgytbTIFcP7PEO9I48YUpQS1z7ntkkZiUbGQa8PcNNShrdU1VvfdZWQoot1v7JvDZe3dTIOeg1ZPmzygU12dqdNZj1h0JhGw1kKIDy1Q5QiXjqXZYlHypr3riJDmzZpksEadBhkf2HzHzsc='>CrowdStrike"
-            },
-            "groundingChunkIndices": [
+              7,
               8
             ]
           },
           {
             "segment": {
-              "startIndex": 5912,
-              "endIndex": 6194,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4vn4u9-zWgwhh7BvN_PEFXJe85Ej3SYaUZBWl_3dJVyQK-FEKppKmAqKPCasV3pEHDShIO44sFtKBKmHF46K2FvhY8_uifJvrfaedaohgZja9U_8hmcmlCJsk0IMThkLJq9jbum6xc-Bj4sMositUHIqAz-ApMnk4KCKiENGUsKUGiZc='>Arctic Wolf"
+              "startIndex": 2702,
+              "endIndex": 2840,
+              "text": "</li>\n        <li>Una vulnerabilidad de Path Traversal (CVE-2020-5366) en Dell iDRAC9, aunque antigua, sigue siendo un tema de discusi\u00f3n."
             },
             "groundingChunkIndices": [
               9
@@ -497,9 +162,9 @@
           },
           {
             "segment": {
-              "startIndex": 6194,
-              "endIndex": 6490,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQFvPAjk5SLqwq-clYeBQjFh3st9GeT0L7FT3jcqOjlsnzbULBtLlVPxHURiO6Cv0uR8pVyVCI41vUfBJY6v2CEz-yBm7srB6iexVflz9KKra9_h7lAfC8TGvL-JVuUqY_MKNkl3h1UCqA71v_EJ-50yCMZJH6BbLz9km51oCQ-8dRwLQ6QpRHJwQ='>Krebs on Security"
+              "startIndex": 3529,
+              "endIndex": 4108,
+              "text": "<section class='section' id='incidentes'>\n  <h3 class='section-title'>Incidentes Reportados</h3>\n  <div class='grid'>\n    <div class='card ALTO'>\n      <span class='tag'>Incidente</span>\n      <h4>CISA Alerta sobre Ciberataque a Sistemas de Gesti\u00f3n de Endpoints</h4>\n      <p class='meta'>Publicado: 2026-03-18</p>\n      <ul>\n        <li>CISA ha emitido una alerta sobre actividad cibern\u00e9tica maliciosa dirigida a sistemas de gesti\u00f3n de endpoints de organizaciones estadounidenses, incluyendo un ataque a una empresa de tecnolog\u00eda m\u00e9dica que afect\u00f3 su entorno de Microsoft."
             },
             "groundingChunkIndices": [
               10
@@ -507,1051 +172,250 @@
           },
           {
             "segment": {
-              "startIndex": 6490,
-              "endIndex": 7043,
-              "text": "</a>\n      </div>\n    </div>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Zimbra</span><span class='tag'>XSS</span><span class='tag'>XXE</span><span class='tag'>CSRF</span><span class='tag'>Explotaci\u00f3n Activa</span>\n      <h4>M\u00faltiples Vulnerabilidades en Zimbra Collaboration Suite</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Una vulnerabilidad cr\u00edtica en Zimbra Collaboration Suite (ZCS) ha sido a\u00f1adida por CISA a su cat\u00e1logo de Vulnerabilidades Explotadas Conocidas (KEV), confirmando su abuso activo."
+              "startIndex": 4108,
+              "endIndex": 4298,
+              "text": "</li>\n        <li>El incidente subraya la importancia de fortalecer las configuraciones de los sistemas de gesti\u00f3n de endpoints para defenderse contra el uso indebido de software leg\u00edtimo."
             },
             "groundingChunkIndices": [
-              13
+              10
             ]
           },
           {
             "segment": {
-              "startIndex": 7043,
-              "endIndex": 7220,
-              "text": "</li>\n        <li>Esta falla se debe a una sanitizaci\u00f3n insuficiente de contenido malicioso incrustado en mensajes de correo electr\u00f3nico, permitiendo la ejecuci\u00f3n de scripts."
+              "startIndex": 4922,
+              "endIndex": 5434,
+              "text": "<section class='section' id='cves'>\n  <h3 class='section-title'>Vulnerabilidades (CVEs)</h3>\n  <div class='grid'>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Microsoft Office</span>\n      <h4>CVE-2026-26110 y CVE-2026-26113: Ejecuci\u00f3n Remota de C\u00f3digo Cr\u00edtica</h4>\n      <p class='meta'>Publicado: 2026-03-10</p>\n      <ul>\n        <li>Dos vulnerabilidades cr\u00edticas de ejecuci\u00f3n remota de c\u00f3digo en Microsoft Office que podr\u00edan permitir a un atacante no autorizado ejecutar c\u00f3digo localmente."
             },
             "groundingChunkIndices": [
-              13
+              2,
+              3,
+              4
             ]
           },
           {
             "segment": {
-              "startIndex": 7220,
-              "endIndex": 7403,
-              "text": "</li>\n        <li>Otras vulnerabilidades incluyen XSS (CVE-2026-33370) en Zimbra Briefcase, XXE (CVE-2026-33371) en la interfaz SOAP de EWS, y CSRF (CVE-2026-33372) en Zimbra Webmail."
+              "startIndex": 5434,
+              "endIndex": 5586,
+              "text": "</li>\n        <li>La vulnerabilidad CVE-2026-26110 es un problema de confusi\u00f3n de tipos, y CVE-2026-26113 es una desreferencia de puntero no confiable."
             },
             "groundingChunkIndices": [
-              14,
-              15,
-              16
+              2
             ]
           },
           {
             "segment": {
-              "startIndex": 7552,
-              "endIndex": 7578,
-              "text": "13 y versiones anteriores."
+              "startIndex": 5753,
+              "endIndex": 6537,
+              "text": "</p>\n      <div class='links'>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26110\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26110</a>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26113\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26113</a>\n      </div>\n    </div>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Microsoft Excel</span>\n      <h4>CVE-2026-26144: Vulnerabilidad de Divulgaci\u00f3n de Informaci\u00f3n Cr\u00edtica</h4>\n      <p class='meta'>Publicado: 2026-03-10</p>\n      <ul>\n        <li>Vulnerabilidad cr\u00edtica de divulgaci\u00f3n de informaci\u00f3n que afecta a Microsoft Excel, debido a una neutralizaci\u00f3n incorrecta de la entrada."
             },
             "groundingChunkIndices": [
-              14,
-              15,
-              16,
-              17
+              2,
+              3,
+              4
             ]
           },
           {
             "segment": {
-              "startIndex": 7752,
-              "endIndex": 7833,
-              "text": "Si no es posible, considerar la interrupci\u00f3n temporal de los sistemas afectados."
+              "startIndex": 6537,
+              "endIndex": 6650,
+              "text": "</li>\n        <li>Un atacante no autorizado podr\u00eda divulgar informaci\u00f3n confidencial en los sistemas afectados."
             },
             "groundingChunkIndices": [
-              13
+              2
             ]
           },
           {
             "segment": {
-              "startIndex": 7833,
-              "endIndex": 8114,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH--BqPp987mNiKezHcv3Rgz_kJawxKusH7XGQ13GkppMtUt14M8wIzuX-E84hlDyK_CR9GnLlXzDnlfXG0Z3cbaaCERghlgwvBmdnBbrUbQujQ6KvkPXBQJ6HWTGwx1zB8yeAKfQ=='>Tenable (CVE-2026-33370)"
+              "startIndex": 7294,
+              "endIndex": 7389,
+              "text": "NET (CVE-2026-26127), que podr\u00eda permitir a un atacante no autorizado interrumpir el servicio."
             },
             "groundingChunkIndices": [
-              14
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 8114,
-              "endIndex": 8385,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPArzrF0W-DpAwEF5yngjlgp8q2W6ZZ8xalKD0zw3nq6jNbN9EKfNughRJ-2HU1wzYidt3H7H21UioeJ5F7xgk-HoqoABXpJdg_PwwBoYcKlYPDyPyZLzuVmYYbcHlw3Om1Um7M-6TqhzIPPgP_wlGOcVUm-SM'>NVD (CVE-2026-33371)"
-            },
-            "groundingChunkIndices": [
-              15
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 8385,
-              "endIndex": 8640,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi-77m1CPC7pmW6H5Sxl87-dThldhXHzCizTCM5tvZO-CTIapGv0Vra-Tk0rJ7CiU94nI16a4v2j5LhAV4jrNYIzVrKsXfdYhsHWq_PBHnibyAwFCsIjSCkPgE99ur8F7E7tP_m-yn_eUj'>NVD (CVE-2026-33372)"
-            },
-            "groundingChunkIndices": [
-              16
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 8640,
-              "endIndex": 8880,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbCtGT8f9d1ZwCYchP7NbF7f27T4FTqtFsomEspE_vuySUhIT5WITMfZBwHXMwKNkQBu6yOUUjt5fmkblj4hf_8wszX73R6W8d3sjlZ3hJpyIM4vHjp9hX-X9cvw=='>ASEC (CVE-2025-66376)"
-            },
-            "groundingChunkIndices": [
-              17
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 8880,
-              "endIndex": 9219,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjLujKrTzr3o88eC91T2c3Rhdz3nbCYzUNU5hspPj0Wsp-eqZayP5q8ohO02HJnO0imQ9ZuDFVKkGgzM07OQp_iXgQPhtZjjX2oadLld9m7wr0OAjrJY6tOFnFYODLcT1n79sfeF8Ovxn0mIkib9-fsFTGunXayRQMqZRIK8YaCmpljpe9DdnIa1NlFCDyQULvDk6IL9lnZQ=='>Cyber Technology Insights (CISA Warning)"
-            },
-            "groundingChunkIndices": [
-              13
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 9767,
-              "endIndex": 9769,
-              "text": "1."
-            },
-            "groundingChunkIndices": [
-              18,
-              19
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 9769,
-              "endIndex": 9954,
-              "text": "</li>\n        <li>La configuraci\u00f3n insegura de sudoer recomendada en la documentaci\u00f3n SSH permite a los atacantes escapar directorios y modificar archivos del sistema arbitrariamente."
-            },
-            "groundingChunkIndices": [
-              18,
-              19
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 9954,
-              "endIndex": 10140,
-              "text": "</li>\n        <li>Esta falla puede llevar a una escalada de privilegios, manipulaci\u00f3n de la configuraci\u00f3n o despliegue de c\u00f3digo malicioso en entornos de infraestructura como c\u00f3digo."
-            },
-            "groundingChunkIndices": [
-              18
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 10140,
-              "endIndex": 10252,
-              "text": "</li>\n        <li>El vector de ataque es basado en red y no requiere autenticaci\u00f3n ni interacci\u00f3n del usuario."
-            },
-            "groundingChunkIndices": [
-              18
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 10395,
-              "endIndex": 10409,
-              "text": "1 o posterior."
-            },
-            "groundingChunkIndices": [
-              18,
-              19
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 10409,
-              "endIndex": 10726,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEtqyBcF7NQkc4pjDu16HQEuX6vEzRFuKsWqZUkXwOw5sXjNpDFYKH0G-fzyT2FKiWXMy4QvixX0TB9bVuAMsVheO7CWYuIXhIOxqwve-8HSYefC8XEREmYIgmBLdm-STv-vktN3ua5uXRbZE8yJUmpDyRGbQ4XKPkkYlmFw=='>SentinelOne (CVE-2026-25499)"
-            },
-            "groundingChunkIndices": [
-              18
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 10726,
-              "endIndex": 10986,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9BtYAiKyMSxMNqjUWOmgPqL1q-bkJtYKgxYGB9Xeh2ry_RrsteuBbDZ-a61c62ZIBcyQQzLtyR3rBtrbvpmJJdUhwNkMAiAGXPktzewVThuwA-l396NhGLgKYYzESyiYJF_wtNk-SANvxCSs='>EUVD (CVE-2026-25499)"
-            },
-            "groundingChunkIndices": [
-              19
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 10986,
-              "endIndex": 11523,
-              "text": "</a>\n      </div>\n    </div>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>Red Hat Enterprise Linux</span><span class='tag'>Kernel</span><span class='tag'>RCE</span><span class='tag'>Escalada de Privilegios</span>\n      <h4>M\u00faltiples Vulnerabilidades Cr\u00edticas en el Kernel de Red Hat Enterprise Linux</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>CERT-FR ha emitido un aviso sobre m\u00faltiples vulnerabilidades cr\u00edticas descubiertas en el kernel de Red Hat Linux (CVE-2025-38106, CVE-2026-23001)."
-            },
-            "groundingChunkIndices": [
-              20
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 11523,
-              "endIndex": 11684,
-              "text": "</li>\n        <li>Estas fallas representan riesgos significativos, incluyendo ejecuci\u00f3n arbitraria de c\u00f3digo (RCE), escalada de privilegios y brechas de datos."
-            },
-            "groundingChunkIndices": [
-              20,
-              21
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 11684,
-              "endIndex": 11801,
-              "text": "</li>\n        <li>Las versiones afectadas incluyen Red Hat Enterprise Linux 7 y 8, as\u00ed como CodeReady Linux Builder."
-            },
-            "groundingChunkIndices": [
-              20,
-              22
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 11801,
-              "endIndex": 11964,
-              "text": "</li>\n        <li>Una vulnerabilidad importante (RHSA-2026:4672) tambi\u00e9n afecta al m\u00f3dulo `container-tools:rhel8`, con CVEs como CVE-2025-61728 y CVE-2025-61726."
-            },
-            "groundingChunkIndices": [
-              23
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 11964,
-              "endIndex": 12185,
-              "text": "</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Consultar urgentemente el bolet\u00edn de seguridad de Red Hat (RHSA-2026:4012) para obtener informaci\u00f3n espec\u00edfica sobre los parches y aplicar las actualizaciones necesarias."
-            },
-            "groundingChunkIndices": [
-              20
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 12185,
-              "endIndex": 12585,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDibQOCw6eBkOP0pGkSqYBi2jFENJkIj170fRNjy-fDpyALY4Q0W9skiOYgVh7mJW81pYq9HDSX2xE_WC6go_A3v2eaYiJGaTdK0D4xF8hkLQ9wrSVItrHijYB0JJklnfB4u0kNf39U6y2zZLbJdvPosB4OvBP-2eAs_2fpKhsFtFHfGsKUt98LGj-lUB4QVBkkWmQPdwDeDdGBP_Jtt-FW_TAvnJYeIf_4SiGBE_RCTck3-V6QcI='>Changeflow (Kernel Vulnerabilities)"
-            },
-            "groundingChunkIndices": [
-              20
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 12585,
-              "endIndex": 12860,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHSQdeB7EYHsDfP9_G6_ym50xbUAr28vD6r-aKxUnjh2KilMpn-IbLNRvSFn__lvZfFju6Fdfd2k0hnpGQq2BaFyPz0Qe80KWA0vX65UdbxJODMrtBnYxmuMq6TDmt45WSC1-FD7AtcjZD'>Red Hat Customer Portal (RHSA-2026:4672)"
-            },
-            "groundingChunkIndices": [
-              23
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 12860,
-              "endIndex": 13179,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvMCxZJXUDe_M3El8edCGVt24pUNU8lqQDLSI-XDJ3goFYyTn4Zb9Z6K9OicrebgwOGNjcoTg6FOhMjwdwMzjgNhoRSsmbHFgJs_QPTP6shAPkvY9OEpeqYHg6avOkh0Mc2BW5swhybe_FnLGsLdVGjYn7uXe0KZQ1wz9gksODsEmn99K7z8NqzvxKuPMAJOwALgbBO6qzGtY='>GovCERT.HK (Red Hat)"
-            },
-            "groundingChunkIndices": [
-              21
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 13225,
-              "endIndex": 13885,
-              "text": "<section class='section' id='incidentes'>\n  <h3 class='section-title'>Incidentes Recientes y Amenazas</h3>\n  <div class='grid'>\n    <div class='card ALTO'>\n      <span class='tag'>Dahua</span><span class='tag'>NVR</span><span class='tag'>XVR</span><span class='tag'>Escalada de Privilegios</span><span class='tag'>Acceso F\u00edsico</span>\n      <h4>Vulnerabilidad de Escalada de Privilegios en Dispositivos Dahua NVR/XVR</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Una vulnerabilidad de escalada de privilegios (CVE-2025-31703) fue descubierta en los dispositivos Dahua NVR (Network Video Recorder) y XVR (eXtended Video Recorder)."
-            },
-            "groundingChunkIndices": [
-              24,
-              25,
-              26
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 13885,
-              "endIndex": 14086,
-              "text": "</li>\n        <li>Un atacante con acceso f\u00edsico al dispositivo puede obtener acceso a un shell restringido a trav\u00e9s del puerto serial y eludir el mecanismo de autenticaci\u00f3n para escalar privilegios."
-            },
-            "groundingChunkIndices": [
-              24,
-              25,
-              26
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 14086,
-              "endIndex": 14173,
-              "text": "</li>\n        <li>Esta falla podr\u00eda comprometer la infraestructura de videovigilancia."
-            },
-            "groundingChunkIndices": [
-              24
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 14370,
-              "endIndex": 14420,
-              "text": "Implementar controles de acceso f\u00edsico estrictos."
-            },
-            "groundingChunkIndices": [
-              24,
-              25
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 14420,
-              "endIndex": 14737,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHiBVnPGASGQDYn-_Nv6-BVla4jKZRGEAaP2zRJwnt618PYX017lvWEDbYR-BC_3QZrHMYx2jJwZbB2CZ4fj2r_lG1wDxcu7QSw6XEQyDft4ZywXprSGDpVZlmDEQAOsmTCZUB-CrsgPj3YngHXPAhJSV7wwSgMm2c5UdY9w=='>SentinelOne (CVE-2025-31703)"
-            },
-            "groundingChunkIndices": [
-              24
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 14737,
-              "endIndex": 15119,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHc20Wx0e77vLs9wf45Q7W2CbEgZtNJQJL5IoxRexVlh_V3E89io2k8SixMJFNyb_HJPIXt2droDDzOol3VKHzQzo_2Nsh8yptOz0dKkS-W7NSrtBSEAYg9m2IP3ewlczjUWyWEzciyRwFR0Y6r7EbqsRSBHg5h40E7o0Owv8GkKmoxrg2cTPM6WTmfyCTnjJHMzP6pliAysnU9UNE6n70jwUqeJXXKkX9G_fz8gunJ018z99ZAupJNAb_kvcSs8gdNreZBwps='>Dahua Security Advisory"
-            },
-            "groundingChunkIndices": [
-              25
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 15119,
-              "endIndex": 15374,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRpkuuHNSOLHsrExgmpHHnGwanb5-NH67Q1fF8AOWutoP3Ha5wllgeQSTtd3ZjOdOcw3hXaASs-XCLKpD0MQLpbRqH6qoXViPp83ZtHYwdCm-WdMQHOTl8EMbuM_Zt5Inof_3kGA=='>Tenable (CVE-2025-31703)"
-            },
-            "groundingChunkIndices": [
-              26
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 15374,
-              "endIndex": 15932,
-              "text": "</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Dell iDRAC</span><span class='tag'>RCE</span><span class='tag'>Divulgaci\u00f3n de Informaci\u00f3n</span><span class='tag'>Acceso de Red Adyacente</span>\n      <h4>Vulnerabilidades en Dell iDRAC (RCE y Divulgaci\u00f3n de Informaci\u00f3n)</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Una vulnerabilidad de control de procesos (CVE-2026-26945) en Dell Integrated Dell Remote Access Controller (iDRAC) 9 y 10 podr\u00eda permitir la ejecuci\u00f3n arbitraria de c\u00f3digo."
-            },
-            "groundingChunkIndices": [
-              27,
-              28,
-              29
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 15932,
-              "endIndex": 16042,
-              "text": "</li>\n        <li>Requiere un atacante con altos privilegios y acceso a la red adyacente para su explotaci\u00f3n."
-            },
-            "groundingChunkIndices": [
-              27,
-              28,
-              29
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 16042,
-              "endIndex": 16217,
-              "text": "</li>\n        <li>Tambi\u00e9n se identific\u00f3 una vulnerabilidad de divulgaci\u00f3n de informaci\u00f3n de depuraci\u00f3n (CVE-2026-26948) en iDRAC9, exponiendo datos sensibles del sistema."
-            },
-            "groundingChunkIndices": [
-              30,
-              28
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 16372,
-              "endIndex": 16378,
-              "text": "25.00."
-            },
-            "groundingChunkIndices": [
-              27,
-              28
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 16378,
-              "endIndex": 16572,
-              "text": "</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Aplicar las actualizaciones de seguridad de firmware proporcionadas por Dell en el aviso DSA-2026-113 para todas las versiones de iDRAC afectadas."
-            },
-            "groundingChunkIndices": [
-              30,
-              28
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 16572,
-              "endIndex": 16889,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFf7waRAPzGo_GjiVOrcR3-QKf-sr6AsAESd_Rg9ILbU8HX6IBURhmgdPKdLeaGPtjY_X1CfO1pO3pvfelATfTDM39v3AduUy0tVBnxVe-EQHo0e5FG8W9RSihBPEdZy402PX2D5Mjua-2pHzJ4q20BNtTkoTO7wFwN1Ec_TA=='>SentinelOne (CVE-2026-26945)"
-            },
-            "groundingChunkIndices": [
-              27
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 16889,
-              "endIndex": 17180,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAkxZz5FcGX4z63Jy9Sf5vrp_kwvMmGKKT53y6CCUTncnhrsjUz_h0Fx1kTiHvc0PhOB9mgz5Ks8q9lZwTOMBexEHkQvTn6YNB5DkoB4Laf9ybuJb8wTELlSwe4tQH7X2ACtDLbVGQXtY_JeLGcSIwfAwAH4jlQ2tbByDJGw=='>SentinelOne (CVE-2026-26948)"
-            },
-            "groundingChunkIndices": [
-              30
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 17180,
-              "endIndex": 17556,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWw6CVcC_uaSdD8l7RKOXdpcmCIMAK0iBRDDLO8QcMvl-mrdm3_kMfBsWHEyxFALWn_DebdpfpG_bV4mUbrio2MkSW-FgXtCHkao0Ok40npecDse5WEnvzVAU5AqebeqiBNZzcXn-nb2gtLC1IX6ypuVrJyy9k3mWVMUbfXOj9zGVspBb_AZwzGXPOGcv5AkZP_TwflaFBZVBNLEqpHGYy6ogFWY0sMQOw1TMU8d2qjhSzytxa9A=='>Dell Security Advisory (DSA-2026-113)"
-            },
-            "groundingChunkIndices": [
-              28
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 17556,
-              "endIndex": 18063,
-              "text": "</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Fortinet</span><span class='tag'>FortiOS</span><span class='tag'>FortiSandbox</span><span class='tag'>Bypass de Autenticaci\u00f3n</span><span class='tag'>XSS</span>\n      <h4>M\u00faltiples Vulnerabilidades en Productos Fortinet</h4>\n      <p class='meta'>Publicado: 2026-02-12</p>\n      <ul>\n        <li>Fortinet lanz\u00f3 avisos de seguridad que abordan m\u00faltiples vulnerabilidades en sus productos, incluyendo FortiOS y FortiSandbox."
-            },
-            "groundingChunkIndices": [
-              31,
-              32,
-              33
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 18063,
-              "endIndex": 18257,
-              "text": "</li>\n        <li>CVE-2025-52436 (Severidad Alta) es una vulnerabilidad de Cross-site Scripting (XSS) en FortiSandbox que puede permitir la ejecuci\u00f3n de comandos por un atacante no autenticado."
-            },
-            "groundingChunkIndices": [
-              31
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 18257,
-              "endIndex": 18446,
-              "text": "</li>\n        <li>CVE-2026-22153 (Severidad Alta) es una vulnerabilidad de Bypass de Autenticaci\u00f3n en FortiOS fnbamd que permite a un atacante no autenticado eludir la autenticaci\u00f3n LDAP."
-            },
-            "groundingChunkIndices": [
-              31
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 18501,
-              "endIndex": 18538,
-              "text": "11 se encuentran entre las afectadas."
-            },
-            "groundingChunkIndices": [
-              33
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 18779,
-              "endIndex": 18782,
-              "text": "11."
-            },
-            "groundingChunkIndices": [
-              32,
-              33
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 18782,
-              "endIndex": 19182,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWjUnLcml6hDI-U6LdLIPE_OC4ZvRNAmqktLOkKcRkHv3WvV3snSz7yvy5A5c1ISnXUy_lxVgX3Tui_G-nUmZs3NHFFykVZCyuT4GIw6cQpTB5n2GU6t4Hv_A8PwuikmLY7iCiqE83Vd1iSvO_dX0LXYANoRPZmHF7dBgHSzwS5qRWDrGg8hY4_5lk1653AqgwytvdjQ6XLmohs8V_5_3yTtkt9OkqTx8NkEhqejXDmEl7Un8guyLgu62rPUJc8A=='>ITS Advisory (Fortinet)"
-            },
-            "groundingChunkIndices": [
-              34
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 19182,
-              "endIndex": 19537,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_Q8T4ZZzX8sEuZoAMYYgqcs2RxnnFZFiGJSjDmoB_UNXrFyfeFrUAanoGEVPI9deb_ZK0lHXyyid4_4LerPBWBX0TEaowJXefs-owevlCDMJI6lcmibMCRbd3HScknHSTS08zQXqWo_piL1IiXS2txW4hQa3ABQjdewvif2TQOaJwtXSIRY3ijVpTNP_VX52wx_nGm_u_jdBsRQDZGCFBSz5YJsNy8yETXoRlyB8=='>Security Affairs (Fortinet)"
-            },
-            "groundingChunkIndices": [
-              31
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 19537,
-              "endIndex": 19805,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyRMRStAzGHq0hqzUi2Tl5E6bGmUi_rrmTqrU6N36HMZbA6LVKS2GMU3_HRoRoZ84hs1wyuqPAX4Ra58BnNXNjmq-kzh8LD0b8L-UyR4GTrqHHbOFNsxJOoJuyv9TdFxAEMx_typFul_-iiBIgYCpgUeU='>GovCERT.HK (Fortinet)"
-            },
-            "groundingChunkIndices": [
-              32
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 19805,
-              "endIndex": 20121,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRBRxKLZMIam7hfS4jfmBEedJZ7aW57p9QEXmGo_CIP7fMJfnuyKmpltYTp_eOcxajjF1QVhlmAFsy23T2JoAXlEIPultHhqrMz-_Sl4qyZDPtZiDfo8BsPzS_CaGZUelOE95E6c0PoIHZOLpgQiiiJ2jkG-hBR1Mbxo5G0Glq-yYltc4UXiYUm8lwE93r7cjNK-Jw9JiH'>NCSA (Fortinet Alert)"
-            },
-            "groundingChunkIndices": [
-              33
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 20696,
-              "endIndex": 20704,
-              "text": "import`."
-            },
-            "groundingChunkIndices": [
-              35,
-              36,
-              37
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 20704,
-              "endIndex": 20805,
-              "text": "</li>\n        <li>Esto puede llevar a una p\u00e9rdida de confidencialidad al crear hosts no autorizados."
-            },
-            "groundingChunkIndices": [
-              35,
-              36,
-              37
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 20805,
-              "endIndex": 20968,
-              "text": "</li>\n        <li>Tambi\u00e9n se inform\u00f3 una escalada de privilegios local (CVE-2025-27237) en Zabbix Agent y Agent 2 para Windows, permitiendo la inyecci\u00f3n de DLL."
-            },
-            "groundingChunkIndices": [
-              38,
-              37
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 21055,
-              "endIndex": 21078,
-              "text": "11 para CVE-2025-27237."
-            },
-            "groundingChunkIndices": [
-              38,
-              37
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 21217,
-              "endIndex": 21306,
-              "text": "Revisar y aplicar el principio de menor privilegio para las cuentas de usuario de Zabbix."
-            },
-            "groundingChunkIndices": [
-              38
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 21306,
-              "endIndex": 21623,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFfcf-Cnt7ww2Ci7fPnRm-UcIO0aVdNHREvqvfPeoZ9zAwEshPW4IMi6XB5KWsNkk37pl8ZdMJsQ-gAXUgf0yPZkvZa5mPT1tN_O0jSM8flW4D4EYTQCyaQzCl9VUPk4OKGOa0bI-lpSaPYeadzbUngxNXOwz5KDbH6tYLRg=='>SentinelOne (CVE-2026-23925)"
-            },
-            "groundingChunkIndices": [
-              35
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 21623,
-              "endIndex": 21885,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsF9NYwBvGhsazq2x40c0Ck0Lk_UW3-I2WKZORYOIAq0AIB-ECXulGBEyyME086ptJDFWrasSyu__yWSgWjkSugvsQ-OX5kk7jy808oq3kF3SUKjHaP3WP5qRT-RsXrIgc0RcnSxljDOx4iyE='>GitHub (CVE-2026-23925)"
-            },
-            "groundingChunkIndices": [
-              36
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 21885,
-              "endIndex": 22194,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG0yJ592db3ea_u8IuTZlwUdvN6sur_mDE3U9iGc-czrKk0almirhlzBYA0D-AFhYQWcqO1MqkNgLvHsvyzAhuNyE7O0C24sD4VmqjO0gewqhQgPbFT8LeRoHNGcCh1-8NR95HEW3DiXXK_mf904ATICvmCSZlf3ImlODDepizuQvwKzeSfNVa7qv1Y4HhyH-wqQ=='>SEK (Zabbix Fixes)"
-            },
-            "groundingChunkIndices": [
-              38
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 22194,
-              "endIndex": 22437,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWLkFUlI_o0-8sMCUbSZnoBg5gRICL3X91ptqXDTvziLac55GdVD85k2ZOfDaNMsevd5x0B1E5anHDkL9cd96o4xcLhL4VCGYrCfTFnncSDr2WpdBGkNXlNJd6pVKZdw5QUgB-'>OpenCVE (Zabbix)"
-            },
-            "groundingChunkIndices": [
-              37
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 22487,
-              "endIndex": 23204,
-              "text": "<section class='section' id='cves'>\n  <h3 class='section-title'>Vulnerabilidades (CVEs)</h3>\n  <div class='grid'>\n    <div class='card CR\u00cdTICO'>\n      <span class='tag'>CVE-2025-59287</span><span class='tag'>Windows Server</span><span class='tag'>WSUS</span><span class='tag'>RCE</span><span class='tag'>Explotaci\u00f3n Activa</span>\n      <h4>CVE-2025-59287: RCE Cr\u00edtica en Windows Server Update Service (WSUS)</h4>\n      <p class='meta'>Publicado: 2025-10-14 (Actualizado: 2026-03-12)</p>\n      <ul>\n        <li>Esta es una vulnerabilidad cr\u00edtica de deserializaci\u00f3n insegura en Microsoft Windows Server Update Service (WSUS) que permite a un atacante no autenticado ejecutar c\u00f3digo arbitrario a trav\u00e9s de la red."
-            },
-            "groundingChunkIndices": [
-              12
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 23204,
-              "endIndex": 23304,
-              "text": "</li>\n        <li>Afecta a todas las versiones compatibles de Windows Server, desde 2012 hasta 2025."
-            },
-            "groundingChunkIndices": [
-              12
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 23304,
-              "endIndex": 23416,
-              "text": "</li>\n        <li>La vulnerabilidad se est\u00e1 explotando activamente y ha sido a\u00f1adida al cat\u00e1logo KEV de CISA."
-            },
-            "groundingChunkIndices": [
-              12
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 23416,
-              "endIndex": 23592,
-              "text": "</li>\n        <li>Los atacantes pueden enviar solicitudes de red especialmente dise\u00f1adas que contienen objetos serializados maliciosos, logrando RCE con privilegios de SYSTEM."
-            },
-            "groundingChunkIndices": [
-              12
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 23711,
-              "endIndex": 23824,
-              "text": "Dada la explotaci\u00f3n activa y la facilidad de ataque (sin autenticaci\u00f3n, remoto), esta es una prioridad m\u00e1xima."
-            },
-            "groundingChunkIndices": [
-              12
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 23824,
-              "endIndex": 24141,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhHUd3rPJt2467BwEyPjuCDbF6If1GPEc4aXeUx5Ipfepgj1dS3yhzc8dzZwPIoqpiDj32EbMAcA09hsD6f0VIuUuCqv7y1WFjdIhnKZyzRGpVrd2s6HjvvHjeS75xxBNN2CPEhncC904HugtIHgSoDRW2eJAQBVurrgF1jg=='>SentinelOne (CVE-2025-59287)"
-            },
-            "groundingChunkIndices": [
-              12
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 24141,
-              "endIndex": 24707,
-              "text": "</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>CVE-2025-31703</span><span class='tag'>Dahua</span><span class='tag'>NVR</span><span class='tag'>XVR</span><span class='tag'>Escalada de Privilegios</span>\n      <h4>CVE-2025-31703: Escalada de Privilegios en Dispositivos Dahua NVR/XVR</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Esta vulnerabilidad de escalada de privilegios permite a un atacante con acceso f\u00edsico al dispositivo NVR/XVR de Dahua bypass la autenticaci\u00f3n a trav\u00e9s del puerto serial."
-            },
-            "groundingChunkIndices": [
-              24,
-              25,
-              26
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 24707,
-              "endIndex": 24809,
-              "text": "</li>\n        <li>El atacante puede obtener acceso a un shell restringido y luego escalar privilegios."
-            },
-            "groundingChunkIndices": [
-              24,
-              25
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 24809,
-              "endIndex": 24966,
-              "text": "</li>\n        <li>Afecta a modelos NVR2-4KS3, XVR4232AN-I/T, XVR1B16H-I/T con versiones de firmware con fecha de compilaci\u00f3n anterior al 3 de marzo de 2026."
-            },
-            "groundingChunkIndices": [
-              25
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 24966,
-              "endIndex": 25141,
-              "text": "</li>\n      </ul>\n      <p>Acci\u00f3n Recomendada: Actualizar el firmware de los dispositivos Dahua NVR/XVR afectados a las versiones corregidas proporcionadas por el fabricante."
-            },
-            "groundingChunkIndices": [
-              25
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 25141,
-              "endIndex": 25458,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHiBVnPGASGQDYn-_Nv6-BVla4jKZRGEAaP2zRJwnt618PYX017lvWEDbYR-BC_3QZrHMYx2jJwZbB2CZ4fj2r_lG1wDxcu7QSw6XEQyDft4ZywXprSGDpVZlmDEQAOsmTCZUB-CrsgPj3YngHXPAhJSV7wwSgMm2c5UdY9w=='>SentinelOne (CVE-2025-31703)"
-            },
-            "groundingChunkIndices": [
-              24
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 25458,
-              "endIndex": 25754,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHc20Wx0e77vLs9wf45Q7W2CbEgZtNJQJL5IoxRexVlh_V3E83iU8XJ31ZA0-SyutVNm3UMBmP5RhwH4huWCzCILEtem_Y8nlu9Hv2tEEhVM8UzA6OX1Rhj6mSHuKL1qz6vN0sl2qDvicDLYHLgPFWOCFp2kETCXQmdYKl3UC-QvfxKkvog=='>Dahua Security Advisory"
-            },
-            "groundingChunkIndices": [
-              25
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 25754,
-              "endIndex": 26307,
-              "text": "</a>\n      </div>\n    </div>\n    <div class='card MEDIO'>\n      <span class='tag'>CVE-2026-25749</span><span class='tag'>Red Hat Enterprise Linux</span><span class='tag'>Vim</span><span class='tag'>Heap Buffer Overflow</span>\n      <h4>CVE-2026-25749: Desbordamiento de B\u00fafer en Vim en Red Hat Linux</h4>\n      <p class='meta'>Publicado: 2026-03-12</p>\n      <ul>\n        <li>Una vulnerabilidad de desbordamiento de b\u00fafer de pila (CVE-2026-25749) fue descubierta en Vim, el editor de texto de l\u00ednea de comandos, que afecta a Red Hat Enterprise Linux."
-            },
-            "groundingChunkIndices": [
-              39
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 26307,
-              "endIndex": 26429,
-              "text": "</li>\n        <li>La falla reside en la l\u00f3gica de resoluci\u00f3n de archivos de etiquetas al procesar la opci\u00f3n 'helpfile'."
-            },
-            "groundingChunkIndices": [
-              39
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 26429,
-              "endIndex": 26636,
-              "text": "</li>\n        <li>Un usuario local podr\u00eda explotar esto proporcionando un valor 'helpfile' especialmente dise\u00f1ado, lo que podr\u00eda llevar a la ejecuci\u00f3n arbitraria de c\u00f3digo o una denegaci\u00f3n de servicio."
-            },
-            "groundingChunkIndices": [
-              39
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 26752,
-              "endIndex": 26819,
-              "text": "Evaluar la posible exposici\u00f3n a usuarios locales malintencionados."
-            },
-            "groundingChunkIndices": [
-              39
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 26819,
-              "endIndex": 27128,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9_CPF0exLg0Thl9krwwigSGg_lLELzgyK8oYe71Iq_q82CFto-w53yVN_w_SkDucphTGXEu0YFAeN_gJ4KyTnRDaR8nmBrFU2E81m5BZ_k7ONCtDJ2McexTM91wHUnFissm75q5ITc4tejqGgJPrQ'>Red Hat Customer Portal (CVE-2026-25749)"
-            },
-            "groundingChunkIndices": [
-              39
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 27178,
-              "endIndex": 27749,
-              "text": "<section class='section' id='ransomware'>\n  <h3 class='section-title'>Alertas de Ransomware</h3>\n  <div class='grid'>\n    <div class='card MEDIO'>\n      <span class='tag'>MacSync</span><span class='tag'>macOS</span><span class='tag'>Infostealer</span><span class='tag'>Ingenier\u00eda Social</span>\n      <h4>Campa\u00f1a de Robo de Informaci\u00f3n MacSync Dirigida a Usuarios de macOS</h4>\n      <p class='meta'>Publicado: 2026-03-19</p>\n      <ul>\n        <li>Una campa\u00f1a creciente est\u00e1 distribuyendo un infostealer de macOS llamado MacSync a trav\u00e9s de campa\u00f1as de \"ClickFix\"."
-            },
-            "groundingChunkIndices": [
+              3,
+              4,
+              11,
+              12,
               1
             ]
           },
           {
             "segment": {
-              "startIndex": 27749,
-              "endIndex": 27891,
-              "text": "</li>\n        <li>Los usuarios son enga\u00f1ados para que abran Terminal y peguen un comando que instala el malware, sin necesidad de un exploit."
+              "startIndex": 7389,
+              "endIndex": 7539,
+              "text": "</li>\n        <li>Esta vulnerabilidad fue divulgada p\u00fablicamente antes de la publicaci\u00f3n del parche, aunque no hay evidencia de explotaci\u00f3n activa."
             },
             "groundingChunkIndices": [
-              1
+              3,
+              4
             ]
           },
           {
             "segment": {
-              "startIndex": 27891,
-              "endIndex": 28058,
-              "text": "</li>\n        <li>MacSync apunta a datos valiosos en macOS, incluyendo contrase\u00f1as guardadas, archivos, datos del llavero, carteras de criptomonedas y frases semilla."
+              "startIndex": 7694,
+              "endIndex": 8331,
+              "text": "</p>\n      <div class='links'>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26127\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-26127</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Microsoft SharePoint / Office 365</span>\n      <h4>CVE-2026-20963: Ejecuci\u00f3n Remota de C\u00f3digo Activamente Explotada</h4>\n      <p class='meta'>Publicado: 2026-03-24</p>\n      <ul>\n        <li>Vulnerabilidad de ejecuci\u00f3n remota de c\u00f3digo en Microsoft SharePoint debido al manejo inadecuado de entradas serializadas, con explotaci\u00f3n activa confirmada."
             },
             "groundingChunkIndices": [
-              1
+              5
             ]
           },
           {
             "segment": {
-              "startIndex": 28058,
-              "endIndex": 28195,
-              "text": "</li>\n        <li>La clave del ataque es la ingenier\u00eda social, donde los usuarios son convencidos de instalar el malware por s\u00ed mismos."
+              "startIndex": 8331,
+              "endIndex": 8473,
+              "text": "</li>\n        <li>Esta vulnerabilidad fue a\u00f1adida al cat\u00e1logo de Vulnerabilidades Explotadas Conocidas (KEV) de CISA el 18 de marzo de 2026."
             },
             "groundingChunkIndices": [
-              1
+              5
             ]
           },
           {
             "segment": {
-              "startIndex": 28406,
-              "endIndex": 28464,
-              "text": "Mantener las copias de seguridad de los datos importantes."
+              "startIndex": 8732,
+              "endIndex": 9351,
+              "text": "</p>\n      <div class='links'>\n        <a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20963\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Security Advisory CVE-2026-20963</a>\n        <a href=\"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCnY0bV69MApCglVL6YSMSglA5JnZO2ZL5l3agq8yb7A30TZ-MS3RPYZ7AXQJcHVsopz_2C2AzEOVfcAnhTwdSkrEllwpSgpl5z00-_tHqPqFQp4kLH6TJ1Jc_oAe6XIUTBWU_-VLWbdwM5rN4zrWNmp9XhHn1d70sQAUdjoy_9mFKQyNql1BCmgDwp6Ss9kSQkDjS8QCn3pkc1hnSsGvCriX_0Oac0AjRwsEjgzo7\" target=\"_blank\" rel=\"noopener noreferrer\">SentinelOne - SharePoint Deserialization RCE</a>"
             },
             "groundingChunkIndices": [
-              1
+              5
             ]
           },
           {
             "segment": {
-              "startIndex": 28464,
-              "endIndex": 28755,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECtuKW7TagdJZhQWfOF3QNPKxKE0L5xqE0PJEaHw-iTo8qAwBCNwTzRsknQ2ofKd-Y7jERBjGAxXac653Rj-mltOVoNfpHxAN0DDnJxeny74JLHt-8acXl-gF7PwZ06ProY2Ljctg7r71-yz0a04xmGuQ'>SecureMac (MacSync)"
+              "startIndex": 9358,
+              "endIndex": 9744,
+              "text": "</div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Dell iDRAC</span>\n      <h4>CVE-2026-26948: Divulgaci\u00f3n de Informaci\u00f3n en iDRAC9</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Vulnerabilidad de divulgaci\u00f3n de informaci\u00f3n en Dell Integrated Dell Remote Access Controller 9 (iDRAC9) debido a informaci\u00f3n de depuraci\u00f3n no eliminada."
             },
             "groundingChunkIndices": [
-              1
+              7
             ]
           },
           {
             "segment": {
-              "startIndex": 29409,
-              "endIndex": 29617,
-              "text": "</li>\n        <li>Asegurar que se apliquen las \u00faltimas actualizaciones de seguridad de Apple para macOS y las actualizaciones de \"Patch Tuesday\" de Microsoft para Windows y Windows Server de manera oportuna."
+              "startIndex": 9744,
+              "endIndex": 9904,
+              "text": "</li>\n        <li>Un atacante con altos privilegios y acceso remoto podr\u00eda explotar esta vulnerabilidad para obtener acceso a datos confidenciales del sistema."
+            },
+            "groundingChunkIndices": [
+              7
+            ]
+          },
+          {
+            "segment": {
+              "startIndex": 10068,
+              "endIndex": 10657,
+              "text": "</p>\n      <div class='links'>\n        <a href=\"https://www.dell.com/support/security/en-us/advisories/DSA-2026-113\" target=\"_blank\" rel=\"noopener noreferrer\">Dell Security Advisory DSA-2026-113</a>\n      </div>\n    </div>\n    <div class='card ALTO'>\n      <span class='tag'>Dell iDRAC</span>\n      <h4>CVE-2026-26945: Ejecuci\u00f3n Remota de C\u00f3digo en iDRAC</h4>\n      <p class='meta'>Publicado: 2026-03-20</p>\n      <ul>\n        <li>Vulnerabilidad de Control de Procesos (CWE-114) en Dell Integrated Dell Remote Access Controller (iDRAC) que afecta a m\u00faltiples generaciones de servidores."
+            },
+            "groundingChunkIndices": [
+              8
+            ]
+          },
+          {
+            "segment": {
+              "startIndex": 10657,
+              "endIndex": 10803,
+              "text": "</li>\n        <li>Un atacante con altos privilegios y acceso a la red adyacente podr\u00eda ejecutar c\u00f3digo arbitrario en sistemas iDRAC vulnerables."
+            },
+            "groundingChunkIndices": [
+              8
+            ]
+          },
+          {
+            "segment": {
+              "startIndex": 11602,
+              "endIndex": 11700,
+              "text": "20.20), que permite a un usuario autenticado con bajos privilegios acceder a archivos arbitrarios."
+            },
+            "groundingChunkIndices": [
+              9
+            ]
+          },
+          {
+            "segment": {
+              "startIndex": 11700,
+              "endIndex": 11814,
+              "text": "</li>\n        <li>Aunque es una vulnerabilidad de 2020, se sigue discutiendo su impacto en entornos empresariales."
+            },
+            "groundingChunkIndices": [
+              9
+            ]
+          },
+          {
+            "segment": {
+              "startIndex": 13236,
+              "endIndex": 13689,
+              "text": "<section class='section' id='recomendaciones'>\n  <h3 class='section-title'>Recomendaciones Generales</h3>\n  <div class='grid'>\n    <div class='card'>\n      <h4>Priorizar Actualizaciones de Seguridad</h4>\n      <p class='meta'>Actualizado: 2026-03-27</p>\n      <ul>\n        <li>Mantener todos los sistemas operativos, firmware (especialmente iDRAC de Dell) y aplicaciones (Microsoft Office, SharePoint) actualizados con los \u00faltimos parches de seguridad."
             },
             "groundingChunkIndices": [
               0,
-              11,
-              7
+              5,
+              8
             ]
           },
           {
             "segment": {
-              "startIndex": 29617,
-              "endIndex": 29802,
-              "text": "</li>\n        <li>Prestar especial atenci\u00f3n a las actualizaciones de firmware para dispositivos como Dell iDRAC y Dahua NVR/XVR, as\u00ed como a las de Zimbra Collaboration Suite y Zabbix."
+              "startIndex": 14010,
+              "endIndex": 14329,
+              "text": "</p>\n    </div>\n    <div class='card'>\n      <h4>Fortalecer la Gesti\u00f3n de Endpoints y Office 365</h4>\n      <p class='meta'>Actualizado: 2026-03-27</p>\n      <ul>\n        <li>Configurar de forma segura los sistemas de gesti\u00f3n de endpoints y entornos de Microsoft, siguiendo las mejores pr\u00e1cticas de CISA y Microsoft."
             },
             "groundingChunkIndices": [
-              24,
-              35,
-              27,
-              25,
-              30,
-              28,
-              38
+              10
             ]
           },
           {
             "segment": {
-              "startIndex": 30008,
-              "endIndex": 30350,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAuGN60IvpXuRIFNIr2IPUr2AsAu_oUSqNgthPr7IMXI44gDTWsHVXqT3X1HyALAgMih1WYXpS9RZCLandKnUkcptdz3_-NQpxlvJyhlq_6yyIVS9A2AZ_X99RJOHKoS5N1PkK7wPT0IvPK-lRTQd9_6w13BD9Ukq6mgDTxxytJkhTsJ4mcBZSTj5A9yZPYxrzJlJUNU'>SANS ISC Handlers Diary"
+              "startIndex": 14692,
+              "endIndex": 15018,
+              "text": "</p>\n    </div>\n    <div class='card'>\n      <h4>Aislamiento de Interfaces de Gesti\u00f3n</h4>\n      <p class='meta'>Actualizado: 2026-03-27</p>\n      <ul>\n        <li>Aislar las interfaces de gesti\u00f3n como iDRAC en redes dedicadas (VLANs) con reglas de firewall estrictas, limitando el acceso solo a administradores autorizados."
             },
             "groundingChunkIndices": [
-              0
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 30350,
-              "endIndex": 30641,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHiBVnPGASGQDYn-_Nv6-BVla4jKZRGEAaP2zRJwnt618PYX017lvWEDbYR-BC_3QZrHMYx2jJwZbB2CZ4fj2r_lG1wDxcu7QSw6XEQyDft4ZywXprSGDpVZlmDEQAOsmTCZUB-CrsgPj3YngHXPAhJSV7wwSgMm2c5UdY9w=='>SentinelOne (CVE-2025-31703)"
-            },
-            "groundingChunkIndices": [
-              24
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 30641,
-              "endIndex": 30929,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfLWEYkpeCriZTE72hVP5BTOhViX9H9mcrDW7-DOraxoWMIcZX6gYtvoT0_I1Oce8eeyr8TnehiWxLnOq-b2362iYOp1j5296gpBUaPoSlYVYaFRnOZnxfpnjJWglJ7p2RB4YPsQ0GqiRmhwNyYlQlQk1eTfZiqtJLqA=='>CyberLeveling (Patch Tuesday)"
-            },
-            "groundingChunkIndices": [
-              11
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 30929,
-              "endIndex": 31220,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFfcf-Cnt7ww2Ci7fPnRm-UcIO0aVdNHREvqvfPeoZ9zAwEshPW4IMi6XB5KWsNkk37pl8ZdMJsQ-gAXUgf0yPZkvZa5mPT1tN_O0jSM8flW4D4EYTQCyaQzCl9VUPk4OKGOa0bI-lpSaPYeadzbUngxNXOwz5KDbH6tYLRg=='>SentinelOne (CVE-2026-23925)"
-            },
-            "groundingChunkIndices": [
-              35
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 31220,
-              "endIndex": 31511,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFf7waRAPzGo_GjiVOrcR3-QKf-sr6AsAESd_Rg9ILbU8HX6IBURhmgdPKdLeaGPtjY_X1CfO1pO3pvfelATfTDM39v3AduUy0tVBnxVe-EQHo0e5FG8W9RSihBPEdZy402PX2D5Mjua-2pHzJ4q20BNtTkoTO7wFwN1Ec_TA=='>SentinelOne (CVE-2026-26945)"
-            },
-            "groundingChunkIndices": [
-              27
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 31511,
-              "endIndex": 31816,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKp7WYYwUKQITrd9z7_kHhc4f3ZTy_T1PYqPZtRE_Zy3phNr3qowEAhJNRzVR-chCgozbapTiBkWdMjJQCF8ymBNHZuUhQ0aiPU7LS3Ka6sX3LQlHZ-gxOIOdm8vcs3y1S7SkPIu4XWq1LhJ72BxQD5jpOfcKpZCECCxhGCxcnfG9l0IQEWKeHzxGk4A=='>NCSA (Microsoft Alert)"
-            },
-            "groundingChunkIndices": [
-              7
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 31816,
-              "endIndex": 32107,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAkxZz5FcGX4z63Jy9Sf5vrp_kwvMmGKKT53y6CCUTncnhrsjUz_h0Fx1kTiHvc0PhOB9mgz5Ks8q9lZwTOMBexEHkQvTn6YNB5DkoB4Laf9ybuJb8wTELlSwe4tQH7X2ACtDLbVGQXtY_JeLGcSIwfAwAH4jlQ2tbByDJGw=='>SentinelOne (CVE-2026-26948)"
-            },
-            "groundingChunkIndices": [
-              30
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 32107,
-              "endIndex": 32483,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWw6CVcC_uaSdD8l7RKOXdpcmCIMAK0iBRDDLO8QcMvl-mrdm3_kMfBsWHEyxFALWn_DebdpfpG_bV4mUbrio2MkSW-FgXtCHkao0Ok40npecDse5WEnvzVAU5AqebeqiBNZzcXn-nb2gtLC1IX6ypuVrJyy9k3mWVMUbfXOj9zGVspBb_AZwzGXPOGcv5AkZP_TwflaFBZVBNLEqpHGYy6ogFWY0sMQOw1TMU8d2qjhSzytxa9A=='>Dell Security Advisory (DSA-2026-113)"
-            },
-            "groundingChunkIndices": [
-              28
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 32483,
-              "endIndex": 32792,
-              "text": "</a>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG0yJ592db3ea_u8IuTZlwUdvN6sur_mDE3U9iGc-czrKk0almirhlzBYA0D-AFhYQWcqO1MqkNgLvHsvyzAhuNyE7O0C24sD4VmqjO0gewqhQgPbFT8LeRoHNGcCh1-8NR95HEW3DiXXK_mf904ATICvmCSZlf3ImlODDepizuQvwKzeSfNVa7qv1Y4HhyH-wqQ=='>SEK (Zabbix Fixes)"
-            },
-            "groundingChunkIndices": [
-              38
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 32792,
-              "endIndex": 33269,
-              "text": "</a>\n      </div>\n    </div>\n    <div class='card MEDIO'>\n      <span class='tag'>Conciencia de Seguridad</span><span class='tag'>Ingenier\u00eda Social</span><span class='tag'>Phishing</span>\n      <h4>Fortalecer la Conciencia sobre Ingenier\u00eda Social</h4>\n      <p class='meta'>Publicado: 2026-03-27</p>\n      <ul>\n        <li>Las campa\u00f1as de ingenier\u00eda social, como la de MacSync, siguen siendo una amenaza eficaz para comprometer sistemas sin necesidad de exploits t\u00e9cnicos."
-            },
-            "groundingChunkIndices": [
-              1
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 33269,
-              "endIndex": 33510,
-              "text": "</li>\n        <li>Los atacantes utilizan t\u00e1cticas convincentes (por ejemplo, herramientas de IA falsas, gu\u00edas de soluci\u00f3n de problemas) para enga\u00f1ar a los usuarios y que estos ejecuten c\u00f3digo malicioso o divulguen informaci\u00f3n sensible."
-            },
-            "groundingChunkIndices": [
-              1
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 33706,
-              "endIndex": 33813,
-              "text": "Fomentar la verificaci\u00f3n de la legitimidad de las fuentes antes de ejecutar comandos o descargar software."
-            },
-            "groundingChunkIndices": [
-              1
-            ]
-          },
-          {
-            "segment": {
-              "startIndex": 33813,
-              "endIndex": 34104,
-              "text": "</p>\n      <div class='links'>\n        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECtuKW7TagdJZhQWfOF3QNPKxKE0L5xqE0PJEaHw-iTo8qAwBCNwTzRsknQ2ofKd-Y7jERBjGAxXac653Rj-mltOVoNfpHxAN0DDnJxeny74JLHt-8acXl-gF7PwZ06ProY2Ljctg7r71-yz0a04xmGuQ'>SecureMac (MacSync)"
-            },
-            "groundingChunkIndices": [
-              1
+              8
             ]
           }
         ],
         "webSearchQueries": [
-          "Fortinet FortiOS 7.2.12 security advisory March 2026 CVE",
-          "Fortinet FortiGate FortiAP FortiMail vulnerabilities February 2026 advisory",
-          "Proxmox VE 8.4.16 security vulnerabilities March 2026 advisory",
-          "Proxmox VE security update February 2026 CVE",
-          "Dell iDRAC generation 13 vulnerabilities March 2026 advisory",
-          "Dell Optiplex Latitude firmware update March 2026 security advisory",
-          "Windows 10 11 security update March 2026 CVE",
-          "Windows Server 2012 2016 vulnerabilities March 2026 security advisory",
-          "Windows XP active exploitation March 2026",
-          "Windows 7 active exploitation March 2026",
-          "SQL Server Express 2005 active exploitation March 2026",
-          "SQL Server Express 2008 active exploitation March 2026",
-          "ESET corporate antivirus vulnerabilities March 2026 advisory",
-          "Office 365 security incidents March 2026 advisory",
-          "macOS security update March 2026 CVE",
-          "Dahua cameras HVR vulnerabilities March 2026 advisory",
-          "Zabbix 7 security vulnerabilities March 2026 advisory",
-          "Ubuntu Server 24 LT security update March 2026 CVE",
-          "Red Hat Enterprise Linux 7 8 security advisory March 2026 CVE",
-          "Zimbra Collaboration Professional 10 vulnerabilities March 2026 advisory"
+          "FortiOS 7.2.12 vulnerability security advisory after:2026-02-25",
+          "FortiGate security advisory after:2026-02-25",
+          "Proxmox VE 8.4.16 vulnerability security advisory after:2026-02-25",
+          "Dell iDRAC security advisory after:2026-02-25",
+          "Dell Optiplex Latitude firmware security update after:2026-02-25",
+          "Windows 10 security update March 2026",
+          "Windows 11 security update March 2026",
+          "Windows Server 2016 security update March 2026",
+          "Office 365 security advisory March 2026",
+          "macOS security update March 2026",
+          "Zabbix 7 vulnerability security advisory after:2026-02-25",
+          "Ubuntu Server 24.04 LTS security advisory after:2026-02-25",
+          "Red Hat Enterprise Linux 7 security advisory after:2026-02-25",
+          "Red Hat Enterprise Linux 8 security advisory after:2026-02-25",
+          "Zimbra Collaboration Professional 10 vulnerability security advisory after:2026-02-25",
+          "CVE-2026- March Fortinet",
+          "CVE-2026- March Microsoft",
+          "CVE-2026- March Dell",
+          "cisa.gov advisories March 2026",
+          "nvd.nist.gov vulnerabilities after:2026-02-25"
         ]
       }
     }
   ],
   "usageMetadata": {
-    "promptTokenCount": 893,
-    "candidatesTokenCount": 14192,
-    "totalTokenCount": 25274,
+    "promptTokenCount": 1297,
+    "candidatesTokenCount": 5125,
+    "totalTokenCount": 20421,
     "promptTokensDetails": [
       {
         "modality": "TEXT",
-        "tokenCount": 893
+        "tokenCount": 1297
       }
     ],
-    "toolUsePromptTokenCount": 3997,
+    "toolUsePromptTokenCount": 3809,
     "toolUsePromptTokensDetails": [
       {
         "modality": "TEXT",
-        "tokenCount": 3997
+        "tokenCount": 3809
       }
     ],
-    "thoughtsTokenCount": 6192
+    "thoughtsTokenCount": 10190
   },
   "modelVersion": "gemini-2.5-flash",
-  "responseId": "Sa3Gaf-dDeii1MkP5YjFyAQ"
+  "responseId": "YMTGaaPgJuiI-sAP18_x2Qo"
 }
