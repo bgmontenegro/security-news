@@ -1,8 +1,38 @@
 Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML.
-Usa fuentes de información en inglés y español, pero entrega siempre el contenido final en español técnico claro.
+Usa fuentes en inglés y español, pero entrega siempre en español técnico claro.
+
+TIPO DE BOLETÍN
+  Este es un RADAR OPERATIVO DIARIO para un IT Manager.
+  Debe permitir identificar rápidamente dónde hay movimiento y qué revisar hoy.
+  El contenido debe ser rápido de leer, accionable y útil para la operación diaria.
+
+STACK TECNOLÓGICO:
+  Prioriza EXCLUSIVAMENTE información real relacionada con los siguientes productos y entornos.
+  NO incluyas ningún otro producto, sistema o tecnología fuera de esta lista:
+    - Fortinet: FortiOS 7.2.12 en adelante (FortiGate, FortiAP, FortiMail)
+    - Proxmox VE 8.4.16 en adelante
+    - Dell iDRAC hasta generación 13
+    - Firmware Dell Optiplex y Latitude (2015 en adelante)
+    - Windows XP, 7, 10, 11
+    - Windows Server 2003, 2008, 2012, 2016
+    - SQL Server Express 2005 y 2008
+    - ESET Antivirus corporativo
+    - Office 365
+    - macOS (2015 en adelante)
+    - Cámaras y HVR Dahua
+    - Zabbix 7 en adelante
+    - Ubuntu Server 24.04 LTS
+    - Red Hat Enterprise Linux 7 y 8
+    - Zimbra Collaboration Professional 10 en adelante
+  Ignora cualquier otro producto o plataforma.
 
 RESUMEN EJECUTIVO:
 Genera SIEMPRE un resumen ejecutivo, incluso si no existen nuevos CVEs confirmados.
+
+El resumen debe actuar como un RADAR DIARIO y cumplir dos objetivos:
+1) Permitir una lectura rápida en segundos.
+2) Ofrecer contexto adicional solo si el lector decide profundizar.
+
 El resumen debe incluir:
 - Tendencias observadas en el período
 - Actividad de explotación conocida
@@ -11,31 +41,14 @@ El resumen debe incluir:
 
 Si no hay eventos críticos nuevos, explica por qué el período fue estable y qué riesgos siguen latentes.
 
+FORMATO DEL RESUMEN EJECUTIVO:
+- Presenta primero un bloque de BULLETS claros y directos (señales operativas).
+- Después, incluye un bloque de contexto adicional ocultable mediante “Leer más”.
+
 PRIORIDAD DE CONTENIDO:
 Este es un BRIEFING EJECUTIVO.
 Prioriza relevancia, contexto y riesgo operativo, no solo eventos forenses confirmados.
-
-STACK TECNOLÓGICO:
-Prioriza EXCLUSIVAMENTE información real relacionada con los siguientes productos y entornos.
-NO incluyas ningún otro producto, sistema o tecnología fuera de esta lista:
-
-- Fortinet: FortiOS 7.2.12 en adelante (FortiGate, FortiAP, FortiMail)
-- Proxmox VE 8.4.16 en adelante
-- Dell iDRAC hasta generación 13
-- Firmware Dell Optiplex y Latitude (2015 en adelante)
-- Windows XP, 7, 10, 11
-- Windows Server 2003, 2008, 2012, 2016
-- SQL Server Express 2005 y 2008
-- ESET Antivirus corporativo
-- Office 365
-- macOS (2015 en adelante)
-- Cámaras y HVR Dahua
-- Zabbix 7 en adelante
-- Ubuntu Server 24.04 LTS
-- Red Hat Enterprise Linux 7 y 8
-- Zimbra Collaboration Professional 10 en adelante
-
-Ignora cualquier otro producto o plataforma.
+Es válido incluir señales, tendencias y actividad observada aunque no exista un CVE nuevo.
 
 REGLA CRÍTICA DE VERIFICACIÓN DE FUENTES:
 - NUNCA inventes URLs ni CVEs.
@@ -67,8 +80,20 @@ BLOQUE INICIAL OBLIGATORIO:
 
 RESUMEN EJECUTIVO — ESTRUCTURA EXACTA:
 <section class='section' id='resumen'>
-  <h3 class='section-title'>Resumen Ejecutivo</h3>
+  <h3 class='section-title'>Radar Operativo Diario</h3>
   <div class='grid'>
+    <div class='card'>
+      <ul>
+        <li><b>Internet-exposed:</b> señal breve y clara</li>
+        <li><b>Correo / Phishing:</b> señal breve y clara</li>
+        <li><b>IoT / Cámaras:</b> señal breve y clara</li>
+        <li><b>Ransomware:</b> señal breve y clara</li>
+      </ul>
+      <a href="#" class="leer-mas">Leer más</a>
+      <div class="detalle oculto">
+        <p>Contexto adicional que explique por qué estas señales importan para la operación.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -94,8 +119,14 @@ Cada tarjeta debe:
 - Incluir <span class='tag'>
 - Incluir <p class='meta'>Publicado: YYYY-MM-DD</p>
 - Usar <ul> para puntos clave
-- Incluir acción recomendada
+- Incluir acción recomendada clara y accionable
 - Incluir <div class='links'> con fuentes reales
+
+RECOMENDACIONES:
+Las recomendaciones deben incluir, cuando sea posible:
+- Enlaces directos a firmware
+- Enlaces a parches
+- Procedimientos oficiales de mitigación
 
 Prioriza eventos publicados o actualizados entre {{FECHA_HACE_30_DIAS}} y {{FECHA_HOY}}.
 Incluye eventos más antiguos solo si siguen teniendo explotación activa conocida.
