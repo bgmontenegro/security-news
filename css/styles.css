@@ -173,3 +173,15 @@ body {
 .card.CRITICO { border-left: 4px solid #b91c1c; }
 .card.ALTO { border-left: 4px solid #f97316; }
 .card.MEDIO { border-left: 4px solid #eab308; }
+
+.detalle.oculto {
+  display: none;
+}
+
+.leer-mas {
+  display: inline-block;
+  margin-top: 8px;
+  color: #60a5fa;
+  cursor: pointer;
+  text-decoration: none;
+}
