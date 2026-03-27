@@ -12,11 +12,27 @@ hace_30 = hoy - timedelta(days=30)
 FECHA_HOY = hoy.strftime("%Y-%m-%d")
 FECHA_30 = hace_30.strftime("%Y-%m-%d")
 
-# --- Leer prompt ---
+# --- Leer whitelist (inserta aquí la lectura y fallback) ---
+try:
+    whitelist_path = "config/whitelist.txt"
+    if os.path.exists(whitelist_path):
+        with open(whitelist_path, "r", encoding="utf-8") as wf:
+            whitelist_lines = [ln.strip() for ln in wf if ln.strip() and not ln.strip().startswith("#")]
+            whitelist = "\n".join(whitelist_lines) if whitelist_lines else "fuentes oficiales"
+    else:
+        whitelist = "fuentes oficiales"
+except Exception:
+    whitelist = "fuentes oficiales"
+
+# --- Leer prompt y reemplazos ---
 with open("prompt_template.txt", "r", encoding="utf-8") as f:
     prompt = f.read()
 
-prompt = prompt.replace("{{FECHA_HOY}}", FECHA_HOY).replace("{{FECHA_HACE_30_DIAS}}", FECHA_30)
+prompt = (prompt
+    .replace("{{FECHA_HOY}}", FECHA_HOY)
+    .replace("{{FECHA_HACE_30_DIAS}}", FECHA_30)
+    .replace("{{WHITELIST_DOMAINS}}", whitelist)
+)
 
 # Asegurar marcador final para detectar truncado
 END_MARKER = "<!-- FIN_DE_BOLETIN -->"
@@ -33,10 +49,13 @@ if not API_TOKEN:
 headers_key = {"Content-Type": "application/json", "x-goog-api-key": API_TOKEN}
 headers_bearer = {"Content-Type": "application/json", "Authorization": f"Bearer {API_TOKEN}"}
 
-# --- Payload conservador (sin 'tools' ni campos experimentales) ---
+# --- Payload con grounding (restaurado tools para search grounding) ---
 payload = {
     "contents": [
         {"parts": [{"text": prompt}]}
+    ],
+    "tools": [
+        {"googleSearch": {}}
     ]
 }
 
@@ -72,12 +91,25 @@ def extract_text_from_response(data):
     except Exception:
         return None
 
+def ends_with_incomplete_word(s):
+    s = s.strip()
+    if not s:
+        return True
+    tail = s[-40:]
+    if tail[-1].isalpha() and tail[-10:].count(" ") == 0:
+        return True
+    return False
+
 def is_valid_html_fragment(h):
     if not h or len(h) < 200:
         return False
     if END_MARKER not in h:
         return False
-    # simple tag balance heuristic
+    if ends_with_incomplete_word(h.replace(END_MARKER, "")):
+        return False
+    required_ids = ["id='resumen'", "id='incidentes'", "id='cves'", "id='ransomware'", "id='recomendaciones'"]
+    if not any(req in h for req in required_ids):
+        return False
     if h.count("<div") < h.count("</div>") or h.count("<section") < h.count("</section>"):
         return False
     return True
@@ -86,6 +118,14 @@ def is_valid_html_fragment(h):
 def call_api_with_headers(headers):
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     try:
+        # registrar payload corto para depuración (no incluye token)
+        try:
+            ensure_content_dir()
+            with open("content/last_payload_preview.json", "w", encoding="utf-8") as pf:
+                json.dump({"prompt_preview": prompt[:2000], "whitelist_preview": whitelist[:500]}, pf, indent=2, ensure_ascii=False)
+        except Exception:
+            pass
+
         r = session.post(url, headers=headers, json=payload, timeout=(10, 90))
         # Guardar cuerpo de respuesta aunque sea error para depuración
         try:
@@ -131,12 +171,16 @@ while attempt < MAX_ATTEMPTS:
                 log_error("Respuesta bearer inválida o truncada.")
                 raise SystemExit("Generación inválida: revisar content/raw.json")
         else:
-            # registrar el cuerpo de error y continuar con reintentos normales
-            log_error(f"400 con x-goog-api-key y bearer intento devolvió status {status2}. Body: {json.dumps(body2) if isinstance(body2, dict) else str(body2)}")
+            ensure_content_dir()
+            err_path = "content/api_error_response.json"
+            with open(err_path, "w", encoding="utf-8") as ef:
+                if isinstance(body2, dict):
+                    json.dump(body2, ef, indent=2, ensure_ascii=False)
+                else:
+                    ef.write(str(body2))
+            log_error(f"400 con x-goog-api-key y bearer intento devolvió status {status2}. Body guardado en {err_path}")
             if attempt >= MAX_ATTEMPTS:
-                print("[generar_boletin] No se pudo generar tras intentar ambas cabeceras.")
-                save_raw(body2 if isinstance(body2, dict) else {"error": str(body2)})
-                raise SystemExit("Generación inválida: revisar content/raw.json")
+                raise SystemExit("Generación inválida: revisar content/api_error_response.json")
             continue
 
     # Si status 2xx procesar
@@ -158,7 +202,6 @@ while attempt < MAX_ATTEMPTS:
                 continue
     else:
         # status no 2xx (por ejemplo 400)
-        # Guardar cuerpo de error para inspección
         ensure_content_dir()
         err_path = "content/api_error_response.json"
         with open(err_path, "w", encoding="utf-8") as ef:
@@ -168,7 +211,6 @@ while attempt < MAX_ATTEMPTS:
                 ef.write(str(body))
         print(f"[generar_boletin] API devolvió status {status}. Cuerpo guardado en {err_path}")
         log_error(f"API status {status}. Ver content/api_error_response.json")
-        # Si quedan intentos, reintentar; si no, salir con error
         if attempt >= MAX_ATTEMPTS:
             raise SystemExit(f"API returned status {status}. Revisar content/api_error_response.json")
         else:
