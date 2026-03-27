@@ -9,9 +9,9 @@ REGLA CRÍTICA DE VERIFICACIÓN DE FUENTES: Prioriza la precisión absoluta sobr
   - Si para un evento crítico no puedes proporcionar un enlace oficial específico, verificado y preciso, no incluyas el evento. 
   - Prefiero un boletín con menos tarjetas reales que uno con tarjetas falsas o inexactas. Rompe el flujo y devuelve un mensaje de error si no puedes cumplir esta regla.
 REGLAS ESTRICTAS PARA ENLACES Y HTML:
-- NAVEGACIÓN SEGURA: Todos los enlaces dentro de <div class='links'> deben ser <a href="[URL]" target="_blank" rel="noopener noreferrer">Nombre de la Fuente</a>.
-- ACEPTAR LINKS DE GROUNDING: Está permitido usar enlaces devueltos por la herramienta de búsqueda (incluyendo vertexaisearch.cloud.google.com). Si la URL de grounding redirige a una URL oficial del proveedor, incluya la URL final como enlace principal.
-- VERIFICACIÓN OBLIGATORIA: Si no se puede resolver la redirección a una fuente oficial (vendor, nvd, cisa, mitre, etc.), marque la tarjeta como "verificada=false" en un atributo data-verificada="false" y mantenga la URL de grounding.
+- NAVEGACIÓN SEGURA: Todos los enlaces dentro de <div class='links'> deben ser etiquetas <a> con target="_blank" y rel="noopener noreferrer". Ejemplo: <a href="[URL_PROPORCIONADA_POR_LA_BUSQUEDA]" target="_blank" rel="noopener noreferrer">Nombre de la Fuente</a>.
+- ACEPTAR ENLACES DE GROUNDING: Puedes usar las URLs devueltas por la herramienta de búsqueda (incluyendo las que comienzan con https://vertexaisearch.cloud.google.com/...). No las modifiques; inclúyelas tal cual para que el lector pueda seguir la traza de validación.
+- WHITELIST: Si existe contenido en {{WHITELIST_DOMAINS}}, prioriza esas fuentes y muéstralas primero en el bloque de links.
 NO incluyas ningún otro producto, sistema o tecnología fuera de esta lista:
 
 - Fortinet: FortiOS 7.2.12 en adelante para: FortiGate, FortiAP, FortiMail
