@@ -2,3 +2,11 @@ msrc.microsoft.com
 cisa.gov
 support.dell.com
 fortiguard.com
+nvd.nist.gov
+dell.com
+support.apple.com
+owasp.org
+eset.com
+pve.proxmox.com
+zimbra.com
+dahuawiki.com
