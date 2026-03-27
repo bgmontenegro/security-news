@@ -75,7 +75,7 @@ Cada tarjeta debe:
 - Incluir acción recomendada
 - Incluir <div class='links'> con las fuentes reales de donde obtuviste la información
 
-Prioriza eventos publicados o actualizados entre {{FECHA_HACE_30_DIAS}} y {{FECHA_HOY}}.
+Prioriza eventos publicados o actualizados entre {{FECHA_HACE_60_DIAS}} y {{FECHA_HOY}}.
 Solo incluye eventos más antiguos si siguen teniendo explotación activa conocida.
 
 Devuelve ÚNICAMENTE el FRAGMENTO HTML.
