@@ -16,13 +16,21 @@ FECHA_30 = hace_30.strftime("%Y-%m-%d")
 with open("prompt_template.txt", "r", encoding="utf-8") as f:
     prompt = f.read()
 
+# Leer whitelist externa (opcional)
+whitelist = []
+if os.path.exists("whitelist.txt"):
+    with open("whitelist.txt", "r", encoding="utf-8") as w:
+        whitelist = [line.strip() for line in w if line.strip()]
+
+# Inyectar fechas y whitelist en el prompt
 prompt = (
     prompt
     .replace("{{FECHA_HOY}}", FECHA_HOY)
     .replace("{{FECHA_HACE_30_DIAS}}", FECHA_30)
+    .replace("{{WHITELIST_DOMAINS}}", "\n".join(whitelist) if whitelist else "")
 )
 
-# Preparar payload y headers (igual que antes)
+# Preparar payload y headers
 url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
 headers = {
     "Content-Type": "application/json",
@@ -58,11 +66,12 @@ r.raise_for_status()
 data = r.json()
 html = data["candidates"][0]["content"]["parts"][0]["text"]
 
-# Guardar salidas
+# Guardar salidas localmente
 os.makedirs("content", exist_ok=True)
 
 with open("content/boletin.html", "w", encoding="utf-8") as f:
     f.write(html)
 
+# Guardar raw.json para depuración local (NO commitear)
 with open("content/raw.json", "w", encoding="utf-8") as f:
     json.dump(data, f, indent=2)
