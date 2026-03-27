@@ -113,10 +113,25 @@ Si no hay eventos verificados para una sección, inserta UNA tarjeta:
   <p>No se han detectado nuevos eventos confirmados para el stack tecnológico definido.</p>
 </div>
 
+TARJETAS — TAXONOMÍA OPERATIVA (OBLIGATORIA):
+Cada tarjeta debe incluir explícitamente la siguiente taxonomía como BADGES visibles,
+usando <span class='tag'> para cada uno:
+
+- Vector de ataque: Internet-exposed / Internal / Physical
+- Tipo de amenaza: RCE / Auth Bypass / Phishing / Info Leak / Privilege Escalation
+- Probabilidad: Explotado activamente / Observado / Teórico
+- Relevancia: Directa / Indirecta para el stack definido
+
+Ejemplo de bloque de taxonomía:
+<span class='tag'>Internet-exposed</span>
+<span class='tag'>Auth Bypass</span>
+<span class='tag'>Explotado</span>
+<span class='tag'>Directo</span>
+
 TARJETAS:
 Cada tarjeta debe:
 - Usar clase card CRITICO / ALTO / MEDIO (sin tildes)
-- Incluir <span class='tag'>
+- Incluir los badges de taxonomía inmediatamente después del título
 - Incluir <p class='meta'>Publicado: YYYY-MM-DD</p>
 - Usar <ul> para puntos clave
 - Incluir acción recomendada clara y accionable
