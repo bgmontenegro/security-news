@@ -1,88 +1,103 @@
-Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML, usa fuentes de información en ingles y español pero debes entregar siempre en español.
-RESUMEN EJECUTIVO:
-  Genera siempre un resumen ejecutivo, incluso si no existen nuevos CVEs confirmados.
-    El resumen debe incluir:
-      - Tendencias observadas en el período
-      - Actividad de explotación conocida
-      - Riesgos relevantes para el stack tecnológico definido
-      - Cambios en el panorama de amenazas
-  Si no hay eventos críticos nuevos, explica por qué el período fue estable.
+Genera un boletín ejecutivo de ciberseguridad en ESPAÑOL como FRAGMENTO HTML.
+Usa fuentes de información en inglés y español, pero entrega siempre el contenido final en español técnico claro.
 
-Prioriza EXCLUSIVAMENTE información real relacionada con los siguientes productos y entornos de infraestructura. 
-Los url a las fuentes de información seran utilizados también.
-REGLA CRÍTICA DE VERIFICACIÓN DE FUENTES: Prioriza la precisión absoluta sobre la completitud.
-  - NUNCA inventes, supongas o alucines una URL.
-  - NUNCA uses marcadores de posición para IDs de vulnerabilidad como 'CVE-2024-XXXX'. Si no conoces el ID exacto, elimina ese evento por completo.
-  - Cada URL proporcionada debe ser un enlace directo y funcional a un advisory oficial (ej. NVD, CISA, o vendor advisory).
-  - Si para un evento crítico no puedes proporcionar un enlace oficial específico, verificado y preciso, no incluyas el evento. 
-  - Prefiero un boletín con menos tarjetas reales que uno con tarjetas falsas o inexactas. Rompe el flujo y devuelve un mensaje de error si no puedes cumplir esta regla.
-REGLAS ESTRICTAS PARA ENLACES Y HTML:
-- NAVEGACIÓN SEGURA: Todos los enlaces dentro de <div class='links'> deben ser etiquetas <a> con target="_blank" y rel="noopener noreferrer". Ejemplo: <a href="[URL_PROPORCIONADA_POR_LA_BUSQUEDA]" target="_blank" rel="noopener noreferrer">Nombre de la Fuente</a>.
-- ACEPTAR ENLACES DE GROUNDING: Puedes usar las URLs devueltas por la herramienta de búsqueda (incluyendo las que comienzan con https://vertexaisearch.cloud.google.com/...). No las modifiques; inclúyelas tal cual para que el lector pueda seguir la traza de validación.
-- WHITELIST: Si existe contenido en {{WHITELIST_DOMAINS}}, prioriza esas fuentes y muéstralas primero en el bloque de links.
+RESUMEN EJECUTIVO:
+Genera SIEMPRE un resumen ejecutivo, incluso si no existen nuevos CVEs confirmados.
+El resumen debe incluir:
+- Tendencias observadas en el período
+- Actividad de explotación conocida
+- Riesgos relevantes para el stack tecnológico definido
+- Cambios en el panorama de amenazas
+
+Si no hay eventos críticos nuevos, explica por qué el período fue estable y qué riesgos siguen latentes.
+
+PRIORIDAD DE CONTENIDO:
+Este es un BRIEFING EJECUTIVO.
+Prioriza relevancia, contexto y riesgo operativo, no solo eventos forenses confirmados.
+
+STACK TECNOLÓGICO:
+Prioriza EXCLUSIVAMENTE información real relacionada con los siguientes productos y entornos.
 NO incluyas ningún otro producto, sistema o tecnología fuera de esta lista:
 
-- Fortinet: FortiOS 7.2.12 en adelante para: FortiGate, FortiAP, FortiMail
-- Proxmox VE version 8.4.16 en adelante 
+- Fortinet: FortiOS 7.2.12 en adelante (FortiGate, FortiAP, FortiMail)
+- Proxmox VE 8.4.16 en adelante
 - Dell iDRAC hasta generación 13
-- Firmware de Dell Optiplex y Latitude equipos 2015 en adelante
-- Windows XP, Windows 7, Windows 10, Windows 11
-- Windows Server 2003, 2008, 2012 y 2016
+- Firmware Dell Optiplex y Latitude (2015 en adelante)
+- Windows XP, 7, 10, 11
+- Windows Server 2003, 2008, 2012, 2016
 - SQL Server Express 2005 y 2008
 - ESET Antivirus corporativo
 - Office 365
-- macOS desde 2015 en adelante
+- macOS (2015 en adelante)
 - Cámaras y HVR Dahua
 - Zabbix 7 en adelante
 - Ubuntu Server 24.04 LTS
 - Red Hat Enterprise Linux 7 y 8
-- Zimbra Collaboration Professional version 10 en adelante
+- Zimbra Collaboration Professional 10 en adelante
 
-Ignora cualquier otro producto, sistema operativo, plataforma o tecnología que no esté explícitamente listada arriba.
+Ignora cualquier otro producto o plataforma.
 
+REGLA CRÍTICA DE VERIFICACIÓN DE FUENTES:
+- NUNCA inventes URLs ni CVEs.
+- NUNCA uses marcadores como CVE-2024-XXXX.
+- Cada tarjeta debe incluir al menos UNA fuente verificable.
+- Se aceptan enlaces oficiales (vendor, NVD, CISA) y también enlaces de grounding (vertexaisearch.cloud.google.com) si son los únicos disponibles.
+- Si no existe ninguna fuente verificable para un evento, no lo incluyas.
+
+REGLAS PARA ENLACES Y HTML:
+- Todos los enlaces deben ir dentro de <div class='links'>.
+- Usa <a> con target="_blank" y rel="noopener noreferrer".
+- Puedes usar URLs de grounding (vertex) tal como fueron proporcionadas.
+- Prioriza fuentes listadas en {{WHITELIST_DOMAINS}} cuando existan.
+- Evita enlaces que devuelvan 404 o páginas vacías.
+
+FORMATO HTML:
 NO incluyas <!DOCTYPE>, <html>, <head>, <body> ni <style>.
 NO uses Markdown.
-NO uses encabezados con ###, listas numeradas ni texto plano.
+NO uses encabezados ### ni listas numeradas.
 
 Usa exclusivamente estas clases CSS:
 section, section-title, grid, card, meta, links, tag, top.
 
-El bloque inicial debe ser:
+BLOQUE INICIAL OBLIGATORIO:
 <div class='top'>
   <h2>Boletín Ejecutivo de Ciberseguridad</h2>
   <p class='meta'>Fecha: {{FECHA_HOY}}</p>
 </div>
 
-El Resumen Ejecutivo debe mantener esta estructura exacta:
+RESUMEN EJECUTIVO — ESTRUCTURA EXACTA:
 <section class='section' id='resumen'>
   <h3 class='section-title'>Resumen Ejecutivo</h3>
   <div class='grid'>
-    </div>
+  </div>
 </section>
 
-ESTRUCTURA DE LAS SECCIONES POSTERIORES:
-  Las siguientes secciones son OBLIGATORIAS y deben existir en el HTML generado:
-    <section class='section' id='incidentes'>
-    <section class='section' id='cves'>
-    <section class='section' id='ransomware'>
-    <section class='section' id='recomendaciones'>
+SECCIONES OBLIGATORIAS:
+<section class='section' id='incidentes'>
+<section class='section' id='cves'>
+<section class='section' id='ransomware'>
+<section class='section' id='recomendaciones'>
 
-REGLA DE EMPTY STATE: Si para el Resumen Ejecutivo o para cualquiera de las secciones posteriores NO tienes eventos reales, verificados y con URLs oficiales:
-  - NO inventes datos. En su lugar, dentro del <div class='grid'> de esa sección específica, inserta una única tarjeta estandarizada de "Sin Novedades" con esta estructura exacta:
-  <div class='card'>
-    <h4>Sin reportes verificados</h4>
-    <p class='meta'>Actualizado: {{FECHA_HOY}}</p>
-    <p>No se han detectado nuevos eventos confirmados para el stack tecnológico definido.</p>
-  </div>
+REGLA DE EMPTY STATE:
+Aplica SOLO a las secciones de eventos (incidentes, cves, ransomware).
+Si no hay eventos verificados para una sección, inserta UNA tarjeta:
 
+<div class='card'>
+  <h4>Sin reportes verificados</h4>
+  <p class='meta'>Actualizado: {{FECHA_HOY}}</p>
+  <p>No se han detectado nuevos eventos confirmados para el stack tecnológico definido.</p>
+</div>
+
+TARJETAS:
 Cada tarjeta debe:
-- Incluir la severidad en la clase (card CRITICO / ALTO / MEDIO)
-- Comenzar con etiquetas <span class='tag'>
+- Usar clase card CRITICO / ALTO / MEDIO (sin tildes)
+- Incluir <span class='tag'>
 - Incluir <p class='meta'>Publicado: YYYY-MM-DD</p>
 - Usar <ul> para puntos clave
 - Incluir acción recomendada
-- Incluir <div class='links'> con las fuentes reales de donde obtuviste la información
+- Incluir <div class='links'> con fuentes reales
+
 Prioriza eventos publicados o actualizados entre {{FECHA_HACE_30_DIAS}} y {{FECHA_HOY}}.
-Solo incluye eventos más antiguos si siguen teniendo explotación activa conocida.
+Incluye eventos más antiguos solo si siguen teniendo explotación activa conocida.
 
 Devuelve ÚNICAMENTE el FRAGMENTO HTML.
