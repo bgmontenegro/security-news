@@ -28,75 +28,69 @@
       { id: "recomendaciones", label: "Recomendaciones" },
       { id: "historico", label: "Histórico", external: true }
     ];
-
+    
     function setActive(id) {
-      document.querySelectorAll(".tabs button").forEach(b => b.classList.toggle("active", b.dataset.id === id));
-      document.querySelectorAll("#contenido .section").forEach(s => s.classList.toggle("hidden", s.id !== id));
+      document.querySelectorAll(".tabs button").forEach(b =>
+        b.classList.toggle("active", b.dataset.id === id)
+      );
+      document.querySelectorAll("#contenido .section").forEach(s =>
+        s.classList.toggle("hidden", s.id !== id)
+      );
     }
-
+    
     function buildTabs() {
       const tabs = document.getElementById("tabs");
-    
-      tabs.innerHTML = SECCIONES.map(s => {
-        return `<button type="button" data-id="${s.id}" data-external="${s.external ? "1" : "0"}">${s.label}</button>`;
-      }).join("");
+      tabs.innerHTML = SECCIONES.map(s =>
+        `<button type="button" data-id="${s.id}" data-external="${s.external ? "1" : "0"}">${s.label}</button>`
+      ).join("");
     
       tabs.querySelectorAll("button").forEach(btn => {
-        const isExternal = btn.dataset.external === "1";
-    
-        if (isExternal) {
-          btn.addEventListener("click", () => {
-            window.location.href = "content/historico/";
-          });
+        if (btn.dataset.external === "1") {
+          btn.onclick = () => window.location.href = "content/historico/";
         } else {
-          btn.addEventListener("click", () => setActive(btn.dataset.id));
+          btn.onclick = () => setActive(btn.dataset.id);
         }
       });
     }
     
     const params = new URLSearchParams(window.location.search);
     const historico = params.get("historico");
-
     const boletinURL = historico
       ? `content/historico/boletin-${historico}.html`
       : "content/boletin.html";
-
+    
     fetch(boletinURL)
       .then(r => r.text())
       .then(html => {
         const tmp = document.createElement("div");
         tmp.innerHTML = html;
-
+    
         const top = tmp.querySelector(".top");
         document.getElementById("top").innerHTML = top ? top.outerHTML : "";
-
-        if (historico) {
-          const aviso = document.createElement("div");
-          aviso.className = "top";
-          aviso.innerHTML = `
-            <p class="meta">
-              📜 Estás viendo un boletín histórico (${historico})
-              · <a href="index.html" style="color:#60a5fa;text-decoration:none;">Volver al boletín actual</a>
-            </p>
-          `;
-          document.getElementById("top").appendChild(aviso);
-        }
-
+    
         const contenido = document.getElementById("contenido");
         contenido.innerHTML = "";
         tmp.querySelectorAll(".section").forEach(sec => contenido.appendChild(sec));
-
-        // Si el resumen no trae id, se lo asignamos al primer bloque .section
-        const firstSection = contenido.querySelector(".section");
-        if (firstSection && !document.getElementById("resumen")) firstSection.id = "resumen";
-
-buildTabs();
-setActive("resumen");
-
+    
+        // Leer más / menos
+        contenido.querySelectorAll(".leer-mas").forEach(link => {
+          link.onclick = e => {
+            e.preventDefault();
+            const detalle = link.nextElementSibling;
+            detalle.classList.toggle("oculto");
+            link.textContent = detalle.classList.contains("oculto") ? "Leer más" : "Leer menos";
+          };
+        });
+    
+        buildTabs();
+        setActive("resumen");
       })
       .catch(() => {
-        document.getElementById("contenido").innerHTML = "<div class='card'><h2>Error</h2><p>No se pudo cargar el boletín.</p></div>";
+        document.getElementById("contenido").innerHTML =
+          "<div class='card'><h2>Error</h2><p>No se pudo cargar el boletín.</p></div>";
       });
-  </script>
+</script>
+
+
 </body>
 </html>
