@@ -34,7 +34,7 @@ payload = {
                 {"text": prompt}
             ]
         }
-    ]
+    ],
     "tools": [
         {
             "googleSearch": {} # Esto habilita la búsqueda en internet en tiempo real
