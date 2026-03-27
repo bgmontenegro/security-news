@@ -8,4 +8,218 @@
   <div class='grid'>
     <div class='card'>
       <ul>
-        <li><b>Internet-exposed:</b> Monitoreo continuo esencial. Acceso no autorizado a RDP/SSH y paneles de administración (iDRAC, Proxmox, Zabbix) sigue siendo un vector primario de intr
+        <li><b>Internet-exposed:</b> Ataques continuos contra plataformas de gestión remota (iDRAC) y vulnerabilidades en Fortinet y Dahua con exposición a internet.</li>
+        <li><b>Correo / Phishing:</b> Campañas de phishing sofisticadas contra Office 365 y Teams, incluyendo evasión de MFA y uso de plataformas legítimas para ataques AiTM.</li>
+        <li><b>IoT / Cámaras:</b> Explotación activa de vulnerabilidades en cámaras Dahua para fines de inteligencia y vigilancia.</li>
+        <li><b>Ransomware:</b> No se detectan campañas masivas nuevas específicas para el stack, pero el phishing exitoso puede ser un vector inicial para su despliegue.</li>
+      </ul>
+      <a href="#" class="leer-mas">Leer más</a>
+      <div class="detalle oculto">
+        <p>Durante el período reciente, se observa una persistencia en la explotación de vectores conocidos y una evolución en las técnicas de ingeniería social. Las plataformas de gestión remota como Dell iDRAC y sistemas como Zimbra y Fortinet continúan siendo objetivos atractivos debido a la criticidad de sus funciones y su exposición en internet. La actividad de phishing contra Office 365 y Microsoft Teams muestra una sofisticación creciente, empleando tácticas de omisión de MFA y el uso de plataformas de creación de aplicaciones sin código para alojar páginas de suplantación de identidad. En el ámbito de IoT, las cámaras Dahua han sido objeto de explotación activa en el Medio Oriente, subrayando la importancia de la seguridad física y las actualizaciones de firmware para estos dispositivos. Si bien no se han identificado nuevas campañas de ransomware de alto perfil que afecten directamente a nuestro stack en el último mes, el éxito de los ataques de phishing y la explotación de vulnerabilidades en sistemas expuestos siguen siendo precursores clave para su posible despliegue.</p>
+        <p>Los sistemas legados como Windows XP, Windows Server 2003/2008 y SQL Server Express 2005/2008, aunque no tienen nuevas vulnerabilidades reportadas, representan un riesgo latente significativo debido a la falta de soporte y parches de seguridad. Se recomienda encarecidamente la revisión de sus planes de mitigación o migración.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class='section' id='cves'>
+  <h3 class='section-title'>Vulnerabilidades y Exposiciones Comunes (CVEs)</h3>
+  <div class='grid'>
+
+    <div class='card CRITICO'>
+      <h4>Múltiples Vulnerabilidades Críticas en Dell iDRAC (CVE-2026-26945, CVE-2026-26948)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>Info Leak</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-20 / Actualizado: 2026-03-20</p>
+      <ul>
+        <li><b>CVE-2026-26945:</b> Vulnerabilidad de control de procesos que permite la ejecución remota de código (RCE) por parte de un atacante con altos privilegios y acceso de red adyacente.</li>
+        <li><b>CVE-2026-26948:</b> Vulnerabilidad de divulgación de información en iDRAC9 debido a información de depuración no eliminada, permitiendo acceso a datos confidenciales del sistema.</li>
+        <li>Afecta a múltiples generaciones de iDRAC, incluyendo iDRAC9 (14G, 15G, 16G) y iDRAC10 (17G).</li>
+      </ul>
+      <p><b>Acción recomendada:</b> Actualice el firmware de Dell iDRAC a las versiones corregidas (iDRAC9 14G a 7.00.00.181+, 15G/16G a 7.20.10.50+; iDRAC10 17G a 1.20.25.00+). Restrinja el acceso a la red de gestión de iDRAC.</p>
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhiJq2qQmGrfXjro7YVLJWgrobcnU2E6EA-F6G57xdM_-NdAt97NuE20SUDKI_5S382tJgc3DD0p-IVplBBzNLpwKSB3aSZjlBrVWly46ehSNmICRUs-FK9p5WCXjbKgjerqC7VJJ3H5xS6b6EFZEvQgHqcXZn_wRdC05UsQ==' target='_blank' rel='noopener noreferrer'>CVE-2026-26945: Dell iDRAC RCE Vulnerability - SentinelOne</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_UufhVxZiJbZt0MJvEPEGkAQqZCXc7wPe4IABon1L01W65jTBIKPAX9h4qWU9JZf0QRZSv4YPCjJkxJPPVqbMrQWV__N_wuRsOoYyHix44OAfJTM59s2iQYUV5lH5bRqlgszQ_MHMtt0UTIMvG79fbEyPOq4SrVz1acaF1g==' target='_blank' rel='noopener noreferrer'>CVE-2026-26948: Dell iDRAC Information Disclosure Flaw - SentinelOne</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFthrEa1Kmqu_J_LA7N1sfEWLbqLf5zjv19Peq97Te3paCr3Mjc1HEQpVBV8aMzf1lqqod7aRuxc6uldhFZN-3NmPMxXcvVlIa2MotLo_o9_-zZNAGPvxyxI5FTLxm8aSgGms3EAcuvBS5wCSIRnSBTriY7oQZu5HIdY5Oklpz_S_TFm-ORxtaJ1U_FfFfmgD4amKIO_8TVtLyRnqF5-gk23hs1luqdM9caQrIQOryzjV2PBHQKJlWw==' target='_blank' rel='noopener noreferrer'>DSA-2026-113: Security Update for Dell iDRAC9 and iDRAC10 Vulnerabilities - Dell</a>
+      </div>
+    </div>
+
+    <div class='card ALTO'>
+      <h4>Múltiples XSS y CSRF en Zimbra Collaboration (ZCS) 10.0 y 10.1</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>XSS</span>
+      <span class='tag'>CSRF</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-20 / Actualizado: 2026-03-20</p>
+      <ul>
+        <li><b>CVE-2026-33372:</b> Vulnerabilidad de Cross-Site Request Forgery (CSRF) en Zimbra Webmail debido a validación incorrecta de tokens.</li>
+        <li><b>CVE-2026-33368:</b> Vulnerabilidad de Cross-Site Scripting (XSS) reflejado en la interfaz REST de Classic Webmail.</li>
+        <li><b>CVE-2026-33370:</b> Vulnerabilidad de Cross-Site Scripting (XSS) almacenado en la función Zimbra Briefcase.</li>
+        <li>Un atacante puede ejecutar scripts arbitrarios en el contexto de la sesión del usuario, llevando a la exfiltración de datos o acciones no autorizadas.</li>
+      </ul>
+      <p><b>Acción recomendada:</b> Aplique las actualizaciones de seguridad disponibles para Zimbra Collaboration (ZCS) 10.0 y 10.1. Consulte los avisos de seguridad de Zimbra para parches específicos.</p>
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNEmQ_mlBm_yArCYWcsaFRDVw9sH5vYEyrB5WjORFZuQz6CL8clwjN0SFbKzBMjFpqlyTZIhEYKw0tVu2JdWoPni7RvX75iQPicO_vIDADurGmvvGVmof_Zd2yRGNFVEEZA40DY7vDy7s=' target='_blank' rel='noopener noreferrer'>CVE-2026-33372 Detail - NVD</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXn_0X50TWHuGa4ZgUDpq6SrUf9Ulp99fqboWbpJhj6Gz9729ASMeR10Y_S6lkjZHRTKZPAo-HX0FRXDhJG3Cx9CKd5gXCa_DvhSRQvwsFDaqfaIkYBpVvaqYGMkFsOh_zwbuxog==' target='_blank' rel='noopener noreferrer'>CVE-2026-33368 | Tenable®</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQUrDhg0hGTSqpOcbTMUag1IwwXpBb4RjfG-lnzzdm_f7UuhhXbYZ0CZiCSHq8V2mZyoROBsQLjNojJIaoavCyyLgbKo6UUnEeENnjkRRuivz8zxcY2zdVrriWS5XrRzaPEP1n3K3xPCze8' target='_blank' rel='noopener noreferrer'>CVE-2026-33370 - CVE Record</a>
+        <a href='https://wiki.zimbra.com/wiki/Zimbra_Security_Advisories' target='_blank' rel='noopener noreferrer'>Zimbra Security Advisories</a>
+      </div>
+    </div>
+
+    <div class='card MEDIO'>
+      <h4>Vulnerabilidad de Path Traversal en Terraform/OpenTofu Provider para Proxmox VE (CVE-2026-25499)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>Privilege Escalation</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-02-06 / Actualizado: 2026-02-06</p>
+      <ul>
+        <li>Una vulnerabilidad de "path traversal" en el proveedor Terraform/OpenTofu para Proxmox VE permite a los atacantes modificar archivos arbitrarios en el sistema.</li>
+        <li>La configuración sudoer insegura recomendada en la documentación SSH permite escapar directorios usando secuencias `../`.</li>
+        <li>Puede llevar a la escalada de privilegios o a la implementación de código malicioso en entornos de infraestructura como código.</li>
+      </ul>
+      <p><b>Acción recomendada:</b> Actualice el Terraform/OpenTofu Provider para Proxmox Virtual Environment a la versión 0.93.1 o posterior. Revise y fortalezca las configuraciones sudoer en sus sistemas Proxmox.</p>
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZQzTKKF90y5lKE5iVlCvo0suUo8g2qkIBdRW6RU-sOehCgBv6hGMitkLvAe9xSvpeZeXOPBJyq7YlaX6B6wJF3FHdpalTGfPCleN3nAg9tANgtosV6AvzlDugv2bH4zuaghDWQ6gHSfvM4PxULYDt_fsqiVL3ZwP2E42GIQ==' target='_blank' rel='noopener noreferrer'>CVE-2026-25499: Proxmox Provider Path Traversal Flaw - SentinelOne</a>
+        <a href='https://pve.proxmox.com/wiki/Security_Audits' target='_blank' rel='noopener noreferrer'>Proxmox VE Security Audits</a>
+      </div>
+    </div>
+
+    <div class='card MEDIO'>
+      <h4>Múltiples Vulnerabilidades en Fortinet FortiOS, FortiMail y FortiAP</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>Auth Bypass</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>Info Leak</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-05 / Actualizado: 2026-03-13</p>
+      <ul>
+        <li>Fortinet ha lanzado avisos de seguridad que abordan múltiples vulnerabilidades en FortiOS, FortiMail, FortiAP y otros productos.</li>
+        <li>Las vulnerabilidades incluyen bypass de autenticación y fallos de desbordamiento de búfer que pueden permitir la ejecución remota de comandos o la escalada de privilegios.</li>
+        <li>Se incluyen CVEs como CVE-2026-22627 (RCE), CVE-2026-24017 (Auth Bypass) y CVE-2026-22153 (LDAP Auth Bypass en FortiOS).</li>
+      </ul>
+      <p><b>Acción recomendada:</b> Revise los avisos de seguridad de Fortinet (FortiGuard PSIRT) y actualice sus dispositivos FortiGate, FortiMail y FortiAP a las versiones más recientes, priorizando FortiOS 7.2.12 o superior.</p>
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEE0I5HKd4htTuqqZqEqoteIfoaUH0yBzgds7rzXuIKrELtHU8ekALFo9xqtOoso8h_AbDvz2hcIPRwcvWiEPGH1Q17Q1WYoQFSaiAoviIjes9vw8hemyjaS5mG7Qv8ejqZrebkDw34KsusvY5GoCOwaakPU-p0rqMOOMk=' target='_blank' rel='noopener noreferrer'>High Severity Vulnerabilities in Fortinet Products - Cyber Security Agency of Singapore</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZKcfnkhnQ42IpbjbEV3Yh_3R_FpdDWIMcwBumVEyVHN-nkYVii2YX7QsC9RBde2OopEuoiL10tmQ8N7iqFKUVSXO-dRWVVb96_w6wraw8G-5HlpoJxbcwge79Lg==' target='_blank' rel='noopener noreferrer'>Fortinet Product Security Update Advisory - ASEC</a>
+        <a href='https://fortiguard.fortinet.com/psirt' target='_blank' rel='noopener noreferrer'>PSIRT Advisories - FortiGuard Labs</a>
+      </div>
+    </div>
+
+    <div class='card MEDIO'>
+      <h4>Actualizaciones de Seguridad de Microsoft para Windows y SQL Server (Marzo 2026)</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>Info Leak</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-10 / Actualizado: 2026-03-11</p>
+      <ul>
+        <li>Microsoft lanzó su Patch Tuesday de marzo de 2026, abordando 83 vulnerabilidades en varios productos.</li>
+        <li>Se incluyen actualizaciones acumulativas y de seguridad para Windows 10, Windows 11, Windows Server 2016.</li>
+        <li>También se emitieron parches para Microsoft Office y SQL Server 2016.</li>
+      </ul>
+      <p><b>Acción recomendada:</b> Aplique todas las actualizaciones de seguridad de Microsoft de marzo de 2026 a sus sistemas Windows 10, 11, Server 2016 y SQL Server 2016. Priorice los sistemas críticos.</p>
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyLgIsbpCXYPPQZHzszvdn5NbTkEXTiWp13kffWmARAJTFuo_fylopOfaYwyjogdHhmwrQPLjsulHGTBYhcXCwMq5xyoUfh_DXPYXRYJ-DP_jLLJffbGSfiaBOendzclU4XHLW398JfW4-dsAsEGla2pQEs8u9QIa5_HH0dQOIbOcxnSs=' target='_blank' rel='noopener noreferrer'>Microsoft Patch Tuesday: March 2026 - Arctic Wolf</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDbl-WDwP6MnFcPYANwmaxG3TpixrXtYJYPaqkKsBdHbHlx4I7jYnWT2MUlOapKui-dsZpmnjRxVxro2JyYWsaaS2lFfvi661jhmveLi93xHqF_7MUxDJbXK6gMwAZZchVWdvQjNpbP41TRE_FIrXCNSUcQuVGTIID2Ii9nC0qSeqDeM1UyPN5zKvd17A8jYtBIeXk1jEphtP41auo1Rz2P2MUkYU3Pk-8_tgOsi-IB2G20Czp' target='_blank' rel='noopener noreferrer'>Content Release: March 2026 Security Updates published 2026-03-10 - BigFix Forum</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuwSTALv-SzQ7GNAa8dbhBZEJvILa-DFF2g7wTsZeyidL5o_MseBpEy4XNcIY5JK5-PpZYmDxIqnkLziByRYeqNq8Avqu3FFdWqRDxNvBGLCE40zg0yIMGsu2b_IwqNYAVrNK-Ro2JMtQDoV5pqOgVCdKY8Cj78jzoUrOXV_Ox_hh4Th10Lqec2T1n890=' target='_blank' rel='noopener noreferrer'>Patchday: Windows Server-Updates (March 10 2026) - BornCity</a>
+        <a href='https://msrc.microsoft.com/update-guide/vulnerability' target='_blank' rel='noopener noreferrer'>Microsoft Security Response Center</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class='section' id='incidentes'>
+  <h3 class='section-title'>Incidentes Reportados</h3>
+  <div class='grid'>
+
+    <div class='card ALTO'>
+      <h4>Campaña de Phishing Avanzado Bypassea MFA en Microsoft 365</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>Phishing</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-26 / Actualizado: 2026-03-26</p>
+      <ul>
+        <li>Una campaña global de phishing sofisticada está atacando cuentas de Microsoft 365, logrando evadir la autenticación multifactor (MFA) utilizando una función legítima de inicio de sesión.</li>
+        <li>La campaña utiliza una plataforma de "no-code" (Railway.com) para alojar páginas de phishing, lo que dificulta la detección por parte de las defensas tradicionales.</li>
+        <li>Más de 340 organizaciones en cinco países se han visto afectadas, con tácticas de suplantación de identidad diversas (propuestas de construcción, DocuSign, mensajes de voz perdidos).</li>
+      </ul>
+      <p><b>Acción recomendada:</b> Refuerce la concienciación sobre phishing con sus usuarios, especialmente sobre URLs sospechosas y solicitudes inusuales. Implemente políticas de acceso condicional más estrictas en Office 365. Considere soluciones de seguridad de correo electrónico avanzadas que detecten el abuso de dominios legítimos.</p>
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4-KgaGI5qCDw0omo8tc3-NSlFI6USjBg_NtZOd4TBnmugZoZ-86OFH2SeqJeVTsyCXg-ICDiADSpZdhfMhAzVXOb0VIt_-XslofrRvNtHMoq04qpH8Ilpho5oPFrgaK6C0TIRcj3xjz5i7EPg-eos3f7TrmlT79ds7wb3KMuxlbwdz9lhO_nL-y2c0i1occLwaWz4' target='_blank' rel='noopener noreferrer'>Microsoft 365 Under Siege: Phishing Campaign Bypasses MFA Across 5 Countries - CyberScoop</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwGxFjeVaz0TwGRh9ltowTvSk7_a8hX-NgaELIU8JLyRkA8cFxb6Xmc95umbh2BCFZacd8fcs1JnuKBzKODQ6gIYe6eRXVuaV7LbzFmAxqOYO_m6RWR0xIdJpxg7cYEe96oN3-yAI4xlBB-ZsM-a-Ly2ASOaBvIAXYuMn4JlLYAU9OboAcLegcz31EZk1h7fm3bPJCoAvZ' target='_blank' rel='noopener noreferrer'>Microsoft credential phishing weaponizes Bubble AI app builder | brief - SC Media</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIyeEx6ta0kERBRgs6xqXTsA1c0ptoGbXEvD4jkf4B8Us-C_IciLbRKxzipNXSGFv-vylfCS1gEHqdjag6zYZv7UGnBXdC_uHAmcfyty0k0NiBwBTAa8X9LBVzywTtRVI66Hf5hPNozJRQbl8OZLigQolzLCcYEuAWgpQF-UUszmoMrEOq26O9Egin_oH2PPny9h0eM1BO0Vuys9dbhrNOWnnAJa9HkCFKK4X3Kg==' target='_blank' rel='noopener noreferrer'>Microsoft Teams Phishing Attacks: What Every Business Owner Needs to Know in 2026</a>
+      </div>
+    </div>
+
+    <div class='card ALTO'>
+      <h4>Aumento de Ataques a Cámaras IP Dahua en el Medio Oriente</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-06 / Actualizado: 2026-03-06</p>
+      <ul>
+        <li>Se ha identificado un aumento alarmante en ciberataques dirigidos a cámaras IP en el Medio Oriente, incluyendo dispositivos Dahua, desde finales de febrero de 2026.</li>
+        <li>Actores de amenaza vinculados a Irán han intensificado sus esfuerzos para explotar vulnerabilidades en estos sistemas para fines de inteligencia y vigilancia.</li>
+        <li>Aunque no se especifican CVEs recientes en este reporte, la actividad subraya la explotación continua de vulnerabilidades conocidas y la necesidad de asegurar estos dispositivos.</li>
+      </ul>
+      <p><b>Acción recomendada:</b> Revise y aplique las últimas actualizaciones de firmware disponibles para todas las cámaras y HVR Dahua. Asegure el acceso físico a los dispositivos y aísle las cámaras en segmentos de red dedicados. Evite la exposición directa a internet mediante port forwarding o UPnP.</p>
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGK4LMVCbdmm7B78FdbOMFrN_jeahOy1SGXKAGSdXXb5vollQeAp_CithJ33RCy40XwAM7v4n4dV4ivxLpqLJJr86bWJ3PbRODbLo9tDulJw1n4xsf_aCBAuFq-xVuLUpjazF8N21mkTBMbNWrmFAmuh9Est0U=' target='_blank' rel='noopener noreferrer'>IP Cameras In Middle East Face Rising Cyber Threats - Check Point Research</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEY1WwAHIsaQiXS5FVXlzE9FNybIPe4KrYCuA19C83_XSGJpVGUfQ1wVy3X8JqsELZ3g2yUf2suEsKqu3MZdYpoQYMd3_RLHuKzWRTYJaOmrYzBe1AbJa2NxqbKL2W9NW8TBS-0u9q0NpAkzgMiEN4VlPwwmcj9lof_Mt6n6Qcifv3BRAt1NU6uCnJJrTDr7dkr4MQeSMI8KWt_co8La7Jgvf00JPgqcS3PTKt-wReCenTQGehEe_DhCl3xUgfXvIJgUkAgDjA=' target='_blank' rel='noopener noreferrer'>Security Advisory – Vulnerability found in Dahua NVR/XVR device - Dahua</a>
+      </div>
+    </div>
+
+    <div class='card MEDIO'>
+      <h4>Explotación de XSS en Zimbra ZCS 10.0 y 10.1 por campanas de spear-phishing</h4>
+      <span class='tag'>Correo / Phishing</span>
+      <span class='tag'>XSS</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-20 / Actualizado: 2026-03-20</p>
+      <ul>
+        <li>CISA ha alertado sobre la explotación activa de una vulnerabilidad de Cross-Site Scripting (XSS) almacenada (CVE-2025-66376) en la interfaz Classic UI de Zimbra Collaboration Suite (ZCS).</li>
+        <li>Los atacantes pueden incrustar JavaScript ofuscado directamente en el cuerpo de correos HTML para explotar la vulnerabilidad cuando la víctima abre el correo en una sesión vulnerable.</li>
+        <li>Esto permite la interceptación completa de la sesión, el robo de credenciales, tokens de sesión y otras informaciones sensibles.</li>
+      </ul>
+      <p><b>Acción recomendada:</b> Aplique las actualizaciones de seguridad para Zimbra Collaboration (ZCS), en particular las versiones que corrigen CVE-2025-66376 (fijado en 10.0.18 y 10.1.13 en noviembre de 2025). Eduque a los usuarios sobre los riesgos de correos electrónicos con contenido HTML inesperado.</p>
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVPzdDm7DP6AImHdwTglHf8W1_He2SVRP_enqJmo1Q639Vay_OKzfeNBGNgI7x1pzPknsnY-MeR03SIowZRbTuLBAB1folZz6mznQJTvONUYnYHlA8MMmagzEi2JqDvIRQfNlqJQCqUomFAnXOqPl731OeowAKQGozu1Ff8RhTmkfUOxuiZZKeE143uX1MNBEYEIr0sWe6GK-6dzTp0JRQ8GHZtSHYuoVKDymDhclTwL9Xr7H5ya3H' target='_blank' rel='noopener noreferrer'>CISA Warns of Zimbra, SharePoint Flaw Exploits - The Cyber Post</a>
+        <a href='https://wiki.zimbra.com/wiki/Zimbra_Security_Advisories' target='_blank' rel='noopener noreferrer'>Zimbra Security Advisories</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class='section' id='ransomware'>
+  <h3 class='section-title'>Ransomware y Amenazas Persistentes Avanzadas (APT)</h3>
+  <div class='grid'>
+    <div class='card'>
+      <h4>Sin reportes verificados de nuevas campañas directas para el stack</h4>
+      <p class='meta'>Actualizado: 2026-03-27</p>
+      <p>No se han detectado nuevas campañas de ransomware o APT confirmadas y directamente impactantes para el stack tecnológico definido en el período reciente. Sin embargo, la persistencia de las técnicas de phishing y la explotación de vulnerabilidades conocidas siguen siendo vectores de entrada potenciales.</p>
+    </div>
+  </div>
+</section>
+
+<section class='section' id='recomendaciones'>
+  <h3 class='section-title'>Recomendaciones y Acciones Proactivas</h3>
+  <div class='grid'>
+
+    <div class='card'>
+      <h4>Gestión de Parches y Actualizaciones</h4>
+      <p class='meta'>Prioridad: CRITICA</p>
+      <ul>
+        <li><b>Fortinet:</b> Mantenga FortiOS 7.2.12 en adelante, FortiMail y FortiAP actualizados. Consulte regularmente FortiGuard PSIRT.</li>
+        <li><b>Proxmox VE:</b> Asegúrese de que Proxmox VE 8.4.16 en adelante esté actualizado. Proxmox 8.x recibirá soporte de seguridad hasta agosto de 2026, planifique la migración a PVE 9.0.</li>
+        <li><b>Dell iDRAC, Optiplex y Latitude:</b> Actualice el firmware de iDRAC (Gen 13) y de los equipos Optiplex y Latitude (2015
