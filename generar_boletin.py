@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, timezone
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-# Fechas reales
+# Fechas reales (timezone-aware)
 hoy = datetime.now(timezone.utc)
 hace_30 = hoy - timedelta(days=30)
 
@@ -17,18 +17,22 @@ with open("prompt_template.txt", "r", encoding="utf-8") as f:
     prompt = f.read()
 
 # Leer whitelist externa (opcional)
-whitelist = []
-if os.path.exists("whitelist.txt"):
-    with open("whitelist.txt", "r", encoding="utf-8") as w:
-        whitelist = [line.strip() for line in w if line.strip()]
+whitelist_path = "config/whitelist.txt"
+whitelist_lines = []
+if os.path.exists(whitelist_path):
+    with open(whitelist_path, "r", encoding="utf-8") as wf:
+        whitelist_lines = [ln.strip() for ln in wf if ln.strip() and not ln.strip().startswith("#")]
 
 # Inyectar fechas y whitelist en el prompt
 prompt = (
     prompt
     .replace("{{FECHA_HOY}}", FECHA_HOY)
     .replace("{{FECHA_HACE_30_DIAS}}", FECHA_30)
-    .replace("{{WHITELIST_DOMAINS}}", "\n".join(whitelist) if whitelist else "")
 )
+
+if whitelist_lines:
+    whitelist_block = "\nFUENTES PERMITIDAS (WHITELIST):\n" + "\n".join(whitelist_lines) + "\n"
+    prompt = prompt + "\n" + whitelist_block
 
 # Preparar payload y headers
 url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
@@ -66,12 +70,12 @@ r.raise_for_status()
 data = r.json()
 html = data["candidates"][0]["content"]["parts"][0]["text"]
 
-# Guardar salidas localmente
+# Guardar salidas
 os.makedirs("content", exist_ok=True)
 
 with open("content/boletin.html", "w", encoding="utf-8") as f:
     f.write(html)
 
-# Guardar raw.json para depuración local (NO commitear)
+# Guardar raw.json localmente para depuración, pero NO versionarlo
 with open("content/raw.json", "w", encoding="utf-8") as f:
     json.dump(data, f, indent=2)
