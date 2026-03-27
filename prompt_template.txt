@@ -41,6 +41,8 @@ El resumen debe incluir:
 
 Si no hay eventos críticos nuevos, explica por qué el período fue estable y qué riesgos siguen latentes.
 
+ADICIONAL (opcional): Si existe evidencia técnica (blogs de seguridad, análisis de PoC, posts de investigadores) que indique explotación o relevancia para componentes del stack, puedes generar una tarjeta de "Observado" con la etiqueta de confianza "Observado" y siempre incluir la fuente; solo omite si no hay ninguna fuente verificable.
+
 FORMATO DEL RESUMEN EJECUTIVO:
 - Presenta primero un bloque de BULLETS claros y directos (señales operativas).
 - Después, incluye un bloque de contexto adicional ocultable mediante “Leer más”.
