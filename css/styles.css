@@ -162,7 +162,7 @@ body {
   font-weight: 600;
 }
 
-.tag.CRÍTICO { background: #b91c1c; color: #fff; }
+.tag.CRITICO { background: #b91c1c; color: #fff; }
 .tag.ALTO { background: #f97316; color: #fff; }
 .tag.MEDIO { background: #eab308; color: #000; }
 
@@ -170,6 +170,6 @@ body {
 .tag.EXPLOIT { background: #dc2626; color: #fff; }
 .tag.PARCHE { background: #16a34a; color: #fff; }
 
-.card.CRÍTICO { border-left: 4px solid #b91c1c; }
+.card.CRITICO { border-left: 4px solid #b91c1c; }
 .card.ALTO { border-left: 4px solid #f97316; }
 .card.MEDIO { border-left: 4px solid #eab308; }
