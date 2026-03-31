@@ -8,37 +8,134 @@
   <div class='grid'>
     <div class='card'>
       <ul>
-        <li><b>Internet-exposed:</b> Vigilancia continua sobre configuraciones de Fortinet y dispositivos IoT expuestos.</li>
-        <li><b>Correo / Phishing:</b> Campañas de phishing persistentes, especialmente dirigidas a credenciales de Office 365.</li>
-        <li><b>IoT / Cámaras:</b> Riesgo constante de acceso no autorizado a dispositivos Dahua por credenciales débiles o desactualizadas.</li>
-        <li><b>Ransomware:</b> No se han observado ataques masivos nuevos en el stack, pero la amenaza persiste sobre sistemas no parcheados.</li>
+        <li><b>Internet-exposed:</b> Detectadas vulnerabilidades críticas en Dell iDRAC y Zabbix, con potencial de RCE o inyección de comandos desde red adyacente o remota.</li>
+        <li><b>Correo / Phishing:</b> Persisten campañas de phishing de Office 365 que evaden MFA mediante registro de dispositivos OAuth y suplantación de infraestructura legítima de Microsoft.</li>
+        <li><b>IoT / Cámaras:</b> Continúa el riesgo de exposición para cámaras Dahua con firmware desactualizado o credenciales por defecto.</li>
+        <li><b>Ransomware:</b> No se han reportado nuevos incidentes masivos que afecten directamente el stack en este período, pero los sistemas Windows EOL siguen siendo un objetivo constante.</li>
       </ul>
       <a href="#" class="leer-mas">Leer más</a>
       <div class="detalle oculto">
-        <p>El periodo de marzo de 2026 ha sido relativamente estable en cuanto a la aparición de nuevas vulnerabilidades críticas cero-day confirmadas que impacten directamente el stack tecnológico definido. Sin embargo, esto no implica una ausencia de riesgo. Las tendencias observadas se centran en la explotación de configuraciones laxas en servicios expuestos a Internet (FortiGate, Zimbra), la constante amenaza de ingeniería social a través de correo electrónico (phishing de Office 365) y la persistencia de sistemas legados (Windows Server 2003/2008, SQL Server Express 2005/2008) que, al no recibir actualizaciones de seguridad, representan un vector de ataque significativo. La gestión de credenciales y parches continúa siendo crítica para mitigar la superficie de ataque y prevenir incidentes de ransomware o intrusiones. La higiene de ciberseguridad básica sigue siendo la defensa más eficaz ante un panorama de amenazas constante.</p>
+        <p>Durante el mes de marzo de 2026, se han identificado vulnerabilidades significativas que requieren atención inmediata. La detección de una vulnerabilidad de ejecución remota de código (RCE) en Dell iDRAC (CVE-2026-26945) y múltiples fallos críticos en Zabbix que permiten inyección de comandos y SQL (WID-SEC-2026-0857) subraya la importancia de mantener actualizados los sistemas de gestión y monitoreo expuestos a la red.</p>
+        <p>El panorama de amenazas se mantiene activo en el frente del phishing, con campañas sofisticadas dirigidas a usuarios de Office 365 que explotan mecanismos de autenticación y la confianza en la infraestructura de Microsoft para el robo de credenciales y bypass de MFA. En cuanto a dispositivos IoT, las cámaras Dahua siguen siendo un vector de ataque común si no se gestionan adecuadamente las actualizaciones de firmware y las contraseñas. Aunque no se han reportado nuevas campañas de ransomware a gran escala específicas para nuestro stack en este período, el riesgo latente permanece, especialmente para los sistemas Windows y Windows Server fuera de soporte.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='incidentes'>
-  <h3 class='section-title'>Incidentes Reportados</h3>
+  <h3 class='section-title'>Incidentes Reportados y Actividad Observada</h3>
   <div class='grid'>
-    <div class='card'>
-      <h4>Sin reportes verificados</h4>
-      <p class='meta'>Actualizado: 2026-03-31</p>
-      <p>No se han detectado nuevos eventos confirmados para el stack tecnológico definido durante este período.</p>
+    <div class='card CRITICO'>
+      <h4>Vulnerabilidad de Ejecución Remota de Código en Dell iDRAC (CVE-2026-26945)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-20</p>
+      <ul>
+        <li>Una vulnerabilidad de control de procesos (CWE-114) en Dell Integrated Dell Remote Access Controller (iDRAC) 9 y 10 permite a atacantes con privilegios altos y acceso a la red adyacente ejecutar código arbitrario.</li>
+        <li>Afecta a iDRAC9 (14G) versiones anteriores a 7.00.00.181, iDRAC9 (15G y 16G) versiones anteriores a 7.20.10.50, e iDRAC10 (17G) versiones anteriores a 1.20.25.00.</li>
+        <li>iDRAC es una interfaz crítica para la administración remota de servidores, lo que hace que esta vulnerabilidad sea de gran preocupación para entornos de centros de datos empresariales.</li>
+      </ul>
+      <b>Acción Recomendada:</b> Revisar y actualizar inmediatamente el firmware de Dell iDRAC a las versiones parcheadas para mitigar esta vulnerabilidad. Implementar segmentación de red para restringir el acceso a las interfaces de gestión de iDRAC.
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsHMXhL0GuDXJZ6f3kyzbb5IH9TdpNxPfXK6h44vPJouR3GcsnS94fuKgpwLPEDpgfE0UCozamSCGlmtA-EFJR4DDv-SZjZg7tweDS_ACwt0ZwMxLFbysvB-4_71I4xZWdA4g1UU9JI8Bi6Fx-ECXCa1qyHLQG8TtC7qRReQ==' target='_blank' rel='noopener noreferrer'>SentinelOne: CVE-2026-26945: Dell iDRAC RCE Vulnerability</a>
+      </div>
+    </div>
+    <div class='card CRITICO'>
+      <h4>Múltiples Vulnerabilidades Críticas en Zabbix (WID-SEC-2026-0857)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>SQL Injection</span>
+      <span class='tag'>Info Leak</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-24</p>
+      <ul>
+        <li>CERT-Bund ha emitido una alerta sobre múltiples vulnerabilidades en Zabbix (CVSS 8.8) que permiten a atacantes remotos inyectar comandos de shell, realizar inyección SQL, divulgar información y causar denegación de servicio.</li>
+        <li>Afecta a varias versiones de Zabbix, incluyendo aquellas anteriores a 7.4.3, 7.0.19, 7.2.13, y 6.0.41.</li>
+        <li>La explotación exitosa puede llevar a un compromiso completo del sistema de monitoreo.</li>
+      </ul>
+      <b>Acción Recomendada:</b> Actualizar Zabbix a las últimas versiones parcheadas (7.4.3, 7.0.19, 7.2.13, 6.0.41 o posteriores según la versión utilizada). Implementar segmentación de red y controles de acceso estrictos para las instancias de Zabbix.
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkybEwdovfb58F6_lw7PPD7C9KiLVtvP6FjajOdurIjV1BiMdBkoWR10aglKzT0pchElBuDqcTDfrRhMMFsvfJ5xnenCxi8ewRD9f3dgIsStWXuHtlCfMhuARJKoqu9wunQ1cFNbOELw2aragY8-VwZ0rStB4wxpBhRBPycSnoJ6-0_pmxdgoC737Ny5Lnuslr8wyd8MP5hQH4Y_kHGe7gn8R2dflQEh8sNoV9J3llB3IzSok=' target='_blank' rel='noopener noreferrer'>Changeflow: Zabbix Vulnerabilities Allow Remote Attacks</a>
+      </div>
+    </div>
+    <div class='card ALTO'>
+      <h4>Campañas de Phishing que Evaden MFA en Office 365</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>Phishing</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-02-19 (última actividad)</p>
+      <ul>
+        <li>Nuevas campañas de phishing abusan del registro de dispositivos OAuth para bypass la autenticación multifactor (MFA) en Microsoft 365, permitiendo acceso persistente a las cuentas de los usuarios.</li>
+        <li>Los atacantes engañan a los empleados para que registren un dispositivo controlado por el atacante en su cuenta, obteniendo tokens OAuth.</li>
+        <li>También se observan campañas que explotan la infraestructura legítima de Microsoft 365 y las malas configuraciones de inquilinos para enviar correos de phishing que parecen auténticos.</li>
+      </ul>
+      <b>Acción Recomendada:</b> Reforzar la capacitación en concienciación sobre ciberseguridad para los usuarios de Office 365. Implementar políticas de acceso condicional para limitar los tipos de dispositivos que pueden registrarse y monitorear activamente los cambios administrativos en el tenant de Microsoft 365. Restringir las aplicaciones a las que los usuarios pueden conectar su cuenta.
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVedVm0hUuGvWjE-Zx7sMKboPsbF9HhXT3MDDdKX9lEKkRZ3PWoI3WyQCpRennZnijDeKZ__bjWTZWwn9jhAf0WGpNL_1ykbIBTCcgFF2os8L1lbK9yXIjQQBJFgVsMfuCTFFiixDbP-3idKOCDUeZYzF1ZSuD96G8CtQg1BsGclj-29Zi9zwdN8R-BsV2dEsSdZIclRfLw8aML1zfGcEEMDgKo2tixiEPfNXEdJy4SNg=' target='_blank' rel='noopener noreferrer'>CSO Online: New phishing campaign tricks employees into bypassing Microsoft 365 MFA</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHG0mgyvzOhIvHWrHpRfk190qSAThr6l1rLSVzesHUNeUvzU1RPOmQDTW9YKNPa0peJ8cSN-t5cVtQdDorkacr3zZ9w6cWDcTKEgcJ0DhGb8tBEH5-OmS2x7Z6MdvP9n9LmGgOrf0LHzHR3pdWIK2a' target='_blank' rel='noopener noreferrer'>Security Magazine: Phishing campaign leverages Microsoft 365 infrastructure for attacks</a>
+        <a href='https://vertexaisearch.cloud.google.google.com/grounding-api-redirect/AUZIYQGprzQ17HRfAppCR_YHuVQdVBBrgJPkPM-3-WO7J-XkAyo34niWuP6I8rqMGSldpdPIQv6PcnXN0Wywg014ZXPwd9RNUcferaXqMkI3t5KoyE_aIZ-OLAZHi74-4ZOrAc6caax1IIRI8OGBLDuqd7RW5UzjGypojRfJnYc2CrrES8mQjJ7BlGGx7EZ1cLgTtfZ8Y-dSjx07LENqJg==' target='_blank' rel='noopener noreferrer'>Guardz: Microsoft 365 Phishing Campaign: Attack Breakdown</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='cves'>
-  <h3 class='section-title'>Nuevas Vulnerabilidades (CVEs)</h3>
+  <h3 class='section-title'>Nuevos CVEs y Actualizaciones de Seguridad</h3>
   <div class='grid'>
-    <div class='card'>
-      <h4>Sin reportes verificados</h4>
-      <p class='meta'>Actualizado: 2026-03-31</p>
-      <p>No se han publicado nuevos CVEs críticos verificados que impacten directamente el stack tecnológico definido en el mes de marzo de 2026.</p>
+    <div class='card CRITICO'>
+      <h4>Bypass de Autenticación en FortiOS con FortiCloud SSO (CVE-2026-24858)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>Auth Bypass</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-01-27</p>
+      <ul>
+        <li>Una vulnerabilidad crítica de bypass de autenticación (CVSS 9.4) en FortiOS permite a un atacante no autenticado, con una cuenta FortiCloud y un dispositivo registrado, omitir la autenticación FortiCloud SSO.</li>
+        <li>Esto podría conducir a un compromiso total del sistema si la función FortiCloud SSO está habilitada.</li>
+        <li>Afecta a FortiOS 7.2.0 a través de 7.2.12.</li>
+      </ul>
+      <b>Acción Recomendada:</b> Actualizar FortiOS a la versión 7.2.13 o superior. Si FortiCloud SSO está habilitado, verificar las configuraciones de seguridad y considerar deshabilitar "Allow administrative login using FortiCloud SSO" si no es estrictamente necesario.
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHa8df6H1AaJLjfXCRZlrmr5vJH6jHUzedIjvZHX5OREK_2Eb6gsNhmeQ-smJLnp3Ze9P9kyEmbli0zFM9b3foeMlP8qQ_pN8Lw7zOoga3_JQjaqHfs1wTAenF9S2CXnFwWIpFq1g7QXA==' target='_blank' rel='noopener noreferrer'>runZero: Fortinet vulnerabilities: How to find affected assets</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7cklRf4Y2S3n96FyHvQuriDMQJyJbixjJZWQO7c-Tq4eozSkMBxIefIKPerfwDTfz3Gj8Gmm8TXPi-WeOZSOCabKNlDfy3E3JJ4Dj8HGyNuxgfIauW3AaZRmLC93k19gixO5Ihep8nBpU35Ajl34PzJ3DE-CG' target='_blank' rel='noopener noreferrer'>OpenCVE: Fortios CVEs and Security Vulnerabilities</a>
+      </div>
+    </div>
+    <div class='card ALTO'>
+      <h4>Vulnerabilidad de XSS Almacenado en Proxmox VE 8.4 (CVE-2025-57539)</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>XSS</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2025-09-09</p>
+      <ul>
+        <li>Una vulnerabilidad de Cross-Site Scripting (XSS) almacenado en el campo "U2F Origin" de la configuración de Datacenter en Proxmox Virtual Environment (PVE) 8.4 permite a usuarios autenticados almacenar entrada maliciosa.</li>
+        <li>La carga útil se renderiza de forma insegura en la interfaz de usuario web y se ejecuta cuando otros usuarios la visualizan, lo que podría conducir al secuestro de sesiones.</li>
+      </ul>
+      <b>Acción Recomendada:</b> Aplicar las actualizaciones de seguridad de Proxmox VE tan pronto como estén disponibles para PVE 8.4 que aborden esta vulnerabilidad. Capacitar a los administradores sobre el riesgo de XSS y buenas prácticas al introducir datos en la interfaz web.
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWgAon6csl1W0VdhOJlc7RKLVYbxK3zqx5iUPZzupOWnNheZ0cyXk-dbnngwob1u022AmkgRdz9EDQq6p55D5Gk5mSm_gJonGloNJm9kgj7qZ2ubbl0qc7qVYIDpQOWQCh_iRbvUfCS06rol4a6hY1dPepPi0=' target='_blank' rel='noopener noreferrer'>OpenCVE: Proxmox CVEs and Security Vulnerabilities</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBD6KBuuaRQBw63rXqE7K5VWayyrNm4e_zEtAjE8cHwy_BWX3EGisRa6tMskYG03EFyxL2KQq3_Bh-879jAKmQgjaYo2rKxiggldJL3vEtLOabn_c_75353I0Eyu24n6mvNtnjrX5DRF_n' target='_blank' rel='noopener noreferrer'>NVD: CVE-2025-57539 Detail</a>
+      </div>
+    </div>
+    <div class='card MEDIO'>
+      <h4>Elevación de Privilegios en Dell iDRAC Service Module (DSA-2026-077)</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>Privilege Escalation</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-02-10</p>
+      <ul>
+        <li>El módulo de servicio Dell iDRAC (iSM) contiene una vulnerabilidad de control de acceso inapropiado que podría permitir a un atacante con bajos privilegios y acceso local escalar privilegios.</li>
+        <li>Afecta a Dell iDRAC Service Module (iSM) para Windows, versiones anteriores a 6.0.3.1, y para Linux, versiones anteriores a 5.4.1.1.</li>
+      </ul>
+      <b>Acción Recomendada:</b> Actualizar Dell iDRAC Service Module a las versiones parcheadas (6.0.3.1 para Windows, 5.4.1.1 para Linux o posteriores). Asegurar el acceso físico y lógico a los sistemas donde se ejecuta iSM.
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnEa3-JozPazrDz9MHRwzP-xOXhN4JoY1o15gZUqrZnpvBZFOeBeJTWCQ85oIH1uKaKlmhIl-42ljkZ5iWVGccA-a9iFTQnSM99QpK2oepS1G-DFBOhy9TV38Zy8KLOoucUcDk2N8bdJcQ3CiENOcvgm2nbhmEdZLtZ4jbJrRhfhirMtl788VE-96KZcux9bez65tANNfkK0TxcvnTcX553Uq-l0yqwRzZbJIW07e5DZulFXBfWw==' target='_blank' rel='noopener noreferrer'>Dell: DSA-2026-077: Security Update for Dell iDRAC Service Module Vulnerability</a>
+      </div>
     </div>
   </div>
 </section>
@@ -49,88 +146,52 @@
     <div class='card'>
       <h4>Sin reportes verificados</h4>
       <p class='meta'>Actualizado: 2026-03-31</p>
-      <p>No se han reportado nuevas campañas de ransomware a gran escala con impacto directo y confirmado sobre el stack tecnológico definido durante este período. Sin embargo, la amenaza de ataques dirigidos persiste, especialmente contra sistemas con vulnerabilidades conocidas no parcheadas.</p>
+      <p>No se han detectado nuevos eventos de ransomware confirmados o campañas de alto impacto dirigidas específicamente a nuestro stack tecnológico definido durante el mes de marzo de 2026.</p>
+      <p>Sin embargo, la amenaza de ransomware sigue siendo persistente, especialmente para sistemas Windows y Windows Server fuera de soporte (XP, 7, 2003, 2008) que carecen de parches de seguridad y protecciones modernas. Se recomienda mantener una postura de seguridad proactiva.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='recomendaciones'>
-  <h3 class='section-title'>Recomendaciones Operativas Diarias</h3>
+  <h3 class='section-title'>Recomendaciones Operativas Clave</h3>
   <div class='grid'>
-    <div class='card ALTO'>
-      <h4>Gestión de Parches y Actualizaciones Críticas</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Privilege Escalation</span>
-      <span class='tag'>Teórico</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-31</p>
+    <div class='card'>
+      <h4>Actualización y Hardening de Sistemas</h4>
       <ul>
-        <li>Asegurar que FortiOS 7.2.12 en adelante, Proxmox VE 8.4.16 en adelante, Ubuntu Server 24.04 LTS y RHEL 7/8 tengan aplicados los últimos parches de seguridad disponibles.</li>
-        <li>Priorizar la actualización de firmware para Dell Optiplex, Latitude (2015+) y Dell iDRAC (hasta Gen 13) para mitigar vulnerabilidades conocidas.</li>
-        <li>Realizar auditorías regulares para identificar y parchear sistemas Windows (XP, 7, 10, 11 y Server 2003, 2008, 2012, 2016) y SQL Server Express 2005/2008, prestando especial atención a los sistemas legados que ya no reciben soporte, y planificar su migración.</li>
+        <li><b>Fortinet:</b> Asegurarse de que FortiOS esté actualizado a la versión 7.2.13 o posterior para mitigar la vulnerabilidad de bypass de autenticación CVE-2026-24858.</li>
+        <li><b>Dell iDRAC y iSM:</b> Priorizar la actualización de firmware para iDRAC a las versiones parcheadas para CVE-2026-26945 y iDRAC Service Module a las versiones 6.0.3.1 (Windows) o 5.4.1.1 (Linux) o posteriores.</li>
+        <li><b>Proxmox VE:</b> Aplicar los parches de seguridad para Proxmox VE 8.4 que aborden las vulnerabilidades XSS (CVE-2025-57539).</li>
+        <li><b>Windows y Windows Server:</b> Mantener actualizados todos los sistemas operativos soportados (Windows 10, 11, Server 2012 R2, 2016) con los últimos parches de seguridad de Microsoft. Planificar la migración de sistemas operativos EOL (XP, 7, Server 2003, 2008, SQL Express 2005, 2008) a versiones soportadas.</li>
+        <li><b>Ubuntu Server 24.04 LTS:</b> Implementar hardening siguiendo las guías CIS Benchmarks y asegurar la configuración de firewall (UFW), SSH (deshabilitar login root por contraseña), y Fail2Ban.</li>
+        <li><b>Red Hat Enterprise Linux 7 y 8:</b> Monitorear y aplicar regularmente las Red Hat Security Advisories (RHSA) para mantener los sistemas parcheados.</li>
+        <li><b>Zabbix:</b> Actualizar Zabbix a las últimas versiones parcheadas (7.4.3, 7.0.19, 7.2.13, 6.0.41 o posteriores).</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Revisar los cronogramas de parches y la implementación de actualizaciones en todos los sistemas operativos y dispositivos de red. Considerar la segmentación o desmantelamiento de sistemas EOL. </p>
+      <b>Fuentes de Actualización:</b>
       <div class='links'>
-        <a href="https://support.dell.com/en-us/drivers" target="_blank" rel="noopener noreferrer">Dell Support & Drivers</a>
-        <a href="https://fortiguard.com/psirt" target="_blank" rel="noopener noreferrer">FortiGuard Labs PSIRT Advisories</a>
-        <a href="https://pve.proxmox.com/wiki/Category:Security_Advisories" target="_blank" rel="noopener noreferrer">Proxmox VE Security Advisories</a>
-        <a href="https://ubuntu.com/security/notices" target="_blank" rel="noopener noreferrer">Ubuntu Security Notices</a>
-        <a href="https://access.redhat.com/security/security-updates/" target="_blank" rel="noopener noreferrer">Red Hat Security Updates</a>
+        <a href='https://www.fortiguard.com/' target='_blank' rel='noopener noreferrer'>FortiGuard Labs</a>
+        <a href='https://www.dell.com/support/home/es-es/drivers/driversbycategory/servers' target='_blank' rel='noopener noreferrer'>Soporte Dell para Servidores</a>
+        <a href='https://pve.proxmox.com/wiki/Roadmap' target='_blank' rel='noopener noreferrer'>Roadmap de Proxmox VE</a>
+        <a href='https://msrc.microsoft.com/update-guide/' target='_blank' rel='noopener noreferrer'>Microsoft Security Response Center (MSRC)</a>
+        <a href='https://ubuntu.com/security/CVEs' target='_blank' rel='noopener noreferrer'>Ubuntu Security Advisories</a>
+        <a href='https://access.redhat.com/security/advisories' target='_blank' rel='noopener noreferrer'>Red Hat Security Advisories</a>
+        <a href='https://www.zabbix.com/support_policy' target='_blank' rel='noopener noreferrer'>Zabbix Support Policy & Updates</a>
       </div>
     </div>
-    <div class='card MEDIO'>
-      <h4>Fortalecimiento de Defensas contra Phishing en Office 365 y Zimbra</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>Phishing</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-31</p>
+    <div class='card'>
+      <h4>Protección de Identidad y Dispositivos</h4>
       <ul>
-        <li>Reforzar la autenticación multifactor (MFA) para todas las cuentas de Office 365 y Zimbra Collaboration Professional 10.</li>
-        <li>Implementar y revisar políticas robustas de filtrado de correo electrónico en FortiMail y Office 365 para detectar y bloquear correos maliciosos.</li>
-        <li>Capacitar a los usuarios en la identificación de correos de phishing y concienciar sobre la importancia de no hacer clic en enlaces sospechosos.</li>
+        <li><b>Office 365:</b> Reforzar la concienciación de usuarios sobre campañas de phishing que intentan evadir MFA. Implementar políticas de acceso condicional y monitorear el registro de dispositivos OAuth sospechosos.</li>
+        <li><b>ESET Antivirus:</b> Asegurar la configuración óptima del antivirus corporativo con niveles de detección agresivos y considerar el uso de ESET Inspect para una visibilidad y respuesta mejoradas.</li>
+        <li><b>Cámaras Dahua:</b> Mantener el firmware de todas las cámaras y HVRs Dahua actualizado. Forzar políticas de contraseñas robustas y únicas, y deshabilitar UPNP si no es esencial.</li>
+        <li><b>macOS:</b> Asegurarse de que todos los dispositivos macOS (2015 en adelante) estén ejecutando la última versión del sistema operativo y que las actualizaciones de seguridad estén habilitadas.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Realizar simulaciones de phishing periódicas y revisar la configuración de seguridad de Office 365 y Zimbra para maximizar la protección contra ataques de ingeniería social. </p>
+      <b>Fuentes Adicionales:</b>
       <div class='links'>
-        <a href="https://www.microsoft.com/en-us/security/business/identity/mfa" target="_blank" rel="noopener noreferrer">Microsoft MFA Best Practices</a>
-        <a href="https://zimbra.github.io/documentation/zimbra_mta_security.html" target="_blank" rel="noopener noreferrer">Zimbra MTA Security Guide</a>
-        <a href="https://fortiguard.com/learning/training/73" target="_blank" rel="noopener noreferrer">Fortinet Email Security Training</a>
-      </div>
-    </div>
-    <div class='card MEDIO'>
-      <h4>Seguridad de Dispositivos IoT (Cámaras Dahua)</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>Auth Bypass</span>
-      <span class='tag'>Teórico</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-31</p>
-      <ul>
-        <li>Cambiar las contraseñas predeterminadas de fábrica en todas las cámaras y HVR Dahua, utilizando contraseñas fuertes y únicas.</li>
-        <li>Asegurar que los dispositivos Dahua solo sean accesibles desde redes de confianza y, si es necesario el acceso externo, utilizar VPNs.</li>
-        <li>Mantener el firmware de las cámaras Dahua actualizado a la última versión disponible para mitigar vulnerabilidades conocidas.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Implementar una política de gestión de contraseñas para dispositivos IoT y revisar la configuración de red para limitar la exposición de estos sistemas. </p>
-      <div class='links'>
-        <a href="https://dahuawiki.com/Security" target="_blank" rel="noopener noreferrer">Dahua Security Best Practices</a>
-      </div>
-    </div>
-    <div class='card MEDIO'>
-      <h4>Monitoreo y Detección con Zabbix y ESET</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Info Leak</span>
-      <span class='tag'>Teórico</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-31</p>
-      <ul>
-        <li>Asegurar que Zabbix 7 en adelante esté configurado con alertas para actividades anómalas, consumo inusual de recursos o fallas de autenticación.</li>
-        <li>Verificar que ESET Antivirus corporativo esté desplegado en todos los endpoints, con las bases de datos de firmas actualizadas y las políticas de detección optimizadas para ransomware y amenazas persistentes avanzadas (APT).</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Realizar revisiones periódicas de los logs de Zabbix y los reportes de ESET para identificar patrones de ataque o comportamientos sospechosos que puedan indicar una brecha de seguridad en curso.</p>
-      <div class='links'>
-        <a href="https://www.zabbix.com/documentation/current/en/manual/installation/upgrade" target="_blank" rel="noopener noreferrer">Zabbix Documentation</a>
-        <a href="https://help.eset.com/era/6/en-US/admin_policies.html" target="_blank" rel="noopener noreferrer">ESET Security Policies</a>
+        <a href='https://www.microsoft.com/security/business/identity/microsoft-365-security' target='_blank' rel='noopener noreferrer'>Seguridad de Microsoft 365</a>
+        <a href='https://www.eset.com/es/business/solutions/endpoint-security/' target='_blank' rel='noopener noreferrer'>ESET Endpoint Security para Empresas</a>
+        <a href='https://dahuawiki.com/Cyber_Security/Best_Practices' target='_blank' rel='noopener noreferrer'>DahuaWiki: Best Practices</a>
+        <a href='https://support.apple.com/es-es/HT201222' target='_blank' rel='noopener noreferrer'>Actualizaciones de seguridad de Apple</a>
       </div>
     </div>
   </div>
 </section>
-
