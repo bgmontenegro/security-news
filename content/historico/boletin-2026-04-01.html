@@ -8,14 +8,16 @@
   <div class='grid'>
     <div class='card'>
       <ul>
-        <li><b>Internet-exposed:</b> Detección de escaneos y intentos de acceso dirigidos a servicios RDP, SSH y VPN expuestos. La amenaza se centra en sistemas sin parchar y credenciales débiles en plataformas EOL.</li>
-        <li><b>Correo / Phishing:</b> Se mantiene una actividad alta de campañas de phishing enfocadas en la suplantación de identidad para la recolección de credenciales de Office 365.</li>
-        <li><b>IoT / Cámaras:</b> Escaneos continuos en busca de dispositivos Dahua con firmware desactualizado o configuraciones predeterminadas vulnerables.</li>
-        <li><b>Ransomware:</b> Riesgo persistente a través de la explotación de sistemas Windows EOL sin parches y ataques que inician con phishing para compromiso de estaciones de trabajo.</li>
+        <li><b>Internet-exposed:</b> Continúa la alta exposición a riesgos por configuraciones débiles o falta de parches en dispositivos Fortinet y Zabbix, así como en equipos Dahua.</li>
+        <li><b>Correo / Phishing:</b> Las campañas de phishing dirigidas a Office 365 y Zimbra siguen siendo una amenaza principal, volviéndose más sofisticadas en la suplantación de identidad.</li>
+        <li><b>IoT / Cámaras:</b> Riesgo persistente en cámaras y HVR Dahua debido a contraseñas por defecto o credenciales débiles y firmware desactualizado.</li>
+        <li><b>Ransomware:</b> La amenaza de ransomware se mantiene latente, especialmente para sistemas Windows y SQL Server legados que ya no reciben soporte o están sin parches.</li>
       </ul>
       <a href="#" class="leer-mas">Leer más</a>
       <div class="detalle oculto">
-        <p>El período actual ha sido estable en cuanto a nuevas vulnerabilidades críticas confirmadas y publicadas para las versiones más recientes de nuestro stack tecnológico (FortiOS 7.2.12+, Proxmox VE 8.4.16+, Zabbix 7+, Zimbra 10+, Ubuntu 24.04 LTS, RHEL 7/8). Sin embargo, la superficie de ataque sigue siendo significativa debido a la presencia de sistemas operativos (Windows XP, Server 2003) y bases de datos (SQL Server Express 2005/2008) fuera de soporte, así como versiones de Dell iDRAC (hasta Gen 13) y firmware de dispositivos IoT (Dahua) que pueden carecer de actualizaciones de seguridad. La explotación de credenciales débiles, la ingeniería social y las configuraciones inseguras continúan siendo los vectores de ataque más predominantes. Es fundamental mantener un enfoque proactivo en la gestión de parches para el software soportado y aplicar mitigaciones para los sistemas en fin de vida útil.</p>
+        <p>Durante el período de reporte (2026-03-02 al 2026-04-01), no se han identificado nuevos eventos críticos confirmados (CVEs) de alta severidad que afecten directamente y de forma novedosa a los productos específicos de nuestro stack tecnológico. Sin embargo, el panorama de amenazas sigue siendo dinámico y las superficies de ataque conocidas continúan siendo puntos de interés para actores maliciosos. La estabilidad observada en nuevos CVEs no debe confundirse con una reducción del riesgo operativo.</p>
+        <p>Los sistemas legados como Windows XP, Windows Server 2003/2008 y SQL Server Express 2005/2008 representan un riesgo constante y elevado, ya que no reciben actualizaciones de seguridad, lo que los convierte en objetivos fáciles para exploits conocidos y ransomware. Del mismo modo, la gestión de la postura de seguridad para Office 365 y Zimbra es crucial, ya que los ataques de phishing avanzados, incluyendo la suplantación de dominios y el compromiso de correo electrónico empresarial (BEC), persisten y evolucionan.</p>
+        <p>Para los dispositivos de borde como FortiGate y Zabbix, las configuraciones incorrectas y la falta de parches en componentes expuestos a Internet son vulnerabilidades comunes. Los dispositivos IoT, particularmente las cámaras Dahua, son susceptibles a ataques si no se cambian las credenciales por defecto o si el firmware no está actualizado, siendo a menudo expuestos involuntariamente a Internet. La vigilancia continua, la aplicación de parches y una configuración de seguridad robusta son esenciales para mitigar estos riesgos latentes.</p>
       </div>
     </div>
   </div>
@@ -27,57 +29,29 @@
     <div class='card'>
       <h4>Sin reportes verificados</h4>
       <p class='meta'>Actualizado: 2026-04-01</p>
-      <p>No se han detectado nuevos incidentes confirmados y públicamente verificados que impacten directamente el stack tecnológico definido durante el período.</p>
+      <p>No se han detectado nuevos eventos confirmados de incidentes para el stack tecnológico definido en el período.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='cves'>
-  <h3 class='section-title'>Vulnerabilidades (CVEs)</h3>
+  <h3 class='section-title'>Nuevas Vulnerabilidades (CVEs)</h3>
   <div class='grid'>
     <div class='card'>
-      <h4>Riesgo por Sistemas Fuera de Soporte</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>Privilege Escalation</span>
-      <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2015-07-14 (Windows Server 2003 EOL)</p>
-      <ul>
-        <li><b>Identificación:</b> Persisten vulnerabilidades críticas sin parchear en Windows XP, Windows Server 2003, SQL Server Express 2005 y 2008. Estos sistemas no reciben más actualizaciones de seguridad, dejándolos expuestos a CVEs conocidos y explotaciones genéricas.</li>
-        <li><b>Impacto:</b> Compromiso total del sistema, exfiltración de datos, despliegue de ransomware y control remoto. La explotación de estos sistemas es un vector común para movimientos laterales en la red.</li>
-        <li><b>Acción Recomendada:</b> Acelerar la migración de todos los sistemas operativos y bases de datos fuera de soporte a versiones actuales. Implementar segmentación de red estricta y monitoreo exhaustivo para aislar estos sistemas si la migración no es inmediata.</li>
-      </ul>
-      <div class='links'>
-        <a href="https://support.microsoft.com/es-es/topic/finalizaci%C3%B3n-del-soporte-extendido-para-windows-server-2003-82a87858-a89c-a81d-612b-bbd7e0ce38d4" target="_blank" rel="noopener noreferrer">Fin de soporte de Windows Server 2003 - Microsoft</a>
-      </div>
-    </div>
-
-    <div class='card'>
-      <h4>Configuraciones Inseguras en Dispositivos IoT Dahua</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>Auth Bypass</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2023-08-15 (Ejemplo de riesgo continuo)</p>
-      <ul>
-        <li><b>Identificación:</b> Dispositivos Dahua (cámaras, HVRs) con firmware obsoleto o credenciales por defecto/débiles siguen siendo objetivo de ataques. La ausencia de parches de seguridad para firmware antiguo deja las puertas abiertas a la explotación remota y el control no autorizado.</li>
-        <li><b>Impacto:</b> Acceso no autorizado a flujos de video, manipulación de grabaciones, y uso de los dispositivos como punto de pivote para acceder a la red interna.</li>
-        <li><b>Acción Recomendada:</b> Auditar todos los dispositivos Dahua para verificar el firmware. Actualizar a la última versión disponible (si es posible para el modelo). Cambiar todas las credenciales por defecto y utilizar contraseñas fuertes y únicas. Segmentar estos dispositivos en una VLAN dedicada.</li>
-      </ul>
-      <div class='links'>
-        <a href="https://www.dahuawiki.com/Security_Advisories" target="_blank" rel="noopener noreferrer">Dahua Wiki Security Advisories (referencia general)</a>
-      </div>
+      <h4>Sin reportes verificados</h4>
+      <p class='meta'>Actualizado: 2026-04-01</p>
+      <p>No se han publicado nuevos CVEs críticos verificados específicos para el stack tecnológico definido en el período.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='ransomware'>
-  <h3 class='section-title'>Actividad de Ransomware</h3>
+  <h3 class='section-title'>Actividad Ransomware</h3>
   <div class='grid'>
     <div class='card'>
       <h4>Sin reportes verificados</h4>
       <p class='meta'>Actualizado: 2026-04-01</p>
-      <p>No se han detectado nuevos grupos de ransomware o campañas masivas que impacten directamente y de manera verificada nuestro stack tecnológico durante el período. La amenaza de ransomware sigue siendo alta para sistemas sin parches.</p>
+      <p>No se ha reportado actividad de ransomware crítica y confirmada que afecte directamente al stack tecnológico definido durante el período.</p>
     </div>
   </div>
 </section>
@@ -85,48 +59,103 @@
 <section class='section' id='recomendaciones'>
   <h3 class='section-title'>Recomendaciones Operativas Clave</h3>
   <div class='grid'>
-    <div class='card CRITICO'>
-      <h4>Priorizar Migración y Aislamiento de Sistemas EOL</h4>
-      <p class='meta'>Vigencia: Continua</p>
+    <div class='card ALTO'>
+      <h4>Reforzar la Seguridad en Sistemas Legados</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>Privilege Escalation</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-04-01</p>
       <ul>
-        <li><b>Windows XP, Server 2003, SQL Server Express 2005/2008:</b> Implementar un plan de migración urgente. Si la migración no es posible de inmediato, aislar estos sistemas en una red segmentada sin acceso directo a Internet ni a la red principal. Considerar soluciones de virtualización para aislar el hardware subyacente.</li>
-        <li><b>Dell iDRAC (Gen 13 y anteriores):</b> Revisar la conectividad de red de los iDRAC más antiguos. Limitar el acceso solo a la red de gestión y deshabilitar servicios no esenciales.</li>
+        <li><b>Windows XP, Server 2003, SQL Server Express 2005/2008:</b> Estos sistemas han alcanzado el fin de vida y son vectores de ataque conocidos para ransomware y exploits antiguos que persisten.</li>
+        <li><b>Acción Recomendada:</b> Aísle completamente estos sistemas de la red principal y de Internet. Considere la migración urgente a plataformas compatibles y actualizadas. Implemente controles de acceso estrictos y segmentación de red.</li>
       </ul>
       <div class='links'>
-        <a href="https://support.microsoft.com/es-es/topic/finalizaci%C3%B3n-del-soporte-extendido-para-windows-server-2003-82a87858-a89c-a81d-612b-bbd7e0ce38d4" target="_blank" rel="noopener noreferrer">Microsoft: Fin de soporte de Windows Server 2003</a>
-        <a href="https://www.dell.com/support/home/es-es/product-support/product/idrac-8-for-poweredge-fca611/docs" target="_blank" rel="noopener noreferrer">Dell iDRAC Support (referencia a documentación general)</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5IhU8pib4KFcbn1OzoVefJzf5HzWeFSTpfx-bNwwuyPpeNEa4cswhcJHYzbdlZSG2DrzCfzgyueErYecforNzHRer9UfjZibfgH47_Hk0BZdG-EGNEjhA4F43XI4GllZR0gU-Kr4G5s4rbGIM-6QzTuNzQw6dMMgwszXoOvd63Bu6zv69i-dAmygD9gyG7wS_7JVeaVp1CotIsK96fMxs9bcG1RUeMkSm_cNwJxtuW2yTFW2LaQ==' target='_blank' rel='noopener noreferrer'>Microsoft: Critical vulnerability in legacy Windows systems</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfWDDDzLuORxC5QdtkM1Nu1r5I1FQ8xRTwTTM8O6H0lsj4EsldgxyNJRdOZVnbCFEVTGSH4kyR0utgTH6vmgNsKC_j6DBJqRJj8q0cVduRcwoOXBDGSbwSuZuxZUF2IAd0U9SUsQPXED9yNRIREBvpbuMM6l5WqHL1obc_cOyhjYNPDdzK26uimg20gxTxGR4fTfX7NRun1sY=' target='_blank' rel='noopener noreferrer'>CIO: Top 5 Security Risks Windows Server 2003 EOL</a>
       </div>
     </div>
 
     <div class='card ALTO'>
-      <h4>Fortalecimiento de Office 365 y Conciencia de Phishing</h4>
-      <p class='meta'>Vigencia: Continua</p>
+      <h4>Mitigar Riesgos de Phishing en Office 365 y Zimbra</h4>
+      <span class='tag'>Correo / Phishing</span>
+      <span class='tag'>Info Leak</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-04-01</p>
       <ul>
-        <li><b>MFA y Políticas de Acceso:</b> Asegurarse de que MFA esté habilitado y sea obligatorio para todos los usuarios de Office 365. Implementar políticas de acceso condicional para limitar el acceso desde ubicaciones no confiables o dispositivos no gestionados.</li>
-        <li><b>Entrenamiento Antiphishing:</b> Reforzar el entrenamiento de concienciación sobre phishing con simulaciones periódicas. Alertar a los usuarios sobre las tendencias actuales de suplantación de identidad.</li>
+        <li><b>Office 365 y Zimbra Collaboration:</b> Las campañas de phishing y Business Email Compromise (BEC) son cada vez más sofisticadas, utilizando incluso infraestructura legítima para evadir defensas.</li>
+        <li><b>Acción Recomendada:</b> Implemente autenticación multifactor (MFA) obligatoria para todos los usuarios. Refuerce las políticas de DMARC, SPF y DKIM. Capacite a los usuarios contra la suplantación de identidad y el phishing. Considere soluciones de seguridad de correo electrónico avanzadas (p. ej., ESET Mail Security si aplica).</li>
       </ul>
       <div class='links'>
-        <a href="https://learn.microsoft.com/es-es/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication" target="_blank" rel="noopener noreferrer">Configurar MFA en Microsoft 365 - Microsoft Learn</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGErzP5vB_CjCZl6AwyKO9Rxi32I0AbaXJjoA6eMBp4c3UXamEcedqJzoFjTXGrFWVeyHHa1_fOwS-6tK_f6OeSXQvQmDQcX37qOlqKEclahNmwzlnxyBnuKXp2UcNwPYrdWXdpC9knIMCtuAp5QoB3KLklXm6L' target='_blank' rel='noopener noreferrer'>Microsoft Threat Intelligence: Phishing exploits O365 misconfigurations</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0bPzg9yexpoP6FL75BqlPHnPg98k5kyASPXFnfxdasPHzzZ2_FXFetP2Gd1Nkd_eDm9nGlRf_rYXlNw7o7yUPe2iMlOKCLzpDWRRthuwJxCQr9AHv6h74AJc17rNVmm4LMKuNevYOlxXvo65MSw==' target='_blank' rel='noopener noreferrer'>Adventus: Microsoft 365 Phishing Threats are Evolving</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1kBXaOKBe8ozouIKlgR9YAXuc4mq7etCg_4zf-wjBDJPMY_j1GdRR8CffRfPFTZFdbDDK16svp0ByXwMl3B9nFK7L3DvBtz0MhF__-BaeObsjd3_X0LIPYkD1DTmgyc9siDAvOWuytKQ7e0KOndKMFSiqv2TrntALTK4q9AETjGh2TjF1' target='_blank' rel='noopener noreferrer'>NetForChoice: Zimbra Security Best Practices</a>
       </div>
     </div>
 
     <div class='card MEDIO'>
-      <h4>Gestión de Parches y Firmware para el Stack Activo</h4>
-      <p class='meta'>Vigencia: Diaria</p>
+      <h4>Asegurar Dispositivos de Gestión (Fortinet, iDRAC, Proxmox, Zabbix)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>Auth Bypass</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-04-01</p>
       <ul>
-        <li><b>Fortinet FortiOS 7.2.12+, Proxmox VE 8.4.16+, Zabbix 7+, Zimbra 10+, Ubuntu Server 24.04 LTS, RHEL 7/8, macOS (2015+), Windows 10/11/Server 2012/2016, ESET Antivirus:</b> Monitorear activamente los avisos de seguridad de los fabricantes (FortiGuard, Proxmox, Red Hat, Ubuntu, Apple, Microsoft, ESET, Zimbra) y aplicar parches y actualizaciones tan pronto como estén disponibles. Priorizar parches para sistemas expuestos a Internet.</li>
-        <li><b>Dell Optiplex y Latitude (2015+):</b> Mantener el firmware del BIOS/UEFI y los drivers de los equipos actualizados a las últimas versiones disponibles a través de Dell Support.</li>
+        <li><b>Fortinet (FortiOS 7.2.12+):</b> Asegure el acceso administrativo con MFA, use contraseñas robustas y restrinja el acceso de gestión solo a IPs de confianza. Mantenga FortiGuard services activos y el firmware actualizado.</li>
+        <li><b>Dell iDRAC (hasta Gen 13):</b> Deshabilite el acceso público a iDRAC. Utilice una red de gestión segregada (VLAN), fuerce TLS 1.2 o superior, y cambie las credenciales por defecto.</li>
+        <li><b>Proxmox VE (8.4.16+):</b> Implemente autenticación por claves SSH, deshabilite el inicio de sesión de root, configure 2FA para la GUI y use el firewall de PVE.</li>
+        <li><b>Zabbix 7+:</b> Refuerce la seguridad del servidor web (HTTPS, HSTS, CSP), aplique el principio de menor privilegio a las cuentas de usuario y agente, y mantenga el software actualizado.</li>
+        <li><b>Acción Recomendada:</b> Revise y endurezca todas las configuraciones de seguridad. Aplique las últimas actualizaciones de firmware y parches de seguridad tan pronto como estén disponibles. Restrinja el acceso de gestión a redes internas y use MFA.</li>
       </ul>
       <div class='links'>
-        <a href="https://www.fortiguard.com/security" target="_blank" rel="noopener noreferrer">FortiGuard Security Advisories</a>
-        <a href="https://pve.proxmox.com/wiki/Category:Security_Advisories" target="_blank" rel="noopener noreferrer">Proxmox VE Security Advisories</a>
-        <a href="https://support.dell.com/en-us/drivers" target="_blank" rel="noopener noreferrer">Dell Drivers & Downloads</a>
-        <a href="https://www.microsoft.com/es-es/msrc" target="_blank" rel="noopener noreferrer">Microsoft Security Response Center (MSRC)</a>
-        <a href="https://support.apple.com/es-es/HT201222" target="_blank" rel="noopener noreferrer">Actualizaciones de seguridad de Apple</a>
-        <a href="https://www.zimbra.com/support/announcements/" target="_blank" rel="noopener noreferrer">Zimbra Security Advisories</a>
-        <a href="https://www.eset.com/es/support/security-vulnerabilities/" target="_blank" rel="noopener noreferrer">ESET Security Vulnerabilities</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNkJs-u92ShsU3FN0N3yxEMZt3RO8BSzwLh04K6ACteEVCJB0g7jQXRxR23HtGWAD529ZQKDa9ZhoXcK72L0JvpmDgI5C9_6f_-9IjB1OHOiZtBSHBsiDChhdW2RYxYzpOqqnEJjmz9G4TJEYMwQ-lad039tmGHGa6ZLeYuq9eIeJyY5u5HEbxG1CKlKsK_jXtF4zEojW5JNgWGS6SudfRKkjbV6CmdfWaqWWMQcOmq3v-0m7vSSeeSTzX8X6tsc9iKAe' target='_blank' rel='noopener noreferrer'>Fortinet: Best Practices FortiOS 7.2</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5dKSnHSVoUSUHERqf8Bbg6cBKW2YHiqyDxWQ2mU6XBDALunG8Xp_UqTEjaVEbKSW1W1MFqfBVD7MieEJ0qLzv0g_pqWC4HBBwTI6w0OUNfSXQpy99hY_O1IoHqtrF6GDgVKlDeOtiGDYLd0nMAU4ayoa7sIYfp0_sPrBXrtASkF8Q0wbF5yImGymvpaVMGIgMJHWcSSauUAEAlcc61R7EzTTUqc8OdEBRmJxXbgEnsbBGkXmVoI3MR2Vxv5-JLzXRJhk6dJr0y0HsX_nRar0uWDvoCxm6EhbVRb12AEbmjzo7xlIIDz35Iicgv89jfWPLTn_mJfh7LoyGLXNmrQ07a2oJ61wuprPI57b9YQ6tbPjB4PDF' target='_blank' rel='noopener noreferrer'>Dell: iDRAC9 Security Configuration Guide</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgPL_ee6_aZvj1hyA0BP8KIwsu42_UK_ze2Kyan850RF0GVk5aVeVGZ7oCmifXag48dc73KRi5H_capaJJLhJ4kl_fnPvS-bH2rr1NydLMcELm-b-UEvleppVa8XQESqlGuMfzMpXRenFz4ZqCj1vNcFl9DuBaseKiWMRo6UE2mv1m9Bs=' target='_blank' rel='noopener noreferrer'>Proxmox VE Helper Scripts: Security Hardening Guide</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwFgncKL9248g5Y0nivuhrsr-HXkF8-Pbn3Ea3zQzao7TOpFH9wNVaRXrQmamc1iENmww0eicGRunihRXFc_KXpTYX26NlQl7Ny3eXNffcavzQACKtCovM4eQM5BpcALdyvXAH751RSLH95t0xASPxMpONg-p8xAZYevqPwZot58oybwq14Hti3LBdF2LOFEUJ1ngseQ==' target='_blank' rel='noopener noreferrer'>Zabbix: Best practices for secure Zabbix setup</a>
+      </div>
+    </div>
+
+    <div class='card MEDIO'>
+      <h4>Endurecer Seguridad en Dispositivos IoT (Dahua)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-04-01</p>
+      <ul>
+        <li><b>Cámaras y HVR Dahua:</b> Múltiples vulnerabilidades pasadas y recientes han permitido el control remoto si los dispositivos están expuestos a Internet con credenciales débiles o firmware sin parches.</li>
+        <li><b>Acción Recomendada:</b> Actualice el firmware de todos los dispositivos Dahua a la última versión disponible. Cambie todas las contraseñas por defecto y utilice credenciales complejas y únicas. Deshabilite UPnP y evite el redireccionamiento de puertos. Aísle estos dispositivos en una VLAN o red separada de la red principal.</li>
+      </ul>
+      <div class='links'>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVEYNegKYd3x-OKO84R2FVmjFkeZhqx1fb5UongJznIPX8nacJMlIlpD8d8STlk_HcUlyFhIKGfis8GC2ic4VwL_ciX1-0CNo42LWU8-Tu883ZUiHcr29jEJHWKz1t8z_id_IZv_7eFg98coU=' target='_blank' rel='noopener noreferrer'>DahuaWiki: Cyber Security Best Practices</a>
+        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOwD2ygJqbCRXThvkz6NZeG2rV-fPXdpl9YJujoEkkRqE8Wg5fKpYdEiOcexhcuEzuXWsQnOsGuAUYoNy9o5G4JKOxht5OUiAAF8jydbP2yrZIFHiPuwEJO5teymBVeUrcaoJMasBLTXspWwGmeFBpWkEG1_MztBssWxBFxrgCaPOsk_8gSdN_iyJ4iCOpi_QJlRBdKinwYuBjB6biWqbmqRDRbUQ=' target='_blank' rel='noopener noreferrer'>Security Affairs: Dahua Camera flaws allow remote hacking</a>
+      </div>
+    </div>
+
+    <div class='card MEDIO'>
+      <h4>Mantener la Higiene de Parches en el Stack Completo</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>Teórico</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-04-01</p>
+      <ul>
+        <li><b>Dell Firmware (Optiplex/Latitude 2015+):</b> Las actualizaciones de firmware abordan vulnerabilidades de bajo nivel que pueden ser explotadas para persistencia o escalada de privilegios.</li>
+        <li><b>Windows 7, 10, 11 / Server 2012, 2016:</b> Es fundamental aplicar puntualmente las actualizaciones de seguridad de Microsoft para protegerse contra nuevas vulnerabilidades.</li>
+        <li><b>macOS (2015+):</b> Mantenga el sistema operativo y las aplicaciones actualizadas para mitigar riesgos.</li>
+        <li><b>Ubuntu Server 24.04 LTS / Red Hat Enterprise Linux 7 y 8:</b> Implemente un proceso robusto de gestión de parches para el sistema operativo y sus componentes.</li>
+        <li><b>ESET Antivirus Corporativo:</b> Asegure que las bases de datos de firmas estén actualizadas y que los agentes endpoint funcionen correctamente en todos los dispositivos compatibles.</li>
+        <li><b>Acción Recomendada:</b> Establezca y siga un calendario estricto de aplicación de parches y actualizaciones para todo el stack tecnológico. Utilice herramientas de gestión centralizada (como ESET PROTECT) para asegurar la cobertura y el estado de los endpoints.</li>
+      </ul>
+      <div class='links'>
+        <a href='https://www.dell.com/support/home/es-es/products/laptops-netbooks/laptops' target='_blank' rel='noopener noreferrer'>Dell Support (Firmware Optiplex/Latitude)</a>
+        <a href='https://msrc.microsoft.com/update-guide/' target='_blank' rel='noopener noreferrer'>Microsoft Security Update Guide</a>
+        <a href='https://support.apple.com/es-es/HT201222' target='_blank' rel='noopener noreferrer'>Apple Support (macOS Security Updates)</a>
+        <a href='https://ubuntu.com/security/notices' target='_blank' rel='noopener noreferrer'>Ubuntu Security Notices</a>
+        <a href='https://access.redhat.com/security/security-updates/' target='_blank' rel='noopener noreferrer'>Red Hat Security Updates</a>
+        <a href='https://www.eset.com/es/business/proteccion-endpoint/' target='_blank' rel='noopener noreferrer'>ESET: Protección Endpoint para Empresas</a>
       </div>
     </div>
   </div>
 </section>
-
