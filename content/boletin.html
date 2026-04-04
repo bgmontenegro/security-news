@@ -8,14 +8,14 @@
   <div class='grid'>
     <div class='card'>
       <ul>
-        <li><b>Internet-exposed:</b> Detección activa de vulnerabilidades en Zimbra y macOS. Persiste el riesgo por sistemas legados no parcheados.</li>
-        <li><b>Correo / Phishing:</b> Aumento significativo de campañas impulsadas por IA, más sofisticadas y con métodos multi-canal (QR, BEC, SMS), buscando evadir MFA.</li>
-        <li><b>IoT / Cámaras:</b> La configuración inadecuada y firmware desactualizado en dispositivos Dahua continúan siendo un vector de riesgo latente.</li>
-        <li><b>Ransomware:</b> Tendencia hacia la multi-extorsión, el Ransomware-as-a-Service (RaaS) y la explotación de la identidad como superficie de ataque principal.</li>
+        <li><b>Internet-exposed:</b> Vigilancia constante por configuración incorrecta y sistemas EOL expuestos.</li>
+        <li><b>Correo / Phishing:</b> Se mantiene la amenaza de campañas sofisticadas, enfocadas en credenciales de Office 365 y Zimbra.</li>
+        <li><b>IoT / Cámaras:</b> Escaneos persistentes buscando dispositivos Dahua con configuraciones débiles o predeterminadas.</li>
+        <li><b>Ransomware:</b> La superficie de ataque de sistemas Windows Server y SQL Server Express EOL sigue siendo un objetivo primario.</li>
       </ul>
       <a href="#" class="leer-mas">Leer más</a>
       <div class="detalle oculto">
-        <p>Durante el período reciente, se observa una estabilidad relativa en la aparición de nuevas vulnerabilidades críticas de día cero que impacten directamente en la infraestructura moderna priorizada. Sin embargo, el panorama de amenazas sigue siendo dinámico y desafiante. Las campañas de phishing y ransomware están evolucionando rápidamente, con la inteligencia artificial amplificando su escala y sofisticación, haciendo que los ataques sean más convincentes y difíciles de detectar. Los sistemas legados como Windows XP, Windows Server 2003/2008 y SQL Server Express 2005/2008 representan un riesgo continuo y significativo debido a la falta de soporte y parches de seguridad. Es crucial mantener un enfoque proactivo en la gestión de parches, la seguridad de las identidades y la concienciación de los usuarios.</p>
+        <p>El periodo actual muestra una relativa estabilidad en cuanto a la publicación de nuevos CVEs críticos confirmados que impacten directamente el stack tecnológico definido. Sin embargo, la persistencia de sistemas operativos y plataformas de base de datos End-of-Life (EOL) como Windows XP, 7, Server 2003, 2008, 2012, y SQL Server Express 2005, 2008, continúa siendo el vector de riesgo más significativo. Estos sistemas, al no recibir actualizaciones de seguridad, son blancos fáciles para exploits conocidos y herramientas de ransomware que aprovechan vulnerabilidades antiguas pero aún activas en el ciberespacio. La actividad observada se centra en la explotación de estas debilidades latentes y en campañas de phishing que buscan comprometer las credenciales de usuarios de Office 365 y Zimbra, así como el acceso a dispositivos IoT (Dahua) con configuraciones por defecto o débiles. Es crucial mantener la vigilancia sobre la higiene de red y la segmentación, además de asegurar que los componentes actuales del stack (Fortinet, Proxmox, ESET, Zabbix, Ubuntu, RHEL, macOS) estén actualizados a las últimas versiones y parches de seguridad. La ausencia de nuevas amenazas críticas no disminuye la importancia de gestionar activamente el riesgo inherente a los sistemas legados.
       </div>
     </div>
   </div>
@@ -27,81 +27,18 @@
     <div class='card'>
       <h4>Sin reportes verificados</h4>
       <p class='meta'>Actualizado: 2026-04-04</p>
-      <p>No se han detectado nuevos eventos confirmados de incidentes o explotación activa verificada directamente contra el stack tecnológico definido en este período.</p>
+      <p>No se han detectado nuevos eventos confirmados para el stack tecnológico definido.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='cves'>
-  <h3 class='section-title'>Nuevas Vulnerabilidades (CVEs)</h3>
+  <h3 class='section-title'>Vulnerabilidades (CVEs)</h3>
   <div class='grid'>
-
-    <div class='card CRITICO'>
-      <h4>Zimbra Collaboration: Múltiples Vulnerabilidades (XSS, CSRF)</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>RCE</span>
-      <span class='tag'>Auth Bypass</span>
-      <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-19</p>
-      <ul>
-        <li>Se han revelado y parcheado múltiples vulnerabilidades en Zimbra Collaboration Suite (ZCS) versiones 10.0 y 10.1.</li>
-        <li>Incluyen una falla de Cross-Site Scripting (XSS) almacenado (CVE-2025-66376) que podría permitir la inyección de scripts maliciosos y el robo de credenciales.</li>
-        <li>También se identificó una vulnerabilidad de Cross-Site Request Forgery (CSRF) (CVE-2026-33372) debido a una validación inadecuada de tokens, permitiendo acciones no autorizadas.</li>
-        <li>Una XSS reflejada en la interfaz REST de Webmail Clásico (/h/rest) (CVE-2026-33368) también permite la ejecución de JavaScript malicioso por parte de atacantes no autenticados.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Actualizar Zimbra Collaboration Suite (ZCS) a las versiones 10.0.18 o superior, o 10.1.16 o superior inmediatamente para mitigar estas vulnerabilidades. Asegurar que se tienen copias de seguridad antes de aplicar parches.</p>
-      <div class='links'>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFi9_fh9nPPM78C2sdu6nKCT3nnFjON4Bu3ySIsm5SxB8XmlubCBaeZTDEJ0WGzxtpsRyKAr3C_082Vfa7Zoq6S3Um5qarp5AUviEbfCTfINDnNN0mVps_2n8XONHjNHFcZ0uxFg_jbzN1CHzw9DKiBSmPo67qvuy9A5OKnlRxtRLiiYXZZe4l9sinELztE_Vlvk6b8YeHpK2meksFsACWursG8h6UlkWXVEIMFwObY' target='_blank' rel='noopener noreferrer'>Security Alert: Zimbra Collaboration Suite XSS Vulnerability Updates – March 2026</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3A05RO7fC4hQ2Ywbl4UNcVOdQD_arKq32FEBYxEnQP8djxK52r8aw0EdCpYSRTvivXt-YRgjfNqdflWL2htqC0I0vY88MGbZ2u3CWQDBKe2O6Jq7R4ItJ5V1wgans897Bjcf3Tal-ApGOpYzMrJuZY7L6i__pyqcGoBKyRw==' target='_blank' rel='noopener noreferrer'>CVE-2026-33372: Zimbra Collaboration CSRF Vulnerability - SentinelOne</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoMIFyBusCBuULGOUWJn1l6G8DIiCB4m1dTWAv0JCgiMszuI0x4Wt_4Gh_B4wNN1Vy2Wth1QfgRDPHLYMKRmB_QWHxJghcse8DiHhqxArEwm6B-YrmZJU76tVORCI5wIwX_SIYCi95e9bFyaU=' target='_blank' rel='noopener noreferrer'>CVE-2026-33368 - GitHub</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoCWnxEl1j0jBpgcxPDRP3lq13digIvkrJHQyPlJIbXUICVVjg9D50uYbJbMivVPrHlokLl-C7WS9dF3QaajriO7oSSmG61kXpcNdDVKLPs6Ai_PZAtM50kRUIOqIpcxYuuqxePMDKNkww4ap3ToxMpIWvFZwYr8zQd7vIkzBT' target='_blank' rel='noopener noreferrer'>Patch Release Update: Zimbra 10.1.16</a>
-      </div>
-    </div>
-
-    <div class='card ALTO'>
-      <h4>Múltiples Vulnerabilidades en macOS (Kernel y WebKit)</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>RCE</span>
-      <span class='tag'>Info Leak</span>
-      <span class='tag'>Explotado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-25</p>
-      <ul>
-        <li>Apple ha lanzado actualizaciones de seguridad para macOS Tahoe 26.4, macOS Sequoia 15.7.5 y macOS Sonoma 14.8.5.</li>
-        <li>Las actualizaciones resuelven más de 75 fallas, incluyendo ocho en WebKit que podrían ser explotadas por sitios web maliciosos para eludir la política de aplicación, realizar ataques XSS, robar huellas dactilares, escapar del sandbox o bloquear procesos.</li>
-        <li>También se abordaron problemas en el kernel que podrían ser explotados para revelar memoria del kernel, filtrar estados sensibles del kernel, corromper la memoria del kernel o escribir en ella.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Instalar las últimas actualizaciones de seguridad disponibles para macOS (26.4, 15.7.5 o 14.8.5 según la versión) a través de "Ajustes del Sistema > General > Actualización de software".</p>
-      <div class='links'>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEt6a8vd4_8tp5CBfH9KEU_-Lc--i3kh-EhQpDiiDE-K2Sxs77Vt9M-65_wZ_VXM4Usbf4FC06auK3IcFpm2MFf1bm9s2YRK26jTrUBzwuoD8OY0_s5tc4D4bPHwe4DtsoTWW5hBTrgj9ng4M4K2RzlLfeK54r2HS6r4gSA5nzoyT3-ZScpIhIdu5uA-A==' target='_blank' rel='noopener noreferrer'>iOS, macOS 26.4 Roll Out With Fresh Security Patches - SecurityWeek</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFbihU3JZvmu1OYfFs46yG2mzIqyZN_18tbOPw8BvlH8jAroc0SGshZr_5EdmgPiQgSAleE2dGbej-ZavqvcqDDcjbK6lnw1nRv4B4LnolvSieEL0ZRtUulR-3jN9MTbasCpvOcvW3bjCyWylBmVyEqgGHl1yzou6fdkDwsfVUqZRFxyHQ2' target='_blank' rel='noopener noreferrer'>macOS Cybersecurity & Privacy in January 2026: What Every Home User Needs to Know</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMFBnmTfWtdfolTdo5bo9D-l5WMiYYifJD3jDbAIR-rcMN-sbwZ74VPtM3KY93Zl-WnwGp7sEFaMDCYwGZf0vNKGgUlXXyOKjPMeBaxLP-sLC2dwf7KeccdA4la2GI-tWKpnT5n2p2-IfYDCA9KvmzsrvReS8=' target='_blank' rel='noopener noreferrer'>What MacBooks Will Stop Working in 2026 - UpTrade</a>
-      </div>
-    </div>
-
-    <div class='card MEDIO'>
-      <h4>Nueva Característica de Seguridad en macOS para Ataques "ClickFix"</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Social Engineering</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-30</p>
-      <ul>
-        <li>Apple ha implementado una nueva característica de seguridad en macOS Tahoe 26.4 para proteger a los usuarios de ataques "ClickFix".</li>
-        <li>Esta función advertirá a los usuarios de Mac si pegan ciertos comandos potencialmente dañinos en la aplicación Terminal.</li>
-        <li>Los ataques "ClickFix" son un método de ingeniería social que engaña a los usuarios para que infecten sus propios dispositivos con malware, a menudo mediante la ejecución de comandos copiados y pegados.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Asegurarse de que macOS Tahoe esté actualizado a la versión 26.4. Educar a los usuarios sobre los riesgos de copiar y pegar comandos de fuentes no confiables en la Terminal.</p>
-      <div class='links'>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHf-c5ja6snx0sihdrBLKIcf1fYjfsRfsnmLV3Kygerr_zfw5AYOOU3CRhkbBI-F7kneUN8Jb499G1JD-G4M0zBvF0_W4VkHZANfWTKMsrOoPhrqyT-eQFpxioqGnDSa7iSJ__1XN3ueEkAyKtSwQIOU1Woli5JlRTfQZ8XEAQ07IxO97EOjr_spbQ9Mwm6GIpj-nUhBMaSV9aCODaYTX4x0iXTM-DqPHk3v5O_k8pNxKKJaDgw' target='_blank' rel='noopener noreferrer'>New macOS security feature will alert users about possible ClickFix attacks - Malwarebytes</a>
-      </div>
-    </div>
-
     <div class='card'>
-      <h4>Sin reportes verificados para otros productos</h4>
+      <h4>Sin reportes verificados</h4>
       <p class='meta'>Actualizado: 2026-04-04</p>
-      <p>No se han detectado nuevas vulnerabilidades CVEs confirmadas o con explotación activa verificada en este período para Fortinet, Proxmox VE, Dell iDRAC/firmware, Windows (XP, 7, 10, 11, Server 2003, 2008, 2012, 2016), SQL Server Express (2005, 2008), ESET Antivirus, Office 365, Dahua, Zabbix, Ubuntu Server 24.04 LTS o Red Hat Enterprise Linux (7, 8).</p>
+      <p>No se han detectado nuevos eventos confirmados para el stack tecnológico definido.</p>
     </div>
   </div>
 </section>
@@ -110,9 +47,9 @@
   <h3 class='section-title'>Actividad de Ransomware</h3>
   <div class='grid'>
     <div class='card'>
-      <h4>Sin reportes verificados de nuevas campañas directas</h4>
+      <h4>Sin reportes verificados</h4>
       <p class='meta'>Actualizado: 2026-04-04</p>
-      <p>Aunque las tendencias de ransomware para 2026 muestran una intensificación de ataques de multi-extorsión, el modelo RaaS y la focalización en la identidad, no se han detectado nuevas campañas de ransomware directamente verificadas que apunten específicamente y con explotación activa al stack tecnológico definido en este período.</p>
+      <p>No se han detectado nuevos eventos confirmados para el stack tecnológico definido.</p>
     </div>
   </div>
 </section>
@@ -120,54 +57,69 @@
 <section class='section' id='recomendaciones'>
   <h3 class='section-title'>Recomendaciones Operativas</h3>
   <div class='grid'>
-    <div class='card'>
-      <h4>Gestión de Parches y Actualizaciones</h4>
+    <div class='card ALTO'>
+      <h4>Gestión de Parches y Firmware Críticos</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>Privilege Escalation</span>
+      <span class='tag'>Teórico</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-04-04</p>
       <ul>
-        <li><b>Zimbra Collaboration:</b> Priorizar la actualización a las versiones 10.0.18 o 10.1.16 o posteriores para mitigar vulnerabilidades recientes de XSS y CSRF.</li>
-        <li><b>macOS:</b> Asegurar que todos los dispositivos Apple estén en una versión soportada de macOS (ej., Tahoe 26.4, Sequoia 15.x, Sonoma 14.x) y aplicar puntualmente las actualizaciones de seguridad disponibles, incluyendo las mejoras de seguridad en segundo plano.</li>
-        <li><b>Ubuntu Server 24.04 LTS:</b> Habilitar las actualizaciones automáticas de seguridad mediante <code>unattended-upgrades</code> y aplicar regularmente las actualizaciones acumulativas, como la 24.04.4 LTS. Considerar Ubuntu Pro para soporte extendido y Livepatch.</li>
-        <li><b>Windows Server 2016:</b> Mantener el sistema operativo al día con todos los parches de seguridad de Microsoft (Patch Tuesday) y configurar la notificación automática de disponibilidad de parches.</li>
-        <li><b>Fortinet (FortiOS 7.2.12+), Proxmox VE (8.4.16+), Zabbix (7+):</b> Consultar los avisos de seguridad oficiales del proveedor y aplicar las actualizaciones de firmware y software tan pronto como estén disponibles.</li>
-        <li><b>Firmware Dell Optiplex y Latitude (2015 en adelante) y iDRAC (hasta Gen 13):</b> Revisar periódicamente el sitio de soporte de Dell para firmware actualizado y parches de seguridad.</li>
-        <li><b>ESET Antivirus Corporativo:</b> Mantener la solución ESET actualizada a la última versión, asegurar que ESET LiveGrid®, Advanced Memory Scanner y Exploit Blocker estén habilitados.</li>
+        <li>Asegurar que FortiOS esté en la versión 7.2.12 o superior. Revisar regularmente FortiGuard para avisos de seguridad.</li>
+        <li>Mantener Proxmox VE en la versión 8.4.16 o posterior y aplicar las últimas actualizaciones de seguridad disponibles.</li>
+        <li>Actualizar Zabbix a la versión 7 o superior, prestando atención a los parches de seguridad para posibles vulnerabilidades de acceso o RCE.</li>
+        <li>Implementar un programa de parches robusto para Ubuntu Server 24.04 LTS y Red Hat Enterprise Linux 7 y 8.</li>
+        <li>Mantener Office 365, macOS (2015 en adelante) y Windows 10/11 con las últimas actualizaciones de seguridad.</li>
       </ul>
+      <p><b>Acción Recomendada:</b> Revisar y aplicar todos los parches y actualizaciones de firmware disponibles para los sistemas Fortinet, Proxmox, Zabbix, sistemas operativos y equipos Dell (Optiplex, Latitude) dentro del stack. Priorizar los sistemas expuestos a Internet y aquellos que manejan datos sensibles.
+      </p>
       <div class='links'>
-        <a href='https://www.zimbra.com/product/download/' target='_blank' rel='noopener noreferrer'>Zimbra Downloads</a>
-        <a href='https://support.apple.com/es-es/HT201222' target='_blank' rel='noopener noreferrer'>Actualizaciones de seguridad de Apple</a>
-        <a href='https://ubuntu.com/security/esm' target='_blank' rel='noopener noreferrer'>Ubuntu Expanded Security Maintenance</a>
-        <a href='https://www.microsoft.com/en-us/download/details.aspx?id=103983' target='_blank' rel='noopener noreferrer'>Windows Server Security Guide - Microsoft Download Center</a>
-        <a href='https://www.fortiguard.com/' target='_blank' rel='noopener noreferrer'>FortiGuard Security Advisories</a>
-        <a href='https://pve.proxmox.com/wiki/Category:Security' target='_blank' rel='noopener noreferrer'>Proxmox VE Security Advisories</a>
-        <a href='https://support.dell.com/drivers' target='_blank' rel='noopener noreferrer'>Soporte Dell - Controladores y descargas</a>
-        <a href='https://www.zabbix.com/security_advisories' target='_blank' rel='noopener noreferrer'>Zabbix Security Advisories and CVE database</a>
-        <a href='https://www.eset.com/es/knowledgebase/' target='_blank' rel='noopener noreferrer'>Base de Conocimientos ESET</a>
+        <a href="https://www.fortiguard.com/psirt" target="_blank" rel="noopener noreferrer">FortiGuard PSIRT Advisories</a>
+        <a href="https://pve.proxmox.com/wiki/Category:Security" target="_blank" rel="noopener noreferrer">Proxmox VE Security Advisories</a>
+        <a href="https://www.zabbix.com/security_advisories" target="_blank" rel="noopener noreferrer">Zabbix Security Advisories</a>
+        <a href="https://msrc.microsoft.com/update-guide/" target="_blank" rel="noopener noreferrer">Microsoft Security Update Guide</a>
+        <a href="https://support.apple.com/en-us/HT201222" target="_blank" rel="noopener noreferrer">Apple Security Updates</a>
+        <a href="https://access.redhat.com/security/vulnerabilities" target="_blank" rel="noopener noreferrer">Red Hat Security Advisories</a>
       </div>
     </div>
-
-    <div class='card'>
-      <h4>Endurecimiento de Configuración y Defensa Proactiva</h4>
+    <div class='card MEDIO'>
+      <h4>Fortalecimiento de Sistemas EOL y Legados</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-04-04</p>
       <ul>
-        <li><b>Office 365:</b> Implementar MFA resistente al phishing (ej. llaves de seguridad FIDO2), bloquear la autenticación heredada y aplicar políticas de Acceso Condicional. Monitorear continuamente la configuración y delegar revisiones a usuarios finales con ayuda de la IA.</li>
-        <li><b>Windows Server (2016, 2012, 2008):</b> Implementar el principio de mínimo privilegio, configurar el firewall de Windows para restringir el acceso remoto a servicios (ej. RDP) solo a IPs y redes autorizadas, y deshabilitar servicios innecesarios. Usar Credential Guard y Device Guard en sistemas compatibles.</li>
-        <li><b>Cámaras y HVR Dahua:</b> Cambiar todas las contraseñas predeterminadas por contraseñas fuertes y únicas. Mantener el firmware actualizado. Limitar el acceso a la red mediante filtros de IP y deshabilitar funciones no utilizadas como Multicast y UPnP. Considerar aislar las cámaras en una subred separada.</li>
-        <li><b>Zabbix 7+:</b> Ejecutar el agente Zabbix con un usuario de bajos privilegios. Asegurar la comunicación con SSL para el frontend. Utilizar las funciones de macro `htmlencode()` en las plantillas de correo HTML para prevenir inyecciones.</li>
-        <li><b>SQL Server Express 2005 y 2008:</b> Para las instancias que aún están en producción, asegurar que se apliquen las últimas Service Packs disponibles y se implementen configuraciones de seguridad robustas (ej., desactivar protocolos no utilizados, restringir el acceso a la red, aplicar el principio de mínimo privilegio para las cuentas de servicio). Planificar activamente la migración a versiones soportadas.</li>
-        <li><b>Sistemas Operativos EOL (Windows XP, 7, Server 2003, 2008):</b> Minimizar la exposición de estos sistemas, aislarlos de la red principal y migrar activamente a versiones soportadas y seguras. Constituyen un riesgo latente significativo por la falta de actualizaciones de seguridad.</li>
+        <li>Los sistemas Windows XP, 7, Server 2003, 2008, 2012 y SQL Server Express 2005, 2008 son altamente vulnerables a exploits conocidos y ransomware.</li>
+        <li>Las versiones antiguas de Dell iDRAC (hasta Gen 13) y firmware de Optiplex/Latitude 2015 pueden tener vulnerabilidades sin parchear.</li>
+        <li>Las cámaras y HVR Dahua son frecuentemente objetivo por credenciales por defecto o debilidades en el firmware.</li>
       </ul>
+      <p><b>Acción Recomendada:</b> Aislar estos sistemas en redes segmentadas, restringir estrictamente el acceso de red, implementar autenticación multifactor (si es posible), y monitorear activamente cualquier actividad inusual. Considerar la migración o virtualización de estos servicios en plataformas más seguras. Realizar revisiones periódicas de configuraciones para Dell iDRAC y dispositivos Dahua.
+      </p>
       <div class='links'>
-        <a href='https://docs.microsoft.com/es-es/microsoft-365/security/defender/microsoft-365-defender-whats-new' target='_blank' rel='noopener noreferrer'>Novedades de Microsoft 365 Defender</a>
-        <a href='https://dahuawiki.com/Cyber_Security/Best_Practices' target='_blank' rel='noopener noreferrer'>Cyber Security/Best Practices - DahuaWiki</a>
-        <a href='https://www.zabbix.com/documentation/current/en/manual/best_practices/security' target='_blank' rel='noopener noreferrer'>Zabbix Security Best Practices</a>
+        <a href="https://www.cisa.gov/resources-tools/resources/end-life-eol-products" target="_blank" rel="noopener noreferrer">CISA Guidance on EOL Products</a>
+        <a href="https://support.dell.com/product/security-advisories" target="_blank" rel="noopener noreferrer">Dell Security Advisories</a>
+        <a href="https://www.dahuawiki.com/Security_Notices" target="_blank" rel="noopener noreferrer">Dahua Security Notices</a>
       </div>
     </div>
-
-    <div class='card'>
-      <h4>Concienciación y Resiliencia</h4>
+    <div class='card MEDIO'>
+      <h4>Higiene de Seguridad en Correo Electrónico y Endpoint</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>Phishing</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-04-04</p>
       <ul>
-        <li><b>Concienciación de Usuarios:</b> Continuar y reforzar la formación sobre phishing, especialmente con el aumento de la sofisticación impulsada por IA. Enseñar a los usuarios a reconocer y reportar correos electrónicos sospechosos, mensajes y sitios web falsos.</li>
-        <li><b>Respaldo y Recuperación:</b> Mantener copias de seguridad actualizadas y verificadas, con un plan de recuperación ante desastres probado regularmente. Esto es crucial ante la creciente amenaza de ataques de ransomware y multi-extorsión.</li>
-        <li><b>Programa de Detección de Amenazas Internas:</b> Fortalecer los programas de amenazas internas, dado el aumento en los intentos de reclutamiento de personal por parte de grupos de ransomware.</li>
+        <li>Las campañas de phishing dirigidas a Office 365 y Zimbra Collaboration Professional 10 siguen siendo prevalentes.</li>
+        <li>ESET Antivirus corporativo debe estar siempre actualizado para asegurar la máxima protección contra malware y amenazas emergentes.</li>
       </ul>
+      <p><b>Acción Recomendada:</b> Fortalecer las políticas anti-phishing y anti-spam en Office 365 y Zimbra. Implementar autenticación multifactor (MFA) para todas las cuentas de correo. Realizar capacitaciones periódicas a los usuarios sobre concienciación en ciberseguridad. Asegurar que las definiciones de ESET Antivirus se actualicen automáticamente y que los escaneos periódicos se ejecuten con regularidad.
+      </p>
+      <div class='links'>
+        <a href="https://www.microsoft.com/security/blog/" target="_blank" rel="noopener noreferrer">Microsoft Security Blog</a>
+        <a href="https://zimbra.com/support/security/" target="_blank" rel="noopener noreferrer">Zimbra Security Advisories</a>
+        <a href="https://www.eset.com/es/blog/noticias-seguridad/" target="_blank" rel="noopener noreferrer">ESET Blog de Seguridad</a>
+      </div>
     </div>
   </div>
 </section>
