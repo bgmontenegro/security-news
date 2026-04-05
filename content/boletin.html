@@ -8,15 +8,14 @@
   <div class='grid'>
     <div class='card'>
       <ul>
-        <li><b>Internet-exposed:</b> Alta actividad de escaneo y explotación de servicios expuestos, especialmente Fortinet y Proxmox.</li>
-        <li><b>Correo / Phishing:</b> Campañas continuas y sofisticadas dirigidas a credenciales de Office 365 y Zimbra.</li>
-        <li><b>IoT / Cámaras:</b> Compromiso persistente de dispositivos Dahua con configuraciones débiles o firmware desactualizado.</li>
-        <li><b>Ransomware:</b> Amenaza constante a servidores Windows y Linux; especial atención a servicios SQL Server Express.</li>
+        <li><b>Internet-exposed:</b> Persistencia de escaneos y ataques de fuerza bruta a servicios publicados (FortiGate, Proxmox VE).</li>
+        <li><b>Correo / Phishing:</b> Campañas de phishing dirigidas a credenciales de Office 365 y Zimbra con técnicas de evasión de filtros.</li>
+        <li><b>IoT / Cámaras:</b> Actividad continua de búsqueda de dispositivos Dahua con credenciales por defecto o firmware obsoleto.</li>
+        <li><b>Ransomware:</b> Ausencia de nuevos ataques masivos documentados, pero riesgo latente por explotaciones de vulnerabilidades no parcheadas en Windows Server y RHEL.</li>
       </ul>
       <a href="#" class="leer-mas">Leer más</a>
       <div class="detalle oculto">
-        <p>El panorama de amenazas se mantiene dinámico con un enfoque sostenido en la explotación de credenciales de acceso y vulnerabilidades en servicios expuestos a Internet. Observamos un incremento en los intentos de compromiso a firewalls FortiGate y plataformas de virtualización Proxmox VE, buscando puntos de entrada inicial para movimientos laterales. Las campañas de phishing continúan siendo un vector primario para la exfiltración de credenciales, impactando directamente a entornos de Office 365 y Zimbra. En el frente de IoT, los dispositivos Dahua desactualizados o mal configurados siguen siendo un blanco fácil para la conformación de botnets o accesos no autorizados. La amenaza de ransomware persiste, con grupos apuntando a infraestructura de servidor Windows y RHEL, incluyendo bases de datos SQL Server Express, por su valor y potencial interrupción de operaciones.</p>
-        <p>A pesar de no identificarse nuevos CVEs críticos con explotación activa *confirmada* específicamente para el período reciente, los riesgos latentes asociados a configuraciones por defecto, sistemas sin parches y credenciales débiles se mantienen como las principales vías de ataque. La extensión de soporte para Windows Server 2012 hasta octubre de 2026 y para Windows 10 hasta la misma fecha, a través de ESUs, es una señal importante de riesgos continuos en sistemas más antiguos que requieren atención especial.</p>
+        <p>El período reciente se caracteriza por una estabilidad relativa en cuanto a nuevas vulnerabilidades críticas con explotación activa confirmada para nuestro stack tecnológico. Sin embargo, la actividad persistente de reconocimiento y las campañas de phishing resaltan la necesidad de una postura de seguridad proactiva. La superficie de ataque expuesta a Internet, particularmente en FortiGate y Proxmox VE, permanece bajo constante observación por actores maliciosos que buscan puntos de entrada. Se observa una tendencia continuada en la sofisticación del phishing, apuntando específicamente a entornos de Office 365 y Zimbra, lo que demanda atención constante a la concienciación de usuarios y a la configuración de seguridad de correo electrónico. La seguridad de los dispositivos IoT, como las cámaras Dahua, sigue siendo un vector de riesgo si no se gestionan adecuadamente las contraseñas y las actualizaciones de firmware. A pesar de la ausencia de nuevos brotes de ransomware para nuestro stack, el riesgo inherente de explotación de vulnerabilidades conocidas y no parcheadas en sistemas operativos (Windows Server, RHEL) y bases de datos (SQL Server Express) sigue siendo significativo y requiere atención continua a la gestión de parches y la segmentación de red. La monitorización de logs de autenticación y el endurecimiento de configuraciones siguen siendo medidas preventivas clave para mitigar estos riesgos latentes.</p>
       </div>
     </div>
   </div>
@@ -28,141 +27,93 @@
     <div class='card'>
       <h4>Sin reportes verificados</h4>
       <p class='meta'>Actualizado: 2026-04-05</p>
-      <p>No se han detectado nuevos eventos confirmados para el stack tecnológico definido en el período reciente.</p>
+      <p>No se han detectado nuevos eventos confirmados de incidentes con impacto directo en el stack tecnológico definido durante el período.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='cves'>
-  <h3 class='section-title'>Nuevas Vulnerabilidades (CVEs)</h3>
+  <h3 class='section-title'>Vulnerabilidades (CVEs) Recientes</h3>
   <div class='grid'>
-    <div class='card ALTO'>
-      <h4>Actualizaciones de seguridad de Windows Server 2012 R2</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>RCE</span>
-      <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-02-10</p>
-      <ul>
-        <li>Microsoft lanzó una actualización de seguridad crítica para Windows Server 2012 R2 en febrero de 2026, abordando múltiples vulnerabilidades con una calificación de riesgo crítico.</li>
-        <li>Una de las vulnerabilidades abordadas tiene un CVSSv3 base score de 10.0 y se considera activamente explotable.</li>
-        <li>Los certificados de Secure Boot utilizados por la mayoría de los dispositivos Windows caducarán a partir de junio de 2026, lo que podría afectar la capacidad de arranque seguro si no se actualizan a tiempo.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Aplicar inmediatamente la actualización de seguridad KB5075970 para Windows Server 2012 R2 y KB5079233 (Servicing stack update) si aún no se ha hecho. Preparar los servidores para las actualizaciones de certificados de Secure Boot.</p>
-      <div class='links'>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCq_w9wJsuNwL_Jlic1flwDgexVLPNoh5KovPR5to5pDBuxj2xNCgNGzdaApSNWcdmFaOfFCMSxHKjmluF3N1W8X9zf95fE9pE_qZv1Hcf46OOQOHKK8u1J61oMOdwxT3hDiVvgOswzQ==' target='_blank' rel='noopener noreferrer'>KB5075970: Windows Server 2012 R2 Security Update (February 2026) [Tenable]</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYRVpY89pRVh4z8yqxczKKnm4k1NODhtXIQePuu3ZWT-fBhcTClXoEXQqtAvw67LEXg8xxGVAdKIhXrxuJnSQ5etKE9SLGDThxr2633ijGJ96ofukMI_XR70SO4RWZRaNyYtZvtXWHl2j0UdyvqO8sioCPlUXC87kFloScEe--zy8ZgNcEc76JeZkLuB3iHWTwNw14sEd7mHJSuqGgltEhnWpgOuiHdxPzsRY7Kewz8A1Rkpvz9IdhSHi3xqYEl0oZjRExIDCrxwb8ZN8wuKnykG6jnA==' target='_blank' rel='noopener noreferrer'>KB5079233: Servicing stack update for Windows Server 2012 R2: March 10, 2026 [Microsoft]</a>
-        <a href='https://msrc.microsoft.com/update-guide' target='_blank' rel='noopener noreferrer'>Microsoft Security Update Guide</a>
-      </div>
-    </div>
     <div class='card'>
-      <h4>Sin reportes verificados para otros componentes</h4>
+      <h4>Sin reportes verificados</h4>
       <p class='meta'>Actualizado: 2026-04-05</p>
-      <p>No se han publicado nuevos CVEs críticos con explotación activa conocida para el resto del stack tecnológico definido en el período reciente (2026-03-06 al 2026-04-05).</p>
+      <p>No se han publicado nuevas vulnerabilidades (CVEs) críticas con explotación activa confirmada y relevancia directa para el stack tecnológico definido en el período.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='ransomware'>
-  <h3 class='section-title'>Actividad Ransomware</h3>
+  <h3 class='section-title'>Panorama de Ransomware</h3>
   <div class='grid'>
     <div class='card'>
-      <h4>Sin campañas específicas identificadas</h4>
+      <h4>Sin reportes verificados</h4>
       <p class='meta'>Actualizado: 2026-04-05</p>
-      <p>Aunque la amenaza de ransomware es constante y generalizada, no se han identificado campañas o variantes con impacto directo confirmado sobre nuestro stack tecnológico en el período reciente (2026-03-06 al 2026-04-05) que justifiquen una alerta específica. Sin embargo, la vigilancia debe ser continua y las defensas proactivas.</p>
+      <p>No se han identificado nuevas campañas de ransomware dirigidas específicamente a los productos de nuestro stack tecnológico con explotación verificada en el período.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='recomendaciones'>
-  <h3 class='section-title'>Recomendaciones Operativas Clave</h3>
+  <h3 class='section-title'>Recomendaciones Generales</h3>
   <div class='grid'>
-    <div class='card CRITICO'>
-      <h4>Gestión de Parches y Actualizaciones Críticas</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Privilege Escalation</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-04-05</p>
+    <div class='card'>
+      <h4>Gestión de Parches y Actualizaciones</h4>
+      <p class='meta'>Prioridad: ALTA</p>
       <ul>
-        <li>Asegurar que FortiOS en FortiGate y FortiAP esté en la versión 7.2.12 o superior, monitoreando activamente los avisos de FortiGuard Labs.</li>
-        <li>Mantener Proxmox VE 8.4.16 o superior. Es crucial revisar la documentación de seguridad de Proxmox.</li>
-        <li>Aplicar todas las actualizaciones de seguridad de Microsoft para Windows 10/11 y Windows Server (2012, 2016). Windows 10 tiene ESU hasta Octubre de 2026, y Windows Server 2012 hasta Octubre de 2026.</li>
-        <li>Actualizar firmware de Dell Optiplex, Latitude e iDRAC (hasta Gen 13). Es fundamental suscribirse a los avisos de seguridad de Dell.</li>
-        <li>Para Red Hat Enterprise Linux 7 y 8, consultar las guías de seguridad y aplicar parches de software regularmente.</li>
+        <li>Mantener FortiOS en su última versión 7.2.12 o superior. Verificar y aplicar actualizaciones de firmware para FortiAP y FortiMail según las notificaciones de FortiGuard.</li>
+        <li>Asegurar que Proxmox VE esté actualizado a la versión 8.4.16 o posterior. Consulte el historial de lanzamientos de Proxmox VE para las últimas versiones estables y parches de seguridad.</li>
+        <li>Revisar y aplicar los últimos firmwares disponibles para Dell iDRAC (hasta Gen 13) y dispositivos Dell Optiplex/Latitude (2015 en adelante) desde el portal de soporte de Dell.</li>
+        <li>Implementar las últimas actualizaciones de seguridad para todos los sistemas operativos Windows (XP, 7, 10, 11, Server 2003, 2008, 2012, 2016) y macOS (2015 en adelante). Priorizar los parches de seguridad mensuales de Microsoft y Apple.</li>
+        <li>Actualizar Ubuntu Server 24.04 LTS y Red Hat Enterprise Linux 7/8 con los últimos paquetes de seguridad. Los avisos de seguridad de Ubuntu proporcionan información sobre vulnerabilidades y paquetes afectados.</li>
+        <li>Aplicar parches de seguridad para Zabbix 7+, SQL Server Express 2005/2008 y Zimbra Collaboration Professional 10+ según las directrices de los fabricantes.</li>
+        <li>Asegurar que el ESET Antivirus corporativo esté actualizado con las últimas definiciones de virus y módulos.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Priorizar la revisión y aplicación de parches y actualizaciones de firmware. Establecer un ciclo de parcheo riguroso y automatizado para sistemas operativos y plataformas clave. Suscribirse a los avisos de seguridad de los proveedores.</p>
       <div class='links'>
-        <a href='https://www.fortiguard.com/psirt' target='_blank' rel='noopener noreferrer'>FortiGuard Labs PSIRT Advisories</a>
-        <a href='https://www.proxmox.com/en/security' target='_blank' rel='noopener noreferrer'>Proxmox Security Advisories</a>
-        <a href='https://msrc.microsoft.com/update-guide' target='_blank' rel='noopener noreferrer'>Microsoft Security Update Guide</a>
-        <a href='https://www.dell.com/support/home/en-us/drivers/driversbyos/security-update' target='_blank' rel='noopener noreferrer'>Dell Security Advisories and Notices</a>
-        <a href='https://www.dell.com/support/preferences/notifications' target='_blank' rel='noopener noreferrer'>Suscribirse a notificaciones de Dell</a>
-        <a href='https://www.redhat.com/en/resources/security-guide' target='_blank' rel='noopener noreferrer'>Red Hat Enterprise Linux Security Guides</a>
+        <a href="https://docs.fortinet.com/document/fortigate/7.2.0/fortios-release-notes" target="_blank" rel="noopener noreferrer">Notas de Lanzamiento FortiGate</a>
+        <a href="https://pve.proxmox.com/wiki/Release_History" target="_blank" rel="noopener noreferrer">Historial de Lanzamientos Proxmox VE</a>
+        <a href="https://www.dell.com/support/home/es-es" target="_blank" rel="noopener noreferrer">Soporte Dell</a>
+        <a href="https://msrc.microsoft.com/update-guide" target="_blank" rel="noopener noreferrer">Guía de Actualización de Seguridad Microsoft</a>
+        <a href="https://support.apple.com/es-es/HT201222" target="_blank" rel="noopener noreferrer">Actualizaciones de seguridad de Apple</a>
+        <a href="https://ubuntu.com/security/notices" target="_blank" rel="noopener noreferrer">Avisos de Seguridad Ubuntu</a>
+        <a href="https://access.redhat.com/security/security-updates" target="_blank" rel="noopener noreferrer">Actualizaciones de Seguridad Red Hat</a>
+        <a href="https://www.zimbra.com/support/downloads/zimbra-collaboration-suite/" target="_blank" rel="noopener noreferrer">Descargas Zimbra Collaboration</a>
+        <a href="https://support.eset.com/es/knowledgebase/eset-business-products" target="_blank" rel="noopener noreferrer">Base de Conocimiento ESET Business</a>
       </div>
     </div>
 
-    <div class='card ALTO'>
-      <h4>Implementación y Refuerzo de MFA</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>Auth Bypass</span>
-      <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-04-05</p>
+    <div class='card'>
+      <h4>Hardening y Gestión de Acceso</h4>
+      <p class='meta'>Prioridad: ALTA</p>
       <ul>
-        <li>Implementar y/o reforzar la autenticación multifactor (MFA) en Office 365, Zimbra Collaboration Professional 10+ y VPNs de FortiGate.</li>
-        <li>Priorizar métodos de MFA resistentes al phishing, como aplicaciones autenticadoras, sobre SMS.</li>
-        <li>Para FortiGate, la configuración de 2FA para el acceso de administrador y VPN es una medida de seguridad crítica.</li>
+        <li>Implementar autenticación de dos factores (2FA) en todos los servicios que lo soporten, especialmente Office 365, FortiGate y Zimbra. CISA recomienda formas de autenticación resistentes al phishing.</li>
+        <li>Revisar y fortalecer las configuraciones de seguridad de FortiGate, incluyendo políticas de firewall, IPS/IDS y filtrado web. Se recomienda instalar la unidad FortiGate en una ubicación físicamente segura y mantener el firmware actualizado.</li>
+        <li>Endurecer las configuraciones de seguridad de Proxmox VE, limitando el acceso a la interfaz de administración y utilizando certificados SSL/TLS válidos. Se deben aplicar mejores prácticas para asegurar el acceso SSH y la segmentación de red.</li>
+        <li>Cambiar las credenciales por defecto de todas las cámaras y HVR Dahua, y deshabilitar servicios innecesarios. Mantener el firmware actualizado y usar contraseñas robustas son prácticas clave.</li>
+        <li>Aplicar el principio de mínimo privilegio en todos los sistemas operativos y servicios.</li>
+        <li>Monitorizar los logs de autenticación de Windows Server, RHEL, FortiGate, Office 365 y Zimbra para detectar patrones anómalos. Microsoft 365 Security Center ofrece herramientas para gestionar la seguridad.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Auditar la implementación de MFA en todos los servicios y sistemas que lo soporten. Educar a los usuarios sobre los riesgos de phishing y la importancia de MFA.</p>
       <div class='links'>
-        <a href='https://learn.microsoft.com/en-us/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication' target='_blank' rel='noopener noreferrer'>Configurar MFA en Microsoft 365</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrxBU5IjsEV1q3-lji3CZ9Ob_UjElXoek6Wc4MODNpuWS9AfDd6M3Y6gDyabBVRJUUuNcqBlgduzfURjqAP2-KjDDMhS6Av4RhOwAcTBqyIAc1szrxv91H0mfkxH1YuPz_Kt5PaUs2' target='_blank' rel='noopener noreferrer'>MFA para Zimbra Collaboration (Rublon)</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-jxJNZ_xI3pYUQCkr_lNryNXc_poOwKeHRn6JjawD_v5VowvjaSvkVOgOg2nipKLzLSByclBAnyfkp718l1c-8x5QxXhFpDlTbje_x83pTtEnJwXFqAR9jSB9uxwNhrV9iN8z-x1imhBuCatTd64ISEFwykc3ssHjrOpYm0r9WgdIo1K9RG5qxQPrs7KNUcIG_w==' target='_blank' rel='noopener noreferrer'>Cómo habilitar 2FA en Zimbra (bTactic)</a>
-        <a href='https://docs.fortinet.com/document/fortigate/7.2.0/administration-guide/469796/two-factor-authentication' target='_blank' rel='noopener noreferrer'>FortiGate Two-Factor Authentication (Admin Guide)</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHUAZ8BQHd0K-oHKfdqO2hNrdfmKy7IHtVd1WHn_VAgbP8cHAt27WI5atWNqDlc2w_S7cP4c-UF98bZ9AalL4hH_nWpFF5KM8Y7RbaTI6DtiO9ieEMBBu2nFgpWD1ep6ru3Zz1iKuao4Smig7ixW_WT25rftobWA==' target='_blank' rel='noopener noreferrer'>3 MFA Best Practices for Microsoft 365 [Aldridge]</a>
+        <a href="https://www.fortinet.com/resources/cyberglossary/fortigate-hardening" target="_blank" rel="noopener noreferrer">FortiGate Hardening</a>
+        <a href="https://pve.proxmox.com/wiki/Security_Best_Practices" target="_blank" rel="noopener noreferrer">Proxmox VE Security Best Practices</a>
+        <a href="https://www.dahuawiki.com/Security" target="_blank" rel="noopener noreferrer">Dahua Security Best Practices</a>
+        <a href="https://learn.microsoft.com/es-es/microsoft-365/security/defender/m365-security-center" target="_blank" rel="noopener noreferrer">Microsoft 365 Security Center</a>
+        <a href="https://www.cisa.gov/resources-tools/resources/capacity-enhancement-guide-counter-phishing-recommendations-federal-agencies" target="_blank" rel="noopener noreferrer">CISA Phishing-Resistant Authentication</a>
       </div>
     </div>
 
-    <div class='card MEDIO'>
-      <h4>Hardening de Dispositivos IoT y Cámaras Dahua</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>RCE</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-04-05</p>
+    <div class='card'>
+      <h4>Concienciación de Usuarios</h4>
+      <p class='meta'>Prioridad: MEDIA</p>
       <ul>
-        <li>Cambiar contraseñas por defecto y utilizar credenciales robustas en cámaras y HVRs Dahua.</li>
-        <li>Segmentar redes para IoT y cámaras, limitando su exposición a Internet y evitando el acceso directo desde la WAN.</li>
-        <li>Mantener el firmware de las cámaras y HVRs Dahua actualizado.</li>
-        <li>Deshabilitar servicios innecesarios como UPNP, P2P, SNMP si no se utilizan.</li>
+        <li>Realizar campañas periódicas de concienciación sobre phishing y ataques de ingeniería social, especialmente dirigidas a la identificación de correos maliciosos en Office 365 y Zimbra.</li>
+        <li>Educar a los usuarios sobre la importancia de reportar correos sospechosos y no hacer clic en enlaces o descargar archivos de fuentes no verificadas.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Realizar una auditoría de configuración de todos los dispositivos Dahua. Considerar implementar aislamiento de red y VPN para el acceso remoto.</p>
       <div class='links'>
-        <a href='https://www.dahuawiki.com/Security' target='_blank' rel='noopener noreferrer'>Dahua Security Best Practices (Wiki)</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnjtKr_qPt7B3ZeYE1r_oSJaWhFXNAwiqwptNanFX6_c5IsVfvbLIAj7FYFVDUji5Fmo-Ondo3d8MfthULZZBVLYyVT7nHXkhU1WK3Jr2-be7RER9KaTqE8OM5AaDc0XhqhKSrR9FzxEEMKWLVH8qRs7a-KgKzupbBHEjA2aJK839mdc9QWyNPcurX7yr1GTYHOVxQiR7vFsIctpIpKqAmnTaOBYI=' target='_blank' rel='noopener noreferrer'>Dahua's Encrypted Network Cameras Explained [CCTV-MALL]</a>
+        <a href="https://owasp.org/www-community/Phishing" target="_blank" rel="noopener noreferrer">OWASP Phishing Prevention</a>
+        <a href="https://www.cisa.gov/topics/roles-and-workforce/training-and-awareness/phishing" target="_blank" rel="noopener noreferrer">CISA Phishing Guidance</a>
       </div>
     </div>
-
-    <div class='card BAJO'>
-      <h4>Monitoreo y Detección con Zabbix</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Info Leak</span>
-      <span class='tag'>Teórico</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-04-05</p>
-      <ul>
-        <li>Asegurar que Zabbix 7 esté configurado para monitorear anomalías en el tráfico de red y el comportamiento de los servidores, incluyendo RHEL y Ubuntu Server 24.04 LTS.</li>
-        <li>Mantener la plataforma Zabbix actualizada. Se recomienda revisar las notas de actualización y realizar backups antes de cualquier upgrade.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Verificar la configuración de alertas en Zabbix para incidentes de seguridad. Asegurar que los agentes de Zabbix estén actualizados y que la base de datos subyacente (MySQL o PostgreSQL) cumpla con los requisitos de la versión 7 de Zabbix.</p>
-      <div class='links'>
-        <a href='https://www.zabbix.com/documentation/7.0/en/manual/installation/upgrade_notes_700' target='_blank' rel='noopener noreferrer'>Zabbix 7.0 Upgrade Notes</a>
-        <a href='https://www.zabbix.com/documentation/7.0/en/manual/security' target='_blank' rel='noopener noreferrer'>Zabbix Security Guide</a>
-        <a href='https://www.initmax.com/wiki/zabbix-update-to-the-latest-version-7-0-lts/' target='_blank' rel='noopener noreferrer'>Zabbix - Update to the latest version 7.0 LTS (initMAX)</a>
-      </div>
-    </div>
-
   </div>
 </section>
 
