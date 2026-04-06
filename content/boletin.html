@@ -8,142 +8,136 @@
   <div class='grid'>
     <div class='card'>
       <ul>
-        <li><b>Internet-exposed:</b> Continuas campañas de escaneo y explotación de configuraciones débiles o vulnerabilidades conocidas en dispositivos Fortinet y Dell iDRAC expuestos a internet.</li>
-        <li><b>Correo / Phishing:</b> Elevado volumen de ataques de phishing y spear-phishing dirigidos a usuarios de Office 365, buscando credenciales y propagación de malware.</li>
-        <li><b>IoT / Cámaras:</b> Detección de intentos de acceso no autorizado a cámaras Dahua con credenciales por defecto o débiles, utilizadas en redes de bots.</li>
-        <li><b>Ransomware:</b> Actividad constante de grupos de ransomware, con especial atención a la explotación de vulnerabilidades en sistemas Windows Server y equipos desactualizados para el movimiento lateral.</li>
+        <li><b>Internet-exposed:</b> Vigilancia crítica en la seguridad de endpoints y la cadena de suministro de software; se observan ataques que afectan sistemas operativos comunes.</li>
+        <li><b>Correo / Phishing:</b> Persisten ataques de phishing avanzados dirigidos a credenciales de Office 365; se reportan robos de datos derivados de malas prácticas de seguridad en M365.</li>
+        <li><b>IoT / Cámaras:</b> Incremento en la atención regulatoria sobre la ciberseguridad de dispositivos CCTV, lo que implica una necesidad continua de asegurar entornos Dahua.</li>
+        <li><b>Ransomware:</b> Emergencia de nuevas amenazas híbridas de ransomware y la explotación de conflictos internacionales por actores maliciosos.</li>
       </ul>
       <a href="#" class="leer-mas">Leer más</a>
       <div class="detalle oculto">
-        <p>El período reciente muestra una tendencia a la estabilidad en cuanto a nuevas vulnerabilidades críticas divulgadas públicamente que afecten directamente a la porción más reciente de nuestro stack tecnológico. Sin embargo, se mantiene un alto nivel de actividad maliciosa basada en la explotación de configuraciones débiles, credenciales comprometidas y vulnerabilidades ya conocidas en sistemas no parcheados o que han alcanzado el fin de su vida útil. La amenaza de phishing sigue siendo el vector principal para comprometer el acceso inicial a entornos de Office 365, mientras que las cámaras y dispositivos IoT mal protegidos son objetivos frecuentes para la inclusión en redes de bots y accesos no autorizados. Es crucial mantener la vigilancia sobre la higiene básica de seguridad, especialmente en los componentes más antiguos de nuestro stack como Windows XP, Server 2003/2008 y SQL Server Express 2005/2008, los cuales presentan riesgos inherentes debido a la falta de soporte y actualizaciones de seguridad.</p>
+        <p><b>Contexto adicional:</b></p>
+        <p>La seguridad de los sistemas de gestión de endpoints es un objetivo clave para actores de amenazas que buscan la interrupción de operaciones. Incidentes de compromiso en la cadena de suministro, como la inyección de malware RAT a través de paquetes npm populares que afectan sistemas Linux, Windows y macOS, subrayan la necesidad de validar la integridad del software y controlar el acceso a la red de sistemas críticos.</p>
+        <p>Los ataques de phishing continúan siendo un vector principal, evolucionando para evadir defensas y robar credenciales. Recientes brechas confirman que configuraciones de seguridad deficientes en entornos como Office 365 resultan en compromisos de datos significativos. La autenticación multifactor y la formación del usuario son esenciales.</p>
+        <p>A nivel global, la preocupación por la seguridad de los dispositivos IoT, incluyendo cámaras de vigilancia (como Dahua), está impulsando nuevas regulaciones y estándares. Es vital asegurar que estos dispositivos estén actualizados, segmentados y configurados de forma segura para evitar ser puntos de entrada.</p>
+        <p>Los grupos de ransomware están diversificando sus tácticas, incluyendo el desarrollo de amenazas híbridas y aprovechando el panorama geopolítico para escalar ataques. Esto requiere una postura proactiva de defensa, con copias de seguridad robustas, segmentación de red y planes de respuesta a incidentes.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='incidentes'>
-  <h3 class='section-title'>Incidentes Reportados</h3>
+  <h3 class='section-title'>Incidentes Observados</h3>
   <div class='grid'>
-    <div class='card'>
-      <h4>Sin reportes verificados</h4>
-      <p class='meta'>Actualizado: 2026-04-06</p>
-      <p>No se han detectado nuevos eventos confirmados de incidentes o explotación activa relevante para el stack tecnológico definido en el período reciente (últimos 30 días).</p>
+    <div class='card ALTO'>
+      <h4>Robo de Datos por Mala Seguridad en Office 365</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>Info Leak</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-08</p>
+      <ul>
+        <li>Se reporta que la falta de controles de seguridad en un entorno de Microsoft 365 (M365) en un gobierno estatal llevó al robo de una cantidad significativa de fondos y a la brecha de datos de menores.</li>
+        <li>Este incidente subraya la importancia crítica de implementar y mantener estrictos controles de seguridad y auditorías en configuraciones de Office 365.</li>
+      </ul>
+      <p><b>Acción Recomendada:</b> Realizar una auditoría exhaustiva de la configuración de seguridad de Office 365, aplicando principios de menor privilegio y asegurando que la autenticación multifactor (MFA) esté habilitada para todas las cuentas. Revisar logs de acceso y actividad sospechosa.</p>
+      <div class='links'>
+        <a href="https://www.itnews.com.au/news/poor-wa-gov-m365-security-led-to-71k-theft-and-childrens-data-breached-606085" target="_blank" rel="noopener noreferrer">Noticia: Poor WA gov M365 security led to 71k theft and children's data breached</a>
+      </div>
+    </div>
+    <div class='card ALTO'>
+      <h4>Compromiso de Cadena de Suministro npm que Afecta Sistemas Operativos</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-07 (fecha de actividad inicial reportada en el período)</p>
+      <ul>
+        <li>Actores de amenazas comprometieron una cuenta npm de una librería ampliamente utilizada (Axios), distribuyendo malware RAT a través de actualizaciones de paquetes maliciosos.</li>
+        <li>Este malware RAT afecta a sistemas Linux, Windows y macOS, que forman parte del stack tecnológico definido.</li>
+        <li>El incidente demuestra cómo una breve exposición de una dependencia confiable puede convertirse rápidamente en una amenaza generalizada.</li>
+      </ul>
+      <p><b>Acción Recomendada:</b> Revisar y validar las dependencias de software, especialmente en entornos de desarrollo y producción. Implementar escaneo de seguridad en la cadena de suministro de software y monitorear la integridad de los paquetes. Aplicar principios de menor privilegio y segmentación de red en sistemas expuestos a dependencias externas.</p>
+      <div class='links'>
+        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEe_uwYnaRCnGIB5vWSB1YPQQOX-QwhZmtI_3_I2WabGm-2lk5gSxmwDBbF8JqHpwRkZpizXoipGE5iq1-s_2neAcSrm85NsO47qJIHzzhUa7K7KD3wp4G-nnsaFQ==" target="_blank" rel="noopener noreferrer">Artículo: Axios npm Attack Deploys Cross-Platform RAT</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='cves'>
-  <h3 class='section-title'>Nuevos CVEs y Actualizaciones de Seguridad</h3>
+  <h3 class='section-title'>Vulnerabilidades Recientes (CVEs)</h3>
   <div class='grid'>
-    <div class='card'>
-      <h4>Sin reportes verificados</h4>
-      <p class='meta'>Actualizado: 2026-04-06</p>
-      <p>No se han publicado nuevos CVEs críticos o actualizaciones de seguridad que afecten directamente a las versiones y productos específicos de nuestro stack tecnológico definido en el período reciente (últimos 30 días).</p>
+    <div class='card CRITICO'>
+      <h4>Múltiples Vulnerabilidades Explotadas Activamente en Microsoft Office SharePoint y Zimbra Collaboration Suite</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>Auth Bypass</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-03-XX (Advertencia CISA)</p>
+      <ul>
+        <li>CISA ha emitido advertencias urgentes sobre vulnerabilidades activamente explotadas en Microsoft Office SharePoint y en Zimbra Collaboration Suite.</li>
+        <li>Estas vulnerabilidades pueden permitir el acceso no autorizado y afectar componentes críticos de comunicación.</li>
+        <li>Se insta a realizar parches inmediatos para prevenir la explotación.</li>
+      </ul>
+      <p><b>Acción Recomendada:</b> Aplicar de inmediato todos los parches de seguridad disponibles para Microsoft Office SharePoint y Zimbra Collaboration Suite. Consultar los avisos de seguridad específicos de Microsoft y Zimbra para identificar las versiones afectadas y las correcciones. Priorizar la implementación de mitigaciones adicionales, como la segmentación de red y la monitorización de accesos anómalos.</p>
+      <div class='links'>
+        <a href="https://thehackernews.com" target="_blank" rel="noopener noreferrer">Referencia: The Hacker News - CISA warnings (menciona SharePoint y Zimbra)</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='ransomware'>
-  <h3 class='section-title'>Alertas de Ransomware</h3>
+  <h3 class='section-title'>Panorama de Ransomware</h3>
   <div class='grid'>
     <div class='card'>
-      <h4>Sin reportes verificados</h4>
+      <h4>Sin reportes verificados de nuevos ataques específicos al stack</h4>
       <p class='meta'>Actualizado: 2026-04-06</p>
-      <p>No se han identificado nuevas campañas de ransomware con vectores de ataque específicos o particularidades que afecten exclusivamente al stack tecnológico definido en el período reciente (últimos 30 días).</p>
+      <p>No se han detectado nuevos eventos confirmados de ransomware dirigidos específicamente a las versiones exactas del stack tecnológico definido y publicados en el último mes. Sin embargo, la actividad general de ransomware sigue siendo alta, con la emergencia de nuevas amenazas híbridas y la explotación de conflictos internacionales por parte de actores maliciosos. Se mantiene la alerta sobre la importancia de la prevención.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='recomendaciones'>
-  <h3 class='section-title'>Recomendaciones Operativas Clave</h3>
+  <h3 class='section-title'>Recomendaciones Generales</h3>
   <div class='grid'>
-    <div class='card CRITICO'>
-      <h4>Gestión de Sistemas End-of-Life (EOL)</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Privilege Escalation</span>
-      <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: Continuo</p>
-      <ul>
-        <li>Los sistemas Windows XP, Windows Server 2003/2008 y SQL Server Express 2005/2008 han alcanzado su fin de vida útil y ya no reciben actualizaciones de seguridad, lo que los convierte en objetivos de alto riesgo.</li>
-        <li>La explotación de vulnerabilidades conocidas en estos sistemas es una táctica común para el movimiento lateral en redes comprometidas.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Identificar y aislar estos sistemas de la red de producción. Priorizar la migración a versiones soportadas o implementar controles de compensación robustos, como segmentación de red y monitoreo estricto.</p>
-      <div class='links'>
-        <a href='https://www.microsoft.com/es-es/cloud-platform/windows-server-end-of-support' target='_blank' rel='noopener noreferrer'>Fin de soporte de Windows Server</a>
-        <a href='https://support.microsoft.com/es-es/lifecycle/search?alpha=SQL%20Server' target='_blank' rel='noopener noreferrer'>Ciclo de vida de SQL Server</a>
-      </div>
-    </div>
-
-    <div class='card ALTO'>
-      <h4>Actualizaciones de Seguridad Críticas para Fortinet FortiOS</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>RCE</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: Continuo</p>
-      <ul>
-        <li>Fortinet emite regularmente parches para vulnerabilidades críticas en FortiOS. Mantener las versiones 7.2.12 en adelante es esencial, pero la explotación de vulnerabilidades previas sigue siendo un riesgo significativo si no se aplican los parches.</li>
-        <li>La exposición de dispositivos Fortinet a internet sin la debida protección o parches eleva drásticamente el riesgo de acceso no autorizado.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Asegurar que todos los dispositivos Fortinet (FortiGate, FortiAP, FortiMail) ejecuten FortiOS 7.2.12 o una versión superior. Revisar periódicamente el sitio de FortiGuard para los últimos avisos de seguridad y aplicar parches con diligencia.</p>
-      <div class='links'>
-        <a href='https://www.fortiguard.com/psirt' target='_blank' rel='noopener noreferrer'>Avisos PSIRT de FortiGuard</a>
-        <a href='https://www.fortinet.com/products/fortigate' target='_blank' rel='noopener noreferrer'>FortiGate</a>
-      </div>
-    </div>
-
     <div class='card MEDIO'>
-      <h4>Refuerzo de Seguridad en Office 365</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>Phishing</span>
-      <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: Continuo</p>
+      <h4>Refuerzo de la Postura de Seguridad en Endpoints y Nubes</h4>
+      <p class='meta'>Actualizado: 2026-04-06</p>
       <ul>
-        <li>Las campañas de phishing dirigidas a Office 365 son el vector de acceso inicial más común para comprometer cuentas y escalar privilegios.</li>
-        <li>La falta de Autenticación Multifactor (MFA) expone las cuentas a un riesgo considerable, incluso con contraseñas robustas.</li>
+        <li>CISA y Microsoft instan a las organizaciones a asegurar sus sistemas de gestión de endpoints debido al aumento de actores de amenazas que buscan interrumpir operaciones.</li>
+        <li>Priorice la implementación de soluciones de seguridad de endpoints robustas (EDR) y asegure que las configuraciones de seguridad en Office 365 cumplan con las mejores prácticas.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Implementar MFA obligatoria para todos los usuarios. Configurar y ajustar las políticas de Microsoft Defender para Office 365. Realizar simulacros de phishing y capacitaciones periódicas para usuarios.</p>
+      <p><b>Acción Recomendada:</b> Implementar un sistema EDR en todos los sistemas Windows y macOS. Realizar evaluaciones de seguridad periódicas en entornos de Office 365 y aplicar las directrices de seguridad de Microsoft.</p>
       <div class='links'>
-        <a href='https://docs.microsoft.com/es-es/microsoft-365/security/defender-for-office365/anti-phishing-policies-overview' target='_blank' rel='noopener noreferrer'>Políticas anti-phishing en Microsoft Defender para Office 365</a>
-        <a href='https://www.microsoft.com/es-es/security/business/identity/mfa' target='_blank' rel='noopener noreferrer'>Autenticación multifactor para empresas</a>
-        <a href='https://www.nsa.gov/Cybersecurity/Advisories-and-Recommendations/Protecting-Office-365/' target='_blank' rel='noopener noreferrer'>Recomendaciones de Seguridad para Office 365 (NSA)</a>
+        <a href="https://www.cisa.gov/news-events/news/cisa-and-microsoft-urge-organizations-secure-endpoint-management-systems" target="_blank" rel="noopener noreferrer">Referencia: CISA y Microsoft sobre seguridad de endpoints</a>
       </div>
     </div>
-
     <div class='card MEDIO'>
-      <h4>Parches y Seguridad de macOS (2015 en adelante)</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Info Leak</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-19</p>
+      <h4>Gestión de Parches y Actualizaciones Continuas</h4>
+      <p class='meta'>Actualizado: 2026-04-06</p>
       <ul>
-        <li>Apple ha implementado "Mejoras de seguridad en segundo plano" para macOS, permitiendo actualizaciones más rápidas para componentes como Safari y WebKit entre lanzamientos completos del sistema operativo.</li>
-        <li>Es fundamental asegurarse de que estas actualizaciones automáticas estén habilitadas para recibir correcciones de seguridad rápidamente.</li>
+        <li>La aplicación rápida de parches sigue siendo la defensa más efectiva contra vulnerabilidades conocidas, especialmente las explotadas activamente.</li>
+        <li>Esto incluye sistemas operativos (Windows, Ubuntu, RHEL, macOS), plataformas (Proxmox VE, FortiOS, Zimbra) y aplicaciones (SQL Server, ESET).</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Verificar que las "Mejoras de seguridad en segundo plano" y las actualizaciones automáticas estén activas en todos los dispositivos macOS. Mantener el sistema operativo actualizado a la última versión compatible.</p>
+      <p><b>Acción Recomendada:</b> Establecer un ciclo de gestión de parches riguroso. Monitorear activamente los avisos de seguridad de los proveedores (FortiGuard, Proxmox, Dell, Microsoft, Apple, ESET, Zabbix, Ubuntu, Red Hat, Zimbra, Dahua) y aplicar las actualizaciones de firmware y software en cuanto estén disponibles.</p>
       <div class='links'>
-        <a href='https://support.apple.com/es-es/HT201222' target='_blank' rel='noopener noreferrer'>Acerca de las actualizaciones de seguridad de Apple</a>
-        <a href='https://support.apple.com/es-es/HT208072' target='_blank' rel='noopener noreferrer'>Acerca de las actualizaciones en segundo plano en macOS</a>
+        <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">Catálogo CISA de Vulnerabilidades Explotadas Conocidas</a>
+        <a href="https://fortiguard.com/psirt" target="_blank" rel="noopener noreferrer">Avisos de Seguridad FortiGuard</a>
+        <a href="https://pve.proxmox.com/wiki/Category:Security" target="_blank" rel="noopener noreferrer">Seguridad Proxmox VE</a>
       </div>
     </div>
-
-    <div class='card BAJO'>
-      <h4>Higiene de Seguridad en Dell iDRAC y Firmware Dell</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Auth Bypass</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-02-10</p>
+    <div class='card MEDIO'>
+      <h4>Fortalecimiento de la Autenticación y Concienciación Anti-Phishing</h4>
+      <p class='meta'>Actualizado: 2026-04-06</p>
       <ul>
-        <li>Se han observado vulnerabilidades de escalada de privilegios en Dell iDRAC Service Module (iSM) en versiones anteriores a 6.0.3.1 (Windows) y 5.4.1.1 (Linux).</li>
-        <li>Versiones antiguas de iDRAC (hasta G13) tienen dependencia de Java y vulnerabilidades conocidas que no han sido parcheadas.</li>
+        <li>Los ataques de robo de credenciales mediante phishing siguen siendo un vector común de compromiso.</li>
+        <li>La implementación de MFA es una barrera crucial contra el acceso no autorizado.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Actualizar Dell iDRAC Service Module a las versiones más recientes. Para iDRAC más antiguos, aplicar el último firmware disponible y restringir estrictamente el acceso a la interfaz de administración solo desde la red interna de gestión.</p>
+      <p><b>Acción Recomendada:</b> Implementar Autenticación Multifactor (MFA) en todos los servicios, especialmente para Office 365, acceso a servidores, iDRAC y paneles de administración de Fortinet, Proxmox, Zabbix y Zimbra. Realizar campañas de concienciación sobre phishing y simulación de ataques regularmente.</p>
       <div class='links'>
-        <a href='https://www.dell.com/support/security/es-mx/dell-security-advisories' target='_blank' rel='noopener noreferrer'>Avisos de Seguridad de Dell</a>
+        <a href="https://www.microsoft.com/en-us/security/business/microsoft-365-security/multi-factor-authentication" target="_blank" rel="noopener noreferrer">MFA en Microsoft 365</a>
+        <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer">OWASP Top 10 (concienciación)</a>
       </div>
     </div>
   </div>
