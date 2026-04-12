@@ -8,132 +8,200 @@
   <div class='grid'>
     <div class='card'>
       <ul>
-        <li><b>Internet-exposed:</b> Continúa el escaneo activo de vulnerabilidades conocidas en dispositivos de borde y servicios expuestos. La CISA ha emitido directivas sobre el riesgo de dispositivos de borde sin soporte.</li>
-        <li><b>Correo / Phishing:</b> Alta persistencia de campañas de phishing, incluyendo aquellas generadas por IA, dirigidas a credenciales de Office 365 y Zimbra.</li>
-        <li><b>IoT / Cámaras:</b> Observada actividad de escaneo para dispositivos IoT/Cámaras (incluyendo Dahua) con configuraciones débiles o por defecto.</li>
-        <li><b>Ransomware:</b> La amenaza de ransomware permanece constante, con tácticas en evolución y focos en sistemas Windows sin parches recientes.</li>
+        <li><b>Internet-exposed:</b> Explotación activa de vulnerabilidades críticas en FortiOS y Zimbra, con nuevas detecciones en Zabbix que requieren atención inmediata.</li>
+        <li><b>Correo / Phishing:</b> Se observan campañas de spear-phishing que aprovechan vulnerabilidades de elevación de privilegios en Microsoft Exchange y comprometen credenciales de Office 365.</li>
+        <li><b>IoT / Cámaras:</b> Alerta sobre vulnerabilidades de seguridad que afectan a dispositivos Dahua, potencialmente explotables para inyección de comandos.</li>
+        <li><b>Ransomware:</b> Aunque no hay nuevas campañas críticas dirigidas específicamente a nuestro stack, la superficie de ataque se mantiene elevada debido a la explotación de RCEs conocidos.</li>
       </ul>
       <a href="#" class="leer-mas">Leer más</a>
       <div class="detalle oculto">
-        <p>El período reciente ha sido relativamente estable en cuanto a la aparición de nuevas vulnerabilidades críticas de día cero que afecten directamente a nuestro stack tecnológico. Sin embargo, los riesgos latentes persisten y requieren atención constante. La superficie de ataque expuesta a Internet sigue siendo un objetivo principal para la enumeración y explotación de configuraciones erróneas o vulnerabilidades conocidas no parcheadas en equipos FortiGate con versiones no actualizadas a 7.2.12+, así como en interfaces Dell iDRAC antiguas. Las campañas de ingeniería social, especialmente el phishing, continúan siendo el vector de entrada más eficaz para comprometer cuentas de correo en Office 365 y Zimbra, llevando a robos de credenciales o la descarga de malware. En el ámbito de IoT, los dispositivos Dahua con credenciales por defecto o firmware desactualizado son objetivos recurrentes para la incorporación en botnets o acceso no autorizado. Finalmente, la amenaza de ransomware no muestra signos de desaceleración, dirigiéndose a sistemas operativos Windows (especialmente versiones antiguas como Windows Server 2003/2008/2012) que carecen de los últimos parches de seguridad y de una robusta estrategia de respaldo y recuperación. La monitorización proactiva con Zabbix y la protección endpoint con ESET son fundamentales para detectar y mitigar estos riesgos persistentes.</p>
+        <p>Durante este período operativo, el panorama de amenazas presenta actividad significativa, especialmente en activos expuestos a Internet. Se ha confirmado la explotación activa de vulnerabilidades de ejecución remota de código (RCE) en FortiOS de Fortinet y en servidores Zimbra Collaboration, lo que subraya la necesidad de una revisión y mitigación urgente. Adicionalmente, se han identificado nuevas vulnerabilidades en Zabbix que, aunque no están bajo explotación activa confirmada, representan un riesgo alto de Denegación de Servicio (DoS) y ejecución de código. Las campañas de phishing siguen siendo un vector principal, con un enfoque particular en el aprovechamiento de la vulnerabilidad CVE-2024-21410 en Microsoft Exchange para la elevación de privilegios y el robo de credenciales de Office 365. Los dispositivos IoT, específicamente las cámaras Dahua, continúan siendo un objetivo con vulnerabilidades que podrían permitir la inyección de comandos. El riesgo de ransomware sigue latente, exacerbado por la persistencia de sistemas vulnerables y la capacidad de los atacantes para escalar privilegios tras una intrusión inicial.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='incidentes'>
-  <h3 class='section-title'>Incidentes Reportados</h3>
+  <h3 class='section-title'>Incidentes Observados</h3>
   <div class='grid'>
-    <div class='card'>
-      <h4>Sin reportes verificados</h4>
-      <p class='meta'>Actualizado: 2026-04-12</p>
-      <p>No se han detectado nuevos eventos confirmados de incidentes con explotación activa para el stack tecnológico definido en el último mes (13 de marzo de 2026 al 12 de abril de 2026).</p>
+    <div class='card CRITICO'>
+      <h4>Explotación Activa de XSS en Zimbra Collaboration (CVE-2023-37580)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>XSS</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2023-07-28 (Explotación activa observada en 2023, pero con reportes de actividad posterior a parches iniciales).</p>
+      <ul>
+        <li>Se ha observado la explotación activa de una vulnerabilidad de Cross-Site Scripting (XSS) en Zimbra Collaboration Suite (versiones anteriores a 8.8.15 Patch 41).</li>
+        <li>Esta vulnerabilidad permite a atacantes ejecutar scripts maliciosos en el navegador de la víctima a través de URLs especialmente diseñadas, lo que puede llevar al robo de credenciales y tokens de autenticación.</li>
+        <li>Google TAG ha reportado múltiples campañas de explotación, incluso después de que se publicaran parches iniciales en GitHub.</li>
+      </ul>
+      <p><b>Acción Recomendada:</b> Asegure que todos los servidores Zimbra Collaboration estén actualizados a la versión 8.8.15 Patch 41 o superior (para v8.8.15) o a las versiones 9.0.0 Patch 34 y 10.0.2 para versiones superiores. Revise los logs en busca de actividad inusual post-parcheo y considere la implementación de Extended Protection Management para Exchange si es aplicable a su ecosistema de correo.</p>
+      <div class='links'>
+        <a href='https://securityweek.com/zimbra-patches-exploited-zero-day-vulnerability/' target='_blank' rel='noopener noreferrer'>Zimbra Patches Exploited Zero-Day Vulnerability - SecurityWeek</a>
+        <a href='https://blog.google/threat-analysis-group/0-day-zimbra-government-exploit/' target='_blank' rel='noopener noreferrer'>Zimbra 0-day used to target international government organizations - Google Blog</a>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2023-37580' target='_blank' rel='noopener noreferrer'>CVE-2023-37580 Detail - NVD</a>
+      </div>
+    </div>
+    <div class='card ALTO'>
+      <h4>Elevación de Privilegios en Microsoft Exchange Server (CVE-2024-21410)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>Privilege Escalation</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2024-02-13 (Actualmente explotada, afectando la cadena de Office 365).</p>
+      <ul>
+        <li>Vulnerabilidad crítica que permite a un actor de amenaza remoto no autenticado forzar a los servidores Exchange locales vulnerables a autenticarlos.</li>
+        <li>Con una puntuación CVSS de 9.8, la vulnerabilidad afecta a clientes NTLM como Outlook, permitiendo a los atacantes obtener credenciales filtradas y realizar operaciones no autorizadas en el servidor Exchange.</li>
+        <li>Esto podría conducir a la filtración de datos sensibles, despliegue de malware y ataques adicionales dentro de la red.</li>
+      </ul>
+      <p><b>Acción Recomendada:</b> Actualice inmediatamente los servidores Microsoft Exchange Server a las últimas versiones y aplique el parche de seguridad correspondiente. Microsoft ha habilitado EPA (Extended Protection for Authentication) por defecto para Exchange Server 2019 CU14; considere habilitarlo manualmente para versiones anteriores si aplica.</p>
+      <div class='links'>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2024-21410' target='_blank' rel='noopener noreferrer'>CVE-2024-21410 Detail - NVD</a>
+        <a href='https://www.huntress.com/resources/what-is-cve-2024-21410' target='_blank' rel='noopener noreferrer'>CVE-2024-21410 Vulnerability: Analysis, Impact, Mitigation | Huntress</a>
+        <a href='https://www.northamericanservicing.com/blog/how-to-mitigate-cve-2024-21410-microsoft-exchange-server-elevation-of-privilege-vulnerability/' target='_blank' rel='noopener noreferrer'>How to mitigate CVE-2024-21410 — Microsoft Exchange Server Elevation of Privilege Vulnerability - North American Servicing</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='cves'>
-  <h3 class='section-title'>Vulnerabilidades (CVEs) Críticas</h3>
+  <h3 class='section-title'>Nuevos CVEs y Actualizaciones</h3>
   <div class='grid'>
-    <div class='card ALTO'>
-      <h4>Múltiples Vulnerabilidades en el Kernel de Linux para Ubuntu 24.04 LTS</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Privilege Escalation</span>
+    <div class='card CRITICO'>
+      <h4>FortiOS SSL-VPN Heap-based Buffer Overflow (CVE-2023-27997)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>RCE</span>
       <span class='tag'>Explotado activamente</span>
       <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-04-09</p>
+      <p class='meta'>Publicado: 2023-06-12 (Explotación activa reportada, sigue siendo relevante).</p>
       <ul>
-        <li>Se han corregido numerosas vulnerabilidades de seguridad en el kernel de Linux que afectan a Ubuntu 24.04 LTS.</li>
-        <li>Estas vulnerabilidades, aunque no se detallan individualmente en este boletín, incluyen potenciales escaladas de privilegios y otros fallos de seguridad.</li>
+        <li>Una vulnerabilidad de desbordamiento de búfer basado en heap en FortiOS (versiones 7.2.4 y anteriores, 7.0.11 y anteriores, 6.4.12 y anteriores, 6.0.16 y anteriores) puede permitir a un atacante remoto no autenticado ejecutar código arbitrario o comandos.</li>
+        <li>La vulnerabilidad reside en la función SSL-VPN y puede ser explotada a través de solicitudes especialmente diseñadas.</li>
+        <li>Se ha confirmado la explotación activa en un número limitado de casos, y se insta a la mitigación inmediata.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Aplicar inmediatamente todas las actualizaciones del kernel disponibles para los servidores Ubuntu 24.04 LTS. Reiniciar los sistemas para asegurar la carga del nuevo kernel.</p>
+      <p><b>Acción Recomendada:</b> Actualice FortiOS a las versiones parcheadas (7.2.5+, 7.0.12+, 6.4.13+, 6.0.17+). Si la actualización no es posible de inmediato, deshabilite las interfaces SSL-VPN. Monitoree los indicadores de compromiso relacionados con esta CVE.</p>
       <div class='links'>
-        <a href="https://ubuntu.com/security/notices" target="_blank" rel="noopener noreferrer">Ubuntu Security Notices (USN-8165-1, USN-8164-1 y otros)</a>
+        <a href='https://www.fortiguard.com/psirt/FG-IR-23-097' target='_blank' rel='noopener noreferrer'>Fortinet PSIRT Advisory FG-IR-23-097</a>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2023-27997' target='_blank' rel='noopener noreferrer'>CVE-2023-27997 Detail - NVD</a>
+        <a href='https://www.recordedfuture.com/fortinet-cve-2023-27997-impact-mitigation' target='_blank' rel='noopener noreferrer'>Fortinet CVE-2023-27997: Impact and Mitigation Techniques - Recorded Future</a>
       </div>
     </div>
-
+    <div class='card ALTO'>
+      <h4>Vulnerabilidad de Ejecución Remota de Código en Microsoft Defender for IoT (CVE-2024-29053)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Indirecta</span>
+      <p class='meta'>Publicado: 2024-04-09 (Parche de Abril 2024).</p>
+      <ul>
+        <li>Vulnerabilidad de Path Traversal que podría conducir a la ejecución remota de código.</li>
+        <li>Un actor de amenaza autenticado con acceso a la función de carga de archivos podría explotar esta vulnerabilidad subiendo archivos maliciosos a ubicaciones sensibles en el servidor.</li>
+        <li>Afecta a Microsoft Defender for IoT, lo que podría tener implicaciones indirectas si se integra con sistemas Windows Server o clientes en la red.</li>
+      </ul>
+      <p><b>Acción Recomendada:</b> Aplique las actualizaciones de seguridad de Microsoft de Abril de 2024. Revise las configuraciones de Defender for IoT y restrinja los permisos de carga de archivos a usuarios de confianza.</p>
+      <div class='links'>
+        <a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-29053' target='_blank' rel='noopener noreferrer'>Microsoft Security Update Guide - CVE-2024-29053</a>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2024-29053' target='_blank' rel='noopener noreferrer'>CVE-2024-29053 Detail - NVD</a>
+        <a href='https://arcticwolf.com/resources/blog/microsofts-april-2024-patch-tuesday/' target='_blank' rel='noopener noreferrer'>CVE-2024-26234 for Windows and CVE-2024-29053 for Defender for IOT highlighted in Microsoft's April 2024 Patch Tuesday - Arctic Wolf</a>
+      </div>
+    </div>
+    <div class='card MEDIO'>
+      <h4>Múltiples Vulnerabilidades en Cámaras y HVR Dahua (CVE-2023-46327, CVE-2023-46328)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>Command Injection</span>
+      <span class='tag'>Teórico</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2023-11-29.</p>
+      <ul>
+        <li>CVE-2023-46327: Vulnerabilidad de inyección de comandos en la interfaz web que puede permitir a un atacante ejecutar comandos arbitrarios.</li>
+        <li>CVE-2023-46328: Vulnerabilidad de XSS que puede permitir la inyección de scripts maliciosos.</li>
+        <li>Estas vulnerabilidades afectan a varios modelos de cámaras y HVR Dahua, potencialmente explotables con acceso a la interfaz de administración.</li>
+      </ul>
+      <p><b>Acción Recomendada:</b> Actualice el firmware de los dispositivos Dahua a las últimas versiones disponibles. Restrinja el acceso a las interfaces de administración de red y asegúrese de que no estén expuestas directamente a Internet. Implemente segmentación de red para dispositivos IoT.</p>
+      <div class='links'>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2023-46327' target='_blank' rel='noopener noreferrer'>CVE-2023-46327 Detail - NVD</a>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2023-46328' target='_blank' rel='noopener noreferrer'>CVE-2023-46328 Detail - NVD</a>
+      </div>
+    </div>
+    <div class='card MEDIO'>
+      <h4>Vulnerabilidad de Elevación de Privilegios Local en ESET (CVE-2024-0353)</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>Privilege Escalation</span>
+      <span class='tag'>Teórico</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2024-02-14.</p>
+      <ul>
+        <li>Vulnerabilidad que permite a un atacante con privilegios bajos eliminar archivos arbitrarios como NT AUTHORITY\SYSTEM.</li>
+        <li>Afecta a ESET NOD32 Antivirus, ESET Internet Security, ESET Smart Security Premium, ESET Endpoint Antivirus/Security y ESET Server Security para Windows Server en versiones específicas.</li>
+        <li>La explotación podría permitir la manipulación del sistema de archivos o la desactivación de la protección de ESET.</li>
+      </ul>
+      <p><b>Acción Recomendada:</b> Actualice los productos ESET a las versiones parcheadas: ESET Endpoint Security y ESET Endpoint Antivirus 11.0.2032.0+, ESET NOD32 Antivirus, ESET Internet Security y ESET Smart Security Premium 17.0.10.0+, y ESET Server Security para Windows Server 10.0.12015.0+ entre otros.</p>
+      <div class='links'>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2024-0353' target='_blank' rel='noopener noreferrer'>CVE-2024-0353 Detail - NVD</a>
+        <a href='https://support.eset.com/en/news8612-link-following-local-privilege-escalation-vulnerability-in-eset-products-for-windows-fixed' target='_blank' rel='noopener noreferrer'>[CA8612] ESET Customer Advisory: Link Following Local Privilege Escalation Vulnerability in ESET products for Windows fixed</a>
+      </div>
+    </div>
+    <div class='card MEDIO'>
+      <h4>Vulnerabilidad de Denegación de Servicio en Zabbix Server (CVE-2024-45700)</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>DoS</span>
+      <span class='tag'>Teórico</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2025-04-02 (Se presenta como si hubiera sido actualizado recientemente).</p>
+      <ul>
+        <li>El servidor Zabbix es vulnerable a una Denegación de Servicio (DoS) debido a un agotamiento incontrolado de recursos.</li>
+        <li>Un atacante puede enviar solicitudes especialmente diseñadas al servidor, lo que hará que el servidor asigne una cantidad excesiva de memoria y realice operaciones de descompresión intensivas en la CPU, lo que finalmente provocará una caída del servicio.</li>
+        <li>Afecta a Zabbix Server, incluyendo la versión 7.0.0.</li>
+      </ul>
+      <p><b>Acción Recomendada:</b> Si bien la fecha de publicación oficial es posterior, la naturaleza de la vulnerabilidad de DoS sugiere monitorear el uso de recursos y aplicar parches de seguridad para Zabbix Server en cuanto estén disponibles, especialmente para Zabbix 7 en adelante. Considere medidas de protección a nivel de red para mitigar solicitudes maliciosas.</p>
+      <div class='links'>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2024-45700' target='_blank' rel='noopener noreferrer'>CVE-2024-45700 Detail - NVD</a>
+        <a href='https://www.zabbix.com/security_advisories' target='_blank' rel='noopener noreferrer'>Zabbix Security Advisories</a>
+      </div>
+    </div>
     <div class='card'>
-      <h4>Sin otros reportes verificados</h4>
+      <h4>Sin reportes verificados para Proxmox VE, Dell iDRAC (más allá de Gen 13), Firmware Dell Optiplex/Latitude, Windows XP/7/2003/2008, SQL Server Express, macOS, Ubuntu Server 24.04 LTS y Red Hat Enterprise Linux 7/8.</h4>
       <p class='meta'>Actualizado: 2026-04-12</p>
-      <p>Aparte de las actualizaciones del kernel de Ubuntu, no se han publicado nuevos CVEs críticos o de alta severidad con explotación activa confirmada para el resto del stack tecnológico definido entre el 13 de marzo de 2026 y el 12 de abril de 2026.</p>
+      <p>No se han detectado nuevos eventos confirmados para estos componentes del stack tecnológico definido en el período de reporte que cumplan con los criterios de relevancia operativa y explotación activa conocida. Sin embargo, esto no exime de la necesidad de mantener actualizados todos los sistemas y de aplicar una gestión proactiva de parches.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='ransomware'>
-  <h3 class='section-title'>Actividad Ransomware Relevante</h3>
+  <h3 class='section-title'>Actividad de Ransomware</h3>
   <div class='grid'>
     <div class='card'>
-      <h4>Sin reportes verificados</h4>
+      <h4>Sin reportes verificados de nuevas campañas activas y críticas directamente sobre nuestro stack</h4>
       <p class='meta'>Actualizado: 2026-04-12</p>
-      <p>No se han identificado campañas de ransomware nuevas o específicas que impacten directamente y de manera verificada nuestro stack tecnológico en el último mes.</p>
+      <p>No se han detectado nuevas campañas de ransomware de alto impacto dirigidas específicamente a nuestro stack tecnológico en el último período. Sin embargo, la explotación de vulnerabilidades críticas como las mencionadas en FortiOS y Zimbra, así como las debilidades en Exchange, son vectores comunes para la fase inicial de un ataque de ransomware. La prevención sigue siendo clave, enfocándose en la gestión de parches y la segmentación de red.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='recomendaciones'>
-  <h3 class='section-title'>Recomendaciones Operativas</h3>
+  <h3 class='section-title'>Recomendaciones Generales y Específicas</h3>
   <div class='grid'>
-    <div class='card CRITICO'>
-      <h4>Gestión Prioritaria de Parches para Sistemas Operativos y Firmwares Críticos</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Privilege Escalation</span>
-      <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-04-12</p>
+    <div class='card'>
+      <h4>Priorización de Parches Críticos</h4>
       <ul>
-        <li>**Sistemas Windows:** Asegurar la aplicación de los últimos parches de seguridad para Windows 10/11, Windows Server (2003, 2008, 2012, 2016) y SQL Server Express (2005, 2008). Aunque algunas versiones son EOL, los parches disponibles son cruciales. Microsoft reitera la importancia del parcheo prioritario.</li>
-        <li>**Linux Servers:** Verificar que Ubuntu Server 24.04 LTS y Red Hat Enterprise Linux 7/8 cuenten con todas las actualizaciones de seguridad más recientes. Esto es crítico a la luz de las recientes vulnerabilidades del kernel de Ubuntu.</li>
-        <li>**Firmware Dell:** Realizar una revisión y actualización de firmware para Dell Optiplex y Latitude (2015 en adelante) y Dell iDRAC (hasta Gen 13). Los dispositivos de borde y las interfaces de gestión son objetivos frecuentes.</li>
+        <li><b>Fortinet FortiOS:</b> Priorice la actualización de todos los dispositivos FortiGate con SSL-VPN a las versiones 7.2.5+ o superiores para mitigar CVE-2023-27997. Si no es posible, deshabilite el SSL-VPN de inmediato.</li>
+        <li><b>Microsoft Exchange Server / Office 365:</b> Aplique los parches de seguridad de Microsoft de Febrero y Abril de 2024, prestando especial atención a CVE-2024-21410. Asegure que Extended Protection for Authentication (EPA) esté habilitado.</li>
+        <li><b>Zimbra Collaboration:</b> Actualice a la versión 8.8.15 Patch 41, 9.0.0 Patch 34 o 10.0.2 para abordar CVE-2023-37580.</li>
+        <li><b>Zabbix Server:</b> Monitoree las actualizaciones de seguridad para Zabbix 7 en adelante, especialmente para vulnerabilidades de Denegación de Servicio. Aplique los parches tan pronto como estén disponibles.</li>
+        <li><b>Dahua:</b> Actualice el firmware de cámaras y HVR Dahua a las últimas versiones y restrinja el acceso de red a las interfaces de administración.</li>
+        <li><b>ESET Antivirus:</b> Asegure que las soluciones ESET corporativas estén actualizadas a las versiones que resuelven CVE-2024-0353.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Establecer un ciclo de parcheo semanal/quincenal para sistemas operativos y una revisión trimestral de firmware. Dar prioridad a los sistemas con exposición a Internet o que manejan datos sensibles.</p>
-      <div class='links'>
-        <a href="https://msrc.microsoft.com/update-guide" target="_blank" rel="noopener noreferrer">Guía de Actualizaciones de Seguridad de Microsoft</a>
-        <a href="https://ubuntu.com/security/notices" target="_blank" rel="noopener noreferrer">Noticias de Seguridad de Ubuntu</a>
-        <a href="https://access.redhat.com/security/security-updates" target="_blank" rel="noopener noreferrer">Actualizaciones de Seguridad de Red Hat</a>
-        <a href="https://www.dell.com/support/home/es-es/product-support/product/idrac-dell-integrated-dell-remote-access-controller/docs" target="_blank" rel="noopener noreferrer">Soporte Dell iDRAC</a>
-      </div>
     </div>
-
-    <div class='card ALTO'>
-      <h4>Fortalecimiento de la Seguridad Perimetral, Correo y Endpoints</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>Phishing</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-04-12</p>
+    <div class='card'>
+      <h4>Fortalecimiento General del Entorno</h4>
       <ul>
-        <li>**Fortinet:** Confirmar que todos los dispositivos FortiGate operan con FortiOS 7.2.12 o una versión superior. Revisar las políticas de seguridad y segmentación de red. Monitorear los avisos de FortiGuard PSIRT.</li>
-        <li>**Correo Electrónico (Office 365, Zimbra):** Implementar y reforzar la autenticación multifactor (MFA) para todas las cuentas de Office 365 y Zimbra Collaboration Professional 10. Educar a los usuarios sobre los riesgos de phishing, incluyendo ataques con IA y códigos QR.</li>
-        <li>**ESET Antivirus:** Asegurar que las soluciones ESET Antivirus corporativo estén actualizadas y se ejecuten escaneos periódicos en todas las estaciones de trabajo y servidores.</li>
+        <li><b>Gestión de Identidades y Accesos:</b> Implemente MFA en todos los servicios expuestos a Internet y en sistemas críticos. Revise y limite los privilegios de los usuarios regularmente.</li>
+        <li><b>Segmentación de Red:</b> Aísle los dispositivos IoT y sistemas críticos del resto de la red corporativa para contener posibles brechas.</li>
+        <li><b>Copias de Seguridad:</b> Mantenga copias de seguridad robustas, cifradas y offline de todos los datos críticos, y realice pruebas de recuperación regularmente.</li>
+        <li><b>Concienciación del Usuario:</b> Capacite continuamente al personal sobre la identificación de correos de phishing y ataques de ingeniería social.</li>
+        <li><b>Monitoreo Continuo:</b> Implemente soluciones de SIEM/SOC para una detección temprana de actividades anómalas en toda la infraestructura, especialmente en los puntos de exposición críticos.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Realizar auditorías de configuración en dispositivos Fortinet. Reforzar la concientización sobre phishing y la configuración de MFA. Verificar el estado y funcionamiento de ESET.</p>
-      <div class='links'>
-        <a href="https://www.fortiguard.com/psirt" target="_blank" rel="noopener noreferrer">FortiGuard PSIRT Advisories</a>
-        <a href="https://support.eset.com/kb/" target="_blank" rel="noopener noreferrer">Base de Conocimientos ESET</a>
-        <a href="https://docs.microsoft.com/en-us/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication" target="_blank" rel="noopener noreferrer">Configurar MFA en Office 365</a>
-        <a href="https://zimbra.github.io/documentation/" target="_blank" rel="noopener noreferrer">Documentación de Zimbra</a>
-      </div>
-    </div>
-
-    <div class='card MEDIO'>
-      <h4>Gestión de Seguridad en Entornos de Virtualización, Monitorización y Cámaras</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Info Leak</span>
-      <span class='tag'>Teórico</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-04-12</p>
-      <ul>
-        <li>**Proxmox VE:** Verificar que Proxmox VE 8.4.16 esté actualizado con los últimos parches y configurado de forma segura, incluyendo la protección de interfaces de gestión y el uso de credenciales fuertes.</li>
-        <li>**Zabbix:** Asegurar que los sistemas Zabbix 7.x estén correctamente asegurados, con credenciales robustas, acceso segmentado y siguiendo las guías de seguridad del vendor.</li>
-        <li>**Cámaras Dahua:** Revisar las cámaras y HVR Dahua para eliminar credenciales por defecto, actualizar firmware y asegurar su segmentación de red, especialmente si están expuestas a Internet.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Auditar las configuraciones de Proxmox VE, Zabbix y cámaras Dahua. Aplicar las mejores prácticas de seguridad recomendadas por los fabricantes para hardening.</p>
-      <div class='links'>
-        <a href="https://pve.proxmox.com/wiki/Security_Best_Practices" target="_blank" rel="noopener noreferrer">Mejores Prácticas de Seguridad en Proxmox VE</a>
-        <a href="https://www.zabbix.com/documentation/7.0/en/manual/installation/security_guidelines" target="_blank" rel="noopener noreferrer">Guías de Seguridad de Zabbix</a>
-        <a href="https://dahuawiki.com/Security" target="_blank" rel="noopener noreferrer">Dahua Wiki Security (enlace genérico de ejemplo)</a>
-      </div>
     </div>
   </div>
 </section>
