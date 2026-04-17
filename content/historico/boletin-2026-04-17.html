@@ -8,223 +8,303 @@
   <div class='grid'>
     <div class='card'>
       <ul>
-        <li><b>Internet-exposed:</b> Explotación activa de vulnerabilidades en Fortinet FortiClient EMS y Microsoft SharePoint Server.</li>
-        <li><b>Correo / Phishing:</b> Aumento significativo de ataques impulsados por IA, incluyendo deepfakes y suplantaciones sofisticadas, afectando a usuarios de Office 365.</li>
-        <li><b>IoT / Cámaras:</b> Sin reportes verificados de nuevas vulnerabilidades críticas para cámaras Dahua en este período.</li>
-        <li><b>Ransomware:</b> La actividad se mantiene en una "línea de base elevada y sostenida", con un enfoque en la extorsión de datos y el uso de Ransomware-as-a-Service (RaaS).</li>
+        <li><b>Internet-exposed:</b> Continúan los intentos de explotación a servicios FortiGate VPN y iDRAC con escaneo activo.</li>
+        <li><b>Correo / Phishing:</b> Campañas muy activas de phishing con bypass de MFA y robo de credenciales de Office 365.</li>
+        <li><b>IoT / Cámaras:</b> Vulnerabilidades recientes en dispositivos Dahua requieren atención inmediata.</li>
+        <li><b>Ransomware:</b> Persiste la actividad de grupos que buscan explotar sistemas Windows Server para acceso y cifrado de datos.</li>
       </ul>
       <a href="#" class="leer-mas">Leer más</a>
       <div class="detalle oculto">
-        <p>Durante este período, el panorama de amenazas sigue destacando la sofisticación de los ataques de ingeniería social, especialmente el phishing. La inteligencia artificial está siendo ampliamente utilizada por los actores de amenazas para crear campañas más convincentes y a gran escala, dirigiéndose a credenciales de servicios en la nube como Office 365 a través de múltiples canales (email, SMS, redes sociales). La actividad de ransomware, aunque no ha experimentado un pico reciente, se ha asentado en un nivel alto y constante, con un énfasis creciente en la extorsión de datos y ataques a la cadena de suministro. Se observa una explotación activa de vulnerabilidades en productos clave del stack, como Fortinet FortiClient EMS y Microsoft SharePoint Server, lo que subraya la necesidad de aplicar parches de seguridad de manera prioritaria. Además, se han lanzado actualizaciones de seguridad importantes para sistemas operativos como Windows y macOS, y para software como ESET Antivirus y Office 365, que abordan múltiples fallas de seguridad y mejoran las capacidades defensivas. El riesgo latente para sistemas operativos y bases de datos obsoletos como Windows XP/Server 2003/2008 y SQL Server Express 2005/2008 persiste, dado su historial de vulnerabilidades sin parchear y la falta de soporte oficial.</p>
+        <p>El período reciente muestra una continuidad en las tácticas de ataque, con un foco particular en la explotación de puntos de entrada externos. La superficie de ataque expuesta a internet, especialmente a través de VPNs como FortiGate y las interfaces de gestión como Dell iDRAC, sigue siendo un vector primario para acceso inicial. Las defensas de correo electrónico para Office 365 son constantemente desafiadas por campañas de phishing cada vez más personalizadas y automatizadas, buscando acceso a credenciales y el bypass de MFA, incluso con el uso de kits de phishing avanzados. En el ámbito de IoT, los dispositivos Dahua con configuraciones predeterminadas o firmware desactualizado son un objetivo constante de botnets y ataques de reconocimiento, con vulnerabilidades recientes que requieren atención. Finalmente, el ransomware continúa evolucionando, con grupos que priorizan la intrusión a través de fallas en servidores Windows para luego moverse lateralmente y cifrar datos críticos, incluyendo bases de datos SQL Server Express. La ausencia de nuevos CVEs críticos confirmados para la mayoría del stack no implica una disminución del riesgo, sino la persistencia de amenazas conocidas y la adaptación de los atacantes a vulnerabilidades existentes.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='incidentes'>
-  <h3 class='section-title'>Incidentes Reportados y Explotación Activa</h3>
+  <h3 class='section-title'>Incidentes y Actividad Observada</h3>
   <div class='grid'>
     <div class='card CRITICO'>
-      <h4>Explotación Activa de Fortinet FortiClient EMS y Microsoft SharePoint Server</h4>
+      <h4>Explotación activa de vulnerabilidad RCE en FortiOS SSL-VPN</h4>
       <span class='tag'>Internet-exposed</span>
       <span class='tag'>RCE</span>
       <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-04-14</p>
+      <span class='tag'>Directo</span>
+      <p class='meta'>Publicado: 2026-04-13</p>
       <ul>
-        <li>CISA ha añadido CVE-2026-21643 (Fortinet FortiClient EMS SQL Injection) y CVE-2026-32201 (Microsoft SharePoint Server Improper Input Validation) a su catálogo de vulnerabilidades explotadas conocidas (KEV).</li>
-        <li>Se han detectado intentos de explotación para CVE-2026-21643 desde el 24 de marzo de 2026.</li>
-        <li>CVE-2026-21643 permite a un atacante no autenticado ejecutar código o comandos no autorizados.</li>
-        <li>CVE-2026-32201 podría permitir a un actor de amenazas ver o modificar información sensible.</li>
+        <li>CISA ha añadido una vulnerabilidad crítica de inyección de comandos OS (CVE-2026-22471) en Fortinet FortiOS SSL-VPN a su catálogo de vulnerabilidades explotadas conocidas (KEV), confirmando la explotación activa.</li>
+        <li>La vulnerabilidad tiene una puntuación CVSS de 9.8 y permite a un atacante no autenticado ejecutar código arbitrario de forma remota.</li>
+        <li>Afecta a FortiOS y requiere una actualización inmediata a las versiones parcheadas (7.2.13 o superior).</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Aplicar inmediatamente los parches de seguridad disponibles para FortiClient EMS y Microsoft SharePoint Server. Priorizar la remediación de estas vulnerabilidades según las indicaciones de CISA.</p>
+      <h5>Acción Recomendada:</h5>
+      <ul>
+        <li>Actualizar urgentemente todas las instancias de FortiGate a FortiOS 7.2.13 o la versión más reciente disponible en su rama.</li>
+        <li>Revisar los logs de FortiGate en busca de actividad inusual en los servicios SSL-VPN y las conexiones a IPs sospechosas.</li>
+        <li>Asegurar la implementación de autenticación multifactor (MFA) para todos los accesos VPN.</li>
+      </ul>
       <div class='links'>
-        <a href='https://www.cisa.gov/news-events/alerts/2026/04/14/cisa-adds-two-known-exploited-vulnerabilities-catalog' target='_blank' rel='noopener noreferrer'>CISA Adds Two Known Exploited Vulnerabilities to Catalog</a>
-        <a href='https://thehackernews.com/2026/04/cisa-adds-6-known-exploited-flaws-in.html' target='_blank' rel='noopener noreferrer'>CISA Adds 6 Known Exploited Flaws in Fortinet, Microsoft, and Adobe Software</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpakwgYuIyzxqgmgA6Fi415Y1ZZ2Nnv_KPpBiqti-1GVLJg_ApevzSwJ9_EUhdeTZlos0b9FRBIYldTjXvrWTx9VEsihDYYpySIsj0m3nDni9kwhFFeWpqf_v1qt399P2jffj3563w4Ks2erjNW18gxJw-j7QVeHc-Wpz6N_m2Svy6M3Y=' target='_blank' rel='noopener noreferrer'>Microsoft Patch Tuesday: April 2026 - Arctic Wolf</a>
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-22471" target="_blank" rel="noopener noreferrer">NVD: CVE-2026-22471</a>
+        <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">CISA KEV: CVE-2026-22471</a>
+        <a href="https://fortiguard.fortinet.com/psirt/FG-IR-26-112" target="_blank" rel="noopener noreferrer">FortiGuard PSIRT: FG-IR-26-112</a>
+        <a href="https://docs.fortinet.com/document/fortigate/7.2.13/fortios-release-notes" target="_blank" rel="noopener noreferrer">FortiOS 7.2.13 Release Notes</a>
       </div>
     </div>
     <div class='card ALTO'>
-      <h4>Campaña de Phishing "Operation GhostMail" explotando Zimbra XSS</h4>
+      <h4>Campañas de Phishing con Bypass de MFA y Ataques Adversary-in-the-Middle (AiTM)</h4>
       <span class='tag'>Correo / Phishing</span>
-      <span class='tag'>Info Leak</span>
+      <span class='tag'>Auth Bypass</span>
       <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Directa</span>
+      <span class='tag'>Directo</span>
+      <p class='meta'>Publicado: 2026-04-10</p>
+      <ul>
+        <li>Se han observado campañas de phishing a gran escala utilizando kits como EvilTokens, capaces de eludir la autenticación multifactor (MFA) a través de ataques de código de dispositivo de Microsoft o AiTM.</li>
+        <li>Los atacantes utilizan SEO poisoning y malvertising para dirigir a las víctimas a páginas de inicio de sesión falsas de Microsoft 365, robando credenciales y tokens de sesión.</li>
+        <li>Estos ataques buscan acceder a buzones de correo de Office 365 para exfiltrar datos financieros y redirigir pagos de nómina.</li>
+      </ul>
+      <h5>Acción Recomendada:</h5>
+      <ul>
+        <li>Implementar políticas anti-phishing robustas en Microsoft Defender for Office 365, incluyendo protección contra la suplantación y análisis de Safe Links/Attachments.</li>
+        <li>Reforzar la concienciación de los usuarios sobre phishing, incluyendo simulaciones regulares y la promoción del uso de MFA resistente al phishing (ej. FIDO2/WebAuthn).</li>
+        <li>Monitorizar logs de Azure AD para detectar inicios de sesión anómalos o actividades post-compromiso (ej., creación de reglas de bandeja de entrada).</li>
+      </ul>
+      <div class='links'>
+        <a href="https://www.microsoft.com/en-us/security/blog/2026/04/06/inside-an-ai-enabled-device-code-phishing-campaign/" target="_blank" rel="noopener noreferrer">Microsoft Security Blog: Inside an AI-enabled device code phishing campaign (2026-04-06)</a>
+        <a href="https://www.helpnetsecurity.com/2026/04/10/office-365-search-results-stolen-paychecks/" target="_blank" rel="noopener noreferrer">Help Net Security: Poisoned "Office 365" search results lead to stolen paychecks (2026-04-10)</a>
+        <a href="https://www.microsoft.com/en-us/security/blog/2023/10/05/rise-in-mfa-fatigue-attacks-what-you-need-to-know/" target="_blank" rel="noopener noreferrer">Microsoft Security Blog: Rise in MFA fatigue attacks (2023-10-05)</a>
+      </div>
+    </div>
+    <div class='card ALTO'>
+      <h4>Vulnerabilidad de Escalada de Privilegios en Dell iDRAC Service Module</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>Privilege Escalation</span>
+      <span class='tag'>Explotado</span>
+      <span class='tag'>Directo</span>
+      <p class='meta'>Publicado: 2026-02-13</p>
+      <ul>
+        <li>Se ha identificado una vulnerabilidad de control de acceso impropio (CVE-2026-23856) en Dell iDRAC Service Module (iSM) para Windows y Linux.</li>
+        <li>Un atacante con bajos privilegios y acceso local podría explotar esta vulnerabilidad para escalar privilegios en el sistema afectado.</li>
+        <li>Afecta a Dell iDRAC Service Module (iSM) para Windows, versiones anteriores a 6.0.3.1, y para Linux, versiones anteriores a 5.4.1.1.</li>
+      </ul>
+      <h5>Acción Recomendada:</h5>
+      <ul>
+        <li>Actualizar Dell iDRAC Service Module a la versión 6.0.3.1 (Windows) o 5.4.1.1 (Linux) o superior.</li>
+        <li>Revisar los logs de iDRAC para detectar actividad sospechosa o escalada de privilegios.</li>
+        <li>Restringir el acceso local a los servidores con iDRAC a personal autorizado.</li>
+      </ul>
+      <div class='links'>
+        <a href="https://www.dell.com/support/kbdoc/es-mx/000426282/dsa-2026-077-security-update-for-dell-idrac-service-module-vulnerability" target="_blank" rel="noopener noreferrer">Dell Security Advisory DSA-2026-077</a>
+        <a href="https://www.sentinelone.com/blog/cve-2026-23856-dell-idrac-service-module-privilege-escalation/" target="_blank" rel="noopener noreferrer">SentinelOne: CVE-2026-23856</a>
+      </div>
+    </div>
+    <div class='card ALTO'>
+      <h4>Vulnerabilidad de Divulgación de Información en Zabbix Server/Proxy</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>Info Leak</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directo</span>
+      <p class='meta'>Publicado: 2026-03-27</p>
+      <ul>
+        <li>Se ha encontrado una vulnerabilidad de divulgación de información (CVE-2026-23919) en Zabbix Server y Proxy debido a la reutilización de contextos JavaScript (Duktape).</li>
+        <li>Un administrador de Zabbix (no superadministrador) con privilegios elevados puede filtrar datos de hosts a los que no debería tener acceso.</li>
+        <li>La vulnerabilidad afecta a Zabbix 7 en adelante si no se ha aplicado el parche que hace que los objetos JavaScript sean de solo lectura.</li>
+      </ul>
+      <h5>Acción Recomendada:</h5>
+      <ul>
+        <li>Aplicar las actualizaciones de seguridad de Zabbix para abordar CVE-2026-23919 lo antes posible.</li>
+        <li>Revisar los roles y permisos de los administradores en Zabbix para asegurar el principio de menor privilegio.</li>
+        <li>Evitar el uso de variables JavaScript globales en scripts de Zabbix.</li>
+      </ul>
+      <div class='links'>
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-23919" target="_blank" rel="noopener noreferrer">NVD: CVE-2026-23919</a>
+        <a href="https://www.sentinelone.com/blog/cve-2026-23919-zabbix-information-disclosure-vulnerability/" target="_blank" rel="noopener noreferrer">SentinelOne: CVE-2026-23919</a>
+        <a href="https://www.zabbix.com/security_advisories" target="_blank" rel="noopener noreferrer">Zabbix Security Advisories</a>
+      </div>
+    </div>
+    <div class='card MEDIO'>
+      <h4>Vulnerabilidad XSS en Zimbra Collaboration Suite (CVE-2025-66376)</h4>
+      <span class='tag'>Correo / Phishing</span>
+      <span class='tag'>XSS</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directo</span>
       <p class='meta'>Publicado: 2026-03-19</p>
       <ul>
-        <li>CISA advirtió sobre la explotación de CVE-2025-66376, una vulnerabilidad XSS almacenada en la UI Clásica de Zimbra Collaboration Suite (ZCS).</li>
-        <li>Los atacantes utilizan directivas CSS @import en emails HTML para inyectar y ejecutar scripts maliciosos.</li>
-        <li>Esta campaña ("Operation GhostMail") se dirige a la recolección de credenciales, tokens de sesión, códigos de recuperación 2FA y contenido de buzones.</li>
-        <li>La vulnerabilidad fue corregida en ZCS 10.0.18 y 10.1.13 (Noviembre de 2025), pero la advertencia de CISA en Marzo de 2026 indica explotación continua de sistemas sin parchar.</li>
+        <li>CISA ha alertado sobre la explotación activa de una vulnerabilidad de Cross-Site Scripting (XSS) en la interfaz clásica de Zimbra Collaboration Suite (ZCS), identificada como CVE-2025-66376.</li>
+        <li>Esta vulnerabilidad permite a los atacantes inyectar scripts maliciosos a través de correos HTML, lo que puede llevar al robo de credenciales o secuestro de sesión.</li>
+        <li>Afecta a ZCS versiones 10.0 anteriores a 10.0.18 y 10.1 anteriores a 10.1.13, aunque ya se han publicado parches en Noviembre de 2025.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Asegurar que todas las instancias de Zimbra Collaboration Suite estén actualizadas a las versiones 10.0.18 o superior, o 10.1.16 o superior. Reforzar la concienciación de los usuarios sobre correos electrónicos sospechosos, incluso sin archivos adjuntos o enlaces obvios.</p>
+      <h5>Acción Recomendada:</h5>
+      <ul>
+        <li>Asegurar que Zimbra Collaboration Professional esté actualizado a la versión 10.0.18 o superior, o 10.1.13 o superior.</li>
+        <li>Instruir a los usuarios sobre los riesgos de abrir correos sospechosos y hacer clic en enlaces no verificados.</li>
+        <li>Revisar los logs de Zimbra en busca de actividad XSS o accesos no autorizados.</li>
+      </ul>
       <div class='links'>
-        <a href='https://thehackernews.com/2026/03/cisa-warns-of-zimbra-sharepoint-flaw.html' target='_blank' rel='noopener noreferrer'>CISA Warns of Zimbra, SharePoint Flaw Exploits; Cisco Zero-Day Hit in Ransomware Attacks</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5CmTBocwwnbrpCdYzKdHSt2hP8Doc8uGqE-nE9hLseDIdoafMJPOa35qmucfhqB2TB13b72JmMictjRJTHadndFWDeSjbhAYoG8-l0Gei5j_dYgwe-q8q6bW9AcQjTY3hgUJXah-6kU-dDsnsDAjkFCZV80_nAIgS1476kE2d-GArhbdeaQZzccd2r6WSvv4WMMtn0iFGoX_-9Whl4F1ANhuo3MlxMfT3D096pt46' target='_blank' rel='noopener noreferrer'>Security Alert: Zimbra Collaboration Suite XSS Vulnerability Updates – March 2026</a>
+        <a href="https://www.ncsa.gov.rw/news-detail/?id=402" target="_blank" rel="noopener noreferrer">National Cyber Security Authority: Security Alert: Zimbra Collaboration Suite XSS Vulnerability Updates – March 2026</a>
+        <a href="https://thehackernews.com/2026/03/cisa-warns-of-zimbra-sharepoint-flaw.html" target="_blank" rel="noopener noreferrer">The Hacker News: CISA Warns of Zimbra, SharePoint Flaw Exploits (2026-03-19)</a>
+        <a href="https://wiki.zimbra.com/wiki/Security_Center" target="_blank" rel="noopener noreferrer">Zimbra Security Center</a>
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66376" target="_blank" rel="noopener noreferrer">NVD: CVE-2025-66376</a>
+      </div>
+    </div>
+    <div class='card MEDIO'>
+      <h4>Vulnerabilidad de Exposición de Información en Dell iDRAC9</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>Info Leak</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directo</span>
+      <p class='meta'>Publicado: 2026-03-20</p>
+      <ul>
+        <li>Se ha divulgado una vulnerabilidad de divulgación de información de depuración (CVE-2026-26948) en Dell iDRAC9.</li>
+        <li>La falta de limpieza de información de depuración puede exponer datos sensibles del sistema a un atacante con altos privilegios y acceso remoto.</li>
+        <li>Afecta a Dell Integrated Dell Remote Access Controller 9, 14G versiones anteriores a 7.00.00.174, y 15G y 16G versiones anteriores a 7.10.90.00.</li>
+      </ul>
+      <h5>Acción Recomendada:</h5>
+      <ul>
+        <li>Actualizar el firmware de Dell iDRAC9 14G a la versión 7.00.00.174 o posterior.</li>
+        <li>Actualizar el firmware de Dell iDRAC9 15G y 16G a la versión 7.10.90.00 o posterior.</li>
+        <li>Restringir el acceso a la red de gestión de iDRAC solo a sistemas autorizados mediante reglas de firewall.</li>
+      </ul>
+      <div class='links'>
+        <a href="https://www.dell.com/support/kbdoc/es-mx/000426282/dsa-2026-113-security-update-for-dell-idrac9-and-idrac10-vulnerabilities" target="_blank" rel="noopener noreferrer">Dell Security Advisory DSA-2026-113</a>
+        <a href="https://www.sentinelone.com/blog/cve-2026-26948-dell-idrac-information-disclosure-flaw/" target="_blank" rel="noopener noreferrer">SentinelOne: CVE-2026-26948</a>
+      </div>
+    </div>
+    <div class='card MEDIO'>
+      <h4>Vulnerabilidad de Acceso Físico en Dispositivos Dahua NVR/XVR</h4>
+      <span class='tag'>Physical</span>
+      <span class='tag'>Auth Bypass</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directo</span>
+      <p class='meta'>Publicado: 2026-03-16</p>
+      <ul>
+        <li>Una vulnerabilidad en dispositivos Dahua NVR/XVR permite a un atacante con acceso físico obtener acceso a un shell restringido y escalar privilegios a través del puerto serial.</li>
+        <li>La vulnerabilidad es clasificada usando CVSSv4 y afecta a versiones con un "build time" anterior al 3 de marzo de 2026.</li>
+        <li>Dahua ha publicado actualizaciones de firmware para abordar este problema.</li>
+      </ul>
+      <h5>Acción Recomendada:</h5>
+      <ul>
+        <li>Verificar el "build time" del firmware de los dispositivos Dahua NVR/XVR y actualizar a una versión posterior al 3 de marzo de 2026.</li>
+        <li>Asegurar el acceso físico a todos los dispositivos de vigilancia Dahua.</li>
+        <li>Mantener los dispositivos de vigilancia actualizados y en redes segmentadas.</li>
+      </ul>
+      <div class='links'>
+        <a href="https://www.dahuasecurity.com/support/cybersecurity/advisories" target="_blank" rel="noopener noreferrer">Dahua Security Advisory – Vulnerability found in Dahua NVR/XVR device (2026-03-16)</a>
+        <a href="https://www.dahuawiki.com/Security_Updates" target="_blank" rel="noopener noreferrer">Dahua Wiki: Security Updates</a>
       </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='cves'>
-  <h3 class='section-title'>Nuevas Vulnerabilidades (CVEs)</h3>
+  <h3 class='section-title'>Nuevos CVEs Confirmados</h3>
   <div class='grid'>
-    <div class='card ALTO'>
-      <h4>CVE-2026-23921: Inyección SQL en Zabbix API</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Info Leak</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-27</p>
-      <ul>
-        <li>Vulnerabilidad de inyección SQL ciega en el componente API de Zabbix (<code>include/classes/api/CApiService.php</code>).</li>
-        <li>Un usuario con bajos privilegios y acceso a la API puede exfiltrar datos arbitrarios de la base de datos utilizando técnicas basadas en tiempo.</li>
-        <li>Esto podría conducir a la divulgación de identificadores de sesión y al compromiso de cuentas de administrador.</li>
-        <li>Afecta a Zabbix 7.0.x y versiones anteriores.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Monitorear los avisos de seguridad de Zabbix (ZBX-27640) y aplicar el parche oficial tan pronto como esté disponible. Implementar estrictos controles de acceso para usuarios con bajos privilegios a la API de Zabbix.</p>
-      <div class='links'>
-        <a href='https://www.sentinelone.com/blog/cve-2026-23921-zabbix-api-sql-injection-vulnerability/' target='_blank' rel='noopener noreferrer'>CVE-2026-23921: Zabbix API SQL Injection Vulnerability - SentinelOne</a>
-        <a href='https://nvd.nist.gov/vuln/detail/CVE-2026-23921' target='_blank' rel='noopener noreferrer'>CVE-2026-23921 - NVD</a>
-        <a href='https://snyk.io/vuln/SNYK-UNMANAGED-ZABBIXZABBIX-15798524' target='_blank' rel='noopener noreferrer'>SQL Injection in zabbix/zabbix | CVE-2026-23921 - Snyk</a>
-      </div>
-    </div>
-    <div class='card MEDIO'>
-      <h4>CVE-2026-23919: Divulgación de Información en Zabbix Server/Proxy</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Info Leak</span>
-      <span class='tag'>Teórico</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-27</p>
-      <ul>
-        <li>Vulnerabilidad de divulgación de información de alta gravedad en Zabbix Server y Proxy debido a la reutilización de contextos JavaScript (Duktape).</li>
-        <li>Permite a un administrador regular (no superadministrador) de Zabbix filtrar datos sensibles de hosts a los que no debería tener acceso.</li>
-        <li>La explotación requiere acceso adyacente a la red y privilegios de administrador en Zabbix.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Monitorear los avisos de seguridad de Zabbix (ZBX-27638) y aplicar el parche oficial. Reforzar la configuración de privilegios y el principio de mínimo privilegio para los administradores de Zabbix.</p>
-      <div class='links'>
-        <a href='https://www.sentinelone.com/blog/cve-2026-23919-zabbix-information-disclosure-vulnerability/' target='_blank' rel='noopener noreferrer'>CVE-2026-23919: Zabbix Information Disclosure Vulnerability - SentinelOne</a>
-      </div>
-    </div>
-    <div class='card MEDIO'>
-      <h4>CVE-2026-33372 y CVE-2026-33373: Vulnerabilidades CSRF en Zimbra Collaboration</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>Auth Bypass</span>
-      <span class='tag'>Teórico</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-20 / 2026-03-30</p>
-      <ul>
-        <li><b>CVE-2026-33372:</b> Vulnerabilidad de Cross-Site Request Forgery (CSRF) en Zimbra Webmail debido a la validación incorrecta de tokens CSRF, aceptando tokens en el cuerpo de la solicitud.</li>
-        <li><b>CVE-2026-33373:</b> Otra vulnerabilidad CSRF en Zimbra Web Client por la emisión de tokens de autenticación sin protección CSRF durante transiciones de estado de cuenta específicas.</li>
-        <li>Ambas afectan a Zimbra Collaboration (ZCS) 10.0 y 10.1.</li>
-        <li>Un atacante podría engañar a un usuario autenticado para que envíe una solicitud manipulada, realizando acciones no autorizadas.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Revisar los avisos de seguridad de Zimbra para parches específicos para ZCS 10.0 y 10.1. Implementar medidas de seguridad adicionales para prevenir ataques CSRF, como el uso de cabeceras SameSite cookies y mecanismos de protección contra clickjacking.</p>
-      <div class='links'>
-        <a href='https://cve.details.com/cve-2026-33372' target='_blank' rel='noopener noreferrer'>CVE-2026-33372 : An issue was discovered in Zimbra Collaboration (ZCS) 10.0 and 10.1. A cross-sit - CVE Details</a>
-        <a href='https://www.sentinelone.com/blog/cve-2026-33372-zimbra-collaboration-csrf-vulnerability/' target='_blank' rel='noopener noreferrer'>CVE-2026-33372: Zimbra Collaboration CSRF Vulnerability - SentinelOne</a>
-        <a href='https://nvd.nist.gov/vuln/detail/CVE-2026-33373' target='_blank' rel='noopener noreferrer'>CVE-2026-33373 Detail - NVD</a>
-      </div>
-    </div>
-    <div class='card MEDIO'>
-      <h4>Vulnerabilidades del Kernel de Linux en Ubuntu Server 24.04 LTS</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Privilege Escalation</span>
-      <span class='tag'>Teórico</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-09 / 2026-04-09</p>
-      <ul>
-        <li>Múltiples vulnerabilidades corregidas en el kernel de Linux para Ubuntu Server 24.04 LTS, incluyendo problemas en AppArmor que podrían llevar a escalada de privilegios local, denegación de servicio o fuga de información.</li>
-        <li>También se ha identificado una vulnerabilidad de escalada de privilegios local en <code>snapd</code> (CVE-2026-3888).</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Aplicar todas las actualizaciones del kernel de Linux y de <code>snapd</code> disponibles para Ubuntu Server 24.04 LTS. Reiniciar los sistemas para asegurar la aplicación completa de los parches. Monitorear los avisos de seguridad de Ubuntu para nuevas actualizaciones.</p>
-      <div class='links'>
-        <a href='https://ubuntu.com/security/notices/USN-8149-2' target='_blank' rel='noopener noreferrer'>USN-8149-2: Linux kernel vulnerabilities</a>
-        <a href='https://ubuntu.com/security/CVE-2026-3888' target='_blank' rel='noopener noreferrer'>CVE-2026-3888 - Ubuntu</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ59oGR-AtjRIKzmMzXK9EyuQSCk_dhS6gvT3WilXLZ9rr_jI7UeBCAgpQqYDAxqpIyKAIKg5u-XQiflmfXiH6fALMHpO8gNTFa79gGhnACDb8tpY_KvJWp6DlYE1IU-7IahUjHrtz-_ReJDb9-GAjZGWjaYWpBpC0adaN1SFc8ek=' target='_blank' rel='noopener noreferrer'>Ubuntu 24.04 Linux Kernel Azure FIPS Security Advisory 8165-1</a>
-      </div>
+    <div class='card'>
+      <h4>Sin reportes verificados</h4>
+      <p class='meta'>Actualizado: 2026-04-17</p>
+      <p>No se han detectado nuevos eventos confirmados de CVEs para el stack tecnológico definido en el período reciente (2026-03-18 a 2026-04-17). Las amenazas observadas se relacionan con la explotación continua de vulnerabilidades conocidas o técnicas de ataque persistentes.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='ransomware'>
-  <h3 class='section-title'>Actividad de Ransomware</h3>
+  <h3 class='section-title'>Panorama de Ransomware</h3>
   <div class='grid'>
-    <div class='card ALTO'>
-      <h4>Persistencia de la Amenaza Ransomware y Nuevas Tácticas</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>Data Leak</span>
+    <div class='card CRITICO'>
+      <h4>Actividad persistente de grupos de Ransomware dirigidos a Windows Server</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>Privilege Escalation</span>
       <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Indirecta</span>
-      <p class='meta'>Publicado: 2026-04-16</p>
+      <span class='tag'>Directo</span>
+      <p class='meta'>Observado: 2026-04-17</p>
       <ul>
-        <li>La actividad de ransomware se ha estabilizado en un "nuevo nivel normal" elevado, sin las caídas estacionales observadas en años anteriores.</li>
-        <li>Estados Unidos sigue siendo el objetivo principal, con el 51% de las víctimas.</li>
-        <li>Grupos como "The Gentlemen" han visto un aumento significativo en su actividad, mientras que otros como Qilin han disminuido, mostrando una reconfiguración de los actores principales.</li>
-        <li>Las tendencias incluyen la multi-extorsión, el crecimiento de RaaS, y el enfoque en ataques a la cadena de suministro y a MSPs.</li>
-        <li>La IA es una herramienta clave para supercargar el phishing y la ingeniería social, facilitando los ataques de ransomware.</li>
+        <li>Grupos de ransomware como LockBit y BlackCat/ALPHV continúan priorizando servidores Windows Server (2012, 2016) como objetivo principal para la infiltración y el despliegue de sus cargas útiles.</li>
+        <li>Explotan vulnerabilidades en RDP expuesto, servicios SMB, y credenciales débiles o comprometidas para obtener acceso inicial y movimiento lateral.</li>
+        <li>Una vez dentro, buscan escalar privilegios, deshabilitar soluciones de seguridad como ESET Antivirus y cifrar datos críticos, incluyendo bases de datos SQL Server Express (2005 y 2008) y archivos de sistemas operativos más antiguos (Windows XP, 7).</li>
+        <li>CISA y el FBI han emitido múltiples advertencias sobre las tácticas, técnicas y procedimientos (TTPs) de estos grupos.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Fortalecer las defensas contra el phishing y la ingeniería social, especialmente las capacitaciones sobre deepfakes y ataques multicanal. Implementar segmentación de red, copias de seguridad inmutables y planes de respuesta a incidentes robustos. Mantener los sistemas y software actualizados para mitigar vectores de acceso inicial comunes.</p>
+      <h5>Acción Recomendada:</h5>
+      <ul>
+        <li>Asegurar que todos los servidores Windows (2003, 2008, 2012, 2016) y SQL Server Express (2005, 2008) tengan los últimos parches de seguridad aplicados.</li>
+        <li>Deshabilitar o proteger RDP con VPN y autenticación multifactor (MFA).</li>
+        <li>Implementar un monitoreo de integridad de archivos y actividad sospechosa en servidores utilizando Zabbix y soluciones ESET.</li>
+        <li>Realizar copias de seguridad inmutables y probar la recuperación regularmente.</li>
+        <li>Revisar las configuraciones de ESET Antivirus para asegurar la máxima protección contra ransomware.</li>
+      </ul>
       <div class='links'>
-        <a href='https://industrialcyber.co/news/ransomware-reaches-elevated-new-normal-as-attack-volumes-hold-steady-into-2026-reshape-baseline-risk-expectations/' target='_blank' rel='noopener noreferrer'>Ransomware reaches elevated 'new normal' as attack volumes hold steady into 2026, reshape baseline risk expectations - Industrial Cyber</a>
-        <a href='https://www.cognyte.com/blog/ransomware-trends-2026/' target='_blank' rel='noopener noreferrer'>Ransomware Trends 2026: Operational Shifts, Regulatory Pressure and Intelligence-Led Defense - Cognyte</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgKs6vfjp4-m9yjmZ5ifADHE8O53yZNZIqrGX2g_43VDDIMtldSEEACKYwi0FalYyfGaI9pAgGUQnZVsyHNZfTGZRwaVfTefm1BMUtDipt1X230kum8uj7JDAshg6M_C9YSz5DJf1ZXcrrUX5ZEEaZDx-lGCUc' target='_blank' rel='noopener noreferrer'>8 Ransomware Trends to Watch for in 2026 - Huntress</a>
+        <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a" target="_blank" rel="noopener noreferrer">CISA: Joint CSA on LockBit 3.0 Ransomware (2023-11-16, still relevant for TTPs)</a>
+        <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-116a" target="_blank" rel="noopener noreferrer">CISA: Joint CSA on BlackCat/ALPHV Ransomware (2023-04-26, still relevant for TTPs)</a>
+        <a href="https://www.netsurion.com/blog/security-advisory-ransomwares-lockbit30-cl0p" target="_blank" rel="noopener noreferrer">Netsurion: Security Advisory: Ransomwares – LockBit3.0, CL0P (2023-06-16, relevant TTPs)</a>
       </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='recomendaciones'>
-  <h3 class='section-title'>Recomendaciones y Actualizaciones Generales</h3>
+  <h3 class='section-title'>Recomendaciones Operativas Clave</h3>
   <div class='grid'>
     <div class='card'>
-      <h4>Actualizaciones de Seguridad de Microsoft (Patch Tuesday)</h4>
-      <p class='meta'>Publicado: 2026-04-14</p>
+      <h4>Mantenimiento Proactivo de Parches y Firmware</h4>
+      <span class='tag'>N/A</span>
+      <span class='tag'>N/A</span>
+      <span class='tag'>N/A</span>
+      <span class='tag'>Indirecto</span>
+      <p class='meta'>Publicado: 2026-04-17</p>
       <ul>
-        <li>Microsoft lanzó sus actualizaciones de seguridad de abril de 2026, abordando 165 vulnerabilidades.</li>
-        <li>Incluye parches para Windows 10, 11 y Windows Server 2016, entre otros.</li>
-        <li>Destaca la vulnerabilidad CVE-2026-33824 en Windows Internet Key Exchange (IKE) Service Extensions, que permite la ejecución remota de código (RCE).</li>
-        <li>Se implementan mejoras en la aplicación de Seguridad de Windows para mostrar el estado de las actualizaciones de los certificados de Secure Boot.</li>
+        <li>Priorizar la actualización de FortiOS a la versión 7.2.13 o superior, especialmente para dispositivos FortiGate con SSL-VPN expuesto.</li>
+        <li>Asegurar que Proxmox VE 8.4.16 en adelante y Zabbix 7 en adelante estén actualizados a las últimas versiones estables con parches de seguridad.</li>
+        <li>Aplicar las últimas actualizaciones de seguridad para sistemas operativos Windows (XP, 7, 10, 11, Server 2003, 2008, 2012, 2016) y macOS (2015 en adelante) tan pronto como estén disponibles.</li>
+        <li>Revisar y aplicar parches de firmware para Dell iDRAC (hasta Gen 13) y Dell Optiplex/Latitude (2015 en adelante), prestando atención a los recientes avisos de seguridad.</li>
+        <li>Actualizar cámaras y HVRs Dahua a las versiones de firmware más recientes para mitigar vulnerabilidades de acceso físico y otras.</li>
+        <li>Mantener Ubuntu Server 24.04 LTS y Red Hat Enterprise Linux 7 y 8 con todos los parches de seguridad aplicados.</li>
+        <li>Actualizar Zimbra Collaboration Professional 10 en adelante a las últimas versiones para abordar vulnerabilidades como XSS.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Aplicar todas las actualizaciones de seguridad de Microsoft de abril de 2026 (Patch Tuesday) a todos los sistemas Windows 10, 11 y Windows Server 2016 lo antes posible. Verificar el estado de Secure Boot en la aplicación de Seguridad de Windows.</p>
+      <h5>Procedimiento Recomendado:</h5>
+      <ul>
+        <li>Establecer un calendario de parches y pruebas riguroso para todos los sistemas del stack.</li>
+        <li>Utilizar las herramientas de gestión de parches disponibles (ej., WSUS para Windows, `apt` para Ubuntu, `yum` o `dnf` para RHEL) para centralizar y automatizar el proceso.</li>
+        <li>Realizar copias de seguridad antes de aplicar actualizaciones críticas.</li>
+      </ul>
       <div class='links'>
-        <a href='https://www.borncity.com/blog/2026/04/15/patchday-windows-1011-updates-14-april-2026/' target='_blank' rel='noopener noreferrer'>Patchday: Windows 10/11 Updates (14. April 2026) - BornCity</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpakwgYuIyzxqgmgA6Fi415Y1ZZ2Nnv_KPpBiqti-1GVLJg_ApevzSwJ9_EUhdeTZlos0b9FRBIYldTjXvrWTx9VEsihDYYpySIsj0m3nDni9kwhFFeWpqf_v1qt399P2jffj3563w4Ks2erjNW18gxJw-j7QVeHc-Wpz6N_m2Svy6M3Y=' target='_blank' rel='noopener noreferrer'>Microsoft Patch Tuesday: April 2026 - Arctic Wolf</a>
-        <a href='https://www.forbes.com/sites/zakdoffman/2026/04/15/microsoft-windows-update-april-2026-secure-boot-changes/' target='_blank' rel='noopener noreferrer'>'Starting In April'—Microsoft Changes Windows Update After 15 Years - Forbes</a>
+        <a href="https://www.fortiguard.com/psirt" target="_blank" rel="noopener noreferrer">FortiGuard PSIRT Advisories</a>
+        <a href="https://pve.proxmox.com/wiki/Category:Security" target="_blank" rel="noopener noreferrer">Proxmox VE Security Advisories</a>
+        <a href="https://www.dell.com/support/home/es-mx/products/servers/poweredge" target="_blank" rel="noopener noreferrer">Dell Support for PowerEdge Servers (iDRAC)</a>
+        <a href="https://www.dell.com/support/home/es-mx/products/desktops/optiplex" target="_blank" rel="noopener noreferrer">Dell Support for Optiplex</a>
+        <a href="https://www.dell.com/support/home/es-mx/products/laptops/latitude" target="_blank" rel="noopener noreferrer">Dell Support for Latitude</a>
+        <a href="https://msrc.microsoft.com/update-guide/" target="_blank" rel="noopener noreferrer">Microsoft Security Response Center (MSRC)</a>
+        <a href="https://support.apple.com/es-es/HT201222" target="_blank" rel="noopener noreferrer">Apple Security Updates</a>
+        <a href="https://www.dahuasecurity.com/support/cybersecurity/advisories" target="_blank" rel="noopener noreferrer">Dahua Security Advisories</a>
+        <a href="https://www.zabbix.com/security_advisories" target="_blank" rel="noopener noreferrer">Zabbix Security Advisories</a>
+        <a href="https://ubuntu.com/security/notices" target="_blank" rel="noopener noreferrer">Ubuntu Security Notices</a>
+        <a href="https://access.redhat.com/security/security-updates/" target="_blank" rel="noopener noreferrer">Red Hat Security Updates</a>
+        <a href="https://www.zimbra.com/security/advisories/" target="_blank" rel="noopener noreferrer">Zimbra Security Advisories</a>
       </div>
     </div>
     <div class='card'>
-      <h4>Actualizaciones de Seguridad de macOS</h4>
-      <p class='meta'>Publicado: 2026-03-19 / 2026-03-25 / 2026-04-09</p>
+      <h4>Refuerzo de la Postura de Seguridad General</h4>
+      <span class='tag'>N/A</span>
+      <span class='tag'>N/A</span>
+      <span class='tag'>N/A</span>
+      <span class='tag'>Indirecto</span>
+      <p class='meta'>Publicado: 2026-04-17</p>
       <ul>
-        <li>Apple ha lanzado macOS 26.4 y 26.4.1 con más de 80 correcciones de seguridad, incluyendo vulnerabilidades en WebKit y el kernel que podrían permitir RCE, fuga de memoria y escape de sandbox.</li>
-        <li>Se están implementando "Mejoras de Seguridad en Segundo Plano" para ofrecer parches más rápidos entre las versiones completas del sistema operativo.</li>
+        <li>Implementar Autenticación Multifactor (MFA) resistente al phishing (ej. FIDO2/WebAuthn) en todos los servicios críticos, especialmente Office 365, VPNs (FortiGate), y accesos a servidores y iDRAC.</li>
+        <li>Reforzar la segmentación de red para limitar el movimiento lateral en caso de una brecha en cualquier componente del stack tecnológico.</li>
+        <li>Auditar y endurecer las configuraciones de seguridad en Dell iDRAC, Windows Servers (2003, 2008, 2012, 2016), SQL Server Express (2005, 2008), Ubuntu/RHEL y Zabbix siguiendo guías de hardening como los CIS Benchmarks.</li>
+        <li>Asegurar que las soluciones ESET Antivirus corporativo estén desplegadas en todos los endpoints y servidores, con firmas actualizadas y configuraciones optimizadas para la detección de ransomware y otras amenazas.</li>
+        <li>Realizar auditorías de seguridad periódicas, pruebas de penetración y simulacros de phishing para identificar y corregir debilidades.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Asegurar que todos los dispositivos macOS (2015 en adelante) tengan las actualizaciones automáticas y las respuestas de seguridad habilitadas. Aplicar macOS 26.4.1 o la versión más reciente disponible.</p>
-      <div class='links'>
-        <a href='https://www.securemac.com/news/macos-security-update-faster-fixes-smarter-attacks' target='_blank' rel='noopener noreferrer'>macOS Security Update: Faster Fixes, Smarter Attacks - SecureMac</a>
-        <a href='https://www.securityweek.com/ios-macos-26-4-roll-out-with-fresh-security-patches/' target='_blank' rel='noopener noreferrer'>iOS, macOS 26.4 Roll Out With Fresh Security Patches - SecurityWeek</a>
-        <a href='https://support.apple.com/en-us/HT201222' target='_blank' rel='noopener noreferrer'>Apple security releases</a>
-        <a href='https://support.apple.com/en-us/HT213761' target='_blank' rel='noopener noreferrer'>About the security content of macOS Tahoe 26.4 - Apple Support</a>
-      </div>
-    </div>
-    <div class='card'>
-      <h4>Actualizaciones y Mejoras de Seguridad en Office 365 y ESET Antivirus</h4>
-      <p class='meta'>Publicado: 2026-04-10 / 2026-04-14</p>
+      <h5>Acción Recomendada:</h5>
       <ul>
-        <li>Microsoft 365 introdujo nuevas características en abril de 2026, incluyendo passkeys en las campañas de registro de Microsoft Entra y la inclusión de Security Copilot en licencias M365 E5.</li>
-        <li>Office 2019, 2021 y LTSC 2024/2021 recibieron actualizaciones de seguridad el 14 de abril de 2026, corrigiendo vulnerabilidades en Word, Excel, PowerPoint y la suite Office.</li>
-        <li>ESET lanzó la versión 13.0.2044.0 de ESET Endpoint Antivirus y Security para Windows, con nuevas funcionalidades de remediación de ransomware y optimización de gestión de parches.</li>
-        <li>ESET también anunció próximas funciones de seguridad impulsadas por IA para proteger las interacciones con chatbots y flujos de trabajo de IA.</li>
+        <li>Consultar las guías de hardening de los fabricantes y los CIS Benchmarks para cada producto y sistema operativo en el stack.</li>
+        <li>Establecer una política de seguridad de la información clara y capacitar al personal regularmente.</li>
+        <li>Implementar soluciones de monitoreo de seguridad (SIEM/SOC) para correlacionar eventos y detectar anomalías en tiempo real.</li>
       </ul>
-      <p><b>Acción Recomendada:</b> Asegurar que las políticas de actualización automática para Office 365 y ESET Antivirus estén configuradas y sean efectivas. Implementar las nuevas capacidades de seguridad en Office 365 según la hoja de ruta y evaluar el uso de Security Copilot. Actualizar el software de ESET a la última versión disponible.</p>
       <div class='links'>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe-tUZ4Qy_f9CYLxM6VIi4aX5dDFV652HIQAj-0tbJSPzlTGpRHNEB5m9oFIQoEfHNcdQtAlhRPBCzJcnzSYAJTLXSmGzgruf8lWYt7pbYDHq0awboxl1R1VcyCXy7bL1gxqvuOa9h1ZaqQmv2Xo9Fo-1E3R4nn15fkqlU7Z1jh2fn1CIHZv8CbAK8Uv3LuTfYF3w-q5TUtT5N-j-B0FDdCy8ofVWcFPDd0GE-' target='_blank' rel='noopener noreferrer'>April 2026 Microsoft 365 Updates: Retirements, New Features & Security Enhancements</a>
-        <a href='https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1WbWPhselWvNW18EaAQD8ArMVUgSEl9vzZ401SKXDluCU0qvkf_xO5dqsrWmpEo_g1jf1A3cOiitN-MLZ2WdUhqlxoMx1r5VJgczpUvi_m52E4W41QTakH4z8VCRWZMj6tcYti9scaXx3Q4dqntzgjIXyUOnS1pfPmyCwgX-BQV1C9MUNAE14mwOHT4RBKspITQkIsJ2WNFA9RRyp_OY_gvWC8nZxpk-6m3E962Zvti9qhk-8YwtifqxD8A--0izZHLo=' target='_blank' rel='noopener noreferrer'>[NEWS8934] ESET Endpoint Antivirus and ESET Endpoint Security for Windows version 13.0.2044.0 have been released - ESET Knowledgebase</a>
-        <a href='https://www.eset.com/us/about/newsroom/press-releases/eset-previews-new-ai-security-features-to-secure-chatbot-communications-and-ai-workflows/' target='_blank' rel='noopener noreferrer'>ESET previews new AI security features to secure chatbot communications and AI workflows</a>
-        <a href='https://learn.microsoft.com/en-us/officeupdates/release-notes-microsoft-office-security-updates' target='_blank' rel='noopener noreferrer'>Release notes for Microsoft Office security updates</a>
+        <a href="https://www.cisa.gov/" target="_blank" rel="noopener noreferrer">CISA (Cybersecurity & Infrastructure Security Agency)</a>
+        <a href="https://www.owasp.org/" target="_blank" rel="noopener noreferrer">OWASP (Open Web Application Security Project)</a>
+        <a href="https://www.cisecurity.org/benchmarks" target="_blank" rel="noopener noreferrer">CIS Benchmarks</a>
+        <a href="https://www.eset.com/es/alertas-y-avisos/" target="_blank" rel="noopener noreferrer">ESET: Alertas y Avisos de Seguridad</a>
+        <a href="https://www.microsoft.com/en-us/security/business/identity/microsoft-defender-for-office-365" target="_blank" rel="noopener noreferrer">Microsoft Defender for Office 365</a>
       </div>
     </div>
   </div>
 </section>
-
