@@ -8,100 +8,37 @@
   <div class='grid'>
     <div class='card'>
       <ul>
-        <li><b>Internet-exposed:</b> Se observa actividad de escaneo para identificar servicios de administración remota expuestos y sistemas Windows vulnerables a MS17-010.</li>
-        <li><b>Correo / Phishing:</b> Persistencia de campañas de phishing altamente sofisticadas dirigidas a credenciales de Office 365, con un caso reciente documentado de suplantación.</li>
-        <li><b>IoT / Cámaras:</b> Sin actividad crítica nueva verificada en las últimas semanas para cámaras Dahua. Mantener la vigilancia sobre configuraciones por defecto.</li>
-        <li><b>Ransomware:</b> Aunque no se han identificado nuevas campañas masivas, la explotación de vulnerabilidades conocidas en sistemas Windows antiguos sigue siendo el vector principal para ataques de ransomware dirigidos.</li>
+        <li><b>Internet-exposed:</b> Continúa la alta actividad de escaneo y sondeo de servicios expuestos. La explotación de vulnerabilidades conocidas y desactualizaciones sigue siendo un vector primario.</li>
+        <li><b>Correo / Phishing:</b> Se observa un flujo constante de campañas de phishing sofisticadas dirigidas a credenciales de Office 365, con un enfoque en la elusión de controles básicos.</li>
+        <li><b>IoT / Cámaras:</b> Persiste el riesgo de compromiso de dispositivos IoT y cámaras (Dahua) con firmware desactualizado o configuraciones predeterminadas.</li>
+        <li><b>Ransomware:</b> La amenaza de ransomware permanece elevada, con grupos centrándose en la interrupción operativa y la exfiltración de datos antes del cifrado.</li>
       </ul>
       <a href="#" class="leer-mas">Leer más</a>
       <div class="detalle oculto">
-        <p>El período reciente se caracteriza por la publicación del *Patch Tuesday de abril de 2026* de Microsoft, que aborda un volumen significativo de vulnerabilidades críticas en sistemas Windows y Office. Esto requiere atención inmediata en las plataformas de cliente y servidor.</p>
-        <p>Paralelamente, la actividad de phishing sigue siendo una amenaza constante, con campañas que utilizan la suplantación de identidad para robar credenciales de Office 365.</p>
-        <p>La relevancia de vulnerabilidades históricas como MS17-010 (EternalBlue) persiste, con menciones en análisis recientes, subrayando el riesgo que representan los sistemas Windows 7 y Server 2008 sin parches adecuados si están expuestos o en redes planas.</p>
+        <p>El panorama de amenazas se mantiene estable en términos de nuevas vulnerabilidades críticas publicadas específicamente para nuestro stack tecnológico en las últimas 24 horas. Sin embargo, la actividad observada subraya la persistencia de tácticas de ataque conocidas y la importancia de una higiene de seguridad robusta. Los atacantes continúan aprovechando configuraciones débiles, credenciales comprometidas y la falta de aplicación oportuna de parches en sistemas expuestos a internet (FortiGate, Proxmox VE, Zimbra, Dell iDRAC). Las campañas de phishing evolucionan, intentando eludir los filtros de seguridad de Office 365 y FortiMail, buscando acceso inicial a la infraestructura interna. La seguridad de los dispositivos IoT, como las cámaras Dahua, es un recordatorio constante de la necesidad de gestionar el firmware y las credenciales de forma proactiva. La amenaza de ransomware exige una revisión continua de las estrategias de backup y segmentación de red para proteger los entornos Windows Server, RHEL, Ubuntu y SQL Server Express.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class='section' id='incidentes'>
-  <h3 class='section-title'>Incidentes Observados</h3>
+  <h3 class='section-title'>Incidentes Reportados</h3>
   <div class='grid'>
-    <div class='card CRITICO'>
-      <h4>Actualizaciones de Seguridad Críticas de Microsoft (Abril 2026)</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>RCE</span>
-      <span class='tag'>Privilege Escalation</span>
-      <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-04-14</p>
-      <ul>
-        <li>Microsoft ha lanzado el Patch Tuesday de abril de 2026, corrigiendo 167 vulnerabilidades de seguridad en Windows y software relacionado.</li>
-        <li>Entre las correcciones se incluye un zero-day en SharePoint Server y una debilidad públicamente divulgada en Windows Defender, conocida como "BlueHammer".</li>
-        <li>La amplia naturaleza de estas vulnerabilidades afecta a diversas versiones de Windows (10, 11) y Windows Server (2012, 2016), así como a productos de Office 365.</li>
-        <li>La explotación de zero-days, como el de SharePoint, indica un riesgo inmediato para los sistemas expuestos o que procesan contenido externo.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Priorizar la aplicación de todas las actualizaciones de seguridad de Microsoft de abril de 2026 en los sistemas operativos Windows y servidores, incluyendo SharePoint y Office 365. Realizar pruebas de regresión en entornos de desarrollo antes de la implementación en producción.</p>
-      <div class='links'>
-        <a href="https://www.itsecuritynews.info/" target="_blank" rel="noopener noreferrer">IT Security News - Microsoft Patch Tuesday, April 2026 Edition</a>
-      </div>
-    </div>
-    <div class='card ALTO'>
-      <h4>Campaña de Phishing dirigida a credenciales de Office 365</h4>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>Phishing</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-30</p>
-      <ul>
-        <li>Se ha identificado una campaña de phishing que utiliza la suplantación de identidad para engañar a usuarios de Microsoft 365 y robar sus credenciales.</li>
-        <li>La táctica incluye la creación de páginas falsas que imitan los portales de inicio de sesión de Office 365, con mensajes de urgencia o alertas de cuenta.</li>
-        <li>Esta campaña destaca la sofisticación creciente de los ataques de ingeniería social para evadir las defensas de correo electrónico.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Reforzar la formación de concienciación sobre phishing para todos los usuarios de Office 365, haciendo hincapié en la verificación de URLs y la alerta ante mensajes sospechosos. Implementar y hacer cumplir la autenticación multifactor (MFA) para todas las cuentas de Office 365. Revisar las configuraciones de seguridad de ESET Antivirus y Office 365 para la detección de URL maliciosas y suplantación de identidad.</p>
-      <div class='links'>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEU6DQ1W5NdQJc-7Iebfx7e-j5V2evkvhpPwEUmD8ZObbXE_PhceZxqM09y7hlJfvcEVkts4ANz3ogLqIQTw0mQ6QxsBrPEiOHCol4f0hh6IdUWSIj1-nEPJA-X3yasrUIbgyQe6IxWi6LaCJL_xJhYRMKfsjbpuw==" target="_blank" rel="noopener noreferrer">Gridinsoft - Kabarak.ac.ke Review: Phishing, Trust Score 10/100</a>
-      </div>
+    <div class='card'>
+      <h4>Sin reportes verificados</h4>
+      <p class='meta'>Actualizado: 2026-04-22</p>
+      <p>No se han detectado nuevos eventos confirmados para el stack tecnológico definido en el período reciente.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='cves'>
-  <h3 class='section-title'>Nuevos y Relevantes CVEs</h3>
+  <h3 class='section-title'>Nuevas Vulnerabilidades (CVEs)</h3>
   <div class='grid'>
-    <div class='card ALTO'>
-      <h4>Persistencia de la Vulnerabilidad MS17-010 (EternalBlue)</h4>
-      <span class='tag'>Internal</span>
-      <span class='tag'>Internet-exposed</span>
-      <span class='tag'>RCE</span>
-      <span class='tag'>Explotado activamente</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-03-28</p>
-      <ul>
-        <li>Aunque es una vulnerabilidad antigua, MS17-010 (conocida como EternalBlue) continúa siendo relevante en análisis de seguridad recientes, lo que indica su persistencia como vector de ataque.</li>
-        <li>Permite la ejecución remota de código sin autenticación en sistemas Windows que utilizan SMBv1 y no están parcheados, como Windows 7 y Windows Server 2008.</li>
-        <li>La explotación de EternalBlue fue la base de ataques de ransomware a gran escala como WannaCry, y sigue siendo una amenaza para infraestructuras desactualizadas.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Verificar y asegurar que todos los sistemas Windows 7, Windows Server 2008 y cualquier otro sistema susceptible (incluyendo Windows XP/Server 2003, aunque no directamente mencionados en la fuente, son vulnerables a SMBv1) estén completamente parcheados contra MS17-010. Deshabilitar el protocolo SMBv1 en todos los sistemas donde no sea estrictamente necesario. Segmentar redes para aislar sistemas legacy y limitar su exposición.</p>
-      <div class='links'>
-        <a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxK4Sie6PNlHcIEtpsgUZ1Kg0exvk6nzX8sS_k0KPE1ZXBdwQx73GTX_uhy34RICGVm3OdugN1otR1s25Dh6SuNJ-9ldGx2W8hRWRYfdAcqELO2XXz3ejcqxCbavvRSbC-j3k0VZ-3C3dfdlCIzn-piA==" target="_blank" rel="noopener noreferrer">Medium - BLUE | TRYHACKME. In this walkthrough, I'll show you a… | by Gerald</a>
-      </div>
-    </div>
-    <div class='card MEDIO'>
-      <h4>Riesgos en macOS por Scams de Aplicaciones Falsas</h4>
-      <span class='tag'>User Interaction</span>
-      <span class='tag'>Malware</span>
-      <span class='tag'>Observado</span>
-      <span class='tag'>Directa</span>
-      <p class='meta'>Publicado: 2026-04-02</p>
-      <ul>
-        <li>Se ha observado un aumento en las estafas que utilizan aplicaciones de IA y herramientas de limpieza falsas para engañar a los usuarios de macOS y que instalen malware.</li>
-        <li>Estas campañas se basan en la ingeniería social para persuadir a los usuarios a ejecutar software malicioso por sí mismos.</li>
-      </ul>
-      <p><b>Acción Recomendada:</b> Educar a los usuarios de macOS sobre los riesgos de descargar software de fuentes no verificadas y sobre cómo identificar aplicaciones falsas. Fomentar la descarga de aplicaciones solo desde la App Store oficial o desarrolladores de confianza. Asegurar que ESET Antivirus esté actualizado y configurado para escanear descargas.</p>
-      <div class='links'>
-        <a href="https://www.itsecuritynews.info/" target="_blank" rel="noopener noreferrer">IT Security News - Mac security in April 2026</a>
-      </div>
+    <div class='card'>
+      <h4>Sin reportes verificados</h4>
+      <p class='meta'>Actualizado: 2026-04-22</p>
+      <p>No se han publicado nuevos CVEs críticos verificados y específicos para los productos y versiones de nuestro stack tecnológico en el último ciclo de reporte.</p>
     </div>
   </div>
 </section>
@@ -112,56 +49,92 @@
     <div class='card'>
       <h4>Sin reportes verificados</h4>
       <p class='meta'>Actualizado: 2026-04-22</p>
-      <p>No se han detectado nuevos eventos confirmados de campañas de ransomware dirigidas específicamente a los productos del stack tecnológico definido en el período de análisis.</p>
-      <p>Sin embargo, la continua relevancia de vulnerabilidades como MS17-010 (EternalBlue) subraya que los sistemas sin parches, especialmente Windows Server 2008 y Windows 7, siguen siendo objetivos de alto valor para operadores de ransomware que adaptan sus ataques para explotar fallas conocidas.</p>
+      <p>No se ha identificado nueva actividad de ransomware con impacto directo y verificado en los componentes de nuestro stack tecnológico durante este período de reporte.</p>
     </div>
   </div>
 </section>
 
 <section class='section' id='recomendaciones'>
-  <h3 class='section-title'>Recomendaciones Operativas Clave</h3>
+  <h3 class='section-title'>Recomendaciones Operativas</h3>
   <div class='grid'>
-    <div class='card'>
+    <div class='card CRITICO'>
       <h4>Gestión de Parches y Actualizaciones</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>Info Leak</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-04-22</p>
       <ul>
-        <li><b>Windows y Office 365:</b> Aplicar de inmediato todas las actualizaciones de seguridad de Microsoft publicadas en el Patch Tuesday de abril de 2026 para Windows 10, 11, Windows Server 2012, 2016 y Office 365. Prestar especial atención a las correcciones para SharePoint Server y Windows Defender.</li>
-        <li><b>Sistemas Windows Legacy:</b> Verificar la aplicación de parches para MS17-010 (EternalBlue) en Windows 7 y Windows Server 2008. Deshabilitar SMBv1 si no es esencial. Considerar la migración de Windows XP y Server 2003, o aplicar una segmentación de red estricta.</li>
-        <li><b>macOS:</b> Mantener los sistemas macOS actualizados con las últimas versiones de seguridad de Apple. Educar a los usuarios sobre los riesgos de software no oficial y estafas.</li>
-        <li><b>Linux (Ubuntu Server 24.04 LTS, RHEL 7/8):</b> Realizar periódicamente las actualizaciones de seguridad del sistema operativo y las aplicaciones.</li>
+        <li>Asegurar la aplicación regular y oportuna de parches de seguridad para todos los sistemas operativos (Windows 10/11, Windows Server 2016, RHEL 7/8, Ubuntu Server 24.04 LTS) y aplicaciones críticas (Office 365, SQL Server Express).</li>
+        <li>Monitorear activamente los avisos de seguridad de Fortinet (FortiOS 7.2.12+), Proxmox VE (8.4.16+), Dell (iDRAC, Optiplex, Latitude) y Zimbra Collaboration (10+) para nuevas actualizaciones de firmware y software.</li>
+        <li>Priorizar las actualizaciones de seguridad para dispositivos con exposición a internet, como FortiGate y Zimbra.</li>
       </ul>
+      <h5>Acción Recomendada:</h5>
+      <p>Establecer y mantener un ciclo de gestión de parches riguroso. Verificar las versiones de firmware y software contra las últimas liberaciones de los proveedores.</p>
       <div class='links'>
-        <a href="https://msrc.microsoft.com/update-guide/" target="_blank" rel="noopener noreferrer">Microsoft Security Update Guide</a>
-        <a href="https://support.apple.com/es-es/HT201222" target="_blank" rel="noopener noreferrer">Acerca de las actualizaciones de seguridad de Apple</a>
-        <a href="https://ubuntu.com/security/notices" target="_blank" rel="noopener noreferrer">Ubuntu Security Notices</a>
-        <a href="https://access.redhat.com/security/security-updates" target="_blank" rel="noopener noreferrer">Red Hat Product Security</a>
+        <a href="https://fortiguard.com/psirt" target="_blank" rel="noopener noreferrer">FortiGuard PSIRT Advisories</a>
+        <a href="https://pve.proxmox.com/wiki/Category:Security" target="_blank" rel="noopener noreferrer">Proxmox VE Security Advisories</a>
+        <a href="https://www.dell.com/support/security/en-us" target="_blank" rel="noopener noreferrer">Dell Security Advisories</a>
+        <a href="https://www.microsoft.com/security/blog/" target="_blank" rel="noopener noreferrer">Microsoft Security Blog</a>
       </div>
     </div>
-    <div class='card'>
-      <h4>Seguridad del Correo Electrónico y Concienciación</h4>
+
+    <div class='card ALTO'>
+      <h4>Endurecimiento de Configuraciones y MFA</h4>
+      <span class='tag'>Internet-exposed</span>
+      <span class='tag'>Auth Bypass</span>
+      <span class='tag'>Explotado activamente</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-04-22</p>
       <ul>
-        <li><b>Office 365:</b> Reforzar la autenticación multifactor (MFA) para todas las cuentas de Office 365. Revisar las políticas anti-phishing y anti-spam en el centro de administración de seguridad de Office 365.</li>
-        <li><b>Formación:</b> Realizar campañas de concienciación sobre phishing, especialmente dirigidas a la identificación de correos de suplantación de identidad que buscan credenciales.</li>
-        <li><b>ESET Antivirus:</b> Asegurar que las definiciones de ESET Antivirus corporativo estén siempre actualizadas y que las configuraciones de protección de correo electrónico y web estén optimizadas.</li>
+        <li>Implementar la autenticación multifactor (MFA) en todos los servicios que lo soporten, especialmente en Office 365, FortiGate, Zimbra y cualquier acceso administrativo a Proxmox VE o iDRAC.</li>
+        <li>Revisar y endurecer las configuraciones predeterminadas en todos los dispositivos y servicios, prestando especial atención a FortiGate, FortiAP, FortiMail, Proxmox VE y cámaras/HVR Dahua.</li>
+        <li>Deshabilitar servicios innecesarios y cerrar puertos no utilizados en servidores Windows Server, RHEL, Ubuntu y FortiGate.</li>
       </ul>
+      <h5>Acción Recomendada:</h5>
+      <p>Realizar auditorías periódicas de configuración y asegurar la aplicación universal de MFA.</p>
       <div class='links'>
-        <a href="https://www.microsoft.com/es-es/security/business/microsoft-365-security" target="_blank" rel="noopener noreferrer">Seguridad de Microsoft 365</a>
-        <a href="https://help.eset.com/era/7/es-ES/index.html" target="_blank" rel="noopener noreferrer">Guía de usuario de ESET Security Management Center</a>
+        <a href="https://learn.microsoft.com/en-us/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication" target="_blank" rel="noopener noreferrer">Configurar MFA para Office 365</a>
+        <a href="https://docs.fortinet.com/document/fortigate/7.2.0/administration-guide/524338/enabling-two-factor-authentication" target="_blank" rel="noopener noreferrer">FortiGate Two-Factor Authentication</a>
       </div>
     </div>
-    <div class='card'>
-      <h4>Hardening de Infraestructura y Segmentación</h4>
+
+    <div class='card MEDIO'>
+      <h4>Concienciación y Detección de Phishing</h4>
+      <span class='tag'>Correo / Phishing</span>
+      <span class='tag'>Phishing</span>
+      <span class='tag'>Observado</span>
+      <span class='tag'>Directa</span>
+      <p class='meta'>Publicado: 2026-04-22</p>
       <ul>
-        <li><b>iDRAC y FortiGate:</b> Revisar las configuraciones de todos los dispositivos FortiGate y Dell iDRAC. Asegurar que los puertos de administración no estén expuestos directamente a Internet y que se utilicen credenciales robustas y MFA. Actualizar el firmware de iDRAC a la última versión disponible para la generación 13.</li>
-        <li><b>Zimbra Collaboration Professional:</b> Mantener Zimbra Collaboration Professional 10 actualizado con los últimos parches de seguridad para mitigar vulnerabilidades conocidas.</li>
-        <li><b>Proxmox VE y Zabbix:</b> Asegurar que las instalaciones de Proxmox VE 8.4.16 y Zabbix 7 estén actualizadas y que sus interfaces de administración estén protegidas con acceso restringido y credenciales fuertes.</li>
-        <li><b>Cámaras Dahua:</b> Cambiar todas las contraseñas predeterminadas y deshabilitar servicios innecesarios en cámaras y HVR Dahua. Mantener el firmware actualizado si hay parches de seguridad disponibles.</li>
+        <li>Reforzar la formación en concienciación de seguridad para todos los usuarios sobre la identificación y reporte de correos de phishing, especialmente aquellos que suplantan servicios de Office 365.</li>
+        <li>Asegurar que FortiMail y ESET Antivirus corporativo estén configurados con las últimas definiciones y reglas para detectar y bloquear campañas de phishing y malware.</li>
       </ul>
+      <h5>Acción Recomendada:</h5>
+      <p>Mantener programas de formación continua y asegurar la optimización de las soluciones de seguridad del correo electrónico.</p>
       <div class='links'>
-        <a href="https://support.dell.com/en-us/idrac-docs" target="_blank" rel="noopener noreferrer">Dell EMC PowerEdge iDRAC Documentation</a>
-        <a href="https://www.fortiguard.com/psirt" target="_blank" rel="noopener noreferrer">FortiGuard Labs - PSIRT Advisories</a>
-        <a href="https://pve.proxmox.com/wiki/Security_Bug_Reporting" target="_blank" rel="noopener noreferrer">Proxmox VE Security Bug Reporting</a>
-        <a href="https://www.zimbra.com/support/documentation/" target="_blank" rel="noopener noreferrer">Zimbra Documentation</a>
+        <a href="https://www.eset.com/latam/empresas/solutions/email-security/" target="_blank" rel="noopener noreferrer">ESET Email Security Solutions</a>
+      </div>
+    </div>
+
+    <div class='card MEDIO'>
+      <h4>Seguridad de la Red y Segmentación</h4>
+      <span class='tag'>Internal</span>
+      <span class='tag'>RCE</span>
+      <span class='tag'>Teórico</span>
+      <span class='tag'>Indirecta</span>
+      <p class='meta'>Publicado: 2026-04-22</p>
+      <ul>
+        <li>Revisar y fortalecer la segmentación de red para limitar el movimiento lateral en caso de un compromiso inicial, protegiendo entornos como Windows Server, SQL Server Express y Proxmox VE.</li>
+        <li>Monitorear el tráfico de red con Zabbix 7 para detectar anomalías que puedan indicar actividad maliciosa.</li>
+        <li>Aislar redes de dispositivos IoT y cámaras Dahua del resto de la red corporativa.</li>
+      </ul>
+      <h5>Acción Recomendada:</h5>
+      <p>Auditar las políticas de firewall y las VLANs para asegurar una segmentación efectiva. Optimizar la monitorización de red.</p>
+      <div class='links'>
+        <a href="https://www.zabbix.com/documentation/7.0/en/manual/config/items/itemtypes/network_monitoring" target="_blank" rel="noopener noreferrer">Zabbix Network Monitoring</a>
       </div>
     </div>
   </div>
 </section>
+
